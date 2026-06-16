@@ -1,0 +1,51 @@
+{
+  "examId": "itp",
+  "chapterId": "ch5",
+  "chapterTitle": "ITと企業商業戦略",
+  "cards": [
+    {
+      "id": "itp-ch5-card1",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "front": "内部環境の「強み・弱み」と、外部環境の「機会・脅威」をマトリックスに当てはめて事業環境を分析する手法は？",
+      "back": "SWOT分析",
+      "tags": [
+        "経営戦略",
+        "SWOT"
+      ]
+    },
+    {
+      "id": "itp-ch5-card2",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "front": "システム調達において、ベンダ（開発会社）に対して具体的なシステム構成、費用、スケジュールの提案を求める文書は？",
+      "back": "RFP（提案依頼書）",
+      "tags": [
+        "システム企画",
+        "RFP"
+      ]
+    },
+    {
+      "id": "itp-ch5-card3",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "front": "ITやデジタル技術を活用して、製品やサービス、ビジネスモデルを変革し、競争上の優位性を確立することをアルファベット2文字で？",
+      "back": "DX（デジタルトランスフォーメーション）",
+      "tags": [
+        "経営戦略",
+        "DX"
+      ]
+    },
+    {
+      "id": "itp-ch5-card4",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "front": "売上高と総費用が等しくなり、利益がちょうどゼロになる売上高のことを何というか？",
+      "back": "損益分岐点",
+      "tags": [
+        "企業活動",
+        "会計"
+      ]
+    }
+  ]
+}
