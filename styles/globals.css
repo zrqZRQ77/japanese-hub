@@ -213,3 +213,12 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; }
   font-weight: 700;
   color: var(--color-text);
 }
+
+.mdx-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.mdx-content strong {
+  font-weight: 700;
+  color: var(--color-accent);
+}
