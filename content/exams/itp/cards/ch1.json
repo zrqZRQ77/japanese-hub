@@ -1,0 +1,38 @@
+{
+  "examId": "itp",
+  "chapterId": "ch1",
+  "chapterTitle": "ITの基礎と論理",
+  "cards": [
+    {
+      "id": "itp-ch1-card1",
+      "examId": "itp",
+      "chapterId": "ch1",
+      "front": "コンピュータの5大装置をすべて挙げよ。",
+      "back": "演算装置、制御装置、記憶装置、入力装置、出力装置",
+      "tags": [
+        "ハードウェア"
+      ]
+    },
+    {
+      "id": "itp-ch1-card2",
+      "examId": "itp",
+      "chapterId": "ch1",
+      "front": "電源を切ると記憶内容が消去される性質を持つ主記憶装置（メインメモリ）の通称は？",
+      "back": "RAM（Random Access Memory）",
+      "tags": [
+        "ハードウェア",
+        "メモリ"
+      ]
+    },
+    {
+      "id": "itp-ch1-card3",
+      "examId": "itp",
+      "chapterId": "ch1",
+      "front": "ソースコードが公開され、誰でも自由に使用・改変・再配布できるソフトウェアの総称は？",
+      "back": "OSS（Open Source Software）",
+      "tags": [
+        "ソフトウェア"
+      ]
+    }
+  ]
+}
