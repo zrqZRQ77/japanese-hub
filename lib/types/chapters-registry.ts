@@ -50,8 +50,65 @@ export const CHAPTERS_REGISTRY: Record<string, ChapterMeta[]> = {
     {
       id: 'ch6', number: 6, title: '売掛金・買掛金',
       sections: [
-        { id: 'ch6-s1', number: '6-1', title: '売掛金とは' },
-        { id: 'ch6-s2', number: '6-2', title: '買掛金とは' },
+        { id: 'ch6-s1', number: '6-1', title: '売掛金とクレジット売掛金' },
+        { id: 'ch6-s2', number: '6-2', title: '買掛金' },
+      ],
+    },
+    {
+      id: 'ch7', number: 7, title: '手形',
+      sections: [
+        { id: 'ch7-s1', number: '7-1', title: '約束手形' },
+        { id: 'ch7-s2', number: '7-2', title: '電子記録債権' },
+        { id: 'ch7-s3', number: '7-3', title: '手形の裏書・割引' },
+      ],
+    },
+    {
+      id: 'ch8', number: 8, title: 'その他の債権・債務',
+      sections: [
+        { id: 'ch8-s1', number: '8-1', title: '貸付金・借入金' },
+        { id: 'ch8-s2', number: '8-2', title: '未収金・未払金' },
+        { id: 'ch8-s3', number: '8-3', title: '前払金・前受金' },
+      ],
+    },
+    {
+      id: 'ch9', number: 9, title: '固定資産',
+      sections: [
+        { id: 'ch9-s1', number: '9-1', title: '固定資産の取得' },
+        { id: 'ch9-s2', number: '9-2', title: '減価償却' },
+        { id: 'ch9-s3', number: '9-3', title: '固定資産の売却' },
+      ],
+    },
+    {
+      id: 'ch10', number: 10, title: '費用・収益の見越し繰延べ',
+      sections: [
+        { id: 'ch10-s1', number: '10-1', title: '費用の繰延べ・収益の繰延べ' },
+        { id: 'ch10-s2', number: '10-2', title: '費用の見越し・収益の見越し' },
+        { id: 'ch10-s3', number: '10-3', title: '再振替仕訳まとめ' },
+      ],
+    },
+    {
+      id: 'ch11', number: 11, title: '決算整理',
+      sections: [
+        { id: 'ch11-s1', number: '11-1', title: '決算整理とは' },
+        { id: 'ch11-s2', number: '11-2', title: '売上原価の計算' },
+        { id: 'ch11-s3', number: '11-3', title: '貸倒引当金' },
+        { id: 'ch11-s4', number: '11-4', title: '消耗品の処理' },
+      ],
+    },
+    {
+      id: 'ch12', number: 12, title: '試算表と精算表',
+      sections: [
+        { id: 'ch12-s1', number: '12-1', title: '試算表' },
+        { id: 'ch12-s2', number: '12-2', title: '精算表' },
+        { id: 'ch12-s3', number: '12-3', title: '決算の流れ' },
+      ],
+    },
+    {
+      id: 'ch13', number: 13, title: '財務諸表',
+      sections: [
+        { id: 'ch13-s1', number: '13-1', title: '貸借対照表' },
+        { id: 'ch13-s2', number: '13-2', title: '損益計算書' },
+        { id: 'ch13-s3', number: '13-3', title: '財務諸表のまとめ' },
       ],
     },
   ],

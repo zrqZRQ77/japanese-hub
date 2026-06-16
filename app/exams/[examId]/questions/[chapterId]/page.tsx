@@ -4,7 +4,6 @@
 // ============================================================
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/layout/Navbar'
-import ExamSidebar from '@/components/layout/ExamSidebar'
 import QuestionClient from '@/components/features/questions/QuestionClient'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChapterById } from '@/lib/types/chapters-registry'
@@ -30,22 +29,20 @@ export default async function QuestionsPage({ params }: Props) {
     return (
       <>
         <Navbar />
-        <div style={{ display: 'flex', height: 'calc(100vh - 64px)' }}>
-          <ExamSidebar exam={exam} />
-          <main style={{
-            flex: 1, display: 'flex', flexDirection: 'column',
-            alignItems: 'center', justifyContent: 'center',
-            background: 'var(--color-bg-subtle)', gap: 12,
-          }}>
-            <div style={{ fontSize: '3rem' }}>✏️</div>
-            <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>
-              第{chapter.number}章 {chapter.title}
-            </div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>
-              この章の練習問題は準備中です。
-            </div>
-          </main>
-        </div>
+        <main style={{
+          flex: 1, display: 'flex', flexDirection: 'column',
+          alignItems: 'center', justifyContent: 'center',
+          height: 'calc(100vh - 64px)',
+          background: 'var(--color-bg-subtle)', gap: 12,
+        }}>
+          <div style={{ fontSize: '3rem' }}>✏️</div>
+          <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>
+            第{chapter.number}章 {chapter.title}
+          </div>
+          <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>
+            この章の練習問題は準備中です。
+          </div>
+        </main>
       </>
     )
   }
@@ -54,7 +51,6 @@ export default async function QuestionsPage({ params }: Props) {
     <>
       <Navbar />
       <div style={{ display: 'flex', height: 'calc(100vh - 64px)', overflow: 'hidden' }}>
-        <ExamSidebar exam={exam} />
         <QuestionClient
           questions={questionSet.questions}
           chapterTitle={questionSet.chapterTitle}

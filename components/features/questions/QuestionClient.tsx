@@ -54,7 +54,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     if (current < questions.length - 1) goTo(current + 1)
   }
 
-  // 各問題のステータス
   function getQuestionStatus(i: number) {
     const ans = answered[i]
     if (!ans) return 'unanswered'
@@ -105,7 +104,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     return base
   }
 
-  // 問題リストのステータスアイコン
   const statusDot = (i: number) => {
     const st = getQuestionStatus(i)
     if (st === 'correct') return { bg: 'var(--color-success)', label: '✓' }
@@ -123,7 +121,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
         background: '#fff', overflowY: 'auto',
         padding: '16px 12px',
       }}>
-        {/* 章タイトル＋進捗 */}
         <div style={{ marginBottom: 14 }}>
           <Link href={`${base}`} style={{
             fontSize: '0.75rem', color: 'var(--color-text-muted)',
@@ -143,7 +140,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           }}>{Object.keys(answered).length}/{questions.length}問</div>
         </div>
 
-        {/* 問題リンク */}
         {questions.map((_, i) => {
           const dot = statusDot(i)
           return (
@@ -186,12 +182,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           <div style={{ fontWeight: 700, fontSize: '1rem' }}>
             問題 {current + 1} / {questions.length}
           </div>
-          <div style={{
-            fontSize: '0.85rem', color: 'var(--color-text-secondary)',
-            display: 'flex', alignItems: 'center', gap: 6,
-          }}>
-            ⏱ 残り時間 <span style={{ fontWeight: 700, color: 'var(--color-text)' }}>28:45</span>
-          </div>
         </div>
 
         {/* 問題カード */}
@@ -202,7 +192,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           padding: '28px 32px',
           boxShadow: 'var(--shadow-card)',
         }}>
-          {/* 章タグ */}
           <div style={{
             display: 'inline-block',
             background: 'var(--color-primary-light)',
@@ -212,14 +201,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             marginBottom: 16,
           }}>{chapterTitle}</div>
 
-          {/* 問題文 */}
           <p style={{
             fontSize: '1.05rem', fontWeight: 600,
             lineHeight: 1.7, marginBottom: 28,
             color: 'var(--color-text)',
           }}>{q.text}</p>
 
-          {/* 選択肢 */}
           {(q.options ?? []).map(opt => (
             <div key={opt.label}
               style={optionStyle(opt.label)}
@@ -229,7 +216,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               <span style={{ fontSize: '0.95rem', color: 'var(--color-text)' }}>
                 {opt.text}
               </span>
-              {/* 正解・不正解アイコン */}
               {isAnswered && opt.label === q.correctAnswer && (
                 <span style={{ marginLeft: 'auto', color: 'var(--color-success)', fontWeight: 700 }}>✓</span>
               )}
@@ -239,7 +225,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             </div>
           ))}
 
-          {/* 解説 */}
           {isAnswered && (
             <div style={{
               marginTop: 20,
@@ -262,7 +247,6 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             </div>
           )}
 
-          {/* 後で見直す + 次の問題 */}
           <div style={{
             display: 'flex', justifyContent: 'space-between',
             alignItems: 'center', marginTop: 24,
