@@ -1,0 +1,50 @@
+{
+  "examId": "itp",
+  "chapterId": "ch4",
+  "chapterTitle": "システムの開発と管理",
+  "cards": [
+    {
+      "id": "itp-ch4-card1",
+      "examId": "itp",
+      "chapterId": "ch4",
+      "front": "プロジェクト管理において、プロジェクト全体の作業を細かく分割し、ツリー状に構造化して洗い出す手法は？",
+      "back": "WBS（Work Breakdown Structure）",
+      "tags": [
+        "プロジェクト管理",
+        "WBS"
+      ]
+    },
+    {
+      "id": "itp-ch4-card2",
+      "examId": "itp",
+      "chapterId": "ch4",
+      "front": "ITサービスマネジメントのベストプラクティス（成功事例）を集め、体系化したガイドラインの名称は？",
+      "back": "ITIL（IT Infrastructure Library）",
+      "tags": [
+        "サービスマネジメント",
+        "ITIL"
+      ]
+    },
+    {
+      "id": "itp-ch4-card3",
+      "examId": "itp",
+      "chapterId": "ch4",
+      "front": "開発担当者と運用担当者が緊密に連携・協力し、ソフトウェアの導入や更新を迅速に進める概念は？",
+      "back": "DevOps（デブオプス）",
+      "tags": [
+        "開発技術",
+        "DevOps"
+      ]
+    },
+    {
+      "id": "itp-ch4-card4",
+      "examId": "itp",
+      "chapterId": "ch4",
+      "front": "情報システムの監査において、監査人が備えておくべき最も重要なスタンス（立場）は何か？",
+      "back": "独立性と客観性（第三者の立場であること）",
+      "tags": [
+        "システム監査"
+      ]
+    }
+  ]
+}
