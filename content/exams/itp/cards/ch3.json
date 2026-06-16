@@ -1,0 +1,40 @@
+{
+  "examId": "itp",
+  "chapterId": "ch3",
+  "chapterTitle": "情報セキュリティ",
+  "cards": [
+    {
+      "id": "itp-ch3-card1",
+      "examId": "itp",
+      "chapterId": "ch3",
+      "front": "実在する企業などを装ったメールを送り、偽のWebサイトに誘導して個人情報を入力させる詐欺手法は？",
+      "back": "フィッシング（Phishing）",
+      "tags": [
+        "セキュリティ",
+        "サイバー攻撃"
+      ]
+    },
+    {
+      "id": "itp-ch3-card2",
+      "examId": "itp",
+      "chapterId": "ch3",
+      "front": "内部ネットワークとインターネットの境界に設置され、許可されていない不正な通信を遮断する仕組みは？",
+      "back": "ファイアウォール（Firewall）",
+      "tags": [
+        "セキュリティ",
+        "ネットワーク"
+      ]
+    },
+    {
+      "id": "itp-ch3-card3",
+      "examId": "itp",
+      "chapterId": "ch3",
+      "front": "データベースと連携したWebアプリケーションの脆弱性を突き、不正な命令文を入力してデータを改ざん・窃取する攻撃は？",
+      "back": "SQLインジェクション",
+      "tags": [
+        "セキュリティ",
+        "サイバー攻撃"
+      ]
+    }
+  ]
+}

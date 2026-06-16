@@ -1,0 +1,71 @@
+{
+  "examId": "itp",
+  "chapterId": "ch2",
+  "chapterTitle": "ネットワークとデータ",
+  "questions": [
+    {
+      "id": "itp-ch2-q1",
+      "examId": "itp",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "インターネットにおいて、ドメイン名とIPアドレスを相互に変換する仕組みはどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "DHCP"
+        },
+        {
+          "label": "B",
+          "text": "DNS"
+        },
+        {
+          "label": "C",
+          "text": "FTP"
+        },
+        {
+          "label": "D",
+          "text": "NTP"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "DNS（Domain Name System）は、人間が覚えやすいドメイン名と、コンピュータが処理するIPアドレスを紐付けて変換するシステムです。DHCPはIPアドレスの自動割り当て、FTPはファイル転送、NTPは時刻同期のプロトコルです。",
+      "tags": [
+        "テクノロジ系",
+        "ネットワーク",
+        "DNS"
+      ]
+    },
+    {
+      "id": "itp-ch2-q2",
+      "examId": "itp",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "年齢や障害の有無にかかわらず、多様な人々がWebサイトやシステムを支障なく利用できる度合いを示す用語はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "アクセシビリティ"
+        },
+        {
+          "label": "B",
+          "text": "トレーサビリティ"
+        },
+        {
+          "label": "C",
+          "text": "スケーラビリティ"
+        },
+        {
+          "label": "D",
+          "text": "ダイバーシティ"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "アクセシビリティ（Accessibility）は「アクセスのしやすさ」を意味し、誰でも使える状態を指します。トレーサビリティは追跡可能性、スケーラビリティは拡張性を示します。",
+      "tags": [
+        "テクノロジ系",
+        "情報デザイン",
+        "アクセシビリティ"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "examId": "itp",
+  "chapterId": "ch2",
+  "chapterTitle": "ネットワークとデータ",
+  "cards": [
+    {
+      "id": "itp-ch2-card1",
+      "examId": "itp",
+      "chapterId": "ch2",
+      "front": "製品やシステムを通じて、ユーザが獲得する体験や満足感の総称をアルファベット2文字で何というか？",
+      "back": "UX（User Experience）",
+      "tags": [
+        "情報デザイン",
+        "UX"
+      ]
+    },
+    {
+      "id": "itp-ch2-card2",
+      "examId": "itp",
+      "chapterId": "ch2",
+      "front": "関係データベースにおいて、特定の行を一意に識別するため、重複や空値が許されない項目（列）は？",
+      "back": "主キー（Primary Key）",
+      "tags": [
+        "データベース",
+        "主キー"
+      ]
+    },
+    {
+      "id": "itp-ch2-card3",
+      "examId": "itp",
+      "chapterId": "ch2",
+      "front": "インターネットなどの通信ネットワークにおいて、標準的に利用されている通信プロトコル（規約）は？",
+      "back": "TCP/IP",
+      "tags": [
+        "ネットワーク",
+        "プロトコル"
+      ]
+    }
+  ]
+}

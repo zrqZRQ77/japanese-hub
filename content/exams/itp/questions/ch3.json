@@ -1,0 +1,71 @@
+{
+  "examId": "itp",
+  "chapterId": "ch3",
+  "chapterTitle": "情報セキュリティ",
+  "questions": [
+    {
+      "id": "itp-ch3-q1",
+      "examId": "itp",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "公開鍵暗号方式において、送信者が受信者に暗号文を送る場合、暗号化に使用する鍵はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "送信者の公開鍵"
+        },
+        {
+          "label": "B",
+          "text": "送信者の秘密鍵"
+        },
+        {
+          "label": "C",
+          "text": "受信者の公開鍵"
+        },
+        {
+          "label": "D",
+          "text": "受信者の秘密鍵"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "公開鍵暗号方式では、暗号化には「受信者の公開鍵（広く公開されている）」を使い、復号には「受信者の秘密鍵（受信者本人しか持っていない）」を使います。これにより、受信者だけが暗号文を解読できます。",
+      "tags": [
+        "テクノロジ系",
+        "セキュリティ",
+        "暗号化"
+      ]
+    },
+    {
+      "id": "itp-ch3-q2",
+      "examId": "itp",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "PC内のファイルを勝手に暗号化し、元に戻すためのパスワードを教える条件として金銭を要求するマルウェアはどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "キーロガー"
+        },
+        {
+          "label": "B",
+          "text": "ランサムウェア"
+        },
+        {
+          "label": "C",
+          "text": "スパイウェア"
+        },
+        {
+          "label": "D",
+          "text": "ボット"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "ランサムウェア（Ransomware）は、Ransom（身代金）とSoftware（ソフトウェア）を組み合わせた造語で、データを人質に取って身代金を要求するマルウェアです。",
+      "tags": [
+        "テクノロジ系",
+        "セキュリティ",
+        "マルウェア"
+      ]
+    }
+  ]
+}
