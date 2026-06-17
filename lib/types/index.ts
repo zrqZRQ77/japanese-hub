@@ -12,6 +12,7 @@ export interface ExamMeta {
   totalChapters: number
   color: string        // Tailwind color key e.g. "blue"
   icon: string         // lucide icon name
+  info?: ExamInfo
 }
 
 /** 章节元数据 */
