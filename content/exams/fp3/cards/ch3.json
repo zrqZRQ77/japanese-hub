@@ -1,0 +1,157 @@
+{
+  "examId": "fp3",
+  "chapterId": "ch3",
+  "chapterTitle": "金融資産運用",
+  "cards": [
+    {
+      "id": "ch3-card-01",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "GDP（国内総生産）を発表している機関はどこか？",
+      "back": "内閣府",
+      "tags": [
+        "経済指標"
+      ]
+    },
+    {
+      "id": "ch3-card-02",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "日本銀行が年4回発表する、企業経営者へのアンケート調査を何というか？",
+      "back": "日銀短観（全国企業短期経済観測調査）",
+      "tags": [
+        "経済指標"
+      ]
+    },
+    {
+      "id": "ch3-card-03",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "預金保険制度において「全額保護」される預金の種類は？",
+      "back": "決済用預金（当座預金など）",
+      "tags": [
+        "預金保険制度"
+      ]
+    },
+    {
+      "id": "ch3-card-04",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "預金保険制度において、定期預金はいくらまで保護されるか？",
+      "back": "1金融機関につき預金者1人当たり元本1,000万円までとその利息",
+      "tags": [
+        "預金保険制度"
+      ]
+    },
+    {
+      "id": "ch3-card-05",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "外貨預金は、預金保険制度の保護対象になるか？",
+      "back": "対象外（保護されない）",
+      "tags": [
+        "預金保険制度"
+      ]
+    },
+    {
+      "id": "ch3-card-06",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "株価が「1株当たり純利益（EPS）」の何倍まで買われているかを示す指標は？",
+      "back": "PER（株価収益率）",
+      "tags": [
+        "株式指標"
+      ]
+    },
+    {
+      "id": "ch3-card-07",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "当期純利益を自己資本で割って求める、企業の収益性を示す指標は？",
+      "back": "ROE（自己資本利益率）",
+      "tags": [
+        "株式指標"
+      ]
+    },
+    {
+      "id": "ch3-card-08",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "顧客が円を外貨に換えて預け入れる際に適用される為替レートは？",
+      "back": "TTS",
+      "tags": [
+        "外貨建て"
+      ]
+    },
+    {
+      "id": "ch3-card-09",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "投資信託において、財産の保管・管理を行う機関はどこか？",
+      "back": "受託会社（信託銀行等）",
+      "tags": [
+        "投資信託"
+      ]
+    },
+    {
+      "id": "ch3-card-10",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "新NISA制度（2024年以降）の年間投資上限額は合計いくらか？",
+      "back": "年間360万円",
+      "tags": [
+        "新NISA"
+      ]
+    },
+    {
+      "id": "ch3-card-11",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "新NISA制度の生涯非課税限度額（総枠）はいくらか？",
+      "back": "1,800万円",
+      "tags": [
+        "新NISA"
+      ]
+    },
+    {
+      "id": "ch3-card-12",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "新NISA制度の「非課税保有期間」は何年か？",
+      "back": "無期限",
+      "tags": [
+        "新NISA"
+      ]
+    },
+    {
+      "id": "ch3-card-13",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "NISA口座の損失は、特定口座の利益と損益通算できるか？",
+      "back": "できない",
+      "tags": [
+        "新NISA"
+      ]
+    },
+    {
+      "id": "ch3-card-14",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "ポートフォリオのリスク低減効果が「最大」になるのは、相関係数がいくつの時か？",
+      "back": "－1",
+      "tags": [
+        "ポートフォリオ"
+      ]
+    },
+    {
+      "id": "ch3-card-15",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "front": "日銀が市場の国債を買って資金を供給し、金利を下げる金融政策を何というか？",
+      "back": "買いオペレーション",
+      "tags": [
+        "金融政策"
+      ]
+    }
+  ]
+}
