@@ -4,11 +4,11 @@ import { getAllQuestionSets } from '../../../../lib/content/question-loader'
 import type { Question } from '../../../../lib/types'
 
 interface Props {
-  params: { examId: string }
+  params: Promise<{ examId: string }>
 }
 
-export default function MockExamPage({ params }: Props) {
-  const { examId } = params
+export default async function MockExamPage({ params }: Props) {
+  const { examId } = await params
   const sets = getAllQuestionSets(examId)
   const questions: Question[] = sets.flatMap(s => s.questions)
   // serialize to plain JSON-compatible object for client
