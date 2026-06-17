@@ -12,6 +12,7 @@ import SearchModal from '@/components/features/search/SearchModal'
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [examMenuOpen, setExamMenuOpen] = useState(false)
+  const [availableExams, setAvailableExams] = useState<typeof EXAMS_REGISTRY | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const pathname = usePathname()
 
@@ -28,6 +29,16 @@ export default function Navbar() {
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
+  }, [])
+
+  // fetch available exams from server (only exams with content)
+  useEffect(() => {
+    let mounted = true
+    fetch('/api/available-exams')
+      .then(r => r.json())
+      .then(data => { if (mounted) setAvailableExams(data) })
+      .catch(() => { if (mounted) setAvailableExams(null) })
+    return () => { mounted = false }
   }, [])
 
   return (
@@ -97,7 +108,7 @@ export default function Navbar() {
                       padding: '4px 10px 6px',
                       letterSpacing: '0.06em',
                     }}>学習できる試験</div>
-                    {EXAMS_REGISTRY.map(exam => (
+                    {(availableExams && availableExams.length ? availableExams : EXAMS_REGISTRY).map(exam => (
                       <Link key={exam.id} href={`/exams/${exam.id}`}
                         onClick={() => setExamMenuOpen(false)}
                         style={{
@@ -150,11 +161,15 @@ export default function Navbar() {
               )}
             </div>
 
-            <NavLink href="/practice" active={isActive('/practice')}>練習問題</NavLink>
-            <NavLink href="/guide" active={isActive('/guide')}>学習ガイド</NavLink>
-            <NavLink href="/ai-chat" active={isActive('/ai-chat')} highlight>AI質問</NavLink>
-
             <div style={{ flex: 1 }} />
+
+            {/* 右侧主导航（靠近搜索） */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
+              <NavLink href="/guide" active={isActive('/guide')} forceColor={'var(--color-text)'}>学習ガイド</NavLink>
+              <NavLink href="/practice" active={isActive('/practice')} forceColor={'var(--color-text)'}>練習問題</NavLink>
+              <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>知識カード</NavLink>
+              <NavLink href="/ai-chat" active={isActive('/ai-chat')} forceColor={'var(--color-text)'}>AI質問</NavLink>
+            </div>
 
             {/* 検索ボタン */}
             <button
@@ -224,7 +239,7 @@ export default function Navbar() {
           }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               <MobileNavSection title="試験を選ぶ">
-                {EXAMS_REGISTRY.map(exam => (
+                {(availableExams && availableExams.length ? availableExams : EXAMS_REGISTRY).map(exam => (
                   <Link key={exam.id} href={`/exams/${exam.id}`}
                     onClick={() => setMobileOpen(false)}
                     style={{
@@ -250,8 +265,9 @@ export default function Navbar() {
               </MobileNavSection>
 
               {[
-                { href: '/practice', label: '練習問題' },
                 { href: '/guide', label: '学習ガイド' },
+                { href: '/practice', label: '練習問題' },
+                { href: '/exams', label: '知識カード' },
                 { href: '/ai-chat', label: 'AI質問' },
               ].map(item => (
                 <Link key={item.href} href={item.href}
@@ -291,16 +307,17 @@ export default function Navbar() {
   )
 }
 
-function NavLink({ href, children, active, highlight }: {
-  href: string; children: React.ReactNode; active?: boolean; highlight?: boolean
+function NavLink({ href, children, active, highlight, forceColor }: {
+  href: string; children: React.ReactNode; active?: boolean; highlight?: boolean; forceColor?: string
 }) {
+  const color = forceColor ?? (highlight ? 'var(--color-primary)'
+    : active ? 'var(--color-primary)'
+    : 'var(--color-text)')
   return (
     <Link href={href} style={{
       padding: '7px 14px', borderRadius: 'var(--radius-sm)',
       fontSize: '0.9rem', fontWeight: active ? 700 : 500,
-      color: highlight ? 'var(--color-primary)'
-        : active ? 'var(--color-primary)'
-        : 'var(--color-text)',
+      color,
       textDecoration: 'none', whiteSpace: 'nowrap',
       background: active ? 'var(--color-primary-light)' : 'transparent',
     }}

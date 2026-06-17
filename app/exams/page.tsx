@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import HoverCard from '@/components/ui/HoverCard'
 import { EXAMS_REGISTRY } from '@/lib/types/exams-registry'
+import { getAvailableExams } from '@/lib/content/exams-loader'
 
 const COMING_SOON = [
   { name: '社会保険労務士', category: '労務', desc: '労働・社会保険の専門家。' },
@@ -66,7 +67,7 @@ export default function ExamsPage() {
             gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
             gap: 16, marginBottom: 48,
           }}>
-            {EXAMS_REGISTRY.map(exam => {
+            {getAvailableExams().map(exam => {
               const cat = CATEGORY_COLORS[exam.category] ?? { bg: '#f3f4f6', text: '#374151' }
               return (
                 <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>

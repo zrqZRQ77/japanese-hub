@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import HoverCard from '@/components/ui/HoverCard'
 import { EXAMS_REGISTRY } from '@/lib/types/exams-registry'
+import { getAvailableExams } from '@/lib/content/exams-loader'
 
 const TOOLS = [
   { icon: '📝', title: '練習問題', desc: '章ごとの練習で知識を定着' },
@@ -18,7 +19,7 @@ const STATS = [
   { value: 'AI', label: '即時解説' },
 ]
 
-const COMING_SOON: string[] = []
+// No coming-soon items — only show exams that have content
 
 export default function HomePage() {
   return (
@@ -161,7 +162,7 @@ export default function HomePage() {
               gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))',
               gap: 'clamp(12px, 2vw, 20px)',
             }}>
-              {EXAMS_REGISTRY.map(exam => (
+              {getAvailableExams().map(exam => (
                 <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>
                   <HoverCard style={{
                     background: '#fff',
@@ -194,24 +195,7 @@ export default function HomePage() {
                   </HoverCard>
                 </Link>
               ))}
-              {COMING_SOON.map(name => (
-                <div key={name} style={{
-                  background: 'var(--color-bg-muted)',
-                  border: '1px dashed var(--color-border-strong)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(16px, 3vw, 24px)', opacity: 0.6,
-                }}>
-                  <div style={{
-                    display: 'inline-block', background: 'var(--color-border)',
-                    color: 'var(--color-text-secondary)',
-                    fontSize: '0.75rem', fontWeight: 700,
-                    padding: '3px 10px', borderRadius: 99, marginBottom: 12,
-                  }}>近日公開</div>
-                  <div style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--color-text-secondary)' }}>
-                    {name}
-                  </div>
-                </div>
-              ))}
+              {/* No coming-soon items to display */}
             </div>
           </div>
         </section>
