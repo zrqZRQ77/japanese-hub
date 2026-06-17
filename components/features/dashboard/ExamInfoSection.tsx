@@ -14,7 +14,6 @@ const DIFF_STARS = (n: number) =>
   '★'.repeat(n) + '☆'.repeat(5 - n)
 
 export default function ExamInfoSection({ exam }: Props) {
-  const [booksOpen, setBooksOpen] = useState(false)
   const info = exam.info
   if (!info) return null
   return (
@@ -95,84 +94,92 @@ export default function ExamInfoSection({ exam }: Props) {
         </div>
       </div>
 
-      {/* 合格後の価値 */}
-      <div style={{ padding: '18px 24px', borderBottom: '1px solid var(--color-border)' }}>
-        <div style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--color-text)', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 6 }}>
-          🎯 合格後に得られること
+      {/* 主体内容：三栏布局 — 指标 / 合格价值 / 教材与讲座 */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 18, padding: '18px 22px', alignItems: 'start' }}>
+        {/* 合格後の価値（中间列） */}
+        <div style={{ gridColumn: '2 / 3' }}>
+          <div style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--color-text)', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 6 }}>
+            🎯 合格後に得られること
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+            {info.valueAfterPass.map((v, i) => (
+              <span key={i} style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: '#f7fbff',
+                color: '#0369a1',
+                fontSize: '0.82rem', fontWeight: 700,
+                padding: '6px 14px', borderRadius: 999,
+                boxShadow: 'inset 0 -1px 0 rgba(2,6,23,0.02)'
+              }}>
+                ✓ {v}
+              </span>
+            ))}
+          </div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-          {info.valueAfterPass.map((v, i) => (
-            <span key={i} style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: '#f7fbff',
-              color: '#0369a1',
-              fontSize: '0.82rem', fontWeight: 700,
-              padding: '6px 14px', borderRadius: 999,
-              boxShadow: 'inset 0 -1px 0 rgba(2,6,23,0.02)'
-            }}>
-              ✓ {v}
-            </span>
-          ))}
-        </div>
-      </div>
 
-      {/* おすすめ教材（折りたたみ） */}
-      {info.books && info.books.length > 0 && (
-        <div style={{ borderBottom: '1px solid var(--color-border)' }}>
-          <button
-            onClick={() => setBooksOpen(v => !v)}
-            style={{
-              width: '100%', display: 'flex', alignItems: 'center',
-              justifyContent: 'space-between',
-              padding: '14px 24px',
-              background: 'none', border: 'none', cursor: 'pointer',
-              fontWeight: 700, fontSize: '0.85rem', color: 'var(--color-text)',
-            }}
-          >
-            <span>📚 おすすめ教材・参考書（Amazon）</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
-              style={{ transform: booksOpen ? 'rotate(180deg)' : 'none', transition: '0.2s' }}>
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          {booksOpen && (
-            <div style={{ padding: '4px 24px 18px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <p style={{ fontSize: '0.75rem', color: 'rgba(20,24,40,0.55)', marginBottom: 6 }}>
-                ※ 以下はAmazonアフィリエイトリンクです。購入価格は変わりません。
-              </p>
-              {info.books.map((book, i) => (
-                <a key={i} href={book.amazonUrl} target="_blank" rel="noopener noreferrer"
-                  style={{
-                    display: 'flex', gap: 12, padding: '12px 16px',
-                    background: '#fff',
-                    border: '1px solid rgba(20,24,40,0.04)',
-                    borderRadius: 12,
-                    textDecoration: 'none', color: 'inherit',
-                    alignItems: 'center'
-                  }}
-                >
-                  <div style={{ fontSize: '1.5rem', flexShrink: 0 }}>📖</div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 3, flexWrap: 'wrap' }}>
-                      <span style={{
-                        fontSize: '0.68rem', fontWeight: 700,
-                        background: '#fef3c7', color: '#92400e',
-                        padding: '2px 7px', borderRadius: 99,
-                      }}>{book.type}</span>
-                      <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--color-primary)' }}>{book.title}</span>
+        {/* おすすめ教材（右侧列） — 直接展示，並列卡片 */}
+        <div style={{ gridColumn: '3 / 4' }}>
+          <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--color-text)', marginBottom: 10 }}>📚 おすすめ教材・参考書（Amazon）</div>
+          <p style={{ fontSize: '0.75rem', color: 'rgba(20,24,40,0.55)', marginBottom: 12 }}>
+            ※ 以下はAmazonアフィリエイトリンクです。購入価格は変わりません。
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
+            {info.books.map((book, i) => (
+              <a key={i} href={book.amazonUrl} target="_blank" rel="noopener noreferrer"
+                style={{
+                  display: 'flex', gap: 12, padding: '12px 16px',
+                  background: '#fff',
+                  border: '1px solid rgba(20,24,40,0.04)',
+                  borderRadius: 12,
+                  textDecoration: 'none', color: 'inherit',
+                  alignItems: 'center'
+                }}
+              >
+                <div style={{ fontSize: '1.6rem', flexShrink: 0 }}>📖</div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, flexWrap: 'wrap' }}>
+                    <span style={{
+                      fontSize: '0.7rem', fontWeight: 800,
+                      background: '#fff7ed', color: '#92400e',
+                      padding: '3px 8px', borderRadius: 99, border: '1px solid rgba(245,158,11,0.08)'
+                    }}>{book.type}</span>
+                    <span style={{ fontWeight: 800, fontSize: '0.95rem', color: '#0f172a' }}>{book.title}</span>
+                  </div>
+                  <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.6)', marginBottom: 4 }}>{book.author}</div>
+                  <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.5)' }}>{book.note}</div>
+                </div>
+                <div style={{ color: '#f59e0b', fontSize: '0.9rem', fontWeight: 800, flexShrink: 0, alignSelf: 'center' }}>
+                  Amazon →
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* 講座 */}
+          {info.courses && info.courses.length > 0 && (
+            <div style={{ marginTop: 12 }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: 800, marginBottom: 8 }}>🖥️ おすすめ講座・スクール</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {info.courses.map((course, i) => (
+                  <a key={i} href={course.url} target="_blank" rel="noopener noreferrer" style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    gap: 12, padding: '10px 14px', background: '#fbfbff', border: '1px solid rgba(20,24,40,0.03)', borderRadius: 10, textDecoration: 'none', color: 'inherit'
+                  }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                        {course.isFree && <span style={{ fontSize: '0.65rem', fontWeight: 800, background: '#ecfdf5', color: '#16a34a', padding: '2px 6px', borderRadius: 99, border: '1px solid rgba(34,197,94,0.12)' }}>無料</span>}
+                        <span style={{ fontWeight: 800 }}>{course.title}</span>
+                      </div>
+                      <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.55)' }}>{course.note}</div>
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginBottom: 3 }}>{book.author}</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--color-text-secondary)' }}>{book.note}</div>
-                  </div>
-                  <div style={{ color: '#f59e0b', fontSize: '0.85rem', fontWeight: 800, flexShrink: 0, alignSelf: 'center' }}>
-                    Amazon →
-                  </div>
-                </a>
-              ))}
+                    <div style={{ color: '#0f62fe', fontWeight: 800 }}>詳細 →</div>
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
-      )}
+      </div>
 
       {/* おすすめ講座 */}
       {info.courses && info.courses.length > 0 && (
