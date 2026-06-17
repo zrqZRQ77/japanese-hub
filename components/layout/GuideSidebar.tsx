@@ -25,8 +25,9 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
       overflowY: 'auto',
       display: 'flex',
       flexDirection: 'column',
+      paddingBottom: 16,
     }}>
-      <div style={{ padding: '16px 14px 0' }}>
+      <div style={{ padding: '20px 18px 0' }}>
         <Link href={`/exams/${examId}`} style={{
           fontSize: '0.75rem', color: 'var(--color-text-muted)',
           textDecoration: 'none', fontWeight: 600,
@@ -40,19 +41,19 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
         }}>学習ガイド</div>
       </div>
 
-      <nav style={{ padding: '0 8px 20px', flex: 1 }}>
+      <nav style={{ padding: '0 10px 8px', flex: 1 }}>
         {chapters.map(ch => {
           const isCurrentChapter = ch.id === currentChapterId
           const isExpanded = expanded === ch.id
           return (
             <div key={ch.id} style={{ marginBottom: 1 }}>
-              <button
+                  <button
                 onClick={() => setExpanded(isExpanded ? '' : ch.id)}
                 style={{
                   width: '100%', textAlign: 'left',
                   display: 'flex', alignItems: 'flex-start',
                   justifyContent: 'space-between', gap: 6,
-                  padding: '8px 10px',
+                  padding: '10px 12px',
                   borderRadius: 'var(--radius-sm)',
                   background: isCurrentChapter ? 'var(--color-primary-light)' : 'transparent',
                   border: 'none', cursor: 'pointer',
@@ -70,14 +71,14 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
                 </svg>
               </button>
               {isExpanded && (
-                <div style={{ paddingLeft: 8, marginBottom: 4 }}>
+                <div style={{ paddingLeft: 6, marginBottom: 6 }}>
                   {ch.sections.map(sec => {
                     const isActiveSection = sec.id === currentSectionId
                     return (
                       <Link key={sec.id}
                         href={`${base}/${ch.id}?section=${sec.id}`}
                         style={{
-                          display: 'block', padding: '6px 10px',
+                          display: 'block', padding: '7px 10px',
                           borderRadius: 'var(--radius-sm)',
                           fontSize: '0.78rem',
                           color: isActiveSection ? 'var(--color-primary)' : 'var(--color-text-secondary)',

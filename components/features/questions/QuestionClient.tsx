@@ -3,7 +3,7 @@
 // 修改此文件 → 所有考试的练习题页面同步更新
 // ============================================================
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { Question } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
@@ -23,25 +23,22 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   const [saved, setSaved] = useState(false)
   const { completeChapter } = useProgress(examId)
 
-  // 全問回答完了時に進捗保存
-  useEffect(() => {
-    if (Object.keys(answered).length === questions.length && !saved) {
-      const correctCount = Object.entries(answered)
-        .filter(([i, ans]) => ans === questions[Number(i)].correctAnswer).length
-      completeChapter(chapterId, questions.length, correctCount)
-      setSaved(true)
-    }
-  }, [answered, questions, chapterId, completeChapter, saved])
-
   const q = questions[current]
   const isAnswered = selected !== null
-  const isCorrect = selected === q.correctAnswer
   const base = `/exams/${examId}`
 
   function handleSelect(label: string) {
     if (isAnswered) return
+    const nextAnswered = { ...answered, [current]: label }
     setSelected(label)
-    setAnswered(prev => ({ ...prev, [current]: label }))
+    setAnswered(nextAnswered)
+
+    if (Object.keys(nextAnswered).length === questions.length && !saved) {
+      const correctCount = Object.entries(nextAnswered)
+        .filter(([i, ans]) => ans === questions[Number(i)].correctAnswer).length
+      completeChapter(chapterId, questions.length, correctCount)
+      setSaved(true)
+    }
   }
 
   function goTo(index: number) {
@@ -112,23 +109,34 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   }
 
   return (
-    <div style={{ display: 'flex', flex: 1, overflow: 'hidden', height: '100%' }}>
+    <div style={{
+      display: 'flex',
+      flex: 1,
+      overflow: 'hidden',
+      height: '100%',
+      width: '100%',
+      maxWidth: 1440,
+      margin: '0 auto',
+      boxShadow: 'var(--shadow-card)',
+      background: '#fff',
+    }}>
 
       {/* ===== 左：問題リスト ===== */}
       <div style={{
-        width: 200, flexShrink: 0,
+        width: 240, flexShrink: 0,
         borderRight: '1px solid var(--color-border)',
         background: '#fff', overflowY: 'auto',
-        padding: '16px 12px',
+        padding: '20px 14px',
       }}>
-        <div style={{ marginBottom: 14 }}>
+        <div style={{ marginBottom: 16 }}>
           <Link href={`${base}`} style={{
             fontSize: '0.75rem', color: 'var(--color-text-muted)',
             textDecoration: 'none', fontWeight: 600,
           }}>← ダッシュボード</Link>
           <div style={{
             fontWeight: 700, fontSize: '0.875rem',
-            marginTop: 8, marginBottom: 6, color: 'var(--color-text)',
+            marginTop: 10, marginBottom: 8, color: 'var(--color-text)',
+            lineHeight: 1.5,
           }}>{chapterTitle}</div>
           <div className="progress-bar">
             <div className="progress-bar-fill"
@@ -146,7 +154,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             <button key={i} onClick={() => goTo(i)} style={{
               width: '100%', textAlign: 'left',
               display: 'flex', alignItems: 'center', gap: 8,
-              padding: '8px 10px',
+              padding: '9px 12px',
               borderRadius: 'var(--radius-sm)',
               border: 'none',
               background: i === current ? 'var(--color-primary-light)' : 'transparent',
@@ -172,12 +180,13 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       <main style={{
         flex: 1, overflowY: 'auto',
         background: 'var(--color-bg-subtle)',
-        padding: '32px',
+        padding: '32px clamp(20px, 3vw, 40px)',
       }}>
         {/* ヘッダー */}
         <div style={{
           display: 'flex', justifyContent: 'space-between',
           alignItems: 'center', marginBottom: 24,
+          maxWidth: 860, width: '100%', marginLeft: 'auto', marginRight: 'auto',
         }}>
           <div style={{ fontWeight: 700, fontSize: '1rem' }}>
             問題 {current + 1} / {questions.length}
@@ -186,6 +195,9 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
 
         {/* 問題カード */}
         <div style={{
+          maxWidth: 860,
+          width: '100%',
+          margin: '0 auto',
           background: '#fff',
           border: '1px solid var(--color-border)',
           borderRadius: 'var(--radius-lg)',
@@ -250,6 +262,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           <div style={{
             display: 'flex', justifyContent: 'space-between',
             alignItems: 'center', marginTop: 24,
+            gap: 12,
           }}>
             <label style={{
               display: 'flex', alignItems: 'center', gap: 8,

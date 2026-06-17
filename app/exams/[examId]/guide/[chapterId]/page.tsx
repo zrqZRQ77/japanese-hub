@@ -45,8 +45,22 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
   return (
     <>
       <Navbar />
-      <div style={{ display: 'flex', height: 'calc(100vh - 64px)', overflow: 'hidden' }}>
-        <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        height: 'calc(100vh - 64px)',
+        overflow: 'hidden',
+        background: 'var(--color-bg-subtle)',
+      }}>
+        <div style={{
+          display: 'flex',
+          width: '100%',
+          maxWidth: 1440,
+          minWidth: 0,
+          overflow: 'hidden',
+          background: '#fff',
+          boxShadow: 'var(--shadow-card)',
+        }}>
           <GuideSidebar
             examId={examId}
             chapters={chapters}
@@ -74,8 +88,8 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
             <div style={{
               flex: 1, display: 'flex', flexDirection: 'column',
               alignItems: 'center', justifyContent: 'center',
-              background: '#fff', color: 'var(--color-text-secondary)',
-              gap: 12,
+              background: 'var(--color-bg-subtle)', color: 'var(--color-text-secondary)',
+              gap: 12, padding: 24,
             }}>
               <div style={{ fontSize: '3rem' }}>📖</div>
               <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>
