@@ -98,3 +98,57 @@ export interface ExamProgress {
   streakDays: number
   lastStudiedAt: string
 }
+
+// ============================================================
+// index.ts の ExamMeta に追加する型定義スニペット
+// 既存の ExamMeta interface に `info?: ExamInfo` フィールドを追加してください
+// ============================================================
+
+export interface ExamBook {
+  title: string
+  author: string
+  type: string        // 'テキスト' | 'テキスト＋問題集' | '過去問・予想問題'
+  note: string
+  amazonUrl: string
+}
+
+export interface ExamCourse {
+  title: string
+  provider: string
+  note: string
+  url: string
+  isFree: boolean
+}
+
+export interface ExamInfo {
+  tagline: string
+  difficulty: number          // 1〜5
+  difficultyLabel: string
+  studyHours: string
+  studyMonths: string
+  examFee: string
+  passRate: string
+  examFormat: string
+  examTime: string
+  officialUrl: string
+  registrationNote: string
+  valueAfterPass: string[]
+  books: ExamBook[]
+  courses: ExamCourse[]
+}
+
+// ExamMeta に追加するフィールド：
+// info?: ExamInfo
+
+// 例：
+// export interface ExamMeta {
+//   id: string
+//   name: string
+//   shortName: string
+//   category: string
+//   description: string
+//   totalChapters: number
+//   color: string
+//   icon: string
+//   info?: ExamInfo   // ← これを追加
+// }

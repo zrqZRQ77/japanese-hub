@@ -1,6 +1,6 @@
 // ============================================================
 // 試験ダッシュボード  /exams/[examId]
-// 進捗はlocalStorage経由（DashboardProgressクライアントコンポーネント）
+// （从 page-new.tsx 提取，并包含 ExamInfoSection 的集成）
 // ============================================================
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -8,6 +8,7 @@ import Navbar from '@/components/layout/Navbar'
 import ExamSidebar from '@/components/layout/ExamSidebar'
 import DashboardProgress from '@/components/features/dashboard/DashboardProgress'
 import ToolCard from '@/components/features/dashboard/ToolCard'
+import ExamInfoSection from '@/components/features/dashboard/ExamInfoSection'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
 
@@ -51,7 +52,7 @@ export default async function ExamDashboardPage({
       <Navbar />
       <div style={{
         display: 'flex',
-        height: 'calc(100vh - 64px)',
+        height: 'calc(100vh - 60px)',
         overflow: 'hidden',
       }}>
         <ExamSidebar exam={exam} />
@@ -62,12 +63,13 @@ export default async function ExamDashboardPage({
           background: 'var(--color-bg-subtle)',
           padding: '32px',
         }}>
-          {/* 全体進捗ヘッダー */}
-          <h1 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: 20 }}>
-            全体の学習進捗
-          </h1>
+          {/* 試験概要セクション（ExamInfo） */}
+          <ExamInfoSection exam={exam} />
 
-          {/* localStorage対応の進捗コンポーネント */}
+          {/* 全体進捗ヘッダー */}
+          <h2 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: 16 }}>
+            全体の学習進捗
+          </h2>
           <DashboardProgress
             examId={examId}
             chapters={chapters}
