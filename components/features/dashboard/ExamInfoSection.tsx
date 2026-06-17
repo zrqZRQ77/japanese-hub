@@ -155,29 +155,7 @@ export default function ExamInfoSection({ exam }: Props) {
           </div>
         </div>
 
-        {/* おすすめ講座・スクール */}
-        {info.courses && info.courses.length > 0 && (
-          <div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 800, marginBottom: 8 }}>🖥️ おすすめ講座・スクール</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {info.courses.map((course, i) => (
-                <a key={i} href={course.url} target="_blank" rel="noopener noreferrer" style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  gap: 12, padding: '10px 14px', background: '#fbfbff', border: '1px solid rgba(20,24,40,0.03)', borderRadius: 10, textDecoration: 'none', color: 'inherit'
-                }}>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                      {course.isFree && <span style={{ fontSize: '0.65rem', fontWeight: 800, background: '#ecfdf5', color: '#16a34a', padding: '2px 6px', borderRadius: 99, border: '1px solid rgba(34,197,94,0.12)' }}>無料</span>}
-                      <span style={{ fontWeight: 800 }}>{course.title}</span>
-                    </div>
-                    <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.55)' }}>{course.note}</div>
-                  </div>
-                  <div style={{ color: '#0f62fe', fontWeight: 800 }}>詳細 →</div>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
+        
       </div>
 
       {/* おすすめ講座 */}
