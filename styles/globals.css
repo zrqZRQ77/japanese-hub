@@ -38,6 +38,7 @@
   --content-max-width: 1200px;
 
   /* --- タイポグラフィ --- */
+  --font-noto-sans-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Meiryo", system-ui, sans-serif;
   --font-sans: var(--font-noto-sans-jp), system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 

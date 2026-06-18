@@ -60,29 +60,32 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   const optionStyle = (label: string): React.CSSProperties => {
     const base: React.CSSProperties = {
       display: 'flex', alignItems: 'center', gap: 14,
-      padding: '16px 20px',
+      padding: '18px 20px',
       border: '1px solid var(--color-border)',
-      borderRadius: 'var(--radius-md)',
+      borderRadius: '18px',
       cursor: isAnswered ? 'default' : 'pointer',
-      marginBottom: 10,
-      transition: 'all 0.15s',
+      marginBottom: 12,
+      transition: 'transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease',
       background: '#fff',
+      boxShadow: '0 1px 0 rgba(15,23,42,0.02)',
     }
-    if (!isAnswered) return base
+    if (!isAnswered) return { ...base }
     if (label === q.correctAnswer) return {
       ...base, background: '#f0fdf4',
       border: '1.5px solid var(--color-success)',
+      boxShadow: '0 8px 24px rgba(22,163,74,0.08)',
     }
     if (label === selected && label !== q.correctAnswer) return {
       ...base, background: '#fef2f2',
       border: '1.5px solid var(--color-error)',
+      boxShadow: '0 8px 24px rgba(220,38,38,0.08)',
     }
-    return { ...base, opacity: 0.5 }
+    return { ...base, opacity: 0.6 }
   }
 
   const circleStyle = (label: string): React.CSSProperties => {
     const base: React.CSSProperties = {
-      width: 32, height: 32, borderRadius: '50%',
+      width: 34, height: 34, borderRadius: '50%',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       fontWeight: 800, fontSize: '0.875rem', flexShrink: 0,
       background: 'var(--color-bg-muted)',
@@ -108,6 +111,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     return { bg: i === current ? 'var(--color-primary)' : 'var(--color-border)', label: String(i + 1) }
   }
 
+  const answeredCount = Object.keys(answered).length
+  const completionRate = questions.length === 0 ? 0 : (answeredCount / questions.length) * 100
+  const currentAnswerState = selected && q?.correctAnswer
+    ? (selected === q.correctAnswer ? 'correct' : 'wrong')
+    : null
+
   return (
     <div style={{
       display: 'flex',
@@ -115,38 +124,49 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       overflow: 'hidden',
       height: '100%',
       width: '100%',
-      background: '#fff',
+      background: 'linear-gradient(180deg, #f8fbff 0%, #f5f7fb 100%)',
     }}>
 
       {/* ===== 左：問題リスト ===== */}
       <div style={{
         width: 'var(--guide-sidebar-width)', flexShrink: 0,
-        borderRight: '1px solid var(--color-border)',
-        background: '#fff', overflowY: 'auto',
-        padding: '28px 0 24px',
+        borderRight: '1px solid rgba(148,163,184,0.16)',
+        background: 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(248,250,252,0.98) 100%)',
+        overflowY: 'auto',
+        padding: '24px 14px 24px 18px',
+        backdropFilter: 'blur(12px)',
+        boxShadow: 'inset -1px 0 0 rgba(255,255,255,0.55)',
       }}>
         <div style={{
-          padding: '0 28px 24px',
-          borderBottom: '1px solid var(--color-border)',
-          marginBottom: 18,
+          padding: '4px 8px 20px',
+          marginBottom: 14,
         }}>
           <Link href={`${base}`} style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6,
             fontSize: '0.78rem', color: 'var(--color-text-muted)',
-            textDecoration: 'none', fontWeight: 600,
+            textDecoration: 'none', fontWeight: 700,
+            padding: '6px 10px', borderRadius: 999,
+            background: 'rgba(255,255,255,0.8)',
+            border: '1px solid rgba(148,163,184,0.16)',
           }}>← ダッシュボード</Link>
           <div style={{
-            fontWeight: 900, fontSize: '1.05rem',
-            marginTop: 22, marginBottom: 12, color: 'var(--color-text)',
-            lineHeight: 1.5,
+            fontWeight: 900, fontSize: '1.02rem',
+            marginTop: 16, marginBottom: 10, color: 'var(--color-text)',
+            lineHeight: 1.55,
           }}>{chapterTitle}</div>
+          <div style={{
+            fontSize: '0.76rem',
+            color: 'var(--color-text-secondary)',
+            marginBottom: 10,
+          }}>{questions.length} 問の練習問題</div>
           <div className="progress-bar">
             <div className="progress-bar-fill"
-              style={{ width: `${(Object.keys(answered).length / questions.length) * 100}%` }} />
+              style={{ width: `${completionRate}%` }} />
           </div>
           <div style={{
             fontSize: '0.78rem', color: 'var(--color-text-muted)',
             marginTop: 8, fontWeight: 600,
-          }}>{Object.keys(answered).length}/{questions.length}問</div>
+          }}>{answeredCount}/{questions.length}問</div>
         </div>
 
         {questions.map((_, i) => {
@@ -155,23 +175,27 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             <button key={i} onClick={() => goTo(i)} style={{
               width: '100%', textAlign: 'left',
               display: 'flex', alignItems: 'center', gap: 12,
-              padding: '12px 28px',
-              border: 'none',
-              borderLeft: `3px solid ${i === current ? 'var(--color-primary)' : 'transparent'}`,
-              background: i === current ? 'var(--color-bg-subtle)' : 'transparent',
-              cursor: 'pointer', marginBottom: 2,
+              padding: '12px 12px',
+              border: '1px solid',
+              borderColor: i === current ? 'rgba(59,130,246,0.20)' : 'transparent',
+              borderRadius: 16,
+              background: i === current
+                ? 'linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(248,250,252,0.96) 100%)'
+                : 'transparent',
+              cursor: 'pointer', marginBottom: 6,
               color: 'var(--color-text)',
               fontWeight: i === current ? 700 : 400,
               fontSize: '0.92rem',
+              boxShadow: i === current ? '0 12px 28px rgba(15,23,42,0.06)' : 'none',
             }}>
               <span style={{
-                width: 26, height: 26, borderRadius: '50%',
+                width: 28, height: 28, borderRadius: '50%',
                 background: dot.bg, color: '#fff',
                 display: 'flex', alignItems: 'center',
                 justifyContent: 'center', fontSize: '0.75rem',
                 fontWeight: 700, flexShrink: 0,
               }}>{dot.label}</span>
-              問題{i + 1}
+              <span style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>問題{i + 1}</span>
             </button>
           )
         })}
@@ -180,43 +204,52 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       {/* ===== 中央：問題本文 ===== */}
       <main style={{
         flex: 1, overflowY: 'auto',
-        background: 'var(--color-bg-subtle)',
-        padding: '56px 48px',
+        background: 'transparent',
+        padding: '42px 32px 48px',
       }}>
         {/* ヘッダー */}
         <div style={{
           display: 'flex', justifyContent: 'space-between',
           alignItems: 'center', marginBottom: 24,
-          maxWidth: 820, width: '100%', marginLeft: 'auto', marginRight: 'auto',
+          maxWidth: 960, width: '100%', marginLeft: 'auto', marginRight: 'auto',
         }}>
-          <div style={{ fontWeight: 700, fontSize: '1rem' }}>
+          <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-text-secondary)' }}>
             問題 {current + 1} / {questions.length}
           </div>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            padding: '7px 12px', borderRadius: 999,
+            background: 'rgba(255,255,255,0.82)',
+            border: '1px solid var(--color-border)',
+            color: 'var(--color-text-secondary)',
+            fontSize: '0.8rem', fontWeight: 700,
+          }}>{chapterTitle}</div>
         </div>
 
         {/* 問題カード */}
         <div style={{
-          maxWidth: 820,
+          maxWidth: 960,
           width: '100%',
           margin: '0 auto',
-          background: '#fff',
-          border: '1px solid var(--color-border)',
-          borderRadius: 8,
+          background: 'rgba(255,255,255,0.92)',
+          border: '1px solid rgba(148,163,184,0.2)',
+          borderRadius: 24,
           padding: '34px 38px',
-          boxShadow: 'var(--shadow-card)',
+          boxShadow: '0 24px 60px rgba(15,23,42,0.08)',
+          backdropFilter: 'blur(8px)',
         }}>
           <div style={{
             display: 'inline-block',
-            background: 'var(--color-primary-light)',
+            background: 'rgba(59,130,246,0.08)',
             color: 'var(--color-primary)',
-            fontSize: '0.75rem', fontWeight: 700,
-            padding: '3px 10px', borderRadius: 99,
-            marginBottom: 16,
+            fontSize: '0.75rem', fontWeight: 800,
+            padding: '5px 12px', borderRadius: 999,
+            marginBottom: 18,
           }}>{chapterTitle}</div>
 
           <p style={{
-            fontSize: '1.05rem', fontWeight: 600,
-            lineHeight: 1.7, marginBottom: 28,
+            fontSize: '1.06rem', fontWeight: 650,
+            lineHeight: 1.8, marginBottom: 28,
             color: 'var(--color-text)',
           }}>{q.text}</p>
 
@@ -226,7 +259,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               onClick={() => handleSelect(opt.label)}
             >
               <span style={circleStyle(opt.label)}>{opt.label}</span>
-              <span style={{ fontSize: '0.95rem', color: 'var(--color-text)' }}>
+              <span style={{ fontSize: '0.96rem', lineHeight: 1.7, color: 'var(--color-text)' }}>
                 {opt.text}
               </span>
               {isAnswered && opt.label === q.correctAnswer && (
@@ -241,20 +274,33 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           {isAnswered && (
             <div style={{
               marginTop: 20,
-              background: 'var(--color-bg-subtle)',
-              border: '1px solid var(--color-border)',
-              borderRadius: 'var(--radius-md)',
-              padding: '16px 20px',
+              background: 'linear-gradient(180deg, #fbfdff 0%, #f7fafc 100%)',
+              border: '1px solid rgba(148,163,184,0.18)',
+              borderRadius: 20,
+              padding: '18px 20px',
             }}>
               <div style={{
-                display: 'flex', alignItems: 'center', gap: 6,
-                fontWeight: 700, fontSize: '0.875rem',
-                marginBottom: 8, color: 'var(--color-text)',
+                display: 'flex', alignItems: 'center', gap: 8,
+                fontWeight: 800, fontSize: '0.875rem',
+                marginBottom: 10, color: 'var(--color-text)',
               }}>
-                💡 解説
+                解説
+                {currentAnswerState && (
+                  <span style={{
+                    marginLeft: 4,
+                    fontSize: '0.74rem',
+                    fontWeight: 700,
+                    padding: '4px 8px',
+                    borderRadius: 999,
+                    background: currentAnswerState === 'correct' ? 'rgba(22,163,74,0.10)' : 'rgba(220,38,38,0.10)',
+                    color: currentAnswerState === 'correct' ? 'var(--color-success)' : 'var(--color-error)',
+                  }}>
+                    {currentAnswerState === 'correct' ? '正解' : '不正解'}
+                  </span>
+                )}
               </div>
               <p style={{
-                fontSize: '0.9rem', lineHeight: 1.7,
+                fontSize: '0.93rem', lineHeight: 1.85,
                 color: 'var(--color-text)',
               }}>{q.explanation}</p>
             </div>
@@ -264,6 +310,8 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             display: 'flex', justifyContent: 'space-between',
             alignItems: 'center', marginTop: 24,
             gap: 12,
+            paddingTop: 18,
+            borderTop: '1px solid rgba(148,163,184,0.2)',
           }}>
             <label style={{
               display: 'flex', alignItems: 'center', gap: 8,
@@ -278,15 +326,16 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               後で見直す
             </label>
 
-            {isAnswered && current < questions.length - 1 && (
-              <button onClick={handleNext} style={{
-                padding: '10px 28px',
-                background: 'var(--color-primary)', color: '#fff',
-                borderRadius: 'var(--radius-sm)',
-                fontWeight: 700, fontSize: '0.9rem',
-                border: 'none', cursor: 'pointer',
-              }}>次の問題 →</button>
-            )}
+              {isAnswered && current < questions.length - 1 && (
+                <button onClick={handleNext} style={{
+                  padding: '10px 28px',
+                  background: 'linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%)', color: '#fff',
+                  borderRadius: 999,
+                  fontWeight: 700, fontSize: '0.9rem',
+                  border: 'none', cursor: 'pointer',
+                  boxShadow: '0 10px 24px rgba(37,99,235,0.22)',
+                }}>次の問題へ</button>
+              )}
             {isAnswered && current === questions.length - 1 && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-end' }}>
                 {saved && (
@@ -299,11 +348,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
                 )}
                 <Link href={`${base}`} style={{
                   padding: '10px 28px',
-                  background: 'var(--color-success)', color: '#fff',
-                  borderRadius: 'var(--radius-sm)',
+                  background: 'linear-gradient(135deg, var(--color-success) 0%, #15803d 100%)', color: '#fff',
+                  borderRadius: 999,
                   fontWeight: 700, fontSize: '0.9rem',
                   textDecoration: 'none',
-                }}>完了 🎉 ダッシュボードへ</Link>
+                  boxShadow: '0 10px 24px rgba(22,163,74,0.18)',
+                }}>学習を完了して戻る</Link>
               </div>
             )}
           </div>

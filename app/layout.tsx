@@ -1,13 +1,5 @@
 import type { Metadata } from 'next'
-import { Noto_Sans_JP } from 'next/font/google'
 import '../styles/globals.css'
-
-const notoSansJp = Noto_Sans_JP({
-  weight: ['400', '500', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-noto-sans-jp',
-})
 
 export const metadata: Metadata = {
   title: '資格合格ナビ — 無料で学ぶ日本の資格',
@@ -16,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja" className={notoSansJp.variable}>
+    <html lang="ja">
       <body>{children}</body>
     </html>
   )
