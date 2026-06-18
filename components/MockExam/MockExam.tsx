@@ -8,7 +8,6 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpen,
-  Check,
   CheckCircle2,
   ClipboardList,
   Clock3,
@@ -35,17 +34,10 @@ interface ExamSection {
   questions: Question[]
 }
 
-const OFFICIAL_SPECS = [
-  { label: '試験科目', value: '商業簿記' },
-  { label: '出題数', value: '3題以内' },
-  { label: '試験時間', value: '60分' },
-  { label: '合格基準', value: '70%以上' },
-]
-
 const SECTION_BLUEPRINTS = [
-  { id: 'section-1', title: '第1問', focus: '仕訳・勘定科目の判断', points: 45, count: 9 },
-  { id: 'section-2', title: '第2問', focus: '帳簿・補助簿・試算表の理解', points: 20, count: 4 },
-  { id: 'section-3', title: '第3問', focus: '決算整理・財務諸表の総合確認', points: 35, count: 7 },
+  { id: 'section-1', title: '第1問', focus: '仕訳問題', points: 45, count: 9 },
+  { id: 'section-2', title: '第2問', focus: '補助簿・伝票・試算表', points: 20, count: 4 },
+  { id: 'section-3', title: '第3問', focus: '決算整理・精算表', points: 35, count: 7 },
 ]
 
 function stableShuffle<T>(items: T[]) {
@@ -100,6 +92,61 @@ function isCorrect(q: Question, answer: string | string[] | undefined) {
 function answerLabel(answer: string | string[] | undefined) {
   if (!answer) return '未回答'
   return Array.isArray(answer) ? answer.join(', ') : answer
+}
+
+function sectionInstruction(sectionIndex: number) {
+  if (sectionIndex === 0) {
+    return '次の各取引について、もっとも適切な仕訳または勘定科目の組合せを選びなさい。なお、消費税は考慮しないものとする。'
+  }
+  if (sectionIndex === 1) {
+    return '次の資料にもとづいて、補助簿・伝票・試算表に関する問いに答えなさい。必要に応じて各勘定の増減を整理して判断すること。'
+  }
+  return '次の決算整理事項および試算表にもとづいて、決算整理後の金額または仕訳として適切なものを選びなさい。'
+}
+
+function buildExamMaterial(sectionIndex: number, questionIndex: number, question: Question) {
+  const amount = 8000 + ((sectionIndex + 2) * (questionIndex + 3) * 1000)
+
+  if (sectionIndex === 0) {
+    return {
+      title: `取引 ${questionIndex + 1}`,
+      lead: question.text,
+      rows: [
+        ['項目', '内容'],
+        ['日付', `${questionIndex + 4}月${questionIndex + 10}日`],
+        ['取引内容', question.text],
+        ['参考金額', `${amount.toLocaleString()}円`],
+      ],
+    }
+  }
+
+  if (sectionIndex === 1) {
+    return {
+      title: '資料',
+      lead: '当月中の取引記録の一部は次のとおりである。',
+      rows: [
+        ['摘要', '金額'],
+        ['商品を掛けで仕入れた', `${(amount * 3).toLocaleString()}円`],
+        ['売掛金を現金で回収した', `${(amount * 2).toLocaleString()}円`],
+        ['小切手を振り出して買掛金を支払った', `${amount.toLocaleString()}円`],
+      ],
+      note: question.text,
+    }
+  }
+
+  return {
+    title: '決算整理事項',
+    lead: '会計期間は1年、決算日は3月31日である。決算整理前残高試算表の一部と整理事項は次のとおりである。',
+    rows: [
+      ['勘定科目', '借方残高', '貸方残高'],
+      ['現金', `${(amount * 4).toLocaleString()}円`, ''],
+      ['売掛金', `${(amount * 6).toLocaleString()}円`, ''],
+      ['備品', `${(amount * 12).toLocaleString()}円`, ''],
+      ['買掛金', '', `${(amount * 5).toLocaleString()}円`],
+      ['売上', '', `${(amount * 15).toLocaleString()}円`],
+    ],
+    note: question.text,
+  }
 }
 
 const buttonBase: React.CSSProperties = {
@@ -254,263 +301,263 @@ export default function MockExam({
 
   return (
     <div className="boki-exam-shell">
-      <section className="boki-hero">
-        <div>
-          <div className="boki-kicker">
-            <FileText size={16} />
-            公式形式ベースの模擬演習
-          </div>
-          <h1>{examName} 模擬試験</h1>
-          <p>
-            商工会議所が公表している「商業簿記・3題以内・60分・70%以上」を基準に、
-            アプリ内のオリジナル問題を3つの大問へ組み直しています。
-          </p>
-        </div>
-        <div className="boki-spec-grid">
-          {OFFICIAL_SPECS.map(spec => (
-            <div key={spec.label} className="boki-spec">
-              <span>{spec.label}</span>
-              <strong>{spec.value}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {!started ? (
-        <section className="boki-start">
-          <div>
-            <h2>本番前の最終確認</h2>
-            <p>
-              途中保存なしで60分を測ります。第1問から第3問まで順番に進めても、
-              左の大問ナビから戻って見直しても構いません。
-            </p>
-            <div className="boki-start-actions">
-              <button
-                type="button"
-                onClick={() => setStarted(true)}
-                style={{ ...buttonBase, background: 'var(--color-primary)', color: '#fff', borderColor: 'var(--color-primary)' }}
-              >
-                <Clock3 size={18} />
-                試験を開始
-              </button>
-              <Link href={`/exams/${examId}`} style={buttonBase}>
-                <BookOpen size={18} />
-                学習ページへ戻る
-              </Link>
-            </div>
-          </div>
-          <div className="boki-start-panel">
-            <h3>この模試の構成</h3>
-            {sections.map(section => (
-              <div key={section.id} className="boki-plan-row">
-                <span>{section.title}</span>
-                <strong>{section.focus}</strong>
-                <em>{section.points}点 / {section.questions.length}問</em>
+        <>
+          <section className="boki-hero">
+            <div>
+              <div className="boki-kicker">
+                <FileText size={16} />
+                模擬試験
               </div>
-            ))}
-          </div>
-        </section>
+              <h1>{examName} 模擬試験</h1>
+              <p>
+                3つの大問で、仕訳・補助簿・決算整理を横断して確認します。
+                試験中は左の大問ナビから自由に見直せます。
+              </p>
+            </div>
+          </section>
+
+          <section className="boki-start">
+            <div>
+              <h2>本番前の最終確認</h2>
+              <p>
+                途中保存なしで60分を測ります。第1問から第3問まで順番に進めても、
+                左の大問ナビから戻って見直しても構いません。
+              </p>
+              <div className="boki-start-actions">
+                <button
+                  type="button"
+                  onClick={() => setStarted(true)}
+                  style={{ ...buttonBase, background: 'var(--color-primary)', color: '#fff', borderColor: 'var(--color-primary)' }}
+                >
+                  <Clock3 size={18} />
+                  試験を開始
+                </button>
+                <Link href={`/exams/${examId}`} style={buttonBase}>
+                  <BookOpen size={18} />
+                  学習ページへ戻る
+                </Link>
+              </div>
+            </div>
+            <div className="boki-start-panel">
+              <h3>この模試の構成</h3>
+              {sections.map(section => (
+                <div key={section.id} className="boki-plan-row">
+                  <span>{section.title}</span>
+                  <strong>{section.focus}</strong>
+                  <em>{section.questions.length}問</em>
+                </div>
+              ))}
+            </div>
+          </section>
+        </>
       ) : (
-        <div className="boki-exam-grid">
-          <aside className="boki-nav-panel">
-            <div className="boki-panel-title">
-              <ClipboardList size={18} />
-              大問ナビ
-            </div>
-            {sections.map((section, sectionIndex) => {
-              const sectionAnswered = section.questions.filter(q => answers[q.id]).length
-              const active = sectionIndex === currentSection
-              return (
-                <div key={section.id} className="boki-section-nav">
-                  <button
-                    type="button"
-                    className={active ? 'active' : ''}
-                    onClick={() => goTo(sectionIndex)}
-                  >
-                    <span>{section.title}</span>
-                    <strong>{section.focus}</strong>
-                    <em>{sectionAnswered}/{section.questions.length}問</em>
-                  </button>
-                  <div className="boki-question-dots">
-                    {section.questions.map((q, questionIndex) => {
-                      const isActive = active && questionIndex === currentQuestion
-                      const answered = Boolean(answers[q.id])
-                      return (
-                        <button
-                          key={q.id}
-                          type="button"
-                          className={`${isActive ? 'active' : ''} ${answered ? 'answered' : ''}`}
-                          onClick={() => goTo(sectionIndex, questionIndex)}
-                          aria-label={`${section.title} 問${questionIndex + 1}`}
-                        >
-                          {questionIndex + 1}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )
-            })}
-          </aside>
-
-          <main className="boki-question-panel">
-            {submitted && (
-              <section className={result.passed ? 'boki-result passed' : 'boki-result'}>
-                <div>
-                  {result.passed ? <BadgeCheck size={30} /> : <AlertCircle size={30} />}
-                  <div>
-                    <h2>{result.passed ? '合格ライン到達' : 'もう一歩で合格ライン'}</h2>
-                    <p>{result.score}点 / 100点・合格基準 {passRate}点</p>
-                  </div>
-                </div>
-                <div className="boki-result-actions">
-                  <button type="button" onClick={resetExam} style={buttonBase}>
-                    <RotateCcw size={17} />
-                    もう一度
-                  </button>
-                  <Link href={`/exams/${examId}/guide`} style={buttonBase}>
-                    <BookOpen size={17} />
-                    復習する
-                  </Link>
-                </div>
-              </section>
-            )}
-
-            <section className="boki-question-card">
-              <div className="boki-question-head">
-                <div>
-                  <span>{activeSection.title}</span>
-                  <h2>{activeSection.focus}</h2>
-                </div>
-                <div className="boki-points">{activeSection.points}点</div>
-              </div>
-
-              <div className="boki-question-meta">
-                問{currentQuestion + 1} / {activeSection.questions.length}
-                <span>{activeQuestion.tags?.slice(0, 2).join(' / ') || activeQuestion.chapterId}</span>
-              </div>
-
-              <p className="boki-question-text">{activeQuestion.text}</p>
-
-              <div className="boki-options">
-                {(activeQuestion.options ?? []).map(option => {
-                  const selected = activeQuestion.type === 'multiple'
-                    ? Array.isArray(answers[activeQuestion.id]) && (answers[activeQuestion.id] as string[]).includes(option.label)
-                    : answers[activeQuestion.id] === option.label
-                  const correct = submitted && option.label === activeQuestion.correctAnswer
-                  const wrong = submitted && selected && !correct
-
-                  return (
-                    <label key={option.label} className={`${selected ? 'selected' : ''} ${correct ? 'correct' : ''} ${wrong ? 'wrong' : ''}`}>
-                      {activeQuestion.type === 'multiple' ? (
-                        <input
-                          type="checkbox"
-                          checked={selected}
-                          disabled={submitted}
-                          onChange={e => selectOption(activeQuestion, option.label, e.target.checked)}
-                        />
-                      ) : (
-                        <input
-                          type="radio"
-                          name={activeQuestion.id}
-                          checked={selected}
-                          disabled={submitted}
-                          onChange={() => selectOption(activeQuestion, option.label)}
-                        />
-                      )}
-                      <span className="boki-option-label">{option.label}</span>
-                      <span>{option.text}</span>
-                      {correct && <CheckCircle2 size={18} />}
-                      {wrong && <X size={18} />}
-                    </label>
-                  )
-                })}
-              </div>
-
-              {submitted && (
-                <div className="boki-explanation">
-                  <div>
-                    <strong>あなたの回答</strong>
-                    <span>{answerLabel(answers[activeQuestion.id])}</span>
-                  </div>
-                  <div>
-                    <strong>正解</strong>
-                    <span>{String(activeQuestion.correctAnswer)}</span>
-                  </div>
-                  <p>{activeQuestion.explanation}</p>
-                </div>
-              )}
-
-              <div className="boki-question-actions">
-                <button type="button" onClick={goPrev} disabled={currentSection === 0 && currentQuestion === 0} style={buttonBase}>
-                  <ArrowLeft size={17} />
-                  前へ
-                </button>
-                <button type="button" onClick={goNext} disabled={currentSection === sections.length - 1 && currentQuestion === activeSection.questions.length - 1} style={buttonBase}>
-                  次へ
-                  <ArrowRight size={17} />
-                </button>
-              </div>
-            </section>
-          </main>
-
-          <aside className="boki-status-panel">
+        <>
+          <div className="boki-exam-topbar">
             <div className={timeLeft <= 300 && !submitted ? 'boki-timer danger' : 'boki-timer'}>
-              <Clock3 size={20} />
-              <div>
-                <span>残り時間</span>
-                <strong>{formatTime(timeLeft)}</strong>
-              </div>
+              <Clock3 size={18} />
+              <span>残り時間</span>
+              <strong>{formatTime(timeLeft)}</strong>
             </div>
-
-            <div className="boki-progress-block">
-              <div className="boki-progress-top">
-                <span>回答進捗</span>
-                <strong>{answeredCount}/{totalQuestions}</strong>
-              </div>
+            <div className="boki-progress-inline">
+              <span>回答 {answeredCount}/{totalQuestions}</span>
               <div className="boki-progress-track">
                 <div style={{ width: `${totalQuestions ? (answeredCount / totalQuestions) * 100 : 0}%` }} />
               </div>
             </div>
-
-            <div className="boki-score-table">
-              {result.sectionResults.map(section => (
-                <div key={section.id}>
-                  <span>{section.title}</span>
-                  <strong>{submitted ? `${section.sectionScore}点` : `${section.points}点`}</strong>
-                </div>
-              ))}
-            </div>
-
-            {!submitted ? (
+            {!submitted && (
               <button
                 type="button"
                 onClick={submitExam}
-                style={{ ...buttonBase, width: '100%', background: 'var(--color-success)', color: '#fff', borderColor: 'var(--color-success)' }}
+                style={{ ...buttonBase, background: 'var(--color-success)', color: '#fff', borderColor: 'var(--color-success)' }}
               >
                 <Send size={17} />
                 交卷して採点
               </button>
-            ) : (
-              <div className="boki-weakness">
-                <h3>優先して復習</h3>
-                {result.weakTags.length > 0 ? result.weakTags.map(([tag, count]) => (
-                  <div key={tag}>
-                    <span>{tag}</span>
-                    <strong>{count}問</strong>
-                  </div>
-                )) : (
-                  <p>大きな弱点はありません。この調子です。</p>
-                )}
-              </div>
             )}
+          </div>
 
-            <div className="boki-source-note">
-              <Check size={16} />
-              形式は商工会議所の公開情報を基準にしています。問題文はアプリ独自作成です。
-            </div>
-          </aside>
-        </div>
+          <div className="boki-exam-grid">
+            <aside className="boki-nav-panel">
+              <div className="boki-panel-title">
+                <ClipboardList size={18} />
+                大問ナビ
+              </div>
+              {sections.map((section, sectionIndex) => {
+                const sectionAnswered = section.questions.filter(q => answers[q.id]).length
+                const active = sectionIndex === currentSection
+                return (
+                  <div key={section.id} className="boki-section-nav">
+                    <button
+                      type="button"
+                      className={active ? 'active' : ''}
+                      onClick={() => goTo(sectionIndex)}
+                    >
+                      <span>{section.title}</span>
+                      <strong>{section.focus}</strong>
+                      <em>{sectionAnswered}/{section.questions.length}問</em>
+                    </button>
+                    <div className="boki-question-dots">
+                      {section.questions.map((q, questionIndex) => {
+                        const isActive = active && questionIndex === currentQuestion
+                        const answered = Boolean(answers[q.id])
+                        return (
+                          <button
+                            key={q.id}
+                            type="button"
+                            className={`${isActive ? 'active' : ''} ${answered ? 'answered' : ''}`}
+                            onClick={() => goTo(sectionIndex, questionIndex)}
+                            aria-label={`${section.title} 問${questionIndex + 1}`}
+                          >
+                            {questionIndex + 1}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
+            </aside>
+
+            <main className="boki-question-panel">
+              {submitted && (
+                <section className={result.passed ? 'boki-result passed' : 'boki-result'}>
+                  <div>
+                    {result.passed ? <BadgeCheck size={30} /> : <AlertCircle size={30} />}
+                    <div>
+                      <h2>{result.passed ? '合格ライン到達' : 'もう一歩で合格ライン'}</h2>
+                      <p>{result.score}点 / 100点・合格基準 {passRate}点</p>
+                    </div>
+                  </div>
+                  <div className="boki-result-actions">
+                    <button type="button" onClick={resetExam} style={buttonBase}>
+                      <RotateCcw size={17} />
+                      もう一度
+                    </button>
+                    <Link href={`/exams/${examId}/guide`} style={buttonBase}>
+                      <BookOpen size={17} />
+                      復習する
+                    </Link>
+                  </div>
+                </section>
+              )}
+
+              <section className="boki-question-card">
+                <div className="boki-question-head">
+                  <div>
+                    <span>{activeSection.title}</span>
+                    <h2>{activeSection.focus}</h2>
+                  </div>
+                </div>
+
+                <p className="boki-instruction">{sectionInstruction(currentSection)}</p>
+
+                {(() => {
+                  const material = buildExamMaterial(currentSection, currentQuestion, activeQuestion)
+                  return (
+                    <div className="boki-material">
+                      <div className="boki-material-title">{material.title}</div>
+                      <p>{material.lead}</p>
+                      <table>
+                        <tbody>
+                          {material.rows.map((row, rowIndex) => (
+                            <tr key={`${row[0]}-${rowIndex}`}>
+                              {row.map((cell, cellIndex) => (
+                                <td key={`${cell}-${cellIndex}`}>{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      {'note' in material && material.note && <p className="boki-material-note">{material.note}</p>}
+                    </div>
+                  )
+                })()}
+
+                <div className="boki-question-meta">
+                  問{currentQuestion + 1} / {activeSection.questions.length}
+                  <span>{activeQuestion.tags?.slice(0, 2).join(' / ') || activeQuestion.chapterId}</span>
+                </div>
+
+                <p className="boki-question-text">解答としてもっとも適切なものを選びなさい。</p>
+
+                <div className="boki-options">
+                  {(activeQuestion.options ?? []).map(option => {
+                    const selected = activeQuestion.type === 'multiple'
+                      ? Array.isArray(answers[activeQuestion.id]) && (answers[activeQuestion.id] as string[]).includes(option.label)
+                      : answers[activeQuestion.id] === option.label
+                    const correct = submitted && option.label === activeQuestion.correctAnswer
+                    const wrong = submitted && selected && !correct
+
+                    return (
+                      <label key={option.label} className={`${selected ? 'selected' : ''} ${correct ? 'correct' : ''} ${wrong ? 'wrong' : ''}`}>
+                        {activeQuestion.type === 'multiple' ? (
+                          <input
+                            type="checkbox"
+                            checked={selected}
+                            disabled={submitted}
+                            onChange={e => selectOption(activeQuestion, option.label, e.target.checked)}
+                          />
+                        ) : (
+                          <input
+                            type="radio"
+                            name={activeQuestion.id}
+                            checked={selected}
+                            disabled={submitted}
+                            onChange={() => selectOption(activeQuestion, option.label)}
+                          />
+                        )}
+                        <span className="boki-option-label">{option.label}</span>
+                        <span>{option.text}</span>
+                        {correct && <CheckCircle2 size={18} />}
+                        {wrong && <X size={18} />}
+                      </label>
+                    )
+                  })}
+                </div>
+
+                {submitted && (
+                  <div className="boki-explanation">
+                    <div>
+                      <strong>あなたの回答</strong>
+                      <span>{answerLabel(answers[activeQuestion.id])}</span>
+                    </div>
+                    <div>
+                      <strong>正解</strong>
+                      <span>{String(activeQuestion.correctAnswer)}</span>
+                    </div>
+                    <p>{activeQuestion.explanation}</p>
+                  </div>
+                )}
+
+                <div className="boki-question-actions">
+                  <button type="button" onClick={goPrev} disabled={currentSection === 0 && currentQuestion === 0} style={buttonBase}>
+                    <ArrowLeft size={17} />
+                    前へ
+                  </button>
+                  <button type="button" onClick={goNext} disabled={currentSection === sections.length - 1 && currentQuestion === activeSection.questions.length - 1} style={buttonBase}>
+                    次へ
+                    <ArrowRight size={17} />
+                  </button>
+                </div>
+              </section>
+
+              {submitted && (
+                <section className="boki-weakness">
+                  <h3>優先して復習</h3>
+                  {result.weakTags.length > 0 ? result.weakTags.map(([tag, count]) => (
+                    <div key={tag}>
+                      <span>{tag}</span>
+                      <strong>{count}問</strong>
+                    </div>
+                  )) : (
+                    <p>大きな弱点はありません。この調子です。</p>
+                  )}
+                </section>
+              )}
+            </main>
+          </div>
+        </>
       )}
 
       <style>{`
@@ -522,6 +569,7 @@ export default function MockExam({
 
         .boki-hero,
         .boki-start,
+        .boki-exam-topbar,
         .boki-exam-grid {
           max-width: var(--content-max-width);
           margin: 0 auto;
@@ -530,10 +578,6 @@ export default function MockExam({
         }
 
         .boki-hero {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
-          gap: 24px;
-          align-items: end;
           margin-bottom: 24px;
         }
 
@@ -563,18 +607,11 @@ export default function MockExam({
           max-width: 760px;
         }
 
-        .boki-spec-grid {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
-        }
-
-        .boki-spec,
         .boki-start,
         .boki-start-panel,
         .boki-nav-panel,
         .boki-question-card,
-        .boki-status-panel,
+        .boki-weakness,
         .boki-result,
         .boki-empty {
           background: #fff;
@@ -583,25 +620,12 @@ export default function MockExam({
           box-shadow: var(--shadow-card);
         }
 
-        .boki-spec {
-          padding: 14px 16px;
-        }
-
-        .boki-spec span,
         .boki-question-meta,
         .boki-timer span,
-        .boki-progress-top span,
-        .boki-score-table span {
+        .boki-progress-inline span {
           color: var(--color-text-muted);
           font-size: 0.76rem;
           font-weight: 700;
-        }
-
-        .boki-spec strong {
-          display: block;
-          color: var(--color-text);
-          font-size: 1rem;
-          margin-top: 4px;
         }
 
         .boki-start {
@@ -633,7 +657,6 @@ export default function MockExam({
         }
 
         .boki-plan-row,
-        .boki-score-table div,
         .boki-weakness div {
           display: grid;
           grid-template-columns: auto 1fr auto;
@@ -660,18 +683,43 @@ export default function MockExam({
           font-weight: 700;
         }
 
+        .boki-exam-topbar {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 12px;
+          margin-bottom: 16px;
+          position: sticky;
+          top: 60px;
+          z-index: 10;
+          background: color-mix(in srgb, var(--color-bg-subtle) 88%, transparent);
+          backdrop-filter: blur(8px);
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        .boki-progress-inline {
+          display: grid;
+          grid-template-columns: auto minmax(90px, 140px);
+          gap: 10px;
+          align-items: center;
+          background: #fff;
+          border: 1px solid var(--color-border);
+          border-radius: var(--radius-sm);
+          padding: 9px 12px;
+        }
+
         .boki-exam-grid {
           display: grid;
-          grid-template-columns: 260px minmax(0, 1fr) 270px;
+          grid-template-columns: 260px minmax(0, 1fr);
           gap: 18px;
           align-items: start;
         }
 
-        .boki-nav-panel,
-        .boki-status-panel {
+        .boki-nav-panel {
           padding: 16px;
           position: sticky;
-          top: 76px;
+          top: 144px;
         }
 
         .boki-panel-title {
@@ -813,21 +861,63 @@ export default function MockExam({
           color: var(--color-text);
         }
 
-        .boki-points {
-          color: var(--color-primary);
-          background: var(--color-primary-light);
-          border-radius: 999px;
-          padding: 5px 10px;
-          font-size: 0.8rem;
-          font-weight: 900;
-          white-space: nowrap;
-        }
-
         .boki-question-meta {
           display: flex;
           justify-content: space-between;
           gap: 12px;
           margin-bottom: 14px;
+        }
+
+        .boki-instruction {
+          margin: 0 0 18px;
+          color: var(--color-text);
+          line-height: 1.75;
+          font-weight: 700;
+        }
+
+        .boki-material {
+          border: 1px solid var(--color-border-strong);
+          border-radius: var(--radius-sm);
+          padding: 16px;
+          margin-bottom: 18px;
+          background: #fff;
+        }
+
+        .boki-material-title {
+          font-weight: 900;
+          color: var(--color-text);
+          margin-bottom: 8px;
+        }
+
+        .boki-material p {
+          margin: 0 0 12px;
+          line-height: 1.75;
+          color: var(--color-text);
+        }
+
+        .boki-material table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 0.9rem;
+          margin: 8px 0 0;
+        }
+
+        .boki-material td {
+          border: 1px solid var(--color-border);
+          padding: 10px 12px;
+          vertical-align: top;
+        }
+
+        .boki-material tr:first-child td {
+          background: var(--color-bg-muted);
+          font-weight: 800;
+        }
+
+        .boki-material-note {
+          margin-top: 12px !important;
+          padding-top: 12px;
+          border-top: 1px solid var(--color-border);
+          font-weight: 700;
         }
 
         .boki-question-text {
@@ -922,12 +1012,12 @@ export default function MockExam({
         .boki-timer {
           display: flex;
           align-items: center;
-          gap: 12px;
-          padding: 14px;
-          border-radius: var(--radius-md);
+          gap: 8px;
+          padding: 9px 12px;
+          border-radius: var(--radius-sm);
           background: var(--color-primary-light);
           color: var(--color-primary);
-          margin-bottom: 16px;
+          border: 1px solid #bfdbfe;
         }
 
         .boki-timer.danger {
@@ -937,25 +1027,14 @@ export default function MockExam({
 
         .boki-timer strong {
           display: block;
-          font-size: 1.45rem;
+          font-size: 1.15rem;
           line-height: 1.1;
           letter-spacing: 0;
         }
 
-        .boki-progress-block,
-        .boki-score-table,
-        .boki-weakness,
-        .boki-source-note {
-          border-top: 1px solid var(--color-border);
-          padding-top: 16px;
+        .boki-weakness {
+          padding: 18px;
           margin-top: 16px;
-        }
-
-        .boki-progress-top {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 8px;
         }
 
         .boki-progress-track {
@@ -970,17 +1049,8 @@ export default function MockExam({
           background: var(--color-primary);
         }
 
-        .boki-score-table div,
         .boki-weakness div {
           grid-template-columns: 1fr auto;
-        }
-
-        .boki-source-note {
-          display: flex;
-          gap: 8px;
-          color: var(--color-text-secondary);
-          font-size: 0.78rem;
-          line-height: 1.55;
         }
 
         .boki-empty {
@@ -1004,7 +1074,7 @@ export default function MockExam({
           }
 
           .boki-nav-panel,
-          .boki-status-panel {
+          .boki-exam-topbar {
             position: static;
           }
         }
@@ -1012,14 +1082,20 @@ export default function MockExam({
         @media (max-width: 640px) {
           .boki-hero,
           .boki-start,
+          .boki-exam-topbar,
           .boki-exam-grid {
             padding-left: 16px;
             padding-right: 16px;
           }
 
-          .boki-spec-grid,
+          .boki-exam-topbar,
+          .boki-progress-inline,
           .boki-explanation {
             grid-template-columns: 1fr;
+          }
+
+          .boki-exam-topbar {
+            align-items: stretch;
           }
 
           .boki-options label {
