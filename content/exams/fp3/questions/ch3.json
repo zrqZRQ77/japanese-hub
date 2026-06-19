@@ -272,6 +272,156 @@
         "金融政策",
         "オペレーション"
       ]
+    },
+    {
+      "id": "fp3-ch3-q11",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "一般に、市場金利が上昇した場合、既に発行されている固定利付債券の価格はどうなるか。",
+      "options": [
+        { "label": "A", "text": "上昇しやすい" },
+        { "label": "B", "text": "下落しやすい" },
+        { "label": "C", "text": "必ず額面と同じになる" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "市場金利が上がると、既存債券の利率の魅力が相対的に下がるため、債券価格は下落しやすくなります。",
+      "tags": ["債券投資", "金利"]
+    },
+    {
+      "id": "fp3-ch3-q12",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "債券の格付けにおいて、一般に投資適格債とされる格付けの下限はどれか。",
+      "options": [
+        { "label": "A", "text": "BBB格" },
+        { "label": "B", "text": "BB格" },
+        { "label": "C", "text": "B格" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "一般にBBB格以上が投資適格債、BB格以下が投資不適格債とされます。",
+      "tags": ["債券投資", "格付け"]
+    },
+    {
+      "id": "fp3-ch3-q13",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "株式の注文方法のうち、価格を指定せず、成立しやすい一方で想定外の価格で約定する可能性がある注文はどれか。",
+      "options": [
+        { "label": "A", "text": "指値注文" },
+        { "label": "B", "text": "成行注文" },
+        { "label": "C", "text": "逆指値注文" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "成行注文は価格を指定しないため成立しやすい一方、市場状況によって想定外の価格で約定することがあります。",
+      "tags": ["株式投資", "注文方法"]
+    },
+    {
+      "id": "fp3-ch3-q14",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "日経平均株価などの指数に連動する運用成果を目指す投資信託はどれか。",
+      "options": [
+        { "label": "A", "text": "インデックス型投資信託" },
+        { "label": "B", "text": "アクティブ型投資信託" },
+        { "label": "C", "text": "単位型投資信託" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "インデックス型投資信託は、日経平均株価やTOPIXなどの指数に連動する運用を目指します。",
+      "tags": ["投資信託", "分類"]
+    },
+    {
+      "id": "fp3-ch3-q15",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "投資信託の分配金のうち、元本の一部を払い戻す性質があり非課税となるものはどれか。",
+      "options": [
+        { "label": "A", "text": "普通分配金" },
+        { "label": "B", "text": "元本払戻金（特別分配金）" },
+        { "label": "C", "text": "配当所得" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "元本払戻金（特別分配金）は元本の払い戻しにあたるため非課税です。普通分配金は課税対象です。",
+      "tags": ["投資信託", "分配金"]
+    },
+    {
+      "id": "fp3-ch3-q16",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "外貨預金に関する記述として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "預金保険制度の保護対象である" },
+        { "label": "B", "text": "預金保険制度の保護対象外である" },
+        { "label": "C", "text": "為替変動リスクはない" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "外貨預金は預金保険制度の対象外であり、為替変動リスクがあります。",
+      "tags": ["外貨建金融商品", "預金保険"]
+    },
+    {
+      "id": "fp3-ch3-q17",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "証券会社が破綻した場合、分別管理されていない顧客資産について投資者保護基金が補償する上限額は、顧客1人あたりいくらか。",
+      "options": [
+        { "label": "A", "text": "500万円" },
+        { "label": "B", "text": "1,000万円" },
+        { "label": "C", "text": "全額" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "投資者保護基金は、証券会社破綻時に分別管理されていない顧客資産について、顧客1人あたり1,000万円まで補償します。",
+      "tags": ["セーフティネット", "投資者保護基金"]
+    },
+    {
+      "id": "fp3-ch3-q18",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "特定口座（源泉徴収あり）に関する記述として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "証券会社が税金を源泉徴収するため、原則として確定申告不要である" },
+        { "label": "B", "text": "年間取引報告書は作成されない" },
+        { "label": "C", "text": "NISA口座と同じく損益通算ができない" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "特定口座（源泉徴収あり）では、証券会社が年間取引報告書を作成し、税金も源泉徴収するため、原則として確定申告不要です。",
+      "tags": ["金融商品の税金", "特定口座"]
+    },
+    {
+      "id": "fp3-ch3-q19",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "投資におけるリスクの意味として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "必ず損をする可能性" },
+        { "label": "B", "text": "リターンの振れ幅" },
+        { "label": "C", "text": "元本保証の有無だけを示すもの" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "投資理論でいうリスクは、危険という意味だけでなく、リターンのばらつき・振れ幅を意味します。",
+      "tags": ["ポートフォリオ", "リスク"]
+    },
+    {
+      "id": "fp3-ch3-q20",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "single",
+      "text": "将来の一定日に、あらかじめ決めた価格で売買する契約を何というか。",
+      "options": [
+        { "label": "A", "text": "先物取引" },
+        { "label": "B", "text": "普通預金" },
+        { "label": "C", "text": "定期保険" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "先物取引は、将来の一定日に、あらかじめ決めた価格で売買する契約です。",
+      "tags": ["派生商品", "先物取引"]
     }
   ]
 }

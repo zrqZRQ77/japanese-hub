@@ -4,30 +4,304 @@
   "chapterTitle": "ライフプランニングと資金計画",
   "questions": [
     {
-      "id": "fp3-ch1-q1",
+      "id": "fp3-ch1-q01",
       "examId": "fp3",
       "chapterId": "ch1",
       "type": "single",
       "text": "FP資格のみを持つ者が、無償で顧客の個別具体的な確定申告書を作成した。税理士法に抵触するか。",
       "options": [
-        {
-          "label": "A",
-          "text": "抵触する"
-        },
-        {
-          "label": "B",
-          "text": "無償なら抵触しない"
-        },
-        {
-          "label": "C",
-          "text": "時期による"
-        }
+        { "label": "A", "text": "抵触する" },
+        { "label": "B", "text": "無償なら抵触しない" },
+        { "label": "C", "text": "申告期限前でなければ抵触しない" }
       ],
       "correctAnswer": "A",
-      "explanation": "有償無償を問わず、具体的な税務業務は税理士の独占業務です。",
-      "tags": [
-        "関連法規"
-      ]
+      "explanation": "税理士資格がないFPは、有償・無償を問わず、個別具体的な税務相談や申告書作成を行うことはできません。",
+      "tags": ["FPの基礎", "関連法規"]
+    },
+    {
+      "id": "fp3-ch1-q02",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "FPが顧客の相続トラブルについて、相手方との交渉文書を作成して代理交渉を行った。この行為に最も関係する法律はどれか。",
+      "options": [
+        { "label": "A", "text": "弁護士法" },
+        { "label": "B", "text": "保険業法" },
+        { "label": "C", "text": "金融商品取引法" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "具体的な法律相談、紛争性のある書類作成、代理交渉は弁護士の業務領域です。FPは一般的な制度説明にとどめる必要があります。",
+      "tags": ["FPの基礎", "弁護士法"]
+    },
+    {
+      "id": "fp3-ch1-q03",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "ライフプランニングの3大ツールのうち、家族の将来行事と必要資金を時系列で整理する表はどれか。",
+      "options": [
+        { "label": "A", "text": "ライフイベント表" },
+        { "label": "B", "text": "個人バランスシート" },
+        { "label": "C", "text": "損益計算書" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "ライフイベント表は、結婚、住宅購入、教育、退職などのイベントと予想費用を時系列で整理する表です。",
+      "tags": ["ライフプランニング", "ライフイベント表"]
+    },
+    {
+      "id": "fp3-ch1-q04",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "ある時点における資産と負債を時価で把握し、純資産を確認するための資料はどれか。",
+      "options": [
+        { "label": "A", "text": "キャッシュフロー表" },
+        { "label": "B", "text": "個人バランスシート" },
+        { "label": "C", "text": "ライフイベント表" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "個人バランスシートでは、資産合計から負債合計を差し引いて純資産を把握します。",
+      "tags": ["ライフプランニング", "個人バランスシート"]
+    },
+    {
+      "id": "fp3-ch1-q05",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "将来の目標額を達成するために、毎年いくら積み立てればよいかを求める係数はどれか。",
+      "options": [
+        { "label": "A", "text": "減債基金係数" },
+        { "label": "B", "text": "資本回収係数" },
+        { "label": "C", "text": "年金現価係数" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "減債基金係数は、将来の目標額から毎年の積立額を求めるための係数です。",
+      "tags": ["6つの係数", "減債基金係数"]
+    },
+    {
+      "id": "fp3-ch1-q06",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "現在ある元本を取り崩しながら毎年いくら受け取れるか、または借入元本に対する毎年の返済額を求める係数はどれか。",
+      "options": [
+        { "label": "A", "text": "終価係数" },
+        { "label": "B", "text": "資本回収係数" },
+        { "label": "C", "text": "年金終価係数" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "資本回収係数は、現在の元本から毎年の受取額や返済額を求める係数です。",
+      "tags": ["6つの係数", "資本回収係数"]
+    },
+    {
+      "id": "fp3-ch1-q07",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "会社員が加入する公的医療保険で、業務外の病気やケガ、出産などに給付を行うものはどれか。",
+      "options": [
+        { "label": "A", "text": "健康保険" },
+        { "label": "B", "text": "労災保険" },
+        { "label": "C", "text": "国民年金" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "会社員は健康保険に加入します。業務上や通勤途中の傷病は労災保険の対象です。",
+      "tags": ["社会保険", "健康保険"]
+    },
+    {
+      "id": "fp3-ch1-q08",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "労災保険の保険料負担に関する記述として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "労働者が全額負担する" },
+        { "label": "B", "text": "事業主が全額負担する" },
+        { "label": "C", "text": "労使が折半して負担する" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "労災保険の保険料は全額事業主負担です。雇用保険は労使双方が負担します。",
+      "tags": ["社会保険", "労災保険"]
+    },
+    {
+      "id": "fp3-ch1-q09",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "公的介護保険の第1号被保険者に該当する者はどれか。",
+      "options": [
+        { "label": "A", "text": "40歳以上65歳未満の医療保険加入者" },
+        { "label": "B", "text": "65歳以上の者" },
+        { "label": "C", "text": "20歳以上60歳未満の自営業者" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "公的介護保険の第1号被保険者は65歳以上、第2号被保険者は40歳以上65歳未満の医療保険加入者です。",
+      "tags": ["社会保険", "介護保険"]
+    },
+    {
+      "id": "fp3-ch1-q10",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "国民年金の第3号被保険者に該当する者として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "自営業者" },
+        { "label": "B", "text": "厚生年金保険の被保険者に扶養されている配偶者" },
+        { "label": "C", "text": "会社員本人" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "第3号被保険者は、第2号被保険者に扶養されている配偶者です。自営業者などは第1号、会社員本人は第2号です。",
+      "tags": ["公的年金", "被保険者区分"]
+    },
+    {
+      "id": "fp3-ch1-q11",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "老齢基礎年金を受給するために必要な受給資格期間は、原則として何年以上か。",
+      "options": [
+        { "label": "A", "text": "10年以上" },
+        { "label": "B", "text": "20年以上" },
+        { "label": "C", "text": "25年以上" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "老齢基礎年金は、受給資格期間が原則10年以上ある場合に65歳から受給できます。",
+      "tags": ["公的年金", "老齢基礎年金"]
+    },
+    {
+      "id": "fp3-ch1-q12",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "老齢年金・障害年金・遺族年金の税務上の取扱いとして、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "老齢年金は非課税、障害年金と遺族年金は課税対象である" },
+        { "label": "B", "text": "老齢年金は課税対象、障害年金と遺族年金は非課税である" },
+        { "label": "C", "text": "すべて非課税である" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "老齢基礎年金・老齢厚生年金は雑所得として課税対象ですが、障害年金・遺族年金は非課税です。",
+      "tags": ["公的年金", "税金"]
+    },
+    {
+      "id": "fp3-ch1-q13",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "iDeCoの掛金の所得控除として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "生命保険料控除" },
+        { "label": "B", "text": "小規模企業共済等掛金控除" },
+        { "label": "C", "text": "寄附金控除" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "iDeCoの掛金は、全額が小規模企業共済等掛金控除の対象です。",
+      "tags": ["企業年金", "iDeCo"]
+    },
+    {
+      "id": "fp3-ch1-q14",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "企業型確定拠出年金（企業型DC）に関する記述として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "将来の給付額があらかじめ確定している" },
+        { "label": "B", "text": "運用成果により将来の給付額が変動する" },
+        { "label": "C", "text": "加入者は運用商品を選択できない" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "確定拠出年金は拠出額が決まり、運用成果によって将来の給付額が変動します。",
+      "tags": ["企業年金", "確定拠出年金"]
+    },
+    {
+      "id": "fp3-ch1-q15",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "住宅ローンの返済方法のうち、毎月の返済額が一定となる方式はどれか。",
+      "options": [
+        { "label": "A", "text": "元利均等返済" },
+        { "label": "B", "text": "元金均等返済" },
+        { "label": "C", "text": "一括返済" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "元利均等返済は元金と利息を合わせた毎月返済額が一定です。元金均等返済は当初返済額が大きく、徐々に減少します。",
+      "tags": ["住宅ローン", "返済方法"]
+    },
+    {
+      "id": "fp3-ch1-q16",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "住宅ローンの繰上返済のうち、一般に返済額軽減型より利息軽減効果が大きいものはどれか。",
+      "options": [
+        { "label": "A", "text": "期間短縮型" },
+        { "label": "B", "text": "返済額軽減型" },
+        { "label": "C", "text": "元金据置型" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "期間短縮型は返済期間を短くするため、一般に返済額軽減型より利息軽減効果が大きくなります。",
+      "tags": ["住宅ローン", "繰上返済"]
+    },
+    {
+      "id": "fp3-ch1-q17",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "住宅ローンの金利タイプのうち、市場金利の変動により将来の返済額が増えるリスクがあるものはどれか。",
+      "options": [
+        { "label": "A", "text": "固定金利型" },
+        { "label": "B", "text": "変動金利型" },
+        { "label": "C", "text": "元利均等型" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "変動金利型は市場金利に応じて金利が見直されるため、金利上昇時に返済額が増えるリスクがあります。",
+      "tags": ["住宅ローン", "金利タイプ"]
+    },
+    {
+      "id": "fp3-ch1-q18",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "日本政策金融公庫が取り扱う教育資金の公的融資制度として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "教育一般貸付" },
+        { "label": "B", "text": "住宅金融支援機構融資" },
+        { "label": "C", "text": "雇用保険の基本手当" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "教育一般貸付は、日本政策金融公庫が取り扱う教育資金の融資制度です。",
+      "tags": ["教育資金", "教育一般貸付"]
+    },
+    {
+      "id": "fp3-ch1-q19",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "クレジットカードのリボルビング払いに関する記述として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "毎月の支払額が一定でも、返済期間や総支払額が膨らむことがある" },
+        { "label": "B", "text": "分割払いと異なり、手数料は一切発生しない" },
+        { "label": "C", "text": "借入残高にかかわらず、必ず1回で完済される" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "リボ払いは毎月の支払額を抑えやすい一方、手数料負担が大きくなり、返済期間や総支払額が膨らみやすい点に注意が必要です。",
+      "tags": ["カード", "リボ払い"]
+    },
+    {
+      "id": "fp3-ch1-q20",
+      "examId": "fp3",
+      "chapterId": "ch1",
+      "type": "single",
+      "text": "FPが金融商品について説明する場合の行為として、最も適切なものはどれか。",
+      "options": [
+        { "label": "A", "text": "一般的な制度やリスクを説明する" },
+        { "label": "B", "text": "登録なしに個別銘柄の売買を代理する" },
+        { "label": "C", "text": "必ず利益が出ると断定して勧誘する" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "FPは一般的な制度説明やリスク説明はできますが、登録なしに個別銘柄の売買推奨・代理を行ったり、利益を断定したりすることは不適切です。",
+      "tags": ["FPの基礎", "金融商品取引法"]
     }
   ]
 }
