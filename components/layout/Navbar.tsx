@@ -11,7 +11,11 @@ import { EXAMS_REGISTRY } from '@/lib/types/exams-registry'
 import SearchModal from '@/components/features/search/SearchModal'
 import SiteLogo from '@/components/layout/SiteLogo'
 
-export default function Navbar() {
+interface NavbarProps {
+  hidePrimaryNav?: boolean
+}
+
+export default function Navbar({ hidePrimaryNav = false }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [availableExams, setAvailableExams] = useState<typeof EXAMS_REGISTRY | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -69,13 +73,14 @@ export default function Navbar() {
 
             <div style={{ flex: 1 }} />
 
-            {/* 右侧主导航（靠近搜索） */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
-              <NavLink href="/guide" active={isActive('/guide')} forceColor={'var(--color-text)'}>学習ガイド</NavLink>
-              <NavLink href="/practice" active={isActive('/practice')} forceColor={'var(--color-text)'}>練習問題</NavLink>
-              <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>知識カード</NavLink>
-              <NavLink href="/ai-chat" active={isActive('/ai-chat')} forceColor={'var(--color-text)'}>AI質問</NavLink>
-            </div>
+            {!hidePrimaryNav && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
+                <NavLink href="/guide" active={isActive('/guide')} forceColor={'var(--color-text)'}>学習ガイド</NavLink>
+                <NavLink href="/practice" active={isActive('/practice')} forceColor={'var(--color-text)'}>練習問題</NavLink>
+                <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>知識カード</NavLink>
+                <NavLink href="/ai-chat" active={isActive('/ai-chat')} forceColor={'var(--color-text)'}>AI質問</NavLink>
+              </div>
+            )}
 
             {/* 検索ボタン */}
             <button
@@ -172,7 +177,7 @@ export default function Navbar() {
                   }}>すべての試験を見る →</Link>
               </MobileNavSection>
 
-              {[
+              {!hidePrimaryNav && [
                 { href: '/guide', label: '学習ガイド' },
                 { href: '/practice', label: '練習問題' },
                 { href: '/exams', label: '知識カード' },

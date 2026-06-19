@@ -38,7 +38,7 @@ export default async function QuestionsIndexPage({ params }: Props) {
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <div style={{
         display: 'flex',
         height: 'calc(100vh - 64px)',

@@ -44,7 +44,7 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <div style={{
         display: 'flex',
         height: 'calc(100vh - 64px)',

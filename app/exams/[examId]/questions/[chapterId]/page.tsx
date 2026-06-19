@@ -21,7 +21,7 @@ export default async function QuestionsPage({ params }: Props) {
   if (!questionSet || questionSet.questions.length === 0) {
     return (
       <>
-        <Navbar />
+        <Navbar hidePrimaryNav />
         <main style={{
           minHeight: 'calc(100vh - 64px)',
           display: 'flex',
@@ -82,7 +82,7 @@ export default async function QuestionsPage({ params }: Props) {
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <div style={{ display: 'flex', height: 'calc(100vh - 64px)', overflow: 'hidden' }}>
         <QuestionClient
           questions={questionSet.questions}

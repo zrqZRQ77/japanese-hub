@@ -20,7 +20,7 @@ export default async function MockExamPage({ params }: Props) {
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <MockExam
         initialQuestions={serialized}
         examId={examId}

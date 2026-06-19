@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: Promise<{ examId: strin
   if (!exam) notFound()
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <main style={{
         height: 'calc(100vh - 64px)', display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',

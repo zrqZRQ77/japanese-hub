@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: Promise<{ examId: strin
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <div style={{
         display: 'flex',
         height: 'calc(100vh - 64px)',

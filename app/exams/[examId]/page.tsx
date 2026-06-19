@@ -48,7 +48,7 @@ export default async function ExamDashboardPage({
 
   return (
     <>
-      <Navbar />
+      <Navbar hidePrimaryNav />
       <div style={{
         display: 'flex',
         height: 'calc(100vh - 60px)',
