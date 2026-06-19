@@ -64,6 +64,101 @@
         "損益計算書",
         "5要素"
       ]
+    },
+    {
+      "id": "boki3-ch2-q3",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "次のうち、「費用」に分類される勘定科目はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "売掛金"
+        },
+        {
+          "label": "B",
+          "text": "借入金"
+        },
+        {
+          "label": "C",
+          "text": "支払家賃"
+        },
+        {
+          "label": "D",
+          "text": "受取利息"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "支払家賃は収益を得るために支払う費用です。売掛金は資産、借入金は負債、受取利息は収益に分類されます。",
+      "tags": [
+        "勘定科目",
+        "費用",
+        "5要素"
+      ]
+    },
+    {
+      "id": "boki3-ch2-q4",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "貸借対照表（B/S）を構成する3つの要素として正しいものはどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "資産・負債・純資産"
+        },
+        {
+          "label": "B",
+          "text": "資産・収益・費用"
+        },
+        {
+          "label": "C",
+          "text": "収益・費用・当期純利益"
+        },
+        {
+          "label": "D",
+          "text": "売上・仕入・繰越商品"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "貸借対照表は一定時点の財政状態を示し、資産・負債・純資産で構成されます。収益と費用は損益計算書の要素です。",
+      "tags": [
+        "貸借対照表",
+        "5要素"
+      ]
+    },
+    {
+      "id": "boki3-ch2-q5",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "「売上」は簿記の5要素のうち、どれに分類されるか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "資産"
+        },
+        {
+          "label": "B",
+          "text": "負債"
+        },
+        {
+          "label": "C",
+          "text": "収益"
+        },
+        {
+          "label": "D",
+          "text": "費用"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "売上は商品やサービスを提供して得た成果であるため、収益に分類されます。",
+      "tags": [
+        "勘定科目",
+        "収益",
+        "5要素"
+      ]
     }
   ]
 }
