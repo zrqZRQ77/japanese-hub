@@ -46,7 +46,7 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
 
   return (
     <>
-      <Navbar hidePrimaryNav />
+      <Navbar />
       <div style={{ display: 'flex', height: 'calc(100vh - 64px)', overflow: 'hidden' }}>
         {/* 学習ガイド内では ExamSidebar を非表示 */}
 

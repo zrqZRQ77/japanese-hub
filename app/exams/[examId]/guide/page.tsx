@@ -14,7 +14,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
 
   return (
     <>
-      <Navbar hidePrimaryNav />
+      <Navbar />
       <div style={{
         display: 'flex',
         height: 'calc(100vh - 64px)',

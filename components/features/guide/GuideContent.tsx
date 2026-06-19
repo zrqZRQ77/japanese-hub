@@ -17,7 +17,7 @@ interface Props {
 }
 
 export default function GuideContent({
-  frontmatter, contentHtml, chapter, sections, currentSectionId, examId, prevLink, nextLink
+  frontmatter, contentHtml, chapter, examId, prevLink, nextLink
 }: Props) {
   const base = `/exams/${examId}`
 
@@ -32,7 +32,7 @@ export default function GuideContent({
       {/* トップバー：ブックマーク・お気に入り・共有 */}
       <div style={{
         display: 'flex', alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-end',
         width: '100%',
         maxWidth: 920,
         padding: '18px 40px',
@@ -40,16 +40,6 @@ export default function GuideContent({
         background: 'var(--color-bg-subtle)',
         position: 'sticky', top: 0, zIndex: 10,
       }}>
-        {/* パンくずリスト */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.82rem', color: 'var(--color-text-muted)' }}>
-          <Link href={`${base}/guide`} style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 600 }}>
-            第{chapter.number}章 {chapter.title}
-          </Link>
-          <span>›</span>
-          <span style={{ color: 'var(--color-text)' }}>
-            {frontmatter.sectionNumber} {frontmatter.sectionTitle}
-          </span>
-        </nav>
         {/* アクションボタン */}
         <div style={{ display: 'flex', gap: 8 }}>
           {['🔖', '⭐', '🗑️'].map(icon => (
@@ -74,99 +64,6 @@ export default function GuideContent({
           maxWidth: 760,
           margin: '0 auto',
         }}>
-        {/* 小節ナビ */}
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: 8,
-          marginBottom: 16,
-        }}>
-          {sections.map(sec => {
-            const active = sec.id === currentSectionId
-            return (
-              <Link
-                key={sec.id}
-                href={`${base}/guide/${chapter.id}?section=${sec.id}`}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  padding: '8px 12px',
-                  borderRadius: 999,
-                  border: `1px solid ${active ? 'var(--color-primary)' : 'var(--color-border)'}`,
-                  background: active ? 'var(--color-primary-light)' : '#fff',
-                  color: active ? 'var(--color-primary)' : 'var(--color-text-secondary)',
-                  textDecoration: 'none',
-                  fontSize: '0.8rem',
-                  fontWeight: active ? 700 : 500,
-                }}
-              >
-                <span style={{
-                  width: 18,
-                  height: 18,
-                  borderRadius: 999,
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: active ? 'var(--color-primary)' : 'var(--color-bg-muted)',
-                  color: active ? '#fff' : 'var(--color-text-muted)',
-                  fontSize: '0.7rem',
-                  flexShrink: 0,
-                }}>{sec.number.split('-')[1] ?? sec.number}</span>
-                <span>{sec.title}</span>
-              </Link>
-            )
-          })}
-        </div>
-
-        <div style={{
-          fontSize: '0.78rem',
-          fontWeight: 700,
-          letterSpacing: '0.06em',
-          color: 'var(--color-text-muted)',
-          marginBottom: 12,
-        }}>
-          この章の小節
-        </div>
-
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(220px, 100%), 1fr))',
-          gap: 10,
-          marginBottom: 24,
-        }}>
-          {sections.map(sec => {
-            const active = sec.id === currentSectionId
-            return (
-              <Link
-                key={sec.id}
-                href={`${base}/guide/${chapter.id}?section=${sec.id}`}
-                style={{
-                  display: 'block',
-                  textDecoration: 'none',
-                  border: `1px solid ${active ? 'var(--color-primary)' : 'var(--color-border)'}`,
-                  background: active ? 'var(--color-primary-light)' : '#fff',
-                  borderRadius: 8,
-                  padding: '12px 14px',
-                }}
-              >
-                <div style={{
-                  fontSize: '0.72rem',
-                  fontWeight: 700,
-                  color: active ? 'var(--color-primary)' : 'var(--color-text-muted)',
-                  marginBottom: 4,
-                }}>{sec.number}</div>
-                <div style={{
-                  fontSize: '0.86rem',
-                  fontWeight: active ? 700 : 600,
-                  color: 'var(--color-text)',
-                  lineHeight: 1.5,
-                }}>{sec.title}</div>
-              </Link>
-            )
-          })}
-        </div>
-
         {/* セクションタイトル */}
         <h1 style={{
           fontSize: '2rem', fontWeight: 900,
