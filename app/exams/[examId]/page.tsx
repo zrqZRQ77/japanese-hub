@@ -10,27 +10,23 @@ import ToolCard from '@/components/features/dashboard/ToolCard'
 import ExamInfoSection from '@/components/features/dashboard/ExamInfoSection'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
+import { BookOpen, LibraryBig, PencilLine } from 'lucide-react'
 
 const TOOLS = [
   {
-    icon: '📖', title: '学習ガイド', color: 'var(--color-primary)',
+    icon: BookOpen, title: '学習ガイド', color: 'var(--color-primary)',
     desc: '各章の解説を読んで基礎を理解する',
     linkLabel: '章一覧を見る', path: '/guide',
   },
   {
-    icon: '✏️', title: '練習問題', color: '#7c3aed',
+    icon: PencilLine, title: '練習問題', color: '#7c3aed',
     desc: '章ごとの問題を解いて理解を確認する',
     linkLabel: '問題一覧を見る', path: '/questions',
   },
   {
-    icon: '🃏', title: '知識カード', color: '#0891b2',
+    icon: LibraryBig, title: '知識カード', color: '#0891b2',
     desc: '重要ポイントをカードで覚える',
     linkLabel: 'カード一覧を見る', path: '/cards',
-  },
-  {
-    icon: '📋', title: '模擬試験', color: '#d97706',
-    desc: '本番形式の試験で実力を試す',
-    linkLabel: '模擬試験を受ける', path: '/mock-exam',
   },
 ]
 

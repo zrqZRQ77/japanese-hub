@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { BookOpen } from 'lucide-react'
 import { ChapterMeta } from '@/lib/types'
 import { getExamById } from '@/lib/types/exams-registry'
 
@@ -49,9 +50,8 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '1.45rem',
             flexShrink: 0,
-          }}>📖</div>
+          }}><BookOpen size={24} strokeWidth={2.2} /></div>
           <div>
             <div style={{
               fontWeight: 900,

@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar'
 import GuideSidebar from '@/components/layout/GuideSidebar'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
+import { BookOpen } from 'lucide-react'
 
 export default async function GuideIndexPage({ params }: { params: Promise<{ examId: string }> }) {
   const { examId } = await params
@@ -47,7 +48,19 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                 marginBottom: 28,
                 boxShadow: 'var(--shadow-card)',
               }}>
-                <div style={{ fontSize: '2.7rem', marginBottom: 26 }}>📖</div>
+                <div style={{
+                  width: 56,
+                  height: 56,
+                  borderRadius: 8,
+                  margin: '0 auto 26px',
+                  background: 'var(--color-primary-light)',
+                  color: 'var(--color-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <BookOpen size={26} />
+                </div>
                 <h1 style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--color-text)', marginBottom: 18 }}>
                   {exam.shortName} 学習ガイド
                 </h1>

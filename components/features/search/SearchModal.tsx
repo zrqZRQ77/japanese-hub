@@ -6,12 +6,13 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { BookOpen, LibraryBig, PencilLine, Search, X } from 'lucide-react'
 import type { SearchResult } from '@/app/api/search/route'
 
 const TYPE_META = {
-  question: { label: '練習問題', icon: '✏️', color: '#7c3aed' },
-  card:     { label: '知識カード', icon: '🃏', color: '#0891b2' },
-  chapter:  { label: '学習ガイド', icon: '📖', color: 'var(--color-primary)' },
+  question: { label: '練習問題', icon: PencilLine, color: '#7c3aed' },
+  card:     { label: '知識カード', icon: LibraryBig, color: '#0891b2' },
+  chapter:  { label: '学習ガイド', icon: BookOpen, color: 'var(--color-primary)' },
 }
 
 interface Props {
@@ -119,7 +120,7 @@ export default function SearchModal({ open, onClose }: Props) {
           padding: '16px 20px',
           borderBottom: results.length > 0 || loading ? '1px solid var(--color-border)' : 'none',
         }}>
-          <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>🔍</span>
+          <Search size={18} style={{ flexShrink: 0, color: 'var(--color-text-muted)' }} />
           <input
             ref={inputRef}
             value={query}
@@ -149,7 +150,8 @@ export default function SearchModal({ open, onClose }: Props) {
                 background: 'none', border: 'none', cursor: 'pointer',
                 color: 'var(--color-text-muted)', fontSize: '1rem', padding: 2,
               }}
-            >✕</button>
+              aria-label="検索語をクリア"
+            ><X size={16} /></button>
           )}
           <kbd style={{
             fontSize: '0.72rem', color: 'var(--color-text-muted)',
@@ -175,6 +177,7 @@ export default function SearchModal({ open, onClose }: Props) {
             {results.map((r, i) => {
               const meta = TYPE_META[r.type]
               const isActive = i === activeIndex
+              const Icon = meta.icon
               return (
                 <Link
                   key={`${r.type}-${r.url}-${i}`}
@@ -196,9 +199,9 @@ export default function SearchModal({ open, onClose }: Props) {
                     background: `${meta.color}18`,
                     borderRadius: 8,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '0.95rem',
                     marginTop: 2,
-                  }}>{meta.icon}</span>
+                    color: meta.color,
+                  }}><Icon size={17} strokeWidth={2.2} /></span>
 
                   {/* テキスト */}
                   <div style={{ flex: 1, minWidth: 0 }}>
@@ -280,7 +283,7 @@ export default function SearchModal({ open, onClose }: Props) {
             padding: '40px 20px', textAlign: 'center',
             color: 'var(--color-text-muted)', fontSize: '0.9rem',
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: 10 }}>🔍</div>
+            <Search size={28} style={{ margin: '0 auto 10px', color: 'var(--color-text-muted)' }} />
             「{query}」に一致する結果が見つかりませんでした
           </div>
         )}
@@ -307,7 +310,7 @@ export default function SearchModal({ open, onClose }: Props) {
                   display: 'flex', alignItems: 'center', gap: 8,
                 }}
               >
-                <span style={{ color: 'var(--color-text-muted)' }}>🔍</span>
+                <Search size={15} style={{ color: 'var(--color-text-muted)' }} />
                 {hint}
               </button>
             ))}

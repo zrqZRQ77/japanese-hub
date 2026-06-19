@@ -42,7 +42,7 @@ export default function ExamsPage() {
               どの資格を目指しますか？
             </h1>
             <p style={{ color: 'var(--color-text-secondary)', fontSize: '1rem', maxWidth: 480 }}>
-              すべての学習コンテンツが無料。練習問題・学習ガイド・AI解説で合格を目指しましょう。
+              すべての学習コンテンツが無料。練習問題・学習ガイド・知識カード・AI解説で合格を目指しましょう。
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function ExamsPage() {
 
                     {/* ツールバッジ */}
                     <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 20 }}>
-                      {['学習ガイド', '練習問題', '知識カード', '模擬試験', 'AI質問'].map(t => (
+                      {['学習ガイド', '練習問題', '知識カード', 'AI質問'].map(t => (
                         <span key={t} style={{
                           fontSize: '0.72rem', fontWeight: 600,
                           color: 'var(--color-text-muted)',

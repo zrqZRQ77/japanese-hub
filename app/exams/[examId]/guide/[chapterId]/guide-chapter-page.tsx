@@ -9,6 +9,7 @@ import GuideContent from '@/components/features/guide/GuideContent'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam, getChapterById } from '@/lib/types/chapters-registry'
 import { getGuideContent, getAllGuideSections } from '@/lib/content/guide-loader'
+import { BookOpen } from 'lucide-react'
 
 interface Props {
   params: Promise<{ examId: string; chapterId: string }>
@@ -83,7 +84,7 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
               background: '#fff', color: 'var(--color-text-secondary)',
               gap: 12,
             }}>
-              <div style={{ fontSize: '3rem' }}>📖</div>
+              <BookOpen size={42} />
               <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>
                 第{chapter.number}章 {chapter.title}
               </div>

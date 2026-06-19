@@ -72,7 +72,7 @@ export default function Navbar() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
               <NavLink href="/guide" active={isActive('/guide')} forceColor={'var(--color-text)'}>学習ガイド</NavLink>
               <NavLink href="/practice" active={isActive('/practice')} forceColor={'var(--color-text)'}>練習問題</NavLink>
-              <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>知識カード</NavLink>
+              <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>資格一覧</NavLink>
               <NavLink href="/ai-chat" active={isActive('/ai-chat')} forceColor={'var(--color-text)'}>AI質問</NavLink>
             </div>
 
@@ -174,7 +174,7 @@ export default function Navbar() {
               {[
                 { href: '/guide', label: '学習ガイド' },
                 { href: '/practice', label: '練習問題' },
-                { href: '/exams', label: '知識カード' },
+                { href: '/exams', label: '資格一覧' },
                 { href: '/ai-chat', label: 'AI質問' },
               ].map(item => (
                 <Link key={item.href} href={item.href}

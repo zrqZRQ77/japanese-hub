@@ -6,14 +6,13 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ExamMeta } from '@/lib/types'
-import { LayoutGrid, BookOpen, PencilLine, LibraryBig, FileText, Bot } from 'lucide-react'
+import { LayoutGrid, BookOpen, PencilLine, LibraryBig, Bot } from 'lucide-react'
 
 const NAV_ITEMS = [
   { key: 'dashboard', label: 'ダッシュボード', icon: LayoutGrid, path: '' },
   { key: 'guide',     label: '学習ガイド',     icon: BookOpen, path: '/guide' },
   { key: 'questions', label: '練習問題',        icon: PencilLine, path: '/questions' },
   { key: 'cards',     label: '知識カード',      icon: LibraryBig, path: '/cards' },
-  { key: 'mock',      label: '模擬試験',        icon: FileText, path: '/mock-exam' },
   { key: 'ai',        label: 'AI質問',          icon: Bot, path: '/ai-chat' },
 ]
 

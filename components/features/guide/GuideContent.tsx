@@ -3,6 +3,7 @@
 // 修改此文件 → 所有教材内容页面的布局/颜色同步更新
 // ============================================================
 import Link from 'next/link'
+import { Bookmark, Star, Trash2 } from 'lucide-react'
 import { ChapterMeta, GuideFrontmatter } from '@/lib/types'
 
 interface Props {
@@ -20,6 +21,11 @@ export default function GuideContent({
   frontmatter, contentHtml, chapter, examId, prevLink, nextLink
 }: Props) {
   const base = `/exams/${examId}`
+  const actions = [
+    { label: 'ブックマーク', icon: Bookmark },
+    { label: 'お気に入り', icon: Star },
+    { label: '削除', icon: Trash2 },
+  ]
 
   return (
     <article style={{
@@ -42,14 +48,21 @@ export default function GuideContent({
       }}>
         {/* アクションボタン */}
         <div style={{ display: 'flex', gap: 8 }}>
-          {['🔖', '⭐', '🗑️'].map(icon => (
-            <button key={icon} style={{
+          {actions.map(action => {
+            const Icon = action.icon
+            return (
+            <button key={action.label} aria-label={action.label} title={action.label} style={{
               padding: '6px 10px', background: 'none',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-sm)',
-              cursor: 'pointer', fontSize: '1rem',
-            }}>{icon}</button>
-          ))}
+              cursor: 'pointer',
+              color: 'var(--color-text-secondary)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}><Icon size={17} strokeWidth={2} /></button>
+            )
+          })}
         </div>
       </div>
 

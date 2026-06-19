@@ -3,12 +3,11 @@ import Navbar from '@/components/layout/Navbar'
 import SiteLogo, { BrandText } from '@/components/layout/SiteLogo'
 import HoverCard from '@/components/ui/HoverCard'
 import { getAvailableExams } from '@/lib/content/exams-loader'
-import { Bot, BookOpen, CreditCard, FileText, PencilLine } from 'lucide-react'
+import { Bot, BookOpen, CreditCard, PencilLine } from 'lucide-react'
 
 const TOOLS = [
   { icon: PencilLine, title: '練習問題', desc: '章ごとの練習で知識を定着' },
   { icon: BookOpen, title: '学習ガイド', desc: 'やさしい解説で理解を深める' },
-  { icon: FileText, title: '模擬試験', desc: '本番形式で実力をチェック' },
   { icon: CreditCard, title: '知識カード', desc: 'スキマ時間に効率よく暗記' },
   { icon: Bot, title: 'AI質問', desc: 'AIがいつでも質問に回答' },
 ]
@@ -64,7 +63,7 @@ export default function HomePage() {
               }}>
                 FP技能士・日商簿記・宅建士など、<br />
                 日本の主要資格に特化した学習プラットフォーム。<br />
-                練習問題・知識カード・模擬試験・AI解説がすべて無料。
+                練習問題・知識カード・学習ガイド・AI解説がすべて無料。
               </p>
 
               <Link href="/exams" style={{
@@ -119,7 +118,7 @@ export default function HomePage() {
               textAlign: 'center',
               fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
               fontWeight: 800, marginBottom: 'clamp(24px, 4vw, 40px)',
-            }}>5つの学習ツール、すべて無料</h2>
+            }}>4つの学習ツール、すべて無料</h2>
             <div style={{ maxWidth: 980, margin: '0 auto' }}>
               <div style={{
                 display: 'grid',

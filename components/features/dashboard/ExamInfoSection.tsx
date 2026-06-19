@@ -4,6 +4,7 @@
 // 修改此文件 → 所有考试页面的"试験紹介"区块同步更新
 // ============================================================
 import { ExamMeta } from '@/lib/types'
+import { BookOpen } from 'lucide-react'
 
 interface Props {
   exam: ExamMeta
@@ -133,7 +134,19 @@ export default function ExamInfoSection({ exam }: Props) {
                   alignItems: 'center'
                 }}
               >
-                <div style={{ fontSize: '1.6rem', flexShrink: 0 }}>📖</div>
+                <div style={{
+                  width: 34,
+                  height: 34,
+                  borderRadius: 8,
+                  background: 'var(--color-primary-light)',
+                  color: 'var(--color-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}>
+                  <BookOpen size={18} />
+                </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, flexWrap: 'wrap' }}>
                     <span style={{
