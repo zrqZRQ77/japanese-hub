@@ -25,7 +25,7 @@ export default function ExamSidebar({ exam }: Props) {
   const base = `/exams/${exam.id}`
 
   return (
-    <aside style={{
+    <aside className="exam-sidebar" style={{
       width: 'var(--sidebar-width)',
       minWidth: 'var(--sidebar-width)',
       borderRight: '1px solid rgba(148,163,184,0.16)',

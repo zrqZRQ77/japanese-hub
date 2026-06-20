@@ -25,7 +25,7 @@ export default function OperatorPage() {
         },
         {
           title: 'サイトURL',
-          body: ['https://open-exam-prep.com/'],
+          body: ['https://japanese-hub.com/'],
         },
         {
           title: '運営目的',

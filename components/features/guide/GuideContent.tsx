@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Bookmark, Star, Trash2 } from 'lucide-react'
 import { ChapterMeta, GuideFrontmatter } from '@/lib/types'
+import { useProgress } from '@/lib/hooks/useProgress'
 
 interface Props {
   frontmatter: GuideFrontmatter
@@ -25,6 +26,7 @@ export default function GuideContent({
 }: Props) {
   const articleRef = useRef<HTMLElement>(null)
   const base = `/exams/${examId}`
+  const { loaded, recordActivity } = useProgress(examId)
   const actions = [
     { label: 'ブックマーク', icon: Bookmark },
     { label: 'お気に入り', icon: Star },
@@ -33,7 +35,14 @@ export default function GuideContent({
 
   useEffect(() => {
     articleRef.current?.scrollTo({ top: 0, left: 0 })
-  }, [currentSectionId])
+    if (!loaded) return
+    recordActivity(
+      'guide',
+      chapter.id,
+      `${base}/guide/${chapter.id}?section=${currentSectionId}`,
+      `${frontmatter.sectionNumber} ${frontmatter.sectionTitle}`,
+    )
+  }, [base, chapter.id, currentSectionId, frontmatter.sectionNumber, frontmatter.sectionTitle, loaded, recordActivity])
 
   return (
     <article ref={articleRef} style={{

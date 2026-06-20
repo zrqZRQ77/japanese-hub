@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../styles/globals.css'
 import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/seo'
+import AdSenseScript from '@/components/monetization/AdSenseScript'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body>{children}</body>
+      <AdSenseScript />
     </html>
   )
 }

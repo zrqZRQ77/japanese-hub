@@ -9,6 +9,8 @@ import ExamSidebar from '@/components/layout/ExamSidebar'
 import DashboardProgress from '@/components/features/dashboard/DashboardProgress'
 import ToolCard from '@/components/features/dashboard/ToolCard'
 import ExamInfoSection from '@/components/features/dashboard/ExamInfoSection'
+import AdSlot from '@/components/monetization/AdSlot'
+import AffiliateRecommendations from '@/components/monetization/AffiliateRecommendations'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
 import { BookOpen, LibraryBig, PencilLine } from 'lucide-react'
@@ -71,7 +73,7 @@ export default async function ExamDashboardPage({
         <ExamSidebar exam={exam} />
 
         {/* メインコンテンツ */}
-        <main style={{
+        <main className="exam-dashboard-main" style={{
           flex: 1, overflowY: 'auto',
           background: 'var(--color-bg-subtle)',
           padding: '32px',
@@ -108,6 +110,9 @@ export default async function ExamDashboardPage({
               />
             ))}
           </div>
+
+          <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_EXAM_DASHBOARD} />
+          <AffiliateRecommendations exam={exam} />
         </main>
       </div>
     </>

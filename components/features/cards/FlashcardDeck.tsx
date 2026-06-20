@@ -1,9 +1,10 @@
 'use client'
 
 import type { CSSProperties } from 'react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { RotateCcw, Layers, CheckCircle2 } from 'lucide-react'
 import { ChapterMeta, KnowledgeCard } from '@/lib/types'
+import { useProgress } from '@/lib/hooks/useProgress'
 
 interface CardGroup {
   chapter: ChapterMeta
@@ -11,15 +12,16 @@ interface CardGroup {
 }
 
 interface Props {
+  examId: string
   examShortName: string
   groups: CardGroup[]
 }
 
-export default function FlashcardDeck({ examShortName, groups }: Props) {
+export default function FlashcardDeck({ examId, examShortName, groups }: Props) {
   const [activeChapterId, setActiveChapterId] = useState(groups[0]?.chapter.id ?? '')
   const [activeCardIndex, setActiveCardIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
-  const [remembered, setRemembered] = useState<Record<string, boolean>>({})
+  const { progress, loaded, recordActivity, setCardRemembered } = useProgress(examId)
 
   const activeGroup = useMemo(
     () => groups.find(group => group.chapter.id === activeChapterId) ?? groups[0],
@@ -27,38 +29,91 @@ export default function FlashcardDeck({ examShortName, groups }: Props) {
   )
   const cards = activeGroup?.cards ?? []
   const activeCard = cards[activeCardIndex] ?? cards[0]
+  const rememberedCardIds = useMemo(
+    () => new Set(progress?.rememberedCardIds ?? []),
+    [progress?.rememberedCardIds],
+  )
   const totalCards = groups.reduce((sum, group) => sum + group.cards.length, 0)
-  const rememberedCount = Object.values(remembered).filter(Boolean).length
-  const chapterRememberedCount = cards.filter(card => remembered[card.id]).length
+  const rememberedCount = rememberedCardIds.size
+  const chapterRememberedCount = cards.filter(card => rememberedCardIds.has(card.id)).length
+
+  useEffect(() => {
+    if (!loaded) return
+    const urlParams = new URLSearchParams(window.location.search)
+    const recentParams = progress?.lastActivity?.type === 'cards'
+      ? new URL(progress.lastActivity.path, window.location.origin).searchParams
+      : null
+    const requestedChapter = urlParams.get('chapter')
+    const recentChapter = progress?.lastActivity?.type === 'cards'
+      ? progress.lastActivity.chapterId
+      : null
+    const nextChapter = requestedChapter ?? recentChapter
+    const nextGroup = groups.find(group => group.chapter.id === nextChapter)
+    if (nextChapter && nextGroup) {
+      setActiveChapterId(nextChapter)
+      const requestedCard = urlParams.get('card') ?? recentParams?.get('card')
+      const cardIndex = nextGroup.cards.findIndex(card => card.id === requestedCard)
+      if (cardIndex >= 0) setActiveCardIndex(cardIndex)
+    }
+  }, [groups, loaded, progress?.lastActivity])
 
   function selectChapter(chapterId: string) {
     setActiveChapterId(chapterId)
     setActiveCardIndex(0)
     setFlipped(false)
+    const group = groups.find(item => item.chapter.id === chapterId)
+    if (group) {
+      const firstCardId = group.cards[0]?.id
+      recordActivity(
+        'cards',
+        chapterId,
+        `/exams/${examId}/cards?chapter=${chapterId}${firstCardId ? `&card=${firstCardId}` : ''}`,
+        `${group.chapter.title}の知識カード`,
+      )
+    }
   }
 
   function moveCard(direction: 1 | -1) {
     if (!cards.length) return
-    setActiveCardIndex(index => {
-      const next = index + direction
-      if (next < 0) return cards.length - 1
-      if (next >= cards.length) return 0
-      return next
-    })
+    const candidate = activeCardIndex + direction
+    const nextIndex = candidate < 0
+      ? cards.length - 1
+      : candidate >= cards.length ? 0 : candidate
+    setActiveCardIndex(nextIndex)
     setFlipped(false)
+    const nextCard = cards[nextIndex]
+    if (nextCard && activeGroup) {
+      recordActivity(
+        'cards',
+        activeGroup.chapter.id,
+        `/exams/${examId}/cards?chapter=${activeGroup.chapter.id}&card=${nextCard.id}`,
+        `${activeGroup.chapter.title}の知識カード`,
+      )
+    }
   }
 
   function toggleRemembered() {
-    if (!activeCard) return
-    setRemembered(prev => ({ ...prev, [activeCard.id]: !prev[activeCard.id] }))
+    if (!activeCard || !activeGroup) return
+    setCardRemembered(
+      activeCard.id,
+      !rememberedCardIds.has(activeCard.id),
+      activeGroup.chapter.id,
+      activeGroup.chapter.title,
+    )
   }
 
   function resetChapter() {
     if (!activeGroup) return
-    const chapterCardIds = new Set(activeGroup.cards.map(card => card.id))
-    setRemembered(prev => Object.fromEntries(
-      Object.entries(prev).filter(([id]) => !chapterCardIds.has(id))
-    ))
+    activeGroup.cards.forEach(card => {
+      if (rememberedCardIds.has(card.id)) {
+        setCardRemembered(
+          card.id,
+          false,
+          activeGroup.chapter.id,
+          activeGroup.chapter.title,
+        )
+      }
+    })
     setActiveCardIndex(0)
     setFlipped(false)
   }
@@ -99,7 +154,7 @@ export default function FlashcardDeck({ examShortName, groups }: Props) {
               className="flashcard-chapter-select"
             >
               {groups.map(group => {
-                const done = group.cards.filter(card => remembered[card.id]).length
+                const done = group.cards.filter(card => rememberedCardIds.has(card.id)).length
                 return (
                   <option key={group.chapter.id} value={group.chapter.id}>
                     第{group.chapter.number}章 {group.chapter.title}（{done}/{group.cards.length}枚）
@@ -138,7 +193,7 @@ export default function FlashcardDeck({ examShortName, groups }: Props) {
                 label="QUESTION"
                 current={activeCardIndex + 1}
                 total={cards.length}
-                remembered={!!remembered[activeCard.id]}
+                remembered={rememberedCardIds.has(activeCard.id)}
               />
               <div className="flashcard-main-text">{activeCard.front}</div>
               <div className="flashcard-hint">クリックして答えを見る</div>
@@ -148,7 +203,7 @@ export default function FlashcardDeck({ examShortName, groups }: Props) {
                 label="ANSWER"
                 current={activeCardIndex + 1}
                 total={cards.length}
-                remembered={!!remembered[activeCard.id]}
+                remembered={rememberedCardIds.has(activeCard.id)}
               />
               <div className="flashcard-answer">{activeCard.back}</div>
               <div className="flashcard-tags">
@@ -164,13 +219,13 @@ export default function FlashcardDeck({ examShortName, groups }: Props) {
             onClick={toggleRemembered}
             style={{
               ...navButtonStyle,
-              background: remembered[activeCard.id] ? 'var(--color-success)' : '#fff',
-              color: remembered[activeCard.id] ? '#fff' : 'var(--color-text)',
-              borderColor: remembered[activeCard.id] ? 'var(--color-success)' : 'var(--color-border)',
+              background: rememberedCardIds.has(activeCard.id) ? 'var(--color-success)' : '#fff',
+              color: rememberedCardIds.has(activeCard.id) ? '#fff' : 'var(--color-text)',
+              borderColor: rememberedCardIds.has(activeCard.id) ? 'var(--color-success)' : 'var(--color-border)',
             }}
           >
             <CheckCircle2 size={16} />
-            {remembered[activeCard.id] ? '覚えた' : '覚えたにする'}
+            {rememberedCardIds.has(activeCard.id) ? '覚えた' : '覚えたにする'}
           </button>
           <button onClick={() => moveCard(1)} style={navButtonStyle}>次のカード</button>
         </div>

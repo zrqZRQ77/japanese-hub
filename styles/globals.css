@@ -65,6 +65,455 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   padding: 0 24px;
 }
 
+/* --- 学習フィードバック --- */
+.learning-feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.learning-feedback-panel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.learning-feedback-panel__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.learning-feedback-panel__heading h3 {
+  margin: 0 0 3px;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.learning-feedback-panel__heading p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+}
+
+.learning-feedback-panel__heading > span {
+  min-width: 42px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.weak-chapter-list,
+.wrong-question-list {
+  display: grid;
+  gap: 8px;
+}
+
+.wrong-question-list {
+  max-height: 344px;
+  padding-right: 3px;
+  overflow-y: auto;
+}
+
+.weak-chapter-list > a {
+  padding: 10px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  color: inherit;
+  background: var(--color-bg-subtle);
+  text-decoration: none;
+}
+
+.weak-chapter-list__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.weak-chapter-list__row > div {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.weak-chapter-list__row strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weak-chapter-list__row span {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+}
+
+.weak-chapter-list__row b {
+  color: #a16207;
+  font-size: 0.84rem;
+}
+
+.weak-chapter-list__row b.is-low {
+  color: var(--color-error);
+}
+
+.weak-chapter-list__bar {
+  height: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--color-border);
+}
+
+.weak-chapter-list__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #d97706;
+}
+
+.wrong-question-list > a {
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  color: var(--color-text-secondary);
+  background: #fff;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.wrong-question-list > a > svg:first-child {
+  color: var(--color-error);
+}
+
+.wrong-question-list > a > div {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.wrong-question-list span {
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.wrong-question-list strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.learning-feedback-empty {
+  min-height: 104px;
+  padding: 18px;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: 7px;
+  color: var(--color-text-muted);
+  background: var(--color-bg-subtle);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.learning-feedback-empty > div {
+  display: grid;
+  gap: 3px;
+}
+
+.learning-feedback-empty strong {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+}
+
+.learning-feedback-empty span {
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .learning-feedback-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 広告・アフィリエイト --- */
+.ad-slot {
+  width: 100%;
+  min-height: 112px;
+  margin: 4px 0 32px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad-slot__label {
+  margin-bottom: 8px;
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.ad-slot__preview {
+  min-height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--color-border-strong);
+  color: var(--color-text-muted);
+  background: var(--color-bg-subtle);
+  font-size: 0.78rem;
+}
+
+.affiliate-section {
+  margin: 0 0 40px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.affiliate-section__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.affiliate-section__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+  color: var(--color-text-secondary);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.affiliate-section__eyebrow span {
+  padding: 2px 6px;
+  border: 1px solid #fde68a;
+  border-radius: 4px;
+  color: #92400e;
+  background: #fffbeb;
+  font-size: 0.64rem;
+}
+
+.affiliate-section h2 {
+  margin: 0 0 6px;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.affiliate-section__heading p {
+  color: var(--color-text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.affiliate-section__trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.affiliate-card {
+  min-width: 0;
+  min-height: 244px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: inherit;
+  background: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.affiliate-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.affiliate-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
+
+.affiliate-card--course {
+  border-top: 3px solid #2563eb;
+}
+
+.affiliate-card--book {
+  border-top: 3px solid #d97706;
+}
+
+.affiliate-card__topline {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.affiliate-card__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.affiliate-card--book .affiliate-card__icon {
+  color: #a16207;
+  background: #fffbeb;
+}
+
+.affiliate-card__type,
+.affiliate-card__pick {
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.affiliate-card__type {
+  color: var(--color-text-secondary);
+}
+
+.affiliate-card__pick {
+  margin-left: auto;
+  padding: 3px 7px;
+  border-radius: 4px;
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.affiliate-card__provider {
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.affiliate-card h3 {
+  margin: 0 0 8px;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.affiliate-card p {
+  margin: 0 0 14px;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.affiliate-card__fit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 15px;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.affiliate-card__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.affiliate-section__disclosure {
+  margin: 16px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 840px) {
+  .affiliate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .affiliate-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .exam-dashboard-main {
+    padding: 16px !important;
+  }
+
+  .ad-slot {
+    min-height: 96px;
+    margin-bottom: 24px;
+    padding: 14px;
+  }
+
+  .affiliate-section {
+    padding: 20px 16px;
+  }
+
+  .affiliate-section__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* --- 学習ガイド MDX レンダリング --- */
 .mdx-content h2 {
   font-size: 1.25rem;

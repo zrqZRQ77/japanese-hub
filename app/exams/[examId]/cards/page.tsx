@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ examId: strin
           background: 'var(--color-bg-subtle)',
           padding: '28px 32px',
         }}>
-          <FlashcardDeck examShortName={exam.shortName} groups={groups} />
+          <FlashcardDeck examId={examId} examShortName={exam.shortName} groups={groups} />
         </main>
       </div>
     </>

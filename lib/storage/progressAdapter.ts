@@ -42,12 +42,12 @@ function getKey(examId: string) {
  * 進捗を読み込む
  * 【将来】: supabase.from('exam_progress').select().eq('user_id', userId).eq('exam_id', examId)
  */
-export function loadProgressFromStorage(examId: string): ExamProgress | null {
+export function loadProgressFromStorage(examId: string): Partial<ExamProgress> | null {
   if (typeof window === 'undefined') return null
   try {
     const raw = window.localStorage.getItem(getKey(examId))
     if (!raw) return null
-    return JSON.parse(raw) as ExamProgress
+    return JSON.parse(raw) as Partial<ExamProgress>
   } catch {
     return null
   }

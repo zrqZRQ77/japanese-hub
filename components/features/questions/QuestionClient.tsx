@@ -3,7 +3,7 @@
 // 修改此文件 → 所有考试的练习题页面同步更新
 // ============================================================
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Question } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
@@ -21,24 +21,45 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   const [answered, setAnswered] = useState<Record<number, string>>({})
   const [reviewLater, setReviewLater] = useState(false)
   const [saved, setSaved] = useState(false)
-  const { completeChapter } = useProgress(examId)
+  const { progress, recordQuestionAnswer } = useProgress(examId)
 
   const q = questions[current]
   const isAnswered = selected !== null
   const base = `/exams/${examId}`
+
+  useEffect(() => {
+    const questionId = window.location.hash.slice(1)
+    if (!questionId) return
+    const index = questions.findIndex(question => question.id === questionId)
+    if (index >= 0) setCurrent(index)
+  }, [questions])
+
+  function isCorrect(question: Question, answer: string) {
+    return Array.isArray(question.correctAnswer)
+      ? question.correctAnswer.length === 1 && question.correctAnswer[0] === answer
+      : question.correctAnswer === answer
+  }
+
+  function isCorrectOption(question: Question, label: string) {
+    return Array.isArray(question.correctAnswer)
+      ? question.correctAnswer.includes(label)
+      : question.correctAnswer === label
+  }
 
   function handleSelect(label: string) {
     if (isAnswered) return
     const nextAnswered = { ...answered, [current]: label }
     setSelected(label)
     setAnswered(nextAnswered)
-
-    if (Object.keys(nextAnswered).length === questions.length && !saved) {
-      const correctCount = Object.entries(nextAnswered)
-        .filter(([i, ans]) => ans === questions[Number(i)].correctAnswer).length
-      completeChapter(chapterId, questions.length, correctCount)
-      setSaved(true)
-    }
+    recordQuestionAnswer(
+      chapterId,
+      chapterTitle,
+      q,
+      label,
+      isCorrect(q, label),
+      questions.length,
+    )
+    setSaved(true)
   }
 
   function goTo(index: number) {
@@ -53,8 +74,10 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
 
   function getQuestionStatus(i: number) {
     const ans = answered[i]
-    if (!ans) return 'unanswered'
-    return ans === questions[i].correctAnswer ? 'correct' : 'wrong'
+    if (ans) return isCorrect(questions[i], ans) ? 'correct' : 'wrong'
+    const stored = progress?.questionProgress[questions[i].id]
+    if (!stored) return 'unanswered'
+    return stored.isCorrect ? 'correct' : 'wrong'
   }
 
   const optionStyle = (label: string): React.CSSProperties => {
@@ -70,12 +93,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       boxShadow: '0 1px 0 rgba(15,23,42,0.02)',
     }
     if (!isAnswered) return { ...base }
-    if (label === q.correctAnswer) return {
+    if (isCorrectOption(q, label)) return {
       ...base, background: '#f0fdf4',
       border: '1.5px solid var(--color-success)',
       boxShadow: '0 8px 24px rgba(22,163,74,0.08)',
     }
-    if (label === selected && label !== q.correctAnswer) return {
+    if (label === selected && !isCorrectOption(q, label)) return {
       ...base, background: '#fef2f2',
       border: '1.5px solid var(--color-error)',
       boxShadow: '0 8px 24px rgba(220,38,38,0.08)',
@@ -93,11 +116,11 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       border: '1.5px solid var(--color-border)',
     }
     if (!isAnswered) return base
-    if (label === q.correctAnswer) return {
+    if (isCorrectOption(q, label)) return {
       ...base, background: 'var(--color-success)',
       color: '#fff', border: 'none',
     }
-    if (label === selected && label !== q.correctAnswer) return {
+    if (label === selected && !isCorrectOption(q, label)) return {
       ...base, background: 'var(--color-error)',
       color: '#fff', border: 'none',
     }
@@ -111,11 +134,15 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     return { bg: i === current ? 'var(--color-primary)' : 'var(--color-border)', label: String(i + 1) }
   }
 
-  const answeredCount = Object.keys(answered).length
+  const persistedAnsweredIds = progress?.chapterProgress[chapterId]?.answeredQuestionIds ?? []
+  const answeredIds = new Set(persistedAnsweredIds)
+  Object.keys(answered).forEach(index => answeredIds.add(questions[Number(index)].id))
+  const answeredCount = answeredIds.size
   const completionRate = questions.length === 0 ? 0 : (answeredCount / questions.length) * 100
   const currentAnswerState = selected && q?.correctAnswer
-    ? (selected === q.correctAnswer ? 'correct' : 'wrong')
+    ? (isCorrect(q, selected) ? 'correct' : 'wrong')
     : null
+  const allAnswered = answeredCount >= questions.length
 
   return (
     <div className="question-layout" style={{
@@ -262,10 +289,10 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               <span style={{ fontSize: '0.96rem', lineHeight: 1.7, color: 'var(--color-text)' }}>
                 {opt.text}
               </span>
-              {isAnswered && opt.label === q.correctAnswer && (
+              {isAnswered && isCorrectOption(q, opt.label) && (
                 <span style={{ marginLeft: 'auto', color: 'var(--color-success)', fontWeight: 700 }}>✓</span>
               )}
-              {isAnswered && opt.label === selected && opt.label !== q.correctAnswer && (
+              {isAnswered && opt.label === selected && !isCorrectOption(q, opt.label) && (
                 <span style={{ marginLeft: 'auto', color: 'var(--color-error)', fontWeight: 700 }}>✗</span>
               )}
             </div>
@@ -336,7 +363,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
                   boxShadow: '0 10px 24px rgba(37,99,235,0.22)',
                 }}>次の問題へ</button>
               )}
-            {isAnswered && current === questions.length - 1 && (
+            {isAnswered && current === questions.length - 1 && allAnswered && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-end' }}>
                 {saved && (
                   <div style={{
@@ -355,6 +382,18 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
                   boxShadow: '0 10px 24px rgba(22,163,74,0.18)',
                 }}>学習を完了して戻る</Link>
               </div>
+            )}
+            {isAnswered && current === questions.length - 1 && !allAnswered && (
+              <button
+                onClick={() => {
+                  const nextIndex = questions.findIndex(question => !answeredIds.has(question.id))
+                  if (nextIndex >= 0) goTo(nextIndex)
+                }}
+                style={{
+                  padding: '10px 22px', background: 'var(--color-primary)', color: '#fff',
+                  border: 'none', borderRadius: 8, fontWeight: 700, cursor: 'pointer',
+                }}
+              >未回答の問題へ</button>
             )}
           </div>
         </div>

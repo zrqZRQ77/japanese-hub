@@ -89,7 +89,38 @@ export interface CardSet {
 }
 
 /** 学習進捗（ローカルストレージ用） */
+export type LearningActivityType = 'guide' | 'questions' | 'cards'
+
+export interface LearningActivity {
+  type: LearningActivityType
+  chapterId: string
+  path: string
+  label: string
+  updatedAt: string
+}
+
+export interface QuestionProgress {
+  questionId: string
+  chapterId: string
+  questionText: string
+  selectedAnswer: string | string[]
+  correctAnswer: string | string[]
+  isCorrect: boolean
+  tags: string[]
+  answeredAt: string
+}
+
+export interface ChapterLearningProgress {
+  chapterId: string
+  answeredQuestionIds: string[]
+  correctQuestionIds: string[]
+  totalQuestions: number
+  completed: boolean
+  lastStudiedAt: string
+}
+
 export interface ExamProgress {
+  version: 2
   examId: string
   completedChapters: string[]
   currentChapterId: string
@@ -98,6 +129,10 @@ export interface ExamProgress {
   correctRate: number
   streakDays: number
   lastStudiedAt: string
+  chapterProgress: Record<string, ChapterLearningProgress>
+  questionProgress: Record<string, QuestionProgress>
+  rememberedCardIds: string[]
+  lastActivity: LearningActivity | null
 }
 
 // ============================================================
@@ -119,6 +154,7 @@ export interface ExamCourse {
   note: string
   url: string
   isFree: boolean
+  isAffiliate?: boolean
 }
 
 export interface ExamInfo {

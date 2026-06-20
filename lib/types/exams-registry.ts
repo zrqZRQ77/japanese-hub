@@ -68,6 +68,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: 'スマホで完結。動画×問題演習でスキマ時間に合格を目指せる',
           url: 'https://studying.jp/boki/',
           isFree: false,
+          isAffiliate: true,
         },
         {
           title: 'TAC簿記3級通信講座',
@@ -75,6 +76,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: '業界最大手の資格スクール。教材の質・合格実績ともにトップクラス',
           url: 'https://www.tac-school.co.jp/kouza_boki.html',
           isFree: false,
+          isAffiliate: true,
         },
       ],
     },
@@ -136,6 +138,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: '動画＋スマホで効率学習。通勤時間などのスキマ学習に向く。',
           url: 'https://studying.jp/fp/',
           isFree: false,
+          isAffiliate: true,
         },
         {
           title: 'ユーキャン FP3級講座',
@@ -143,6 +146,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: 'テキスト＋添削で学習を進める通信講座の定番。',
           url: 'https://www.u-can.co.jp/',
           isFree: false,
+          isAffiliate: true,
         },
         {
           title: 'TAC FP3級 通信講座',
@@ -150,6 +154,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: '通学・通信で実績のある資格スクール。模擬試験やサポートが充実。',
           url: 'https://www.tac-school.co.jp/',
           isFree: false,
+          isAffiliate: true,
         },
       ],
     },
@@ -212,6 +217,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: '動画＋スマホで学べる効率学習。短時間で要点を押さえたい人向け。',
           url: 'https://studying.jp/itpassport/',
           isFree: false,
+          isAffiliate: true,
         },
         {
           title: 'Udemy ITパスポート講座（検索）',
@@ -219,6 +225,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
           note: '講師ごとの講座が多数。セールで安価に購入できることが多い。',
           url: 'https://www.udemy.com/courses/search/?q=IT%20パスポート',
           isFree: false,
+          isAffiliate: true,
         },
         {
           title: 'IPA（学習コンテンツ）',

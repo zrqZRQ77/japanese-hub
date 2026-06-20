@@ -9,6 +9,7 @@ import ProgressRing from '@/components/features/dashboard/ProgressRing'
 import StatCard from '@/components/features/dashboard/StatCard'
 import { useProgress } from '@/lib/hooks/useProgress'
 import { ChapterMeta } from '@/lib/types'
+import { AlertCircle, ArrowRight, BarChart3 } from 'lucide-react'
 
 interface Props {
   examId: string
@@ -61,6 +62,26 @@ export default function DashboardProgress({ examId, chapters, totalChapters }: P
     ?? chapters[0]
 
   const base = `/exams/${examId}`
+  const continuePath = progress?.lastActivity?.path ?? `${base}/guide/${currentChapterId}`
+  const continueLabel = progress?.lastActivity?.label ?? `第${currentChapter?.number}章 ${currentChapter?.title}`
+
+  const chapterResults = chapters.flatMap(chapter => {
+    const result = progress?.chapterProgress[chapter.id]
+    if (!result || result.answeredQuestionIds.length === 0) return []
+    const answered = result.answeredQuestionIds.length
+    const correct = result.correctQuestionIds.length
+    return [{
+      chapter,
+      answered,
+      correct,
+      accuracy: Math.round((correct / answered) * 100),
+    }]
+  }).sort((a, b) => a.accuracy - b.accuracy || b.answered - a.answered)
+
+  const weakChapters = chapterResults.filter(result => result.accuracy < 80).slice(0, 4)
+  const wrongQuestions = Object.values(progress?.questionProgress ?? {})
+    .filter(result => !result.isCorrect)
+    .sort((a, b) => b.answeredAt.localeCompare(a.answeredAt))
 
   const chapterStatus = (chId: string): 'done' | 'active' | 'none' => {
     if (completed.includes(chId)) return 'done'
@@ -106,13 +127,13 @@ export default function DashboardProgress({ examId, chapters, totalChapters }: P
               fontWeight: 600, marginBottom: 4,
             }}>学習中の章</div>
             <div style={{ fontWeight: 800, fontSize: '1.05rem', marginBottom: 2 }}>
-              第{currentChapter?.number}章 {currentChapter?.title}
+              {progress?.lastActivity ? '前回の続き' : `第${currentChapter?.number}章 ${currentChapter?.title}`}
             </div>
             <div style={{
               fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginBottom: 14,
-            }}>完了 {completed.length}/{totalChapters}章</div>
+            }}>{continueLabel} ・ 完了 {completed.length}/{totalChapters}章</div>
             <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-              <Link href={`${base}/guide/${currentChapterId}`} style={{
+              <Link href={continuePath} style={{
                 display: 'inline-block',
                 padding: '8px 18px',
                 background: 'var(--color-primary)', color: '#fff',
@@ -187,10 +208,96 @@ export default function DashboardProgress({ examId, chapters, totalChapters }: P
         </div>
       </div>
 
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 8,
+        margin: '30px 0 14px',
+      }}>
+        <BarChart3 size={19} color="var(--color-primary)" />
+        <h2 style={{ fontSize: '1.05rem', fontWeight: 800 }}>学習フィードバック</h2>
+      </div>
+
+      <div className="learning-feedback-grid">
+        <section className="learning-feedback-panel" aria-labelledby="weak-chapters-heading">
+          <div className="learning-feedback-panel__heading">
+            <div>
+              <h3 id="weak-chapters-heading">復習を優先したい章</h3>
+              <p>正答率80%未満の章を表示しています</p>
+            </div>
+            <span>{weakChapters.length}章</span>
+          </div>
+
+          {weakChapters.length > 0 ? (
+            <div className="weak-chapter-list">
+              {weakChapters.map(({ chapter, answered, correct, accuracy }) => (
+                <Link href={`${base}/questions/${chapter.id}`} key={chapter.id}>
+                  <div className="weak-chapter-list__row">
+                    <div>
+                      <strong>第{chapter.number}章 {chapter.title}</strong>
+                      <span>{correct}/{answered}問正解</span>
+                    </div>
+                    <b className={accuracy < 60 ? 'is-low' : ''}>{accuracy}%</b>
+                  </div>
+                  <div className="weak-chapter-list__bar">
+                    <span style={{ width: `${accuracy}%` }} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="learning-feedback-empty">
+              <BarChart3 size={22} />
+              <div>
+                <strong>{chapterResults.length ? '現在、正答率80%未満の章はありません' : '問題を解くと分析が始まります'}</strong>
+                <span>章ごとの正答率から復習順を自動で整理します。</span>
+              </div>
+            </div>
+          )}
+        </section>
+
+        <section className="learning-feedback-panel" aria-labelledby="wrong-questions-heading">
+          <div className="learning-feedback-panel__heading">
+            <div>
+              <h3 id="wrong-questions-heading">未解決の間違い</h3>
+              <p>正解するとこの一覧から外れます</p>
+            </div>
+            <span>{wrongQuestions.length}問</span>
+          </div>
+
+          {wrongQuestions.length > 0 ? (
+            <div className="wrong-question-list">
+              {wrongQuestions.map(result => {
+                const chapter = chapters.find(item => item.id === result.chapterId)
+                return (
+                  <Link
+                    href={`${base}/questions/${result.chapterId}#${result.questionId}`}
+                    key={result.questionId}
+                  >
+                    <AlertCircle size={17} />
+                    <div>
+                      <span>第{chapter?.number ?? '-'}章 {chapter?.title ?? ''}</span>
+                      <strong>{result.questionText}</strong>
+                    </div>
+                    <ArrowRight size={16} />
+                  </Link>
+                )
+              })}
+            </div>
+          ) : (
+            <div className="learning-feedback-empty">
+              <AlertCircle size={22} />
+              <div>
+                <strong>未解決の間違いはありません</strong>
+                <span>間違えた問題はここからすぐに解き直せます。</span>
+              </div>
+            </div>
+          )}
+        </section>
+      </div>
+
       {/* 章一覧 */}
       <div style={{
         display: 'flex', alignItems: 'center',
-        justifyContent: 'space-between', marginBottom: 14,
+        justifyContent: 'space-between', marginTop: 30, marginBottom: 14,
       }}>
         <h2 style={{ fontSize: '1.05rem', fontWeight: 700 }}>章一覧（学習ガイド）</h2>
         <Link href={`${base}/guide`} style={{

@@ -4,7 +4,6 @@
 // 修改此文件 → 所有考试页面的"试験紹介"区块同步更新
 // ============================================================
 import { ExamMeta } from '@/lib/types'
-import { BookOpen } from 'lucide-react'
 
 interface Props {
   exam: ExamMeta
@@ -116,97 +115,31 @@ export default function ExamInfoSection({ exam }: Props) {
           </div>
         </div>
 
-        {/* おすすめ教材（直接展示） */}
-        <div>
-          <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--color-text)', marginBottom: 8 }}>📚 おすすめ教材・参考書（Amazon）</div>
-          <p style={{ fontSize: '0.75rem', color: 'rgba(20,24,40,0.55)', marginBottom: 12 }}>
-            ※ 以下はAmazonアフィリエイトリンクです。購入価格は変わりません。
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10 }}>
-            {info.books.map((book, i) => (
-              <a key={i} href={book.amazonUrl} target="_blank" rel="noopener noreferrer"
-                style={{
-                  display: 'flex', gap: 12, padding: '12px 16px',
-                  background: '#fff',
-                  border: '1px solid rgba(20,24,40,0.04)',
-                  borderRadius: 12,
-                  textDecoration: 'none', color: 'inherit',
-                  alignItems: 'center'
-                }}
-              >
-                <div style={{
-                  width: 34,
-                  height: 34,
-                  borderRadius: 8,
-                  background: 'var(--color-primary-light)',
-                  color: 'var(--color-primary)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                }}>
-                  <BookOpen size={18} />
-                </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, flexWrap: 'wrap' }}>
-                    <span style={{
-                      fontSize: '0.7rem', fontWeight: 800,
-                      background: '#fff7ed', color: '#92400e',
-                      padding: '3px 8px', borderRadius: 99, border: '1px solid rgba(245,158,11,0.08)'
-                    }}>{book.type}</span>
-                    <span style={{ fontWeight: 800, fontSize: '0.95rem', color: '#0f172a' }}>{book.title}</span>
-                  </div>
-                  <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.6)', marginBottom: 4 }}>{book.author}</div>
-                  <div style={{ fontSize: '0.78rem', color: 'rgba(20,24,40,0.5)' }}>{book.note}</div>
-                </div>
-                <div style={{ color: '#f59e0b', fontSize: '0.9rem', fontWeight: 800, flexShrink: 0, alignSelf: 'center' }}>
-                  Amazon →
-                </div>
-              </a>
-            ))}
+        {info.courses.some(course => course.isFree) && (
+          <div>
+            <div style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--color-text)', marginBottom: 10 }}>
+              無料で使える外部学習サービス
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {info.courses.filter(course => course.isFree).map(course => (
+                <a
+                  href={course.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={course.title}
+                  style={{
+                    padding: '8px 12px', border: '1px solid var(--color-border)', borderRadius: 6,
+                    color: 'var(--color-primary)', background: '#fff', textDecoration: 'none',
+                    fontSize: '0.8rem', fontWeight: 700,
+                  }}
+                >
+                  {course.title} ↗
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-
-        
+        )}
       </div>
-
-      {/* おすすめ講座 */}
-      {info.courses && info.courses.length > 0 && (
-        <div style={{ padding: '14px 24px 18px' }}>
-          <div style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--color-text)', marginBottom: 10 }}>
-            🖥️ おすすめ講座・スクール
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {info.courses.map((course, i) => (
-              <a key={i} href={course.url} target="_blank" rel="noopener noreferrer"
-                style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                  gap: 12, padding: '10px 14px',
-                  background: 'var(--color-bg-subtle)',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: 'var(--radius-sm)',
-                  textDecoration: 'none', color: 'inherit',
-                }}
-              >
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
-                    {course.isFree && (
-                      <span style={{
-                        fontSize: '0.65rem', fontWeight: 700,
-                        background: '#f0fdf4', color: '#16a34a',
-                        padding: '1px 6px', borderRadius: 99, border: '1px solid #bbf7d0',
-                      }}>無料</span>
-                    )}
-                    <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--color-text)' }}>{course.title}</span>
-                  </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)' }}>{course.note}</div>
-                </div>
-                <span style={{ fontSize: '0.78rem', color: 'var(--color-primary)', fontWeight: 700, flexShrink: 0 }}>詳細 →</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
     </section>
   )
 }

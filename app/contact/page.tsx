@@ -19,7 +19,7 @@ export default function ContactPage() {
         {
           title: 'お問い合わせ先',
           body: [
-            'メール：contact@open-exam-prep.com',
+            'メール：contact@japanese-hub.com',
             '内容を確認のうえ、必要に応じて返信いたします。返信までお時間をいただく場合があります。',
           ],
         },
@@ -49,5 +49,5 @@ export default function ContactPage() {
 }
 
 export function ContactMailLink() {
-  return <Link href="mailto:contact@open-exam-prep.com">contact@open-exam-prep.com</Link>
+  return <Link href="mailto:contact@japanese-hub.com">contact@japanese-hub.com</Link>
 }
