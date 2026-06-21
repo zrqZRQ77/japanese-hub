@@ -5,13 +5,14 @@ import {
   Bot,
   BookOpen,
   Check,
-  Clock3,
   Layers3,
   PencilLine,
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import SiteFooter from '@/components/layout/SiteFooter'
 import { getAvailableExams } from '@/lib/content/exams-loader'
+import { getAllQuestionSets } from '@/lib/content/question-loader'
+import { getChaptersByExam } from '@/lib/types/chapters-registry'
 import { createPageMetadata } from '@/lib/seo'
 import styles from './home.module.css'
 
@@ -22,10 +23,9 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 const TOOLS = [
-  { icon: BookOpen, number: '01', title: '学習ガイド', desc: '試験範囲を章ごとに整理。基礎から順序よく理解できます。' },
-  { icon: PencilLine, number: '02', title: '練習問題', desc: '学んだ内容をすぐに確認。回答結果は端末に保存されます。' },
-  { icon: Layers3, number: '03', title: '知識カード', desc: '重要語句を短時間で反復。移動中の復習にも使えます。' },
-  { icon: Bot, number: '04', title: 'AI質問', desc: '分からない点をその場で質問。学習の停滞を減らします。' },
+  { icon: BookOpen, title: '学習ガイド', desc: '試験範囲を章ごとに整理。基礎から順序よく理解できます。' },
+  { icon: PencilLine, title: '練習問題', desc: '学んだ内容をすぐに確認。回答結果は端末に保存されます。' },
+  { icon: Layers3, title: '知識カード', desc: '重要語句を短時間で反復。移動中の復習にも使えます。' },
 ]
 
 const EXAM_MARKS: Record<string, string> = {
@@ -36,6 +36,20 @@ const EXAM_MARKS: Record<string, string> = {
 
 export default function HomePage() {
   const exams = getAvailableExams()
+  const examStats = exams.map(exam => {
+    const chapters = getChaptersByExam(exam.id)
+    const questionCount = getAllQuestionSets(exam.id)
+      .reduce((sum, set) => sum + set.questions.length, 0)
+
+    return {
+      exam,
+      chapterCount: chapters.length,
+      sectionCount: chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0),
+      questionCount,
+    }
+  })
+  const totalSections = examStats.reduce((sum, item) => sum + item.sectionCount, 0)
+  const totalQuestions = examStats.reduce((sum, item) => sum + item.questionCount, 0)
 
   return (
     <div className={styles.page}>
@@ -46,12 +60,12 @@ export default function HomePage() {
             <div className={styles.heroCopy}>
               <div className={styles.eyebrow}>日本の資格を、ひとつずつ確実に。</div>
               <h1>
-                <span className={styles.heroLead}>合格までの学びを、</span>
-                <span className={styles.heroAccent}>静かに整える。</span>
+                <span className={styles.heroLead}>3つの資格を、</span>
+                <span className={styles.heroAccent}>深く学べる場所。</span>
               </h1>
               <p>
-                日商簿記3級・FP3級・ITパスポートに対応。
-                教材、練習問題、知識カードをひとつの場所で無料で利用できます。
+                日商簿記3級・FP3級・ITパスポートに絞り、学習ガイド・練習問題・知識カードを無料で公開しています。
+                対象資格は、内容の質を保ちながら順次追加していきます。
               </p>
               <div className={styles.heroActions}>
                 <Link className={styles.primaryAction} href="/exams">
@@ -73,58 +87,49 @@ export default function HomePage() {
               <div className={styles.signatureLine} aria-hidden="true"><span /></div>
               <div className={styles.indexHeader}>
                 <div>
-                  <span>STUDY INDEX</span>
-                  <h2>学習できる資格</h2>
+                  <span>対応資格</span>
+                  <h2>現在公開中の3資格</h2>
                 </div>
-                <strong>{String(exams.length).padStart(2, '0')}</strong>
+                <strong>{exams.length}種</strong>
               </div>
               <div className={styles.indexList}>
-                {exams.map((exam, index) => (
+                {examStats.map(({ exam, chapterCount, questionCount }) => (
                   <Link href={`/exams/${exam.id}`} key={exam.id}>
-                    <span className={styles.examMark}>{EXAM_MARKS[exam.id] ?? String(index + 1).padStart(2, '0')}</span>
+                    <span className={styles.examMark}>{EXAM_MARKS[exam.id] ?? exam.shortName.slice(0, 2)}</span>
                     <span className={styles.indexExamText}>
-                      <strong>{exam.name}</strong>
-                      <small>{exam.category}</small>
+                      <strong>{exam.shortName}</strong>
+                      <small>{chapterCount}章 / {questionCount}問</small>
                     </span>
                     <ArrowRight size={17} aria-hidden="true" />
                   </Link>
                 ))}
               </div>
               <div className={styles.indexFooter}>
-                <Clock3 size={15} aria-hidden="true" />
-                好きな時間に、続きから学習できます
+                まずはこの3資格を、迷わず学べる形に整えています。
               </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.examsSection} aria-labelledby="exam-heading">
+        <section className={styles.trustSection} aria-label="公開中の教材情報">
           <div className="container-page">
-            <div className={styles.sectionHeading}>
+            <div className={styles.trustGrid}>
               <div>
-                <span>EXAMINATIONS</span>
-                <h2 id="exam-heading">対応試験</h2>
+                <span>対応資格</span>
+                <strong>{exams.length}種</strong>
               </div>
-              <p>いま必要な資格を選び、章ごとの学習を始められます。</p>
-            </div>
-
-            <div className={styles.examGrid}>
-              {exams.map((exam, index) => (
-                <Link className={styles.examCard} key={exam.id} href={`/exams/${exam.id}`}>
-                  <div className={styles.examCardTop}>
-                    <span>{String(index + 1).padStart(2, '0')}</span>
-                    <small>{exam.category}</small>
-                  </div>
-                  <div>
-                    <h3>{exam.name}</h3>
-                    <p>{exam.description}</p>
-                  </div>
-                  <div className={styles.examCardAction}>
-                    学習を始める
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </div>
-                </Link>
-              ))}
+              <div>
+                <span>教材小節</span>
+                <strong>{totalSections}節</strong>
+              </div>
+              <div>
+                <span>練習問題</span>
+                <strong>{totalQuestions}問</strong>
+              </div>
+              <div>
+                <span>利用条件</span>
+                <strong>無料</strong>
+              </div>
             </div>
           </div>
         </section>
@@ -133,10 +138,10 @@ export default function HomePage() {
           <div className="container-page">
             <div className={styles.sectionHeading}>
               <div>
-                <span>LEARNING TOOLS</span>
-                <h2 id="tools-heading">学ぶ、解く、覚える</h2>
+                <span>学習機能</span>
+                <h2 id="tools-heading">読む・解く・覚えるを一つの流れに</h2>
               </div>
-              <p>理解と定着を往復できる、4つの学習機能を用意しています。</p>
+              <p>教材で理解し、問題で確認し、カードで復習する。資格学習に必要な基本動作をひとつにまとめています。</p>
             </div>
 
             <div className={styles.toolGrid}>
@@ -145,7 +150,6 @@ export default function HomePage() {
                 return (
                   <article className={styles.toolItem} key={tool.title}>
                     <div className={styles.toolMeta}>
-                      <span>{tool.number}</span>
                       <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
                     </div>
                     <h3>{tool.title}</h3>
@@ -155,13 +159,20 @@ export default function HomePage() {
               })}
             </div>
 
-            <div className={styles.closingBand}>
-              <div>
-                <span>START LEARNING</span>
-                <h2>今日の一章から、始めよう。</h2>
+            <div className={styles.aiFeature}>
+              <div className={styles.aiIcon} aria-hidden="true">
+                <Bot size={27} strokeWidth={1.8} />
               </div>
-              <Link href="/exams">
-                資格一覧へ
+              <div>
+                <span>準備中の機能</span>
+                <h2>AI質問で、つまずきをその場でほどく。</h2>
+                <p>
+                  学習ガイドや練習問題で分からない点を、試験範囲に沿って質問できる機能を準備しています。
+                  実装後は各資格ページから利用できます。
+                </p>
+              </div>
+              <Link href="/ai-chat">
+                AI質問を見る
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
             </div>

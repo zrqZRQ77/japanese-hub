@@ -80,9 +80,8 @@
 
 .eyebrow,
 .sectionHeading span,
-.closingBand span,
+.aiFeature span,
 .indexHeader > div > span {
-  letter-spacing: 0.08em;
   font-size: 0.72rem;
   font-weight: 800;
 }
@@ -286,12 +285,12 @@
   font-size: 0.7rem;
 }
 
-.examsSection,
+.trustSection,
 .toolsSection {
   padding: 76px 0;
 }
 
-.examsSection {
+.trustSection {
   background: var(--home-paper);
 }
 
@@ -315,7 +314,7 @@
 }
 
 .sectionHeading h2,
-.closingBand h2 {
+.aiFeature h2 {
   margin: 4px 0 0;
   color: var(--home-ink);
   font-family: var(--home-serif);
@@ -335,81 +334,40 @@
   line-height: 1.75;
 }
 
-.examGrid {
+.trustGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--home-ink);
   border-left: 1px solid var(--home-line);
 }
 
-.examCard {
-  min-height: 282px;
-  padding: 24px;
-  color: var(--home-ink);
+.trustGrid > div {
+  min-height: 118px;
+  padding: 20px 22px;
   border-right: 1px solid var(--home-line);
   border-bottom: 1px solid var(--home-line);
-  background: rgba(244, 243, 239, 0.62);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
-  text-decoration: none;
+  background: rgba(244, 243, 239, 0.58);
 }
 
-.examCard:hover {
-  background: #eeece5;
-}
-
-.examCardTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.examCardTop > span {
-  color: var(--home-gold-dark);
-  font-family: var(--home-serif);
-  font-size: 1.1rem;
-}
-
-.examCardTop small {
+.trustGrid span {
+  display: block;
+  margin-bottom: 22px;
   color: var(--home-text-muted);
-  font-size: 0.68rem;
-  font-weight: 800;
-}
-
-.examCard h3 {
-  margin: 0 0 10px;
-  font-family: var(--home-serif);
-  font-size: 1.42rem;
-  font-weight: 600;
-}
-
-.examCard p {
-  margin: 0;
-  color: var(--home-text-muted);
-  font-size: 0.82rem;
-  line-height: 1.75;
-}
-
-.examCardAction {
-  padding-top: 15px;
-  border-top: 1px solid var(--home-line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-size: 0.78rem;
   font-weight: 800;
 }
 
-.examCardAction svg {
-  color: var(--home-gold-dark);
+.trustGrid strong {
+  color: var(--home-ink);
+  font-family: var(--home-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .toolGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--home-ink);
   border-bottom: 1px solid var(--home-line);
 }
@@ -451,27 +409,44 @@
   line-height: 1.72;
 }
 
-.closingBand {
+.aiFeature {
   margin-top: 60px;
   padding: 30px 32px;
   color: var(--home-paper);
   background: var(--home-ink);
-  display: flex;
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
 }
 
-.closingBand span {
+.aiIcon {
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(201, 162, 75, 0.48);
+  color: var(--home-gold);
+  display: grid;
+  place-items: center;
+}
+
+.aiFeature span {
   color: var(--home-gold);
 }
 
-.closingBand h2 {
+.aiFeature h2 {
   color: var(--home-paper);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
-.closingBand a {
+.aiFeature p {
+  max-width: 650px;
+  margin: 10px 0 0;
+  color: #c1beb5;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.aiFeature a {
   min-width: 154px;
   min-height: 44px;
   padding: 10px 16px;
@@ -514,12 +489,8 @@
     font-size: 3.2rem;
   }
 
-  .examGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .examCard {
-    min-height: 230px;
+  .trustGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .toolGrid {
@@ -553,7 +524,7 @@
     font-size: 2rem;
   }
 
-  .closingBand h2 {
+  .aiFeature h2 {
     font-size: 1.65rem;
   }
 
@@ -561,7 +532,7 @@
     font-size: 0.9rem;
   }
 
-  .examsSection,
+  .trustSection,
   .toolsSection {
     padding: 56px 0;
   }
@@ -572,13 +543,13 @@
     gap: 12px;
   }
 
-  .closingBand {
+  .aiFeature {
+    grid-template-columns: 1fr;
     padding: 26px 22px;
     align-items: stretch;
-    flex-direction: column;
   }
 
-  .closingBand a {
+  .aiFeature a {
     width: 100%;
   }
 }
@@ -615,6 +586,7 @@
     padding-left: 36px;
   }
 
+  .trustGrid,
   .toolGrid {
     grid-template-columns: 1fr;
   }
@@ -647,9 +619,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .primaryAction,
-  .examCard,
   .indexList a,
-  .closingBand a {
+  .aiFeature a {
     transition: background-color 160ms ease, color 160ms ease;
   }
 }
