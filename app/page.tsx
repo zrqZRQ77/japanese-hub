@@ -1,11 +1,19 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import {
+  ArrowRight,
+  Bot,
+  BookOpen,
+  Check,
+  Clock3,
+  Layers3,
+  PencilLine,
+} from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import SiteFooter from '@/components/layout/SiteFooter'
-import HoverCard from '@/components/ui/HoverCard'
 import { getAvailableExams } from '@/lib/content/exams-loader'
-import { Bot, BookOpen, CreditCard, PencilLine } from 'lucide-react'
 import { createPageMetadata } from '@/lib/seo'
+import styles from './home.module.css'
 
 export const metadata: Metadata = createPageMetadata({
   title: '資格合格ナビ — 無料で学ぶ日本の資格',
@@ -14,225 +22,154 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 const TOOLS = [
-  { icon: PencilLine, title: '練習問題', desc: '章ごとの練習で知識を定着' },
-  { icon: BookOpen, title: '学習ガイド', desc: 'やさしい解説で理解を深める' },
-  { icon: CreditCard, title: '知識カード', desc: 'スキマ時間に効率よく暗記' },
-  { icon: Bot, title: 'AI質問', desc: 'AIがいつでも質問に回答' },
+  { icon: BookOpen, number: '01', title: '学習ガイド', desc: '試験範囲を章ごとに整理。基礎から順序よく理解できます。' },
+  { icon: PencilLine, number: '02', title: '練習問題', desc: '学んだ内容をすぐに確認。回答結果は端末に保存されます。' },
+  { icon: Layers3, number: '03', title: '知識カード', desc: '重要語句を短時間で反復。移動中の復習にも使えます。' },
+  { icon: Bot, number: '04', title: 'AI質問', desc: '分からない点をその場で質問。学習の停滞を減らします。' },
 ]
 
-const STATS = [
-  { value: '100+', label: '練習問題' },
-  { value: '5種', label: '学習ツール' },
-  { value: '無料', label: '全コンテンツ' },
-  { value: 'AI', label: '即時解説' },
-]
-
-// No coming-soon items — only show exams that have content
+const EXAM_MARKS: Record<string, string> = {
+  boki3: 'BK',
+  fp3: 'FP',
+  itp: 'IT',
+}
 
 export default function HomePage() {
+  const exams = getAvailableExams()
+
   return (
-    <>
+    <div className={styles.page}>
       <Navbar />
-      <main>
-        {/* ===== Hero ===== */}
-        <section style={{
-          background: 'var(--color-hero-bg)',
-          color: 'var(--color-hero-text)',
-          padding: 'clamp(56px, 8vw, 88px) 0 clamp(44px, 6vw, 68px)',
-          borderBottom: '1px solid var(--color-border)',
-        }}>
-          <div className="container-page" style={{
-            display: 'flex', gap: 'clamp(24px, 4vw, 56px)',
-            alignItems: 'center', flexWrap: 'wrap',
-          }}>
-            {/* 左：テキスト */}
-            <div style={{ flex: '1 1 min(100%, 360px)' }}>
-              <div style={{
-                display: 'inline-block',
-                background: '#fff', color: 'var(--color-primary)',
-                fontSize: '0.78rem', fontWeight: 800,
-                padding: '5px 12px', borderRadius: 'var(--radius-sm)',
-                marginBottom: 18,
-                border: '1px solid var(--color-border)',
-              }}>完全無料・AI解説・登録不要</div>
-
-              <h1 style={{
-                fontSize: 'clamp(2rem, 6vw, 3.7rem)',
-                fontWeight: 900, lineHeight: 1.15, marginBottom: 14,
-                color: 'var(--color-text)',
-              }}>
-                資格合格を、<br />
-                <span style={{ color: 'var(--color-primary)' }}>無料で。</span>
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <div className={`container-page ${styles.heroInner}`}>
+            <div className={styles.heroCopy}>
+              <div className={styles.eyebrow}>日本の資格を、ひとつずつ確実に。</div>
+              <h1>
+                <span className={styles.heroLead}>合格までの学びを、</span>
+                <span className={styles.heroAccent}>静かに整える。</span>
               </h1>
-
-              <p style={{
-                color: 'var(--color-text-secondary)', fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-                lineHeight: 1.8, marginBottom: 32, maxWidth: 420,
-              }}>
-                FP技能士・日商簿記・宅建士など、<br />
-                日本の主要資格に特化した学習プラットフォーム。<br />
-                練習問題・知識カード・学習ガイド・AI解説がすべて無料。
+              <p>
+                日商簿記3級・FP3級・ITパスポートに対応。
+                教材、練習問題、知識カードをひとつの場所で無料で利用できます。
               </p>
-
-              <Link href="/exams" style={{
-                display: 'inline-block',
-                padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
-                background: 'var(--color-accent)', color: '#fff',
-                borderRadius: 'var(--radius-sm)', fontWeight: 700,
-                fontSize: 'clamp(0.95rem, 2vw, 1.05rem)',
-                textDecoration: 'none',
-                boxShadow: '0 12px 26px rgba(37,99,235,0.18)',
-              }}>試験を選ぶ →</Link>
+              <div className={styles.heroActions}>
+                <Link className={styles.primaryAction} href="/exams">
+                  学ぶ資格を選ぶ
+                  <ArrowRight size={17} aria-hidden="true" />
+                </Link>
+                <Link className={styles.secondaryAction} href="/guide">
+                  学習ガイドを見る
+                </Link>
+              </div>
+              <div className={styles.heroNotes} aria-label="サービスの特徴">
+                <span><Check size={14} />登録不要</span>
+                <span><Check size={14} />全教材無料</span>
+                <span><Check size={14} />進捗を端末に保存</span>
+              </div>
             </div>
 
-            {/* 右：統計カード 2×2 */}
-            <div style={{
-              flex: '0 0 auto',
-              display: 'grid', gridTemplateColumns: '1fr 1fr',
-              gap: 'clamp(10px, 2vw, 16px)',
-              width: 'min(100%, 300px)',
-            }}>
-              {STATS.map(s => (
-                <div key={s.label} style={{
-                  background: '#fff',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: 'clamp(16px, 3vw, 28px) clamp(12px, 2vw, 24px)',
-                  textAlign: 'center',
-                  boxShadow: 'var(--shadow-card)',
-                }}>
-                  <div style={{
-                    fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
-                    fontWeight: 900, color: 'var(--color-text)', lineHeight: 1,
-                  }}>{s.value}</div>
-                  <div style={{
-                    fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)',
-                    color: 'var(--color-text-secondary)', marginTop: 6,
-                  }}>{s.label}</div>
+            <div className={styles.studyIndex} aria-label="対応資格一覧">
+              <div className={styles.signatureLine} aria-hidden="true"><span /></div>
+              <div className={styles.indexHeader}>
+                <div>
+                  <span>STUDY INDEX</span>
+                  <h2>学習できる資格</h2>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ===== 5つの学習ツール ===== */}
-        <section style={{
-          padding: 'clamp(40px, 6vw, 64px) 0',
-          background: 'var(--color-bg)',
-          borderBottom: '1px solid var(--color-border)',
-        }}>
-          <div className="container-page">
-            <h2 style={{
-              textAlign: 'center',
-              fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-              fontWeight: 800, marginBottom: 'clamp(24px, 4vw, 40px)',
-            }}>4つの学習ツール、すべて無料</h2>
-            <div style={{ maxWidth: 980, margin: '0 auto' }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(min(160px, 100%), 1fr))',
-                gap: 'clamp(10px, 2vw, 16px)',
-                justifyContent: 'center',
-              }}>
-                {TOOLS.map(t => {
-                  const Icon = t.icon
-                  return (
-                <HoverCard key={t.title} style={{
-                  background: '#fff',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(16px, 3vw, 24px) clamp(12px, 2vw, 20px)',
-                  textAlign: 'center', cursor: 'pointer',
-                  boxShadow: 'var(--shadow-card)',
-                }}>
-                  <div style={{
-                    width: 42,
-                    height: 42,
-                    margin: '0 auto 12px',
-                    borderRadius: 'var(--radius-md)',
-                    background: 'var(--color-primary-light)',
-                    color: 'var(--color-primary)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}><Icon size={20} strokeWidth={2.2} /></div>
-                  <div style={{ fontWeight: 700, fontSize: 'clamp(0.875rem, 1.5vw, 0.95rem)', marginBottom: 6 }}>{t.title}</div>
-                  <div style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.8rem)', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>{t.desc}</div>
-                </HoverCard>
-                  )
-                })}
+                <strong>{String(exams.length).padStart(2, '0')}</strong>
+              </div>
+              <div className={styles.indexList}>
+                {exams.map((exam, index) => (
+                  <Link href={`/exams/${exam.id}`} key={exam.id}>
+                    <span className={styles.examMark}>{EXAM_MARKS[exam.id] ?? String(index + 1).padStart(2, '0')}</span>
+                    <span className={styles.indexExamText}>
+                      <strong>{exam.name}</strong>
+                      <small>{exam.category}</small>
+                    </span>
+                    <ArrowRight size={17} aria-hidden="true" />
+                  </Link>
+                ))}
+              </div>
+              <div className={styles.indexFooter}>
+                <Clock3 size={15} aria-hidden="true" />
+                好きな時間に、続きから学習できます
               </div>
             </div>
           </div>
         </section>
 
-        {/* ===== 試験一覧 ===== */}
-        <section style={{
-          padding: 'clamp(40px, 6vw, 64px) 0',
-          background: 'var(--color-bg-subtle)',
-        }}>
+        <section className={styles.examsSection} aria-labelledby="exam-heading">
           <div className="container-page">
-            <div style={{
-              display: 'flex', justifyContent: 'space-between',
-              alignItems: 'baseline', marginBottom: 6, flexWrap: 'wrap', gap: 8,
-            }}>
-              <h2 style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', fontWeight: 800 }}>対応試験</h2>
-              <Link href="/exams" style={{
-                fontSize: '0.875rem', color: 'var(--color-primary)',
-                fontWeight: 600, textDecoration: 'none',
-              }}>すべて見る →</Link>
+            <div className={styles.sectionHeading}>
+              <div>
+                <span>EXAMINATIONS</span>
+                <h2 id="exam-heading">対応試験</h2>
+              </div>
+              <p>いま必要な資格を選び、章ごとの学習を始められます。</p>
             </div>
-            <p style={{
-              color: 'var(--color-text-secondary)', marginBottom: 24,
-              fontSize: 'clamp(0.8rem, 1.5vw, 0.95rem)',
-            }}>随時追加予定。すべて無料で学習できます。</p>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))',
-              gap: 'clamp(12px, 2vw, 20px)',
-            }}>
-              {getAvailableExams().map(exam => (
-                <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>
-                  <HoverCard style={{
-                    background: '#fff',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: 'clamp(16px, 3vw, 24px)',
-                    cursor: 'pointer', height: '100%',
-                    boxShadow: 'var(--shadow-card)',
-                  }}>
-                    <div style={{
-                      display: 'inline-block',
-                      background: 'var(--color-primary-light)',
-                      color: 'var(--color-primary)',
-                      fontSize: '0.75rem', fontWeight: 700,
-                      padding: '3px 10px', borderRadius: 'var(--radius-sm)', marginBottom: 12,
-                    }}>{exam.category}</div>
-                    <div style={{
-                      fontWeight: 800,
-                      fontSize: 'clamp(1rem, 2vw, 1.1rem)',
-                      marginBottom: 6, color: 'var(--color-text)',
-                    }}>{exam.name}</div>
-                    <div style={{
-                      fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)',
-                      color: 'var(--color-text-secondary)', lineHeight: 1.6,
-                    }}>{exam.description}</div>
-                    <div style={{
-                      marginTop: 16, color: 'var(--color-primary)',
-                      fontSize: '0.875rem', fontWeight: 600,
-                      display: 'flex', alignItems: 'center', gap: 4,
-                    }}>学習を始める →</div>
-                  </HoverCard>
+            <div className={styles.examGrid}>
+              {exams.map((exam, index) => (
+                <Link className={styles.examCard} key={exam.id} href={`/exams/${exam.id}`}>
+                  <div className={styles.examCardTop}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <small>{exam.category}</small>
+                  </div>
+                  <div>
+                    <h3>{exam.name}</h3>
+                    <p>{exam.description}</p>
+                  </div>
+                  <div className={styles.examCardAction}>
+                    学習を始める
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </div>
                 </Link>
               ))}
-              {/* No coming-soon items to display */}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.toolsSection} aria-labelledby="tools-heading">
+          <div className="container-page">
+            <div className={styles.sectionHeading}>
+              <div>
+                <span>LEARNING TOOLS</span>
+                <h2 id="tools-heading">学ぶ、解く、覚える</h2>
+              </div>
+              <p>理解と定着を往復できる、4つの学習機能を用意しています。</p>
+            </div>
+
+            <div className={styles.toolGrid}>
+              {TOOLS.map(tool => {
+                const Icon = tool.icon
+                return (
+                  <article className={styles.toolItem} key={tool.title}>
+                    <div className={styles.toolMeta}>
+                      <span>{tool.number}</span>
+                      <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
+                    </div>
+                    <h3>{tool.title}</h3>
+                    <p>{tool.desc}</p>
+                  </article>
+                )
+              })}
+            </div>
+
+            <div className={styles.closingBand}>
+              <div>
+                <span>START LEARNING</span>
+                <h2>今日の一章から、始めよう。</h2>
+              </div>
+              <Link href="/exams">
+                資格一覧へ
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </section>
 
         <SiteFooter />
       </main>
-    </>
+    </div>
   )
 }

@@ -11,11 +11,12 @@ const FOOTER_LINKS = [
 export default function SiteFooter() {
   return (
     <footer style={{
-      background: 'var(--color-bg)',
-      color: 'var(--color-text-muted)',
-      padding: '32px 0',
-      borderTop: '1px solid var(--color-border)',
+      background: 'var(--color-brand)',
+      color: 'rgba(244,243,239,0.66)',
+      padding: '34px 0',
+      borderTop: '1px solid rgba(201,162,75,0.32)',
       fontSize: '0.875rem',
+      ['--color-brand' as string]: 'var(--color-bg)',
     }}>
       <div className="container-page" style={{
         display: 'flex',
@@ -38,7 +39,7 @@ export default function SiteFooter() {
         }}>
           {FOOTER_LINKS.map(link => (
             <Link key={link.href} href={link.href} style={{
-              color: 'var(--color-text-secondary)',
+              color: 'rgba(244,243,239,0.74)',
               textDecoration: 'none',
               fontWeight: 700,
             }}>

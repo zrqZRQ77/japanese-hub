@@ -14,7 +14,7 @@ export default function ToolCard({ icon, title, desc, linkLabel, href, color = '
   const Icon = icon
   return (
     <div style={{
-      background: '#fff',
+      background: 'var(--color-bg)',
       border: '1px solid var(--color-border)',
       borderRadius: 'var(--radius-md)',
       padding: '20px',
@@ -24,7 +24,7 @@ export default function ToolCard({ icon, title, desc, linkLabel, href, color = '
       <div style={{
         width: 40,
         height: 40,
-        borderRadius: 8,
+        borderRadius: 'var(--radius-sm)',
         background: `${color}14`,
         color,
         display: 'flex',
@@ -39,7 +39,7 @@ export default function ToolCard({ icon, title, desc, linkLabel, href, color = '
       </div>
       <Link href={href} style={{
         fontSize: '0.82rem', fontWeight: 600,
-        color, textDecoration: 'none',
+        color: 'var(--color-primary-dark)', textDecoration: 'none',
         display: 'flex', alignItems: 'center', gap: 4,
       }}>
         {linkLabel} →

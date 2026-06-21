@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<{ examId: strin
         <div style={{
           width: 52,
           height: 52,
-          borderRadius: 8,
+          borderRadius: 'var(--radius-sm)',
           background: 'var(--color-primary-light)',
           color: 'var(--color-primary)',
           display: 'flex',

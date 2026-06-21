@@ -23,12 +23,12 @@ const TOOLS = [
     linkLabel: '章一覧を見る', path: '/guide',
   },
   {
-    icon: PencilLine, title: '練習問題', color: '#7c3aed',
+    icon: PencilLine, title: '練習問題', color: 'var(--color-warning)',
     desc: '章ごとの問題を解いて理解を確認する',
     linkLabel: '問題一覧を見る', path: '/questions',
   },
   {
-    icon: LibraryBig, title: '知識カード', color: '#0891b2',
+    icon: LibraryBig, title: '知識カード', color: 'var(--color-success)',
     desc: '重要ポイントをカードで覚える',
     linkLabel: 'カード一覧を見る', path: '/cards',
   },

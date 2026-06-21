@@ -17,12 +17,12 @@ export const metadata: Metadata = createPageMetadata({
 
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
-  '会計・経理': { bg: '#eff6ff', text: '#1d4ed8' },
-  'ファイナンシャル': { bg: '#f0fdf4', text: '#15803d' },
-  '不動産': { bg: '#fff7ed', text: '#c2410c' },
-  '法律': { bg: '#faf5ff', text: '#7e22ce' },
-  'IT': { bg: '#ecfdf5', text: '#065f46' },
-  '労務': { bg: '#fef2f2', text: '#991b1b' },
+  '会計・経理': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
+  'ファイナンシャル': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
+  '不動産': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
+  '法律': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
+  'IT': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
+  '労務': { bg: 'var(--color-primary-light)', text: 'var(--color-primary-dark)' },
 }
 
 export default function ExamsPage() {
@@ -73,11 +73,11 @@ export default function ExamsPage() {
             gap: 16, marginBottom: 48,
           }}>
             {getAvailableExams().map(exam => {
-              const cat = CATEGORY_COLORS[exam.category] ?? { bg: '#f3f4f6', text: '#374151' }
+              const cat = CATEGORY_COLORS[exam.category] ?? { bg: 'var(--color-bg-muted)', text: 'var(--color-text)' }
               return (
                 <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>
                   <HoverCard style={{
-                    background: '#fff',
+                    background: 'var(--color-bg)',
                     border: '1px solid var(--color-border)',
                     borderRadius: 'var(--radius-lg)',
                     padding: '24px',
@@ -90,13 +90,13 @@ export default function ExamsPage() {
                         display: 'inline-block',
                         background: cat.bg, color: cat.text,
                         fontSize: '0.75rem', fontWeight: 700,
-                        padding: '3px 10px', borderRadius: 99,
+                        padding: '3px 10px', borderRadius: 'var(--radius-sm)',
                       }}>{exam.category}</span>
                       <span style={{
                         fontSize: '0.75rem', fontWeight: 600,
                         color: 'var(--color-success)',
-                        background: '#f0fdf4',
-                        padding: '3px 8px', borderRadius: 99,
+                        background: '#e3ece8',
+                        padding: '3px 8px', borderRadius: 'var(--radius-sm)',
                       }}>無料</span>
                     </div>
                     <div style={{
@@ -116,7 +116,7 @@ export default function ExamsPage() {
                           fontSize: '0.72rem', fontWeight: 600,
                           color: 'var(--color-text-muted)',
                           background: 'var(--color-bg-muted)',
-                          padding: '2px 8px', borderRadius: 99,
+                          padding: '2px 8px', borderRadius: 'var(--radius-sm)',
                           border: '1px solid var(--color-border)',
                         }}>{t}</span>
                       ))}

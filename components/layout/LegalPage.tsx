@@ -26,9 +26,9 @@ export default function LegalPage({ title, description, updatedAt, sections }: P
           <article style={{
             maxWidth: 880,
             margin: '0 auto',
-            background: '#fff',
+            background: 'var(--color-bg)',
             border: '1px solid var(--color-border)',
-            borderRadius: 8,
+            borderRadius: 'var(--radius-lg)',
             boxShadow: 'var(--shadow-card)',
             padding: 'clamp(28px, 5vw, 48px)',
           }}>

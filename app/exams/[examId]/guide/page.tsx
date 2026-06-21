@@ -58,9 +58,9 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
           }}>
             <div style={{ maxWidth: 860, width: '100%' }}>
               <div style={{
-                background: '#fff',
+                background: 'var(--color-bg)',
                 border: '1px solid var(--color-border)',
-                borderRadius: 8,
+                borderRadius: 'var(--radius-lg)',
                 padding: '64px 48px',
                 textAlign: 'center',
                 marginBottom: 28,
@@ -69,7 +69,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                 <div style={{
                   width: 56,
                   height: 56,
-                  borderRadius: 8,
+                  borderRadius: 'var(--radius-sm)',
                   margin: '0 auto 26px',
                   background: 'var(--color-primary-light)',
                   color: 'var(--color-primary)',
@@ -100,8 +100,8 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                   { label: '学習状況', value: '公開中' },
                 ].map(item => (
                   <div key={item.label} style={{
-                    background: '#fff', border: '1px solid var(--color-border)',
-                    borderRadius: 8, padding: '24px 16px',
+                    background: 'var(--color-bg)', border: '1px solid var(--color-border)',
+                    borderRadius: 'var(--radius-md)', padding: '24px 16px',
                     textAlign: 'center', boxShadow: 'var(--shadow-card)',
                   }}>
                     <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-primary)', marginBottom: 4 }}>{item.value}</div>

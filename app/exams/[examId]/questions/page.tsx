@@ -28,10 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function accentColor(colorKey?: string) {
   switch (colorKey) {
-    case 'green': return '#10b981'
-    case 'blue': return '#3b82f6'
-    case 'purple': return '#7c3aed'
-    default: return '#f59e0b'
+    case 'green': return 'var(--color-success)'
+    case 'blue': return 'var(--color-primary)'
+    case 'purple': return 'var(--color-warning)'
+    default: return 'var(--color-primary)'
   }
 }
 
@@ -57,7 +57,7 @@ export default async function QuestionsIndexPage({ params }: Props) {
         display: 'flex',
         height: 'calc(100vh - 64px)',
         overflow: 'hidden',
-        background: 'linear-gradient(180deg, #f8fbff 0%, #f5f7fb 100%)',
+        background: 'var(--color-bg-subtle)',
       }}>
         <ExamSidebar exam={exam} />
 
@@ -120,11 +120,11 @@ export default async function QuestionsIndexPage({ params }: Props) {
                 { label: '形式', value: '章別演習' },
               ].map(item => (
                 <div key={item.label} style={{
-                  background: 'rgba(255,255,255,0.86)',
-                  border: '1px solid rgba(148,163,184,0.18)',
-                  borderRadius: 8,
+                  background: 'var(--color-bg)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius-md)',
                   padding: '14px 16px',
-                  boxShadow: '0 10px 24px rgba(15,23,42,0.04)',
+                  boxShadow: 'var(--shadow-card)',
                 }}>
                   <div style={{
                     color: 'var(--color-text-secondary)',
@@ -143,10 +143,10 @@ export default async function QuestionsIndexPage({ params }: Props) {
             </div>
 
             <section style={{
-              background: 'rgba(255,255,255,0.92)',
-              border: '1px solid rgba(148,163,184,0.18)',
-              borderRadius: 8,
-              boxShadow: '0 18px 38px rgba(15,23,42,0.06)',
+              background: 'var(--color-bg)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-lg)',
+              boxShadow: 'var(--shadow-card)',
               overflow: 'hidden',
             }}>
               {chapters.map(ch => {
@@ -164,7 +164,7 @@ export default async function QuestionsIndexPage({ params }: Props) {
                       gap: 16,
                       justifyContent: 'space-between',
                       padding: '18px 20px',
-                      borderBottom: '1px solid rgba(148,163,184,0.14)',
+                      borderBottom: '1px solid var(--color-border)',
                       color: 'inherit',
                       textDecoration: 'none',
                       opacity: ready ? 1 : 0.58,
@@ -173,7 +173,7 @@ export default async function QuestionsIndexPage({ params }: Props) {
                       <div className="questions-index-action" style={{
                         width: 44,
                         height: 44,
-                        borderRadius: 8,
+                        borderRadius: 'var(--radius-sm)',
                         background: ready ? `${accent}12` : 'rgba(148,163,184,0.10)',
                         display: 'flex',
                         alignItems: 'center',

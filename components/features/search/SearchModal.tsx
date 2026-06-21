@@ -10,8 +10,8 @@ import { BookOpen, LibraryBig, PencilLine, Search, X } from 'lucide-react'
 import type { SearchResult } from '@/app/api/search/route'
 
 const TYPE_META = {
-  question: { label: '練習問題', icon: PencilLine, color: '#7c3aed' },
-  card:     { label: '知識カード', icon: LibraryBig, color: '#0891b2' },
+  question: { label: '練習問題', icon: PencilLine, color: 'var(--color-warning)' },
+  card:     { label: '知識カード', icon: LibraryBig, color: 'var(--color-success)' },
   chapter:  { label: '学習ガイド', icon: BookOpen, color: 'var(--color-primary)' },
 }
 
@@ -109,8 +109,8 @@ export default function SearchModal({ open, onClose }: Props) {
         width: 'min(660px, calc(100vw - 32px))',
         zIndex: 1001,
         borderRadius: 'var(--radius-lg)',
-        background: '#fff',
-        boxShadow: '0 20px 60px rgba(0,0,0,0.2)',
+        background: 'var(--color-bg)',
+        boxShadow: '0 20px 60px rgba(26,29,41,0.22)',
         overflow: 'hidden',
       }}>
 
@@ -197,7 +197,7 @@ export default function SearchModal({ open, onClose }: Props) {
                   <span style={{
                     width: 32, height: 32, flexShrink: 0,
                     background: `${meta.color}18`,
-                    borderRadius: 8,
+                    borderRadius: 'var(--radius-sm)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     marginTop: 2,
                     color: meta.color,
@@ -210,7 +210,7 @@ export default function SearchModal({ open, onClose }: Props) {
                         fontSize: '0.7rem', fontWeight: 700,
                         color: meta.color,
                         background: `${meta.color}15`,
-                        padding: '1px 7px', borderRadius: 99,
+                        padding: '1px 7px', borderRadius: 'var(--radius-sm)',
                         flexShrink: 0,
                       }}>{meta.label}</span>
                       <span style={{
@@ -267,8 +267,8 @@ export default function SearchModal({ open, onClose }: Props) {
                   fontSize: '0.72rem', color: 'var(--color-text-muted)',
                 }}>
                   <kbd style={{
-                    background: '#fff', border: '1px solid var(--color-border)',
-                    borderRadius: 4, padding: '1px 5px', fontSize: '0.72rem',
+                    background: 'var(--color-bg)', border: '1px solid var(--color-border)',
+                    borderRadius: 3, padding: '1px 5px', fontSize: '0.72rem',
                   }}>{k.key}</kbd>
                   {k.label}
                 </div>

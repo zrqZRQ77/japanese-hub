@@ -24,7 +24,7 @@ export default function AiChatPage() {
       }}>
         <div style={{
           width: 'min(100%, 640px)',
-          background: '#fff',
+          background: 'var(--color-bg)',
           border: '1px solid var(--color-border)',
           borderRadius: 'var(--radius-lg)',
           boxShadow: 'var(--shadow-card)',
@@ -34,7 +34,7 @@ export default function AiChatPage() {
           <div style={{
             width: 52,
             height: 52,
-            borderRadius: 8,
+            borderRadius: 'var(--radius-sm)',
             margin: '0 auto 16px',
             background: 'var(--color-primary-light)',
             color: 'var(--color-primary)',

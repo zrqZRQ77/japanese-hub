@@ -126,7 +126,7 @@ export default function FlashcardDeck({
   if (!activeGroup || !activeCard) {
     return (
       <div style={{
-        background: '#fff',
+        background: 'var(--color-bg)',
         border: '1px solid var(--color-border)',
         borderRadius: 'var(--radius-lg)',
         padding: '36px 24px',
@@ -224,8 +224,8 @@ export default function FlashcardDeck({
             onClick={toggleRemembered}
             style={{
               ...navButtonStyle,
-              background: rememberedCardIds.has(activeCard.id) ? 'var(--color-success)' : '#fff',
-              color: rememberedCardIds.has(activeCard.id) ? '#fff' : 'var(--color-text)',
+              background: rememberedCardIds.has(activeCard.id) ? 'var(--color-success)' : 'var(--color-bg)',
+              color: rememberedCardIds.has(activeCard.id) ? 'var(--color-bg)' : 'var(--color-text)',
               borderColor: rememberedCardIds.has(activeCard.id) ? 'var(--color-success)' : 'var(--color-border)',
             }}
           >
@@ -257,7 +257,7 @@ function Metric({ label, value }: { label: string; value: string }) {
       background: 'var(--color-bg-muted)',
       border: '1px solid var(--color-border)',
       padding: '4px 10px',
-      borderRadius: 99,
+      borderRadius: 'var(--radius-sm)',
     }}>
       {label} {value}
     </span>
@@ -287,9 +287,9 @@ const navButtonStyle: CSSProperties = {
   gap: 7,
   minWidth: 128,
   border: '1px solid var(--color-border)',
-  background: '#fff',
+  background: 'var(--color-bg)',
   color: 'var(--color-text)',
-  borderRadius: 8,
+  borderRadius: 'var(--radius-sm)',
   padding: '10px 14px',
   fontSize: '0.86rem',
   fontWeight: 800,

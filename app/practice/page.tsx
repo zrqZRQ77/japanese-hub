@@ -60,7 +60,7 @@ export default function PracticePage() {
 
               return (
                 <section key={exam.id} style={{
-                  background: '#fff',
+                  background: 'var(--color-bg)',
                   border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius-lg)',
                   padding: 24,
@@ -79,11 +79,11 @@ export default function PracticePage() {
                       <div style={{
                         display: 'inline-block',
                         background: 'var(--color-primary-light)',
-                        color: 'var(--color-primary)',
+                        color: 'var(--color-primary-dark)',
                         fontSize: '0.75rem',
                         fontWeight: 700,
                         padding: '3px 10px',
-                        borderRadius: 99,
+                        borderRadius: 'var(--radius-sm)',
                         marginBottom: 10,
                       }}>{exam.category}</div>
                       <h2 style={{
@@ -100,7 +100,7 @@ export default function PracticePage() {
                       background: 'var(--color-bg-muted)',
                       border: '1px solid var(--color-border)',
                       padding: '4px 8px',
-                      borderRadius: 99,
+                      borderRadius: 'var(--radius-sm)',
                     }}>{totalQuestions}問</div>
                   </div>
 
@@ -116,14 +116,14 @@ export default function PracticePage() {
                       fontSize: '0.72rem', fontWeight: 600,
                       color: 'var(--color-text-muted)',
                       background: 'var(--color-bg-muted)',
-                      padding: '2px 8px', borderRadius: 99,
+                      padding: '2px 8px', borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--color-border)',
                     }}>章数 {chapters.length}</span>
                     <span style={{
                       fontSize: '0.72rem', fontWeight: 600,
                       color: 'var(--color-text-muted)',
                       background: 'var(--color-bg-muted)',
-                      padding: '2px 8px', borderRadius: 99,
+                      padding: '2px 8px', borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--color-border)',
                     }}>収録 {totalQuestions}問</span>
                   </div>

@@ -2147,7 +2147,7 @@ export default function MockExam({
 
         .boki-progress-track {
           height: 8px;
-          border-radius: 999px;
+          border-radius: var(--radius-sm);
           background: var(--color-bg-muted);
           overflow: hidden;
         }

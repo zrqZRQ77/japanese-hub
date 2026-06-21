@@ -4,11 +4,11 @@ export function BrandText({ className }: { className?: string }) {
   const style: React.CSSProperties = {
     fontWeight: 900,
     fontSize: '1.12rem',
-    color: 'var(--color-brand)',
+    color: 'currentColor',
     textDecoration: 'none',
     whiteSpace: 'nowrap',
     letterSpacing: 0,
-    fontFamily: 'var(--font-sans)',
+    fontFamily: 'var(--font-serif)',
   }
   return (
     <span style={style} className={className}>
@@ -19,7 +19,7 @@ export function BrandText({ className }: { className?: string }) {
 
 export default function SiteLogo({ className }: { className?: string }) {
   return (
-    <Link href="/" style={{ textDecoration: 'none' }} className={className}>
+    <Link href="/" style={{ color: 'var(--color-brand)', textDecoration: 'none' }} className={className}>
       <BrandText />
     </Link>
   )

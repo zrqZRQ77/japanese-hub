@@ -44,8 +44,8 @@ export default function ExamSidebar({ exam }: Props) {
     <aside className="exam-sidebar" style={{
       width: 'var(--sidebar-width)',
       minWidth: 'var(--sidebar-width)',
-      borderRight: '1px solid rgba(148,163,184,0.16)',
-      background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)',
+      borderRight: '1px solid var(--color-border)',
+      background: 'var(--color-bg)',
       display: 'flex',
       flexDirection: 'column',
       height: '100%',
@@ -54,7 +54,7 @@ export default function ExamSidebar({ exam }: Props) {
       {/* 試験名ヘッダー */}
       <div style={{
         padding: '20px 20px 16px',
-        borderBottom: '1px solid rgba(148,163,184,0.16)',
+        borderBottom: '1px solid var(--color-border)',
       }}>
         <div style={{
           fontSize: '0.75rem', fontWeight: 700,
@@ -79,24 +79,24 @@ export default function ExamSidebar({ exam }: Props) {
           return (
             <Link key={item.key} href={href} style={{
               display: 'flex', alignItems: 'center', gap: 12,
-              padding: '11px 12px', borderRadius: 14,
+              padding: '11px 12px', borderRadius: 'var(--radius-sm)',
               marginBottom: 4,
               textDecoration: 'none',
               fontWeight: isActive ? 700 : 600,
               fontSize: '0.92rem',
               color: isActive ? 'var(--color-primary)' : 'var(--color-text)',
               background: isActive
-                ? 'linear-gradient(180deg, rgba(59,130,246,0.10) 0%, rgba(59,130,246,0.06) 100%)'
+                ? 'var(--color-primary-light)'
                 : 'transparent',
               border: '1px solid',
-              borderColor: isActive ? 'rgba(59,130,246,0.16)' : 'transparent',
-              boxShadow: isActive ? '0 10px 24px rgba(15,23,42,0.05)' : 'none',
+              borderColor: isActive ? 'rgba(201,162,75,0.34)' : 'transparent',
+              boxShadow: isActive ? '0 10px 24px rgba(26,29,41,0.05)' : 'none',
               transition: 'background 0.15s ease, transform 0.15s ease',
             }}>
               <span style={{
-                width: 28, height: 28, borderRadius: 10,
+                width: 28, height: 28, borderRadius: 'var(--radius-sm)',
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                background: isActive ? 'rgba(59,130,246,0.14)' : 'rgba(148,163,184,0.08)',
+                background: isActive ? 'rgba(201,162,75,0.20)' : 'rgba(170,163,148,0.14)',
                 color: isActive ? 'var(--color-primary)' : 'var(--color-text-secondary)',
                 flexShrink: 0,
               }}>

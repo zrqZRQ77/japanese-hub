@@ -52,7 +52,7 @@ export default function GuidePage() {
 
               return (
                 <div key={exam.id} style={{
-                  background: '#fff',
+                  background: 'var(--color-bg)',
                   border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius-lg)',
                   padding: 24,
@@ -66,9 +66,9 @@ export default function GuidePage() {
                       <div style={{
                         display: 'inline-block',
                         background: 'var(--color-primary-light)',
-                        color: 'var(--color-primary)',
+                        color: 'var(--color-primary-dark)',
                         fontSize: '0.75rem', fontWeight: 700,
-                        padding: '3px 10px', borderRadius: 99,
+                        padding: '3px 10px', borderRadius: 'var(--radius-sm)',
                         marginBottom: 10,
                       }}>{exam.category}</div>
                       <h2 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--color-text)', margin: 0 }}>
@@ -80,7 +80,7 @@ export default function GuidePage() {
                       color: 'var(--color-text-secondary)',
                       background: 'var(--color-bg-muted)',
                       border: '1px solid var(--color-border)',
-                      padding: '4px 8px', borderRadius: 99,
+                      padding: '4px 8px', borderRadius: 'var(--radius-sm)',
                     }}>{chapters.length}章</div>
                   </div>
 
@@ -101,14 +101,14 @@ export default function GuidePage() {
                       fontSize: '0.72rem', fontWeight: 600,
                       color: 'var(--color-text-muted)',
                       background: 'var(--color-bg-muted)',
-                      padding: '2px 8px', borderRadius: 99,
+                      padding: '2px 8px', borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--color-border)',
                     }}>総章数 {chapters.length}</span>
                     <span style={{
                       fontSize: '0.72rem', fontWeight: 600,
                       color: 'var(--color-text-muted)',
                       background: 'var(--color-bg-muted)',
-                      padding: '2px 8px', borderRadius: 99,
+                      padding: '2px 8px', borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--color-border)',
                     }}>総セクション {sectionCount}</span>
                   </div>

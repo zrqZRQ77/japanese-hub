@@ -113,8 +113,8 @@ export default function GuideContent({
         {/* 練習問題へのリンク */}
         <div className="guide-practice-cta" style={{
           marginTop: 40, padding: '20px 24px',
-          background: '#fff',
-          borderRadius: 8,
+          background: 'var(--color-bg)',
+          borderRadius: 'var(--radius-md)',
           border: '1px solid var(--color-border)',
           display: 'flex', alignItems: 'center',
           justifyContent: 'space-between', flexWrap: 'wrap', gap: 12,

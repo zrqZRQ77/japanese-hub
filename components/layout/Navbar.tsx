@@ -46,10 +46,12 @@ export default function Navbar() {
     <>
       <nav style={{
         position: 'sticky', top: 0, zIndex: 50,
-        background: 'rgba(255,255,255,0.92)',
-        borderBottom: '1px solid rgba(226,232,240,0.86)',
-        boxShadow: '0 8px 24px rgba(15,23,42,0.04)',
+        background: 'rgba(26,29,41,0.96)',
+        borderBottom: '1px solid rgba(201,162,75,0.32)',
+        boxShadow: '0 10px 24px rgba(26,29,41,0.12)',
         backdropFilter: 'blur(14px)',
+        color: 'var(--color-bg)',
+        ['--color-brand' as string]: 'var(--color-bg)',
       }}>
         <div className="container-page" style={{
           display: 'flex', alignItems: 'center',
@@ -70,10 +72,10 @@ export default function Navbar() {
             <div style={{ flex: 1 }} />
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
-              <NavLink href="/guide" active={isActive('/guide')} forceColor={'var(--color-text)'}>学習ガイド</NavLink>
-              <NavLink href="/practice" active={isActive('/practice')} forceColor={'var(--color-text)'}>練習問題</NavLink>
-              <NavLink href="/exams" active={isActive('/exams')} forceColor={'var(--color-text)'}>資格一覧</NavLink>
-              <NavLink href="/ai-chat" active={isActive('/ai-chat')} forceColor={'var(--color-text)'}>AI質問</NavLink>
+              <NavLink href="/guide" active={isActive('/guide')}>学習ガイド</NavLink>
+              <NavLink href="/practice" active={isActive('/practice')}>練習問題</NavLink>
+              <NavLink href="/exams" active={isActive('/exams')}>資格一覧</NavLink>
+              <NavLink href="/ai-chat" active={isActive('/ai-chat')}>AI質問</NavLink>
             </div>
 
             {/* 検索ボタン */}
@@ -82,22 +84,22 @@ export default function Navbar() {
               style={{
                 display: 'flex', alignItems: 'center', gap: 8,
                 padding: '8px 12px',
-                background: '#fff',
-                border: '1px solid var(--color-border)',
+                background: 'rgba(244,243,239,0.06)',
+                border: '1px solid rgba(244,243,239,0.16)',
                 borderRadius: 'var(--radius-sm)',
-                cursor: 'pointer', color: 'var(--color-text-muted)',
+                cursor: 'pointer', color: 'rgba(244,243,239,0.78)',
                 fontSize: '0.875rem', whiteSpace: 'nowrap', flexShrink: 0,
-                boxShadow: '0 1px 2px rgba(15,23,42,0.03)',
+                boxShadow: 'none',
               }}
-              onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--color-primary)')}
-              onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border)')}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(201,162,75,0.72)')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(244,243,239,0.16)')}
             >
               <Search size={16} />
               検索
               <kbd style={{
-                fontSize: '0.68rem', color: 'var(--color-text-muted)',
-                background: '#fff', border: '1px solid var(--color-border)',
-                borderRadius: 4, padding: '1px 5px',
+                fontSize: '0.68rem', color: 'rgba(244,243,239,0.64)',
+                background: 'rgba(244,243,239,0.08)', border: '1px solid rgba(244,243,239,0.18)',
+                borderRadius: 3, padding: '1px 5px',
               }}>⌘K</kbd>
             </button>
 
@@ -119,18 +121,18 @@ export default function Navbar() {
           >
             <span style={{
               display: 'block', width: 22, height: 2,
-              background: 'var(--color-text)', borderRadius: 2,
+              background: 'var(--color-bg)', borderRadius: 2,
               transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none',
               transition: '0.2s',
             }} />
             <span style={{
               display: 'block', width: 22, height: 2,
-              background: 'var(--color-text)', borderRadius: 2,
+              background: 'var(--color-bg)', borderRadius: 2,
               opacity: mobileOpen ? 0 : 1, transition: '0.2s',
             }} />
             <span style={{
               display: 'block', width: 22, height: 2,
-              background: 'var(--color-text)', borderRadius: 2,
+              background: 'var(--color-bg)', borderRadius: 2,
               transform: mobileOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
               transition: '0.2s',
             }} />
@@ -141,7 +143,7 @@ export default function Navbar() {
         {mobileOpen && (
           <div className="mobile-nav-menu" style={{
             borderTop: '1px solid var(--color-border)',
-            background: 'rgba(255,255,255,0.96)',
+            background: 'var(--color-bg)',
             padding: '16px 20px 20px',
           }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -214,22 +216,22 @@ export default function Navbar() {
   )
 }
 
-function NavLink({ href, children, active, highlight, forceColor }: {
-  href: string; children: React.ReactNode; active?: boolean; highlight?: boolean; forceColor?: string
+function NavLink({ href, children, active, highlight }: {
+  href: string; children: React.ReactNode; active?: boolean; highlight?: boolean
 }) {
-  const color = forceColor ?? (highlight ? 'var(--color-primary)'
+  const color = highlight ? 'var(--color-primary)'
     : active ? 'var(--color-primary)'
-    : 'var(--color-text)')
+    : 'rgba(244,243,239,0.86)'
   return (
     <Link href={href} style={{
       padding: '7px 14px', borderRadius: 'var(--radius-sm)',
       fontSize: '0.9rem', fontWeight: active ? 800 : 600,
       color,
       textDecoration: 'none', whiteSpace: 'nowrap',
-      background: active ? 'var(--color-primary-light)' : 'transparent',
-      border: active ? '1px solid rgba(37,99,235,0.10)' : '1px solid transparent',
+      background: active ? 'rgba(201,162,75,0.12)' : 'transparent',
+      border: active ? '1px solid rgba(201,162,75,0.28)' : '1px solid transparent',
     }}
-      onMouseEnter={e => { if (!active) e.currentTarget.style.background = 'var(--color-bg-subtle)' }}
+      onMouseEnter={e => { if (!active) e.currentTarget.style.background = 'rgba(244,243,239,0.08)' }}
       onMouseLeave={e => { if (!active) e.currentTarget.style.background = 'transparent' }}
     >
       {children}

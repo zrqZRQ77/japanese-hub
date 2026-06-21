@@ -7,30 +7,30 @@
 
 :root {
   /* --- ブランドカラー --- */
-  --color-brand: #111827;
-  --color-primary: #2563eb;        /* メインブルー */
-  --color-primary-dark: #1d4ed8;   /* ホバー時 */
-  --color-primary-light: #eef4ff;  /* 背景ハイライト */
+  --color-brand: #1a1d29;
+  --color-primary: #c9a24b;        /* 金のアクセント */
+  --color-primary-dark: #a98232;   /* ホバー時 */
+  --color-primary-light: #f1ead7;  /* 背景ハイライト */
 
-  --color-accent: #2563eb;         /* CTA（主色と統一） */
-  --color-accent-dark: #1d4ed8;
+  --color-accent: #c9a24b;
+  --color-accent-dark: #a98232;
 
-  --color-success: #16a34a;        /* 正解・完了 */
-  --color-error: #dc2626;          /* 不正解 */
-  --color-warning: #d97706;        /* 学習中 */
+  --color-success: #2f6b5f;        /* 正解・完了 */
+  --color-error: #b84a3a;          /* 不正解 */
+  --color-warning: #b47a2b;        /* 学習中 */
 
   /* --- ニュートラル --- */
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f7f9fc;
-  --color-bg-muted: #f1f5f9;
-  --color-border: #e5eaf2;
-  --color-border-strong: #cbd5e1;
-  --color-text: #1e293b;
-  --color-text-secondary: #64748b;
-  --color-text-muted: #94a3b8;
+  --color-bg: #f4f3ef;
+  --color-bg-subtle: #ebe9e2;
+  --color-bg-muted: #e1ded4;
+  --color-border: #cfcbc0;
+  --color-border-strong: #aaa394;
+  --color-text: #1f2330;
+  --color-text-secondary: #69675f;
+  --color-text-muted: #908b7f;
 
   /* --- ヒーロー背景 --- */
-  --color-hero-bg: #f8fafc;
+  --color-hero-bg: #f4f3ef;
   --color-hero-text: var(--color-text);
 
   /* --- レイアウト --- */
@@ -39,17 +39,18 @@
   --content-max-width: 1200px;
 
   /* --- タイポグラフィ --- */
+  --font-serif: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
   --font-noto-sans-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Meiryo", system-ui, sans-serif;
   --font-sans: var(--font-noto-sans-jp), system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* --- 角丸・影 --- */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 8px;
-  --radius-xl: 10px;
-  --shadow-card: 0 10px 24px rgba(15,23,42,0.04);
-  --shadow-elevated: 0 18px 36px rgba(15,23,42,0.08);
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --shadow-card: 0 10px 24px rgba(26,29,41,0.05);
+  --shadow-elevated: 0 18px 36px rgba(26,29,41,0.10);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -77,7 +78,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: #fff;
+  background: var(--color-bg);
   box-shadow: var(--shadow-card);
 }
 
@@ -106,7 +107,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   min-width: 42px;
   padding: 4px 8px;
   border-radius: 6px;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   background: var(--color-primary-light);
   font-size: 0.72rem;
   font-weight: 800;
@@ -191,7 +192,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   border: 1px solid var(--color-border);
   border-radius: 7px;
   color: var(--color-text-secondary);
-  background: #fff;
+  background: var(--color-bg);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
@@ -265,7 +266,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: #fff;
+  background: var(--color-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,7 +296,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   padding: 28px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: #fff;
+  background: var(--color-bg);
   box-shadow: var(--shadow-card);
 }
 
@@ -319,10 +320,10 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 
 .affiliate-section__eyebrow span {
   padding: 2px 6px;
-  border: 1px solid #fde68a;
+  border: 1px solid rgba(201, 162, 75, 0.34);
   border-radius: 4px;
-  color: #92400e;
-  background: #fffbeb;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
   font-size: 0.64rem;
 }
 
@@ -363,7 +364,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   color: inherit;
-  background: #fff;
+  background: var(--color-bg);
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -371,7 +372,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 }
 
 .affiliate-card:hover {
-  border-color: #bfdbfe;
+  border-color: rgba(201, 162, 75, 0.58);
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
   transform: translateY(-2px);
 }
@@ -382,11 +383,11 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 }
 
 .affiliate-card--course {
-  border-top: 3px solid #2563eb;
+  border-top: 3px solid var(--color-primary);
 }
 
 .affiliate-card--book {
-  border-top: 3px solid #d97706;
+  border-top: 3px solid var(--color-warning);
 }
 
 .affiliate-card__topline {
@@ -400,7 +401,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 .affiliate-card__icon {
   width: 30px;
   height: 30px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -409,8 +410,8 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 }
 
 .affiliate-card--book .affiliate-card__icon {
-  color: #a16207;
-  background: #fffbeb;
+  color: var(--color-warning);
+  background: #f3ead8;
 }
 
 .affiliate-card__type,
@@ -427,8 +428,8 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   margin-left: auto;
   padding: 3px 7px;
   border-radius: 4px;
-  color: #1d4ed8;
-  background: #eff6ff;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
 }
 
 .affiliate-card__provider {
@@ -551,8 +552,8 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 /* 加粗：黄色背景ハイライト */
 .mdx-content strong {
   font-weight: 700;
-  background: #fef9c3;
-  color: #854d0e;
+  background: var(--color-primary-light);
+  color: #6f5520;
   padding: 1px 4px;
   border-radius: 3px;
 }
@@ -564,7 +565,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   overflow-x: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: #fff;
+  background: var(--color-bg);
   box-shadow: var(--shadow-card);
 }
 
@@ -605,24 +606,24 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 }
 
 .mdx-content th {
-  background: #f8fafc;
+  background: #e7e3d8;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-text-secondary);
 }
 
 .mdx-content td {
-  background: #fff;
+  background: var(--color-bg);
   color: var(--color-text);
 }
 
 .mdx-content .mdx-summary-row td {
-  background: #fbfdff;
+  background: #eee9dc;
   font-weight: 700;
 }
 
 .mdx-content td:empty {
-  background: #fcfdff;
+  background: #eeeae0;
 }
 
 .mdx-content th[align="right"],
@@ -744,7 +745,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
     min-height: 58px;
     padding: 7px 10px;
     border-bottom: 1px solid var(--color-border);
-    background: #fff;
+    background: var(--color-bg);
     display: flex;
     gap: 4px;
     flex: 0 0 auto;
@@ -779,7 +780,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
     min-height: 62px;
     padding: 8px 10px;
     border-bottom: 1px solid var(--color-border);
-    background: #fff;
+    background: var(--color-bg);
     display: grid;
     grid-template-columns: 40px minmax(0, 1.15fr) minmax(0, 1fr);
     align-items: end;
@@ -1033,9 +1034,9 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 }
 
 .flashcard-shell {
-  background: #fff;
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   padding: 22px;
 }
@@ -1050,7 +1051,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   gap: 20px;
   padding-bottom: 16px;
   margin-bottom: 14px;
-  background: #fff;
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1088,7 +1089,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   width: 100%;
   min-height: 44px;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--color-bg-subtle);
   color: var(--color-text);
   padding: 0 12px;
@@ -1134,8 +1135,8 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   justify-content: center;
   gap: 7px;
   border: 1px solid var(--color-border);
-  background: #fff;
-  border-radius: 8px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
   padding: 8px 11px;
   color: var(--color-text-secondary);
   font-size: 0.8rem;
@@ -1163,9 +1164,9 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 .flashcard-face {
   min-height: 360px;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 28px;
-  background: #fff;
+  background: var(--color-bg);
   box-shadow: var(--shadow-elevated);
   display: flex;
   flex-direction: column;
@@ -1178,7 +1179,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   position: absolute;
   inset: 0;
   transform: rotateY(180deg);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: #eee9dc;
 }
 
 .flashcard.is-flipped .flashcard-front {
@@ -1210,7 +1211,7 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
 
 .flashcard-answer {
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--color-brand);
 }
 
 .flashcard-hint {
@@ -1230,8 +1231,8 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   font-weight: 800;
   color: var(--color-primary);
   background: var(--color-primary-light);
-  border: 1px solid rgba(37, 99, 235, 0.12);
-  border-radius: 999px;
+  border: 1px solid rgba(201, 162, 75, 0.24);
+  border-radius: var(--radius-sm);
   padding: 4px 9px;
 }
 
