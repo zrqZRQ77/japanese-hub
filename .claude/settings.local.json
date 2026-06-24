@@ -8,7 +8,8 @@
       "Bash(curl -s \"http://localhost:3000/exams/boki3/guide/ch1?section=ch1-s1\" -o /tmp/nav.html -w \"guide: %{http_code}\\\\n\")",
       "Read(//private/tmp/**)",
       "Bash(python3 -)",
-      "Bash(pkill -f \"next dev\")"
+      "Bash(pkill -f \"next dev\")",
+      "Bash(cd \"/Users/zhouruoqi/Downloads/claude代码/shikaku-navi-1-6\" && sed -n '36,70p' app/exams/[examId]/questions/[chapterId]/page.tsx)"
     ]
   }
 }

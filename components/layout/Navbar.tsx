@@ -3,7 +3,7 @@
 // 修改此文件全站导航同步更新
 // ============================================================
  'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, forwardRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Search } from 'lucide-react'
@@ -16,6 +16,18 @@ export default function Navbar() {
   const [availableExams, setAvailableExams] = useState<typeof EXAMS_REGISTRY | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const pathname = usePathname()
+  const guideLinkRef = useRef<HTMLAnchorElement>(null)
+  const [searchWidth, setSearchWidth] = useState(44)
+
+  // 検索ボタンの幅を「学習ガイド」リンクの実際の表示幅に合わせる
+  useEffect(() => {
+    function syncSearchWidth() {
+      if (guideLinkRef.current) setSearchWidth(guideLinkRef.current.offsetWidth)
+    }
+    syncSearchWidth()
+    window.addEventListener('resize', syncSearchWidth)
+    return () => window.removeEventListener('resize', syncSearchWidth)
+  }, [])
 
   // /exams/[examId]/guide や /exams/[examId]/questions のようなネストしたルートも
   // 対応するナビ項目（学習ガイド／練習問題）として判定する
@@ -85,7 +97,7 @@ export default function Navbar() {
             <div style={{ flex: 1 }} />
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
-              <NavLink href="/guide" active={isActive('/guide')}>学習ガイド</NavLink>
+              <NavLink ref={guideLinkRef} href="/guide" active={isActive('/guide')}>学習ガイド</NavLink>
               <NavLink href="/practice" active={isActive('/practice')}>練習問題</NavLink>
               <NavLink href="/exams" active={isActive('/exams')}>資格一覧</NavLink>
             </div>
@@ -97,7 +109,7 @@ export default function Navbar() {
               title="検索（⌘K）"
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                width: 44, height: 36,
+                width: searchWidth, height: 36,
                 background: 'linear-gradient(180deg, rgba(244,243,239,0.07), rgba(244,243,239,0.03))',
                 border: '1px solid rgba(201,162,75,0.22)',
                 borderRadius: 18,
@@ -231,14 +243,14 @@ export default function Navbar() {
   )
 }
 
-function NavLink({ href, children, active, highlight }: {
+const NavLink = forwardRef<HTMLAnchorElement, {
   href: string; children: React.ReactNode; active?: boolean; highlight?: boolean
-}) {
+}>(function NavLink({ href, children, active, highlight }, ref) {
   const color = highlight ? 'var(--color-primary)'
     : active ? 'var(--color-primary)'
     : 'rgba(244,243,239,0.86)'
   return (
-    <Link href={href} style={{
+    <Link ref={ref} href={href} style={{
       padding: '7px 14px', borderRadius: 'var(--radius-sm)',
       fontSize: '0.9rem', fontWeight: active ? 800 : 600,
       color,
@@ -252,7 +264,7 @@ function NavLink({ href, children, active, highlight }: {
       {children}
     </Link>
   )
-}
+})
 
 function MobileNavSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (

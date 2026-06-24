@@ -54,23 +54,23 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'center',
-            padding: '72px 48px',
+            padding: '40px 48px',
           }}>
             <div style={{ maxWidth: 860, width: '100%' }}>
               <div style={{
                 background: 'var(--color-bg)',
                 border: '1px solid var(--color-border)',
                 borderRadius: 'var(--radius-lg)',
-                padding: '64px 48px',
+                padding: '40px 48px',
                 textAlign: 'center',
-                marginBottom: 28,
+                marginBottom: 20,
                 boxShadow: 'var(--shadow-card)',
               }}>
                 <div style={{
                   width: 56,
                   height: 56,
                   borderRadius: 'var(--radius-sm)',
-                  margin: '0 auto 26px',
+                  margin: '0 auto 18px',
                   background: 'var(--color-primary-light)',
                   color: 'var(--color-primary)',
                   display: 'flex',
@@ -79,7 +79,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                 }}>
                   <BookOpen size={26} />
                 </div>
-                <h1 style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--color-text)', marginBottom: 18 }}>
+                <h1 style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--color-text)', marginBottom: 14 }}>
                   {exam.shortName} 学習ガイド
                 </h1>
                 <p style={{ fontSize: '1.05rem', color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
@@ -92,7 +92,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
                 gap: 16,
-                marginBottom: 32,
+                marginBottom: 24,
               }}>
                 {[
                   { label: '総章数', value: `${chapters.length}章` },
@@ -101,7 +101,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
                 ].map(item => (
                   <div key={item.label} style={{
                     background: 'var(--color-bg)', border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-md)', padding: '24px 16px',
+                    borderRadius: 'var(--radius-md)', padding: '18px 16px',
                     textAlign: 'center', boxShadow: 'var(--shadow-card)',
                   }}>
                     <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-primary)', marginBottom: 4 }}>{item.value}</div>

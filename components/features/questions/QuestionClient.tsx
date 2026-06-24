@@ -115,11 +115,11 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     const base: React.CSSProperties = {
       display: 'flex', alignItems: 'center', gap: 14,
       width: '100%', textAlign: 'left', fontFamily: 'inherit',
-      padding: '18px 20px',
+      padding: '15px 18px',
       border: '1px solid var(--color-border)',
       borderRadius: 'var(--radius-md)',
       cursor: isAnswered ? 'default' : 'pointer',
-      marginBottom: 12,
+      marginBottom: 9,
       transition: 'transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease',
       background: 'var(--color-bg)',
       boxShadow: '0 1px 0 rgba(26,29,41,0.02)',
@@ -261,12 +261,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       <main className="question-main" style={{
         flex: 1, overflowY: 'auto',
         background: 'transparent',
-        padding: '40px 32px 48px',
+        padding: '28px 32px 36px',
       }}>
         {/* ヘッダー */}
         <div className="question-header" style={{
           display: 'flex', justifyContent: 'space-between',
-          alignItems: 'center', marginBottom: 24,
+          alignItems: 'center', marginBottom: 16,
           maxWidth: 960, width: '100%', marginLeft: 'auto', marginRight: 'auto',
         }}>
           <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-text-secondary)' }}>
@@ -290,7 +290,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
           background: 'var(--color-bg)',
           border: '1px solid var(--color-border)',
           borderRadius: 'var(--radius-lg)',
-          padding: '34px 38px',
+          padding: '26px 32px',
           boxShadow: 'var(--shadow-elevated)',
           backdropFilter: 'blur(8px)',
         }}>
@@ -300,12 +300,12 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             color: 'var(--color-primary-dark)',
             fontSize: '0.75rem', fontWeight: 800,
             padding: '5px 12px', borderRadius: 'var(--radius-sm)',
-            marginBottom: 18,
+            marginBottom: 14,
           }}>{chapterTitle}</div>
 
           <p style={{
             fontSize: '1.06rem', fontWeight: 650,
-            lineHeight: 1.8, marginBottom: 28,
+            lineHeight: 1.8, marginBottom: 20,
             color: 'var(--color-text)',
           }}>{q.text}</p>
 
@@ -366,9 +366,9 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
 
           <div className="question-actions" style={{
             display: 'flex', justifyContent: 'space-between',
-            alignItems: 'center', marginTop: 24,
+            alignItems: 'center', marginTop: 18,
             gap: 12,
-            paddingTop: 18,
+            paddingTop: 14,
             borderTop: '1px solid var(--color-border)',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
