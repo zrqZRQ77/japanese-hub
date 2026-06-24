@@ -9,6 +9,7 @@ import ExamSidebar from '@/components/layout/ExamSidebar'
 import DashboardProgress from '@/components/features/dashboard/DashboardProgress'
 import ToolCard from '@/components/features/dashboard/ToolCard'
 import ExamInfoSection from '@/components/features/dashboard/ExamInfoSection'
+import ExamFaqSection from '@/components/features/dashboard/ExamFaqSection'
 import AdSlot from '@/components/monetization/AdSlot'
 import AffiliateRecommendations from '@/components/monetization/AffiliateRecommendations'
 import { getExamById } from '@/lib/types/exams-registry'
@@ -92,6 +93,9 @@ export default async function ExamDashboardPage({
           <div style={{ marginTop: 32 }}>
             <ExamInfoSection exam={exam} />
           </div>
+
+          {/* よくある質問（難易度・合格率などをQ&A形式で補足） */}
+          <ExamFaqSection exam={exam} />
 
           {/* 学習コンテンツ 4グリッド */}
           <h2 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: 14, marginTop: 32 }}>学習コンテンツ</h2>
