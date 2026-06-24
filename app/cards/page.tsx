@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navbar from '@/components/layout/Navbar'
 import ExamToolCard from '@/components/features/exams/ExamToolCard'
@@ -50,14 +49,10 @@ export default function CardsPage() {
           }}>
             {EXAMS_REGISTRY.map(exam => {
               const chapters = getChaptersByExam(exam.id)
-              const chapterStats = chapters.map(ch => {
-                const set = getCardSet(exam.id, ch.id)
-                return {
-                  chapter: ch,
-                  count: set?.cards.length ?? 0,
-                }
-              })
-              const totalCards = chapterStats.reduce((sum, item) => sum + item.count, 0)
+              const totalCards = chapters.reduce(
+                (sum, ch) => sum + (getCardSet(exam.id, ch.id)?.cards.length ?? 0),
+                0,
+              )
 
               return (
                 <ExamToolCard
@@ -69,47 +64,7 @@ export default function CardsPage() {
                   tags={[`章数 ${chapters.length}`, `収録 ${totalCards}枚`]}
                   primaryAction={{ href: `/exams/${exam.id}/cards`, label: 'カードで覚える' }}
                   secondaryAction={{ href: `/exams/${exam.id}`, label: 'ダッシュボードへ' }}
-                >
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, 100%), 1fr))',
-                    gap: 10,
-                  }}>
-                    {chapterStats.map(({ chapter, count }) => (
-                      <Link
-                        key={chapter.id}
-                        href={`/exams/${exam.id}/cards?chapter=${chapter.id}`}
-                        style={{
-                          display: 'block',
-                          textDecoration: 'none',
-                          border: '1px solid var(--color-border)',
-                          borderRadius: 'var(--radius-md)',
-                          padding: '12px 14px',
-                          background: 'var(--color-bg-subtle)',
-                        }}
-                      >
-                        <div style={{
-                          fontSize: '0.72rem',
-                          color: 'var(--color-text-muted)',
-                          fontWeight: 700,
-                          marginBottom: 4,
-                        }}>第{chapter.number}章</div>
-                        <div style={{
-                          fontSize: '0.88rem',
-                          fontWeight: 700,
-                          color: 'var(--color-text)',
-                          lineHeight: 1.5,
-                          marginBottom: 8,
-                        }}>{chapter.title}</div>
-                        <div style={{
-                          fontSize: '0.75rem',
-                          color: 'var(--color-primary)',
-                          fontWeight: 700,
-                        }}>{count > 0 ? `${count}枚を覚える →` : '未収録'}</div>
-                      </Link>
-                    ))}
-                  </div>
-                </ExamToolCard>
+                />
               )
             })}
           </div>
