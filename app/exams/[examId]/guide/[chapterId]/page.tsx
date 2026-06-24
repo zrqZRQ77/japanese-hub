@@ -82,6 +82,7 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
           overflow: 'hidden',
         }}>
           <GuideSidebar
+            key={chapterId}
             examId={examId}
             chapters={chapters}
             currentChapterId={chapterId}

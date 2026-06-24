@@ -54,6 +54,7 @@ export default async function GuideChapterPage({ params, searchParams }: Props) 
         {/* ガイドコンテンツエリア */}
         <div className="guide-layout" style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
           <GuideSidebar
+            key={chapterId}
             examId={examId}
             chapters={chapters}
             currentChapterId={chapterId}
