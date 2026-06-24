@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import {
   ArrowRight,
-  Bot,
   BookOpen,
   Check,
   Layers3,
@@ -157,24 +156,6 @@ export default function HomePage() {
                   </article>
                 )
               })}
-            </div>
-
-            <div className={styles.aiFeature}>
-              <div className={styles.aiIcon} aria-hidden="true">
-                <Bot size={27} strokeWidth={1.8} />
-              </div>
-              <div>
-                <span>準備中の機能</span>
-                <h2>AI質問で、つまずきをその場でほどく。</h2>
-                <p>
-                  学習ガイドや練習問題で分からない点を、試験範囲に沿って質問できる機能を準備しています。
-                  実装後は各資格ページから利用できます。
-                </p>
-              </div>
-              <Link href="/ai-chat">
-                AI質問を見る
-                <ArrowRight size={17} aria-hidden="true" />
-              </Link>
             </div>
           </div>
         </section>
