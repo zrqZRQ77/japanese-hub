@@ -100,7 +100,7 @@ export default function AffiliateRecommendations({ exam }: AffiliateRecommendati
       </div>
 
       <p className="affiliate-section__disclosure">
-        当サイトはアフィリエイト広告を利用しています。リンク先で購入・申込みが成立した場合、当サイトが紹介料を受け取ることがあります。利用者の支払額に影響はありません。
+        ※PR／成果報酬型広告を含みます
       </p>
     </section>
   )

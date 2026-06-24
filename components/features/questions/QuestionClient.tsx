@@ -386,7 +386,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               )}
             </div>
 
-              {isAnswered && current < questions.length - 1 && (
+              {current < questions.length - 1 && (
                 <button type="button" onClick={handleNext} style={{
                   padding: '10px 28px',
                   background: 'var(--color-primary)', color: 'var(--color-bg)',
