@@ -3,7 +3,7 @@
 // 修改此文件 → 所有考试的练习题页面同步更新
 // ============================================================
 'use client'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Question } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
@@ -22,13 +22,28 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   const [current, setCurrent] = useState(initialQuestionIndex)
   const [selected, setSelected] = useState<string | null>(null)
   const [answered, setAnswered] = useState<Record<number, string>>({})
-  const [reviewLater, setReviewLater] = useState(false)
   const [saved, setSaved] = useState(false)
   const { progress, recordQuestionAnswer } = useProgress(examId)
 
   const q = questions[current]
-  const isAnswered = selected !== null
   const base = `/exams/${examId}`
+  const chapterCardsPath = `${base}/cards?chapter=${chapterId}`
+
+  const getStoredAnswer = (index: number) => {
+    const stored = progress?.questionProgress[questions[index]?.id]?.selectedAnswer
+    return typeof stored === 'string' ? stored : null
+  }
+
+  const selectedAnswer = selected ?? getStoredAnswer(current)
+  const isAnswered = selectedAnswer !== null
+  const answeredIds = useMemo(() => {
+    const ids = new Set(progress?.chapterProgress[chapterId]?.answeredQuestionIds ?? [])
+    Object.keys(answered).forEach(index => {
+      const question = questions[Number(index)]
+      if (question) ids.add(question.id)
+    })
+    return ids
+  }, [answered, chapterId, progress, questions])
 
   function isCorrect(question: Question, answer: string) {
     return Array.isArray(question.correctAnswer)
@@ -77,12 +92,15 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
 
   function goTo(index: number) {
     setCurrent(index)
-    setSelected(answered[index] ?? null)
-    setReviewLater(false)
+    setSelected(answered[index] ?? getStoredAnswer(index))
   }
 
   function handleNext() {
     if (current < questions.length - 1) goTo(current + 1)
+  }
+
+  function handlePrevious() {
+    if (current > 0) goTo(current - 1)
   }
 
   function getQuestionStatus(i: number) {
@@ -112,7 +130,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       border: '1.5px solid var(--color-success)',
       boxShadow: '0 8px 24px rgba(47,107,95,0.08)',
     }
-    if (label === selected && !isCorrectOption(q, label)) return {
+    if (label === selectedAnswer && !isCorrectOption(q, label)) return {
       ...base, background: '#f4dfdb',
       border: '1.5px solid var(--color-error)',
       boxShadow: '0 8px 24px rgba(184,74,58,0.08)',
@@ -134,7 +152,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       ...base, background: 'var(--color-success)',
       color: 'var(--color-bg)', border: 'none',
     }
-    if (label === selected && !isCorrectOption(q, label)) return {
+    if (label === selectedAnswer && !isCorrectOption(q, label)) return {
       ...base, background: 'var(--color-error)',
       color: 'var(--color-bg)', border: 'none',
     }
@@ -148,13 +166,10 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     return { bg: i === current ? 'var(--color-primary)' : 'var(--color-border)', label: String(i + 1) }
   }
 
-  const persistedAnsweredIds = progress?.chapterProgress[chapterId]?.answeredQuestionIds ?? []
-  const answeredIds = new Set(persistedAnsweredIds)
-  Object.keys(answered).forEach(index => answeredIds.add(questions[Number(index)].id))
   const answeredCount = answeredIds.size
   const completionRate = questions.length === 0 ? 0 : (answeredCount / questions.length) * 100
-  const currentAnswerState = selected && q?.correctAnswer
-    ? (isCorrect(q, selected) ? 'correct' : 'wrong')
+  const currentAnswerState = selectedAnswer && q?.correctAnswer
+    ? (isCorrect(q, selectedAnswer) ? 'correct' : 'wrong')
     : null
   const allAnswered = answeredCount >= questions.length
 
@@ -308,7 +323,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               {isAnswered && isCorrectOption(q, opt.label) && (
                 <span style={{ marginLeft: 'auto', color: 'var(--color-success)', fontWeight: 700 }}>✓</span>
               )}
-              {isAnswered && opt.label === selected && !isCorrectOption(q, opt.label) && (
+              {isAnswered && opt.label === selectedAnswer && !isCorrectOption(q, opt.label) && (
                 <span style={{ marginLeft: 'auto', color: 'var(--color-error)', fontWeight: 700 }}>✗</span>
               )}
             </button>
@@ -356,21 +371,23 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             paddingTop: 18,
             borderTop: '1px solid var(--color-border)',
           }}>
-            <label style={{
-              display: 'flex', alignItems: 'center', gap: 8,
-              fontSize: '0.875rem', color: 'var(--color-text-secondary)',
-              cursor: 'pointer',
-            }}>
-              <input type="checkbox"
-                checked={reviewLater}
-                onChange={e => setReviewLater(e.target.checked)}
-                style={{ width: 16, height: 16 }}
-              />
-              後で見直す
-            </label>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+              {current > 0 && (
+                <button type="button" onClick={handlePrevious} style={{
+                  padding: '10px 20px',
+                  background: 'var(--color-bg)',
+                  color: 'var(--color-text-secondary)',
+                  borderRadius: 'var(--radius-sm)',
+                  fontWeight: 700,
+                  fontSize: '0.9rem',
+                  border: '1px solid var(--color-border)',
+                  cursor: 'pointer',
+                }}>前の問題へ</button>
+              )}
+            </div>
 
               {isAnswered && current < questions.length - 1 && (
-                <button onClick={handleNext} style={{
+                <button type="button" onClick={handleNext} style={{
                   padding: '10px 28px',
                   background: 'var(--color-primary)', color: 'var(--color-bg)',
                   borderRadius: 'var(--radius-sm)',
@@ -389,14 +406,14 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
                     ✓ 進捗を保存しました
                   </div>
                 )}
-                <Link href={`${base}`} style={{
+                <Link href={chapterCardsPath} style={{
                   padding: '10px 28px',
                   background: 'var(--color-success)', color: 'var(--color-bg)',
                   borderRadius: 'var(--radius-sm)',
                   fontWeight: 700, fontSize: '0.9rem',
                   textDecoration: 'none',
                   boxShadow: '0 10px 24px rgba(47,107,95,0.18)',
-                }}>学習を完了して戻る</Link>
+                }}>知識カードで復習する</Link>
               </div>
             )}
             {isAnswered && current === questions.length - 1 && !allAnswered && (
