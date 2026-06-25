@@ -16,14 +16,14 @@ export default function Navbar() {
   const [availableExams, setAvailableExams] = useState<typeof EXAMS_REGISTRY | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const pathname = usePathname()
-  const guideLinkRef = useRef<HTMLAnchorElement>(null)
+  const examsLinkRef = useRef<HTMLAnchorElement>(null)
   const [searchWidth, setSearchWidth] = useState(44)
 
-  // 検索ボタンの幅を「学習ガイド」リンクの実際の表示幅に合わせる
+  // 検索ボタンの幅を「資格一覧」リンクの実際の表示幅に合わせる
   // （モバイルではリンクが非表示=offsetWidth0のため、その場合は前の幅を維持する）
   useEffect(() => {
     function syncSearchWidth() {
-      const width = guideLinkRef.current?.offsetWidth
+      const width = examsLinkRef.current?.offsetWidth
       if (width) setSearchWidth(width)
     }
     syncSearchWidth()
@@ -31,22 +31,9 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', syncSearchWidth)
   }, [])
 
-  // /exams/[examId]/guide や /exams/[examId]/questions のようなネストしたルートも
-  // 対応するナビ項目（学習ガイド／練習問題／知識カード）として判定する
-  const isGuideActive = pathname.startsWith('/guide')
-    || /^\/exams\/[^/]+\/guide(\/|$)/.test(pathname)
-  const isPracticeActive = pathname.startsWith('/practice')
-    || /^\/exams\/[^/]+\/questions(\/|$)/.test(pathname)
-  const isCardsActive = pathname.startsWith('/cards')
-    || /^\/exams\/[^/]+\/cards(\/|$)/.test(pathname)
-  const isExamsActive = !isGuideActive && !isPracticeActive && !isCardsActive && pathname.startsWith('/exams')
-
   const isActive = (path: string) => {
     if (path === '/') return pathname === '/'
-    if (path === '/guide') return isGuideActive
-    if (path === '/practice') return isPracticeActive
-    if (path === '/cards') return isCardsActive
-    if (path === '/exams') return isExamsActive
+    if (path === '/exams') return pathname.startsWith('/exams')
     return pathname.startsWith(path)
   }
 
@@ -101,10 +88,7 @@ export default function Navbar() {
             <div style={{ flex: 1 }} />
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginRight: 8 }}>
-              <NavLink ref={guideLinkRef} href="/guide" active={isActive('/guide')}>学習ガイド</NavLink>
-              <NavLink href="/practice" active={isActive('/practice')}>練習問題</NavLink>
-              <NavLink href="/cards" active={isActive('/cards')}>知識カード</NavLink>
-              <NavLink href="/exams" active={isActive('/exams')}>資格一覧</NavLink>
+              <NavLink ref={examsLinkRef} href="/exams" active={isActive('/exams')}>資格一覧</NavLink>
             </div>
 
           </div>
@@ -208,9 +192,6 @@ export default function Navbar() {
               </MobileNavSection>
 
               {[
-                { href: '/guide', label: '学習ガイド' },
-                { href: '/practice', label: '練習問題' },
-                { href: '/cards', label: '知識カード' },
                 { href: '/exams', label: '資格一覧' },
               ].map(item => (
                 <Link key={item.href} href={item.href}

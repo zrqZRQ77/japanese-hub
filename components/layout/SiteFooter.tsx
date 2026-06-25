@@ -20,33 +20,37 @@ export default function SiteFooter() {
     }}>
       <div className="container-page" style={{
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
         gap: 18,
-        flexWrap: 'wrap',
       }}>
-        <div>
-          <div style={{ marginBottom: 8 }}>
-            <SiteLogo />
-          </div>
-          <p>© 2026 <BrandText />. All rights reserved.</p>
-        </div>
-        <nav aria-label="フッターリンク" style={{
+        <SiteLogo />
+
+        <div style={{
           display: 'flex',
-          gap: 14,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 18,
           flexWrap: 'wrap',
-          justifyContent: 'flex-end',
         }}>
-          {FOOTER_LINKS.map(link => (
-            <Link key={link.href} href={link.href} style={{
-              color: 'rgba(244,243,239,0.74)',
-              textDecoration: 'none',
-              fontWeight: 700,
-            }}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+          <p style={{ margin: 0 }}>© 2026 <BrandText />. All rights reserved.</p>
+          <nav aria-label="フッターリンク" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 14,
+            flexWrap: 'wrap',
+            justifyContent: 'flex-end',
+          }}>
+            {FOOTER_LINKS.map(link => (
+              <Link key={link.href} href={link.href} style={{
+                color: 'rgba(244,243,239,0.74)',
+                textDecoration: 'none',
+                fontWeight: 700,
+              }}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   )
