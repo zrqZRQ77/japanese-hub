@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { Question } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
 import { trackEvent } from '@/lib/analytics'
+import AdSlot from '@/components/monetization/AdSlot'
 
 interface Props {
   questions: Question[]
@@ -429,6 +430,13 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               >未回答の問題へ</button>
             )}
           </div>
+        </div>
+        <div style={{
+          maxWidth: 960,
+          width: '100%',
+          margin: '24px auto 0',
+        }}>
+          <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_EXAM_SECONDARY} />
         </div>
       </main>
 

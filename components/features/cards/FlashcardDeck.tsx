@@ -6,6 +6,7 @@ import { RotateCcw, Layers, CheckCircle2 } from 'lucide-react'
 import { ChapterMeta, KnowledgeCard } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
 import { trackEvent } from '@/lib/analytics'
+import AdSlot from '@/components/monetization/AdSlot'
 
 interface CardGroup {
   chapter: ChapterMeta
@@ -314,6 +315,9 @@ export default function FlashcardDeck({
           </>
         )}
       </section>
+      <div style={{ marginTop: 24 }}>
+        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_EXAM_SECONDARY} />
+      </div>
     </div>
   )
 }

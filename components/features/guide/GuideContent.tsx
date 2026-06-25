@@ -10,6 +10,7 @@ import { Bookmark } from 'lucide-react'
 import { ChapterMeta, GuideFrontmatter } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
 import { trackEvent } from '@/lib/analytics'
+import AdSlot from '@/components/monetization/AdSlot'
 
 interface Props {
   frontmatter: GuideFrontmatter
@@ -161,6 +162,15 @@ export default function GuideContent({
             fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'nowrap',
           }}>練習問題を解く →</Link>
         </div>
+      </div>
+
+      <div style={{
+        width: '100%',
+        maxWidth: 920,
+        padding: '0 40px 28px',
+        boxSizing: 'border-box',
+      }}>
+        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_EXAM_SECONDARY} />
       </div>
 
       {/* 前へ / 次へ ナビゲーション */}
