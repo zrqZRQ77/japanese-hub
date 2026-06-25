@@ -8,6 +8,21 @@ interface AffiliateRecommendationsProps {
   exam: ExamMeta
 }
 
+const amazonAssociateTag = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG?.trim()
+
+function withAmazonAssociateTag(url: string): string {
+  if (!amazonAssociateTag) return url
+
+  try {
+    const parsed = new URL(url)
+    if (!parsed.hostname.endsWith('amazon.co.jp')) return url
+    parsed.searchParams.set('tag', amazonAssociateTag)
+    return parsed.toString()
+  } catch {
+    return url
+  }
+}
+
 export default function AffiliateRecommendations({ exam }: AffiliateRecommendationsProps) {
   const info = exam.info
   if (!info) return null
@@ -15,7 +30,8 @@ export default function AffiliateRecommendations({ exam }: AffiliateRecommendati
   const freeCourses = info.courses.filter(course => course.isFree && !course.isAffiliate)
   const affiliateCourses = info.courses.filter(course => course.isAffiliate).slice(0, 2)
   const books = info.books.slice(0, 2)
-  const hasSponsoredItems = affiliateCourses.length > 0 || books.length > 0
+  const hasAmazonAffiliateLinks = Boolean(amazonAssociateTag) && books.length > 0
+  const hasSponsoredItems = affiliateCourses.length > 0 || hasAmazonAffiliateLinks
 
   if (freeCourses.length === 0 && affiliateCourses.length === 0 && books.length === 0) return null
 
@@ -103,9 +119,9 @@ export default function AffiliateRecommendations({ exam }: AffiliateRecommendati
         {books.map(book => (
           <a
             className="affiliate-card affiliate-card--book"
-            href={book.amazonUrl}
+            href={withAmazonAssociateTag(book.amazonUrl)}
             target="_blank"
-            rel="sponsored noopener noreferrer"
+            rel={hasAmazonAffiliateLinks ? 'sponsored noopener noreferrer' : 'noopener noreferrer'}
             key={book.title}
             onClick={() => trackEvent('affiliate_click', {
               exam_id: exam.id,
@@ -117,7 +133,7 @@ export default function AffiliateRecommendations({ exam }: AffiliateRecommendati
             <div className="affiliate-card__topline">
               <span className="affiliate-card__icon"><BookOpen size={19} /></span>
               <span className="affiliate-card__type">{book.type}</span>
-              <span className="affiliate-card__pick">PR</span>
+              <span className="affiliate-card__pick">{hasAmazonAffiliateLinks ? 'PR' : '教材'}</span>
             </div>
             <div className="affiliate-card__provider">Amazon</div>
             <h3>{book.title}</h3>
@@ -135,7 +151,7 @@ export default function AffiliateRecommendations({ exam }: AffiliateRecommendati
 
       {hasSponsoredItems && (
         <p className="affiliate-section__disclosure">
-          ※「PR」表示の項目は成果報酬型広告を含みます
+          ※「PR」表示の項目は成果報酬型広告を含みます。Amazonのアソシエイトとして、資格合格ナビは適格販売により収入を得ています。
         </p>
       )}
     </section>

@@ -24,6 +24,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: GA4の「G-」から始まる測定ID
 - `GOOGLE_SITE_VERIFICATION`: Search ConsoleのHTMLタグ方式で発行された確認コード
+- `NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT`: AdSenseの `ca-pub-` から始まるクライアントID
+- `NEXT_PUBLIC_ADSENSE_SLOT_EXAM_SECONDARY`: 学習ページ下部に表示するAdSense広告ユニットID
+- `NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG`: AmazonアソシエイトのトラッキングID（例: `example-22`）
 
 GA4では次の学習・収益イベントを送信します。
 
