@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import LegalPage from '@/components/layout/LegalPage'
 import { createPageMetadata } from '@/lib/seo'
+
+const externalLinkStyle = { color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' } as const
 
 export const metadata: Metadata = createPageMetadata({
   title: 'プライバシーポリシー',
@@ -33,7 +36,13 @@ export default function PrivacyPage() {
           title: 'Cookie・アクセス解析・広告',
           body: [
             '当サイトでは、サイトの利用状況を把握し、内容を改善するためにGoogle Analyticsを利用します。Google AnalyticsはCookie等を使用し、閲覧ページ、利用環境、操作状況などの情報を収集します。',
-            '収集されたデータはGoogleのプライバシーポリシーおよび利用規約に基づいて管理されます。Cookieの利用はブラウザ設定により拒否できます。',
+            <>
+              収集されたデータは
+              <Link href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={externalLinkStyle}>Googleのプライバシーポリシー</Link>
+              および
+              <Link href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={externalLinkStyle}>利用規約</Link>
+              に基づいて管理されます。Cookieの利用はブラウザ設定により拒否できます。
+            </>,
             '広告配信サービスを利用する場合、利用者の興味に応じた広告が表示されることがあります。Cookieの利用はブラウザ設定により拒否できます。',
           ],
         },
@@ -47,7 +56,7 @@ export default function PrivacyPage() {
         {
           title: 'お問い合わせ',
           body: [
-            '個人情報の開示、訂正、削除、利用停止等を希望される場合は、お問い合わせページよりご連絡ください。',
+            <>個人情報の開示、訂正、削除、利用停止等を希望される場合は、<Link href="/contact" style={externalLinkStyle}>お問い合わせページ</Link>よりご連絡ください。</>,
           ],
         },
       ]}
