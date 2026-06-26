@@ -37,7 +37,6 @@ export const CHAPTERS_REGISTRY: Record<string, ChapterMeta[]> = {
     { id: 'ch7', number: 7, title: '手形', sections: [
       { id: 'ch7-s1', number: '7-1', title: '約束手形' },
       { id: 'ch7-s2', number: '7-2', title: '電子記録債権' },
-      { id: 'ch7-s3', number: '7-3', title: '手形の裏書・割引' },
     ]},
     { id: 'ch8', number: 8, title: 'その他の債権・債務', sections: [
       { id: 'ch8-s1', number: '8-1', title: '貸付金・借入金' },
@@ -45,6 +44,7 @@ export const CHAPTERS_REGISTRY: Record<string, ChapterMeta[]> = {
       { id: 'ch8-s3', number: '8-3', title: '前払金・前受金' },
       { id: 'ch8-s4', number: '8-4', title: '仮払金・仮受金・立替金・預り金' },
       { id: 'ch8-s5', number: '8-5', title: '有価証券・税金・保証金' },
+      { id: 'ch8-s6', number: '8-6', title: '受取商品券' },
     ]},
     { id: 'ch9', number: 9, title: '固定資産', sections: [
       { id: 'ch9-s1', number: '9-1', title: '固定資産の取得' },

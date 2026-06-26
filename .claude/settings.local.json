@@ -11,7 +11,9 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(cd \"/Users/zhouruoqi/Downloads/claude代码/shikaku-navi-1-6\" && sed -n '36,70p' app/exams/[examId]/questions/[chapterId]/page.tsx)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(curl -s http://localhost:3000/)"
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(python3 -c ' *)",
+      "Bash(rm -rf .next)"
     ]
   }
 }
