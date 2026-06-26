@@ -1586,6 +1586,204 @@
         "システム企画",
         "企画"
       ]
+    },
+    {
+      "id": "itp-ch5-q49",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "大量のテキストデータを学習し、自然な文章を生成できるAIモデルであり、ChatGPTなどの生成AIの基盤技術となっているものはどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "LLM（大規模言語モデル）"
+        },
+        {
+          "label": "B",
+          "text": "RPA"
+        },
+        {
+          "label": "C",
+          "text": "ERP"
+        },
+        {
+          "label": "D",
+          "text": "BIツール"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LLM（大規模言語モデル）は、大量のテキストデータを学習し、自然な文章を生成できるAIモデルで、生成AIの基盤技術です。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s3",
+        "技術戦略マネジメント",
+        "生成AI"
+      ]
+    },
+    {
+      "id": "itp-ch5-q50",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "生成AIが、事実と異なる内容をあたかも正しいかのように生成してしまう現象を何というか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "ハルシネーション"
+        },
+        {
+          "label": "B",
+          "text": "レイテンシ"
+        },
+        {
+          "label": "C",
+          "text": "バイアス"
+        },
+        {
+          "label": "D",
+          "text": "オーバーフィッティング"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "ハルシネーションは、生成AIが事実と異なる内容を、もっともらしく生成してしまう現象を指します。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s3",
+        "技術戦略マネジメント",
+        "生成AI"
+      ]
+    },
+    {
+      "id": "itp-ch5-q51",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "公平性・説明可能性・安全性などに配慮してAIを開発・利用するという考え方を表す用語はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "責任あるAI"
+        },
+        {
+          "label": "B",
+          "text": "シャドーIT"
+        },
+        {
+          "label": "C",
+          "text": "ローコード開発"
+        },
+        {
+          "label": "D",
+          "text": "デジタルツイン"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "責任あるAI（Responsible AI）は、公平性・説明可能性・安全性などに配慮してAIを開発・利用する考え方です。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s3",
+        "技術戦略マネジメント",
+        "生成AI"
+      ]
+    },
+    {
+      "id": "itp-ch5-q52",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "ブロックチェーン技術を用いて、デジタルデータに唯一性・所有権を持たせる技術であり、デジタルアート等の取引にも利用されるものはどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "NFT"
+        },
+        {
+          "label": "B",
+          "text": "RPA"
+        },
+        {
+          "label": "C",
+          "text": "EDI"
+        },
+        {
+          "label": "D",
+          "text": "POS"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "NFT（非代替性トークン）は、ブロックチェーン技術を使ってデジタルデータに唯一性・所有権を持たせる技術です。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s4",
+        "ビジネスインダストリ",
+        "NFT"
+      ]
+    },
+    {
+      "id": "itp-ch5-q53",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "事業者が適格請求書（インボイス）を発行・保存することで、消費税の仕入税額控除を適用できる制度はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "インボイス制度"
+        },
+        {
+          "label": "B",
+          "text": "電子帳簿保存法"
+        },
+        {
+          "label": "C",
+          "text": "下請法"
+        },
+        {
+          "label": "D",
+          "text": "特定商取引法"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "インボイス制度は、適格請求書の発行・保存により消費税の仕入税額控除を適用するための制度です。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s4",
+        "ビジネスインダストリ",
+        "インボイス制度"
+      ]
+    },
+    {
+      "id": "itp-ch5-q54",
+      "examId": "itp",
+      "chapterId": "ch5",
+      "type": "single",
+      "text": "経済産業省が策定した、企業が自社のDX推進状況を自己診断するための指標はどれか。",
+      "options": [
+        {
+          "label": "A",
+          "text": "DX推進指標"
+        },
+        {
+          "label": "B",
+          "text": "バランススコアカード"
+        },
+        {
+          "label": "C",
+          "text": "SWOT分析"
+        },
+        {
+          "label": "D",
+          "text": "ファイブフォース分析"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "DX推進指標は、経済産業省が策定した、企業がDXの推進状況を自己診断するための指標です。",
+      "tags": [
+        "ストラテジ系",
+        "ch5-s4",
+        "ビジネスインダストリ",
+        "DX推進指標"
+      ]
     }
   ]
 }
