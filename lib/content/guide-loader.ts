@@ -64,6 +64,22 @@ function markSummaryRows(table: HastNode) {
   walk(table)
 }
 
+const JOURNAL_TABLE_HEADERS = ['借方科目', '借方金額', '貸方科目', '貸方金額']
+
+function isJournalTable(table: HastNode): boolean {
+  const headerRow = table.children
+    ?.find(c => c.type === 'element' && c.tagName === 'thead')
+    ?.children?.find(c => c.type === 'element' && c.tagName === 'tr')
+  if (!headerRow) return false
+
+  const headerTexts = (headerRow.children ?? [])
+    .filter(c => c.type === 'element' && c.tagName === 'th')
+    .map(c => getTextContent(c).trim())
+
+  return headerTexts.length === JOURNAL_TABLE_HEADERS.length
+    && headerTexts.every((text, i) => text === JOURNAL_TABLE_HEADERS[i])
+}
+
 function rehypeTableFrames() {
   return (tree: HastNode) => {
     const visit = (node: HastNode) => {
@@ -71,9 +87,10 @@ function rehypeTableFrames() {
 
       node.children = node.children.map(child => {
         if (child.type === 'element' && child.tagName === 'table') {
-          const className = ['mdx-table-frame']
+          const journalTable = isJournalTable(child)
+          const className = journalTable ? ['mdx-table-frame', 'mdx-journal-table'] : ['mdx-table-frame']
           markSummaryRows(child)
-          if (getTableColumnCount(child) >= 6) className.push('mdx-wide-table')
+          if (!journalTable && getTableColumnCount(child) >= 6) className.push('mdx-wide-table')
 
           return {
             type: 'element',
