@@ -686,6 +686,24 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   color: var(--color-text);
 }
 
+/* 6列以上の幅広テーブルは可読性を優先し、横スクロールで表示する */
+.mdx-content .mdx-wide-table table {
+  min-width: 1100px;
+  table-layout: auto;
+}
+
+.mdx-content .mdx-wide-table th,
+.mdx-content .mdx-wide-table td {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.mdx-content .mdx-wide-table th:first-child,
+.mdx-content .mdx-wide-table td:first-child {
+  min-width: 130px;
+}
+
 .mdx-content .mdx-summary-row td {
   background: #eee9dc;
   font-weight: 700;
@@ -752,6 +770,10 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   .mdx-content .mdx-table-frame {
     max-width: calc(100vw - 32px);
     margin: 16px 0 22px;
+  }
+
+  .mdx-content .mdx-wide-table table {
+    min-width: 980px;
   }
 
   .mdx-content table {
