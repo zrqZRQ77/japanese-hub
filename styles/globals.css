@@ -691,6 +691,41 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   font-weight: 700;
 }
 
+/* 6列以上の教材用ワイドテーブル
+   内容を画面幅へ無理に圧縮せず、表全体を横スクロールして読む。 */
+.mdx-content .mdx-table-frame.mdx-wide-table {
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mdx-content .mdx-table-frame.mdx-wide-table table {
+  width: max-content;
+  min-width: 100%;
+  table-layout: auto;
+}
+
+.mdx-content .mdx-table-frame.mdx-wide-table th,
+.mdx-content .mdx-table-frame.mdx-wide-table td {
+  min-width: 96px;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.mdx-content .mdx-table-frame.mdx-wide-table th:first-child,
+.mdx-content .mdx-table-frame.mdx-wide-table td:first-child {
+  min-width: 72px;
+}
+
+.mdx-content .mdx-table-frame.mdx-wide-table th:nth-child(2),
+.mdx-content .mdx-table-frame.mdx-wide-table td:nth-child(2) {
+  min-width: 104px;
+}
+
+.mdx-content .mdx-table-frame.mdx-wide-table td {
+  font-variant-numeric: tabular-nums;
+}
+
 .mdx-content th[align="right"],
 .mdx-content td[align="right"] {
   text-align: right;

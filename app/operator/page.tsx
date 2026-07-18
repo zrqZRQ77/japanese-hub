@@ -27,7 +27,7 @@ export default function OperatorPage() {
         {
           title: 'サイトURL',
           body: [
-            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' }}>
+            <Link key="site-url" href="/" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' }}>
               https://japanese-hub.com/
             </Link>,
           ],
@@ -42,7 +42,7 @@ export default function OperatorPage() {
         {
           title: '連絡先',
           body: [
-            <>お問い合わせは、当サイトの<Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' }}>お問い合わせページ</Link>よりご連絡ください。</>,
+            <span key="contact-link">お問い合わせは、当サイトの<Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' }}>お問い合わせページ</Link>よりご連絡ください。</span>,
           ],
         },
       ]}
