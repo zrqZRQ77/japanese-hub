@@ -34,6 +34,9 @@ export default function GuideContent({
 
   useEffect(() => {
     articleRef.current?.scrollTo({ top: 0, left: 0 })
+  }, [chapter.id, currentSectionId])
+
+  useEffect(() => {
     if (!loaded) return
     recordActivity(
       'guide',
