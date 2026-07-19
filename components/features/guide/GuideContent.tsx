@@ -4,7 +4,7 @@
 // ============================================================
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { Bookmark } from 'lucide-react'
 import { ChapterMeta, GuideFrontmatter } from '@/lib/types'
@@ -26,15 +26,10 @@ interface Props {
 export default function GuideContent({
   frontmatter, contentHtml, chapter, currentSectionId, examId, prevLink, nextLink
 }: Props) {
-  const articleRef = useRef<HTMLElement>(null)
   const base = `/exams/${examId}`
   const { loaded, progress, recordActivity, toggleBookmark } = useProgress(examId)
   const sectionId = `${chapter.id}#${currentSectionId}`
   const isBookmarked = progress?.bookmarkedSectionIds.includes(sectionId) ?? false
-
-  useEffect(() => {
-    articleRef.current?.scrollTo({ top: 0, left: 0 })
-  }, [chapter.id, currentSectionId])
 
   useEffect(() => {
     if (!loaded) return
@@ -47,7 +42,7 @@ export default function GuideContent({
   }, [base, chapter.id, currentSectionId, frontmatter.sectionNumber, frontmatter.sectionTitle, loaded, recordActivity])
 
   return (
-    <article ref={articleRef} className="guide-content" style={{
+    <article className="guide-content" style={{
       flex: 1, overflowY: 'auto',
       background: 'var(--color-bg-subtle)',
       display: 'flex', flexDirection: 'column',
