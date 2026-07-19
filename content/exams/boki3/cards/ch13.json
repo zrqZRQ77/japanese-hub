@@ -3,87 +3,21 @@
   "chapterId": "ch13",
   "chapterTitle": "財務諸表",
   "cards": [
-    {
-      "id": "boki3-ch13-card1",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "一定時点の財政状態（財産や借金）を明らかにする報告書を何という？",
-      "back": "貸借対照表（たいしゃくたいしょうひょう：B/S）",
-      "tags": [
-        "貸借対照表"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card2",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "一定期間の経営成績（収益や費用）を明らかにする報告書を何という？",
-      "back": "損益計算書（そんえきけいさんしょ：P/L）",
-      "tags": [
-        "損益計算書"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card3",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "貸借対照表を構成する3つの要素は？",
-      "back": "資産、負債、純資産",
-      "tags": [
-        "5要素",
-        "貸借対照表"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card4",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "損益計算書を構成する2つの要素は？",
-      "back": "収益、費用",
-      "tags": [
-        "5要素",
-        "損益計算書"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card5",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "決算日から1年以内に現金化・支払いが行われるかを基準に流動・固定を分けるルールを何という？",
-      "back": "ワン・イヤー・ルール（1年基準）",
-      "tags": [
-        "ワン・イヤー・ルール"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card6",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "損益計算書で計算された当期純利益は、貸借対照表のどの科目に加算される？",
-      "back": "繰越利益剰余金（純資産の部）",
-      "tags": [
-        "財務諸表のつながり"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card7",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "貸借対照表のバランス（左右一致）を表す等式は？",
-      "back": "資産 ＝ 負債 ＋ 純資産",
-      "tags": [
-        "等式"
-      ]
-    },
-    {
-      "id": "boki3-ch13-card8",
-      "examId": "boki3",
-      "chapterId": "ch13",
-      "front": "損益計算書のバランスを表す等式（利益が出る場合）は？",
-      "back": "収益 － 費用 ＝ 当期純利益",
-      "tags": [
-        "等式"
-      ]
-    }
+    {"id":"boki3-ch13-card1","examId":"boki3","chapterId":"ch13","front":"財務諸表へ使う金額は決算整理前か後か？","back":"決算整理後の調整後残高。精算表のP/L欄・B/S欄から転記する。","tags":["調整後残高"]},
+    {"id":"boki3-ch13-card2","examId":"boki3","chapterId":"ch13","front":"統一ケースの収益合計は？","back":"704,000円。売上700,000円＋受取利息4,000円。","tags":["収益合計"]},
+    {"id":"boki3-ch13-card3","examId":"boki3","chapterId":"ch13","front":"統一ケースの費用合計は？","back":"624,000円。売上原価420,000円ほか各費用の合計。","tags":["費用合計"]},
+    {"id":"boki3-ch13-card4","examId":"boki3","chapterId":"ch13","front":"統一ケースの当期純利益は？","back":"80,000円。収益704,000円−費用624,000円。","tags":["当期純利益"]},
+    {"id":"boki3-ch13-card5","examId":"boki3","chapterId":"ch13","front":"当期純利益はP/Lのどちら側へ表示する？","back":"費用側。左右を一致させる差額であり、費用そのものではない。","tags":["損益計算書"]},
+    {"id":"boki3-ch13-card6","examId":"boki3","chapterId":"ch13","front":"三分法で財務諸表へ表示する商品原価は？","back":"仕入残高そのものではなく、期首商品＋当期仕入純額−期末商品で求めた売上原価。","tags":["売上原価"]},
+    {"id":"boki3-ch13-card7","examId":"boki3","chapterId":"ch13","front":"統一ケースの資産合計は？","back":"1,064,000円。備品減価償却累計額60,000円を資産から控除する。","tags":["資産合計"]},
+    {"id":"boki3-ch13-card8","examId":"boki3","chapterId":"ch13","front":"統一ケースの負債合計は？","back":"484,000円。買掛金160,000円＋借入金300,000円＋未払費用24,000円。","tags":["負債合計"]},
+    {"id":"boki3-ch13-card9","examId":"boki3","chapterId":"ch13","front":"統一ケースの純資産合計は？","back":"580,000円。資本金500,000円＋繰越利益剰余金80,000円。","tags":["純資産合計"]},
+    {"id":"boki3-ch13-card10","examId":"boki3","chapterId":"ch13","front":"統一ケースの貸借対照表等式は？","back":"資産1,064,000円＝負債484,000円＋純資産580,000円。","tags":["貸借対照表等式"]},
+    {"id":"boki3-ch13-card11","examId":"boki3","chapterId":"ch13","front":"減価償却累計額は何として表示する？","back":"負債ではなく、備品など固定資産から控除する評価勘定。","tags":["減価償却累計額"]},
+    {"id":"boki3-ch13-card12","examId":"boki3","chapterId":"ch13","front":"前払保険料の表示先は？","back":"貸借対照表の資産。翌期にサービスを受ける権利。","tags":["前払保険料"]},
+    {"id":"boki3-ch13-card13","examId":"boki3","chapterId":"ch13","front":"未払費用の表示先は？","back":"貸借対照表の負債。当期費用に対応する将来の支払義務。","tags":["未払費用"]},
+    {"id":"boki3-ch13-card14","examId":"boki3","chapterId":"ch13","front":"期末繰越利益剰余金の基本式と統一ケースの前提は？","back":"期首残高＋当期純利益−配当など。統一ケースは期首0円・配当なしなので80,000円。","tags":["繰越利益剰余金"]},
+    {"id":"boki3-ch13-card15","examId":"boki3","chapterId":"ch13","front":"決算整理はP/LとB/Sへどう影響する？","back":"多くの整理仕訳は費用・収益と資産・負債の両面へ同額の影響を与える。","tags":["決算整理","P/LとB/S"]},
+    {"id":"boki3-ch13-card16","examId":"boki3","chapterId":"ch13","front":"財務諸表が合わないときの確認順序は？","back":"計算→転記漏れ→借貸方向→決算整理の両面→売上原価・期末商品→利益剰余金条件。","tags":["最終検算"]}
   ]
 }
