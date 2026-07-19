@@ -34,7 +34,13 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
         <select
           value={currentChapterId}
           onChange={event => {
-            if (event.target.value) router.push(`${base}/${event.target.value}`)
+            if (event.target.value) {
+              const chapter = chapters.find(item => item.id === event.target.value)
+              const firstSectionId = chapter?.sections[0]?.id
+              router.push(firstSectionId
+                ? `${base}/${event.target.value}/${firstSectionId}`
+                : `${base}/${event.target.value}`)
+            }
           }}
         >
           <option value="">章を選択</option>
@@ -52,7 +58,7 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
           disabled={!currentChapter}
           onChange={event => {
             if (currentChapter && event.target.value) {
-              router.push(`${base}/${currentChapter.id}?section=${event.target.value}`)
+              router.push(`${base}/${currentChapter.id}/${event.target.value}`)
             }
           }}
         >
@@ -165,7 +171,7 @@ export default function GuideSidebar({ examId, chapters, currentChapterId, curre
                     const isBookmarked = bookmarkedSectionIds.has(`${ch.id}#${sec.id}`)
                     return (
                       <Link key={sec.id}
-                        href={`${base}/${ch.id}?section=${sec.id}`}
+                        href={`${base}/${ch.id}/${sec.id}`}
                         style={{
                           display: 'flex',
                           alignItems: 'center',

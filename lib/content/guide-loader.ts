@@ -129,6 +129,13 @@ export async function getGuideContent(examId: string, chapterId: string, section
   }
 }
 
+export function getGuideFrontmatter(examId: string, chapterId: string, sectionId: string): GuideFrontmatter | null {
+  const filePath = path.join(CONTENT_ROOT, examId, 'guide', chapterId, `${sectionId}.mdx`)
+  if (!fs.existsSync(filePath)) return null
+  const raw = fs.readFileSync(filePath, 'utf-8')
+  return matter(raw).data as GuideFrontmatter
+}
+
 export function getAllGuideSections(examId: string, chapterId: string): string[] {
   const dir = path.join(CONTENT_ROOT, examId, 'guide', chapterId)
   if (!fs.existsSync(dir)) return []

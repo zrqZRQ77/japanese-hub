@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
 import { getAvailableExams } from '@/lib/content/exams-loader'
+import { getGuideFrontmatter } from '@/lib/content/guide-loader'
 import { isMockExamPublic } from '@/lib/types/exams-registry'
 import { absoluteUrl } from '@/lib/seo'
 
@@ -65,20 +66,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     for (const chapter of getChaptersByExam(exam.id)) {
-      urls.push(
-        {
-          url: absoluteUrl(`${examBase}/guide/${chapter.id}`),
-          lastModified: now,
+      for (const section of chapter.sections) {
+        const frontmatter = getGuideFrontmatter(exam.id, chapter.id, section.id)
+        const updatedAt = frontmatter?.updatedAt ? new Date(frontmatter.updatedAt) : now
+        urls.push({
+          url: absoluteUrl(`${examBase}/guide/${chapter.id}/${section.id}`),
+          lastModified: updatedAt,
           changeFrequency: 'monthly',
           priority: 0.78,
-        },
-        {
-          url: absoluteUrl(`${examBase}/questions/${chapter.id}`),
-          lastModified: now,
-          changeFrequency: 'monthly',
-          priority: 0.76,
-        }
-      )
+        })
+      }
+
+      urls.push({
+        url: absoluteUrl(`${examBase}/questions/${chapter.id}`),
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.76,
+      })
     }
   }
 

@@ -77,7 +77,9 @@ export async function GET(req: NextRequest) {
           chapterTitle: ch.title,
           title: `第${ch.number}章 ${ch.title}`,
           excerpt: ch.sections.map(s => s.title).join(' / '),
-          url: `/exams/${exam.id}/guide/${ch.id}${firstSectionId ? `?section=${firstSectionId}` : ''}`,
+          url: firstSectionId
+            ? `/exams/${exam.id}/guide/${ch.id}/${firstSectionId}`
+            : `/exams/${exam.id}/guide/${ch.id}`,
         })
       }
 
@@ -104,7 +106,7 @@ export async function GET(req: NextRequest) {
             chapterTitle: ch.title,
             title: `${section.number} ${sectionTitle}`,
             excerpt: highlight(plainContent || sectionTitle, q),
-            url: `/exams/${exam.id}/guide/${ch.id}?section=${section.id}`,
+            url: `/exams/${exam.id}/guide/${ch.id}/${section.id}`,
           })
         }
       }
