@@ -112,7 +112,7 @@ export default async function GuideIndexPage({ params }: { params: Promise<{ exa
 
               {chapters[0] && (
                 <div style={{ textAlign: 'center' }}>
-                  <Link href={`${base}/guide/${chapters[0].id}`} style={{
+                  <Link href={`${base}/guide/${chapters[0].id}/${chapters[0].sections[0]?.id ?? ''}`} style={{
                     display: 'inline-block', padding: '14px 40px',
                     background: 'var(--color-primary)', color: 'var(--color-bg)',
                     borderRadius: 'var(--radius-sm)', fontWeight: 700,

@@ -43,18 +43,45 @@ function loadJsonSets(kind) {
     }))
 }
 
-function collectMockQuestions(value, output = []) {
-  if (Array.isArray(value)) {
-    value.forEach(item => collectMockQuestions(item, output))
-    return output
-  }
-  if (!value || typeof value !== 'object') return output
+const MOCK_SECTION_BLUEPRINTS = [
+  { chapterId: 'mock-s1', title: '第1問', points: 45, count: 9 },
+  { chapterId: 'mock-s2', title: '第2問', points: 20, count: 2 },
+  { chapterId: 'mock-s3', title: '第3問', points: 35, count: 4 },
+]
 
-  if (value.id && Array.isArray(value.options) && value.correctAnswer) {
-    output.push(value)
+function validateMockAnswerSheet(question, issues) {
+  if (!question.answerSheet) {
+    if (!Array.isArray(question.options)
+      || !question.options.some(option => option.label === question.correctAnswer)) {
+      issues.push(`${question.id}: mock correctAnswer does not map to an option`)
+    }
+    return
   }
-  Object.values(value).forEach(item => collectMockQuestions(item, output))
-  return output
+
+  if (question.answerSheet.kind === 'journal') {
+    const lines = question.answerSheet.lines ?? []
+    if (lines.length === 0) issues.push(`${question.id}: journal answer sheet has no lines`)
+    if (new Set(lines.map(line => line.id)).size !== lines.length) {
+      issues.push(`${question.id}: duplicate journal line ids`)
+    }
+    for (const line of lines) {
+      if (!line.account || !line.amount || !['借方', '貸方'].includes(line.side)) {
+        issues.push(`${question.id}: invalid journal answer line ${line.id}`)
+      }
+    }
+    return
+  }
+
+  const blanks = question.answerSheet.blanks ?? []
+  if (blanks.length === 0) issues.push(`${question.id}: blank answer sheet has no fields`)
+  if (new Set(blanks.map(blank => blank.id)).size !== blanks.length) {
+    issues.push(`${question.id}: duplicate blank ids`)
+  }
+  for (const blank of blanks) {
+    if (!blank.label || String(blank.answer).trim() === '') {
+      issues.push(`${question.id}: invalid blank ${blank.id}`)
+    }
+  }
 }
 
 function main() {
@@ -179,9 +206,12 @@ function main() {
 
     if (route === 'guide' && parts[3]) {
       const chapter = registryByChapter.get(parts[3])
-      const section = parsed.searchParams.get('section')
+      const sectionId = parts[4]
       if (!chapter) issues.push(`${relative}: broken guide chapter link ${url}`)
-      if (section && !chapter?.sections.some(item => item.id === section)) {
+      if (parsed.searchParams.has('section')) {
+        issues.push(`${relative}: legacy guide query link ${url}`)
+      }
+      if (sectionId && !chapter?.sections.some(item => item.id === sectionId)) {
         issues.push(`${relative}: broken guide section link ${url}`)
       }
     } else if (route === 'questions' && parts[3]) {
@@ -197,15 +227,30 @@ function main() {
   }
 
   const mockPath = path.join(CONTENT_ROOT, 'mock-exam', 'questions.json')
-  const mockQuestions = collectMockQuestions(JSON.parse(fs.readFileSync(mockPath, 'utf8')))
+  const mockSet = JSON.parse(fs.readFileSync(mockPath, 'utf8'))
+  const mockQuestions = mockSet.questions ?? []
   const mockIds = new Set()
   for (const question of mockQuestions) {
     if (mockIds.has(question.id)) issues.push(`Duplicate mock question id: ${question.id}`)
     mockIds.add(question.id)
-    if (!question.options.some(option => option.label === question.correctAnswer)) {
-      issues.push(`${question.id}: mock correctAnswer does not map to an option`)
+    if (question.examId !== EXAM_ID) issues.push(`${question.id}: invalid mock examId`)
+    if (!/^mock-s[1-3]$/.test(question.chapterId)) {
+      issues.push(`${question.id}: invalid mock chapterId`)
+    }
+    if (!question.material?.rows?.length) issues.push(`${question.id}: mock material is missing`)
+    if (!question.prompt || !question.explanation) issues.push(`${question.id}: prompt or explanation is missing`)
+    validateMockAnswerSheet(question, issues)
+  }
+
+  for (const blueprint of MOCK_SECTION_BLUEPRINTS) {
+    const actual = mockQuestions.filter(question => question.chapterId === blueprint.chapterId).length
+    if (actual !== blueprint.count) {
+      issues.push(`${blueprint.title}: expected ${blueprint.count} questions, found ${actual}`)
     }
   }
+  const mockPoints = MOCK_SECTION_BLUEPRINTS.reduce((sum, section) => sum + section.points, 0)
+  if (mockPoints !== 100) issues.push(`Mock exam points must total 100, found ${mockPoints}`)
+  if (mockQuestions.length !== 15) issues.push(`Mock exam must contain 15 subquestions, found ${mockQuestions.length}`)
 
   const trackedFiles = execFileSync('git', ['ls-files', 'content/exams/boki3'], {
     cwd: ROOT,

@@ -343,14 +343,14 @@ export default function DashboardProgress({ examId, chapters, totalChapters }: P
                 }}>
                   <Bookmark size={17} style={{ color: 'var(--color-primary)' }} />
                   <Link
-                    href={`${base}/guide/${chapter.id}?section=${section.id}`}
+                    href={`${base}/guide/${chapter.id}/${section.id}`}
                     style={{ minWidth: 0, display: 'grid', gap: 2, textDecoration: 'none', color: 'inherit' }}
                   >
                     <span>第{chapter.number}章 {chapter.title}</span>
                     <strong>{section.number} {section.title}</strong>
                   </Link>
                   <Link
-                    href={`${base}/guide/${chapter.id}?section=${section.id}`}
+                    href={`${base}/guide/${chapter.id}/${section.id}`}
                     aria-label="このセクションを開く"
                     style={{ color: 'var(--color-text-muted)', display: 'flex' }}
                   >
@@ -410,7 +410,7 @@ export default function DashboardProgress({ examId, chapters, totalChapters }: P
           const status = chapterStatus(ch.id)
           const s = STATUS_STYLE[status]
           return (
-            <Link key={ch.id} href={`${base}/guide/${ch.id}`}
+            <Link key={ch.id} href={`${base}/guide/${ch.id}/${ch.sections[0]?.id ?? ''}`}
               style={{ textDecoration: 'none', flexShrink: 0 }}
             >
               <div style={{

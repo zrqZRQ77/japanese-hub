@@ -1,156 +1,23 @@
-// ============================================================
-// 学習ガイド 章ページ  /exams/[examId]/guide/[chapterId]
-// MDXファイルを読み込んで動的レンダリング
-// ============================================================
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Navbar from '@/components/layout/Navbar'
-import GuideSidebar from '@/components/layout/GuideSidebar'
-import GuideContent from '@/components/features/guide/GuideContent'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { getExamById } from '@/lib/types/exams-registry'
-import { getChaptersByExam, getChapterById } from '@/lib/types/chapters-registry'
-import { getGuideContent, getAllGuideSections } from '@/lib/content/guide-loader'
-import { BookOpen } from 'lucide-react'
-import { createPageMetadata } from '@/lib/seo'
+import { getChapterById } from '@/lib/types/chapters-registry'
+import { getAllGuideSections } from '@/lib/content/guide-loader'
 
 interface Props {
   params: Promise<{ examId: string; chapterId: string }>
   searchParams: Promise<{ section?: string }>
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export default async function LegacyGuideChapterPage({ params, searchParams }: Props) {
   const { examId, chapterId } = await params
+  const { section } = await searchParams
   const exam = getExamById(examId)
   const chapter = getChapterById(examId, chapterId)
-
-  if (!exam || !chapter) {
-    return createPageMetadata({
-      title: '学習ガイド',
-      path: `/exams/${examId}/guide/${chapterId}`,
-      noIndex: true,
-    })
-  }
-
-  return createPageMetadata({
-    title: `${exam.shortName} 第${chapter.number}章 ${chapter.title}`,
-    description: `${exam.name}の学習ガイド第${chapter.number}章「${chapter.title}」。重要知識を章ごとに整理して学べます。`,
-    path: `/exams/${examId}/guide/${chapterId}`,
-  })
-}
-
-export default async function GuideChapterPage({ params, searchParams }: Props) {
-  const { examId, chapterId } = await params
-  const { section: sectionParam } = await searchParams
-
-  const exam = getExamById(examId)
-  if (!exam) notFound()
-
-  const chapters = getChaptersByExam(examId)
-  const chapter = getChapterById(examId, chapterId)
-  if (!chapter) notFound()
+  if (!exam || !chapter) notFound()
 
   const sections = getAllGuideSections(examId, chapterId)
-  const firstSection = sections[0]
-  const activeSection = (sectionParam && sections.includes(sectionParam))
-    ? sectionParam
-    : firstSection
+  const targetSection = section && sections.includes(section) ? section : sections[0]
+  if (!targetSection) notFound()
 
-  const guideData = activeSection
-    ? await getGuideContent(examId, chapterId, activeSection)
-    : null
-
-  // 前後セクションリンク（章をまたいで連続したセクション単位でナビゲートする）
-  const flatSections = chapters.flatMap(c =>
-    getAllGuideSections(examId, c.id).map(sectionId => {
-      const sectionMeta = c.sections.find(s => s.id === sectionId)
-      return {
-        chapterId: c.id,
-        sectionId,
-        label: sectionMeta ? `${sectionMeta.number} ${sectionMeta.title}` : sectionId,
-      }
-    })
-  )
-  const currentIndex = flatSections.findIndex(
-    s => s.chapterId === chapterId && s.sectionId === activeSection
-  )
-  const prevSection = currentIndex > 0 ? flatSections[currentIndex - 1] : undefined
-  const nextSection = currentIndex >= 0 && currentIndex < flatSections.length - 1
-    ? flatSections[currentIndex + 1]
-    : undefined
-
-  // コンテンツ未作成時のフォールバック用：次の章へのリンク
-  const chapterIndex = chapters.findIndex(c => c.id === chapterId)
-  const nextChapter = chapters[chapterIndex + 1]
-
-  const base = `/exams/${examId}`
-
-  return (
-    <>
-      <Navbar />
-      <div className="guide-page-shell" style={{
-        display: 'flex',
-        height: 'calc(100vh - 64px)',
-        overflow: 'hidden',
-        background: 'var(--color-bg-subtle)',
-      }}>
-        <div className="guide-layout" style={{
-          display: 'flex',
-          width: '100%',
-          height: '100%',
-          minWidth: 0,
-          overflow: 'hidden',
-        }}>
-          <GuideSidebar
-            key={chapterId}
-            examId={examId}
-            chapters={chapters}
-            currentChapterId={chapterId}
-            currentSectionId={activeSection}
-            progress={25}
-          />
-
-          {guideData ? (
-            <GuideContent
-              key={`${chapterId}-${activeSection}`}
-              frontmatter={guideData.frontmatter}
-              contentHtml={guideData.contentHtml}
-              chapter={chapter}
-              sections={chapter.sections}
-              currentSectionId={activeSection ?? firstSection ?? chapter.sections[0]?.id ?? ''}
-              examId={examId}
-              prevLink={prevSection
-                ? { href: `${base}/guide/${prevSection.chapterId}?section=${prevSection.sectionId}`, label: prevSection.label }
-                : undefined}
-              nextLink={nextSection
-                ? { href: `${base}/guide/${nextSection.chapterId}?section=${nextSection.sectionId}`, label: nextSection.label }
-                : undefined}
-            />
-          ) : (
-            <div style={{
-              flex: 1, display: 'flex', flexDirection: 'column',
-              alignItems: 'center', justifyContent: 'center',
-              background: 'var(--color-bg-subtle)', color: 'var(--color-text-secondary)',
-              gap: 12, padding: 24,
-            }}>
-              <BookOpen size={42} />
-              <div style={{ fontWeight: 700, fontSize: '1.1rem' }}>
-                第{chapter.number}章 {chapter.title}
-              </div>
-              <div style={{ fontSize: '0.9rem' }}>
-                このチャプターのコンテンツは準備中です。
-              </div>
-              {nextChapter && (
-                <a href={`${base}/guide/${nextChapter.id}`} style={{
-                  marginTop: 8, padding: '9px 20px',
-                  background: 'var(--color-primary)', color: 'var(--color-bg)',
-                  borderRadius: 'var(--radius-sm)', fontWeight: 700,
-                  fontSize: '0.875rem', textDecoration: 'none',
-                }}>次の章へ →</a>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    </>
-  )
+  permanentRedirect(`/exams/${examId}/guide/${chapterId}/${targetSection}`)
 }

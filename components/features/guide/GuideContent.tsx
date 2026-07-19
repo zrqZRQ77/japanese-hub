@@ -19,12 +19,13 @@ interface Props {
   sections: ChapterMeta['sections']
   currentSectionId: string
   examId: string
+  examShortName: string
   prevLink?: { href: string; label: string }
   nextLink?: { href: string; label: string }
 }
 
 export default function GuideContent({
-  frontmatter, contentHtml, chapter, currentSectionId, examId, prevLink, nextLink
+  frontmatter, contentHtml, chapter, currentSectionId, examId, examShortName, prevLink, nextLink
 }: Props) {
   const base = `/exams/${examId}`
   const { loaded, progress, recordActivity, toggleBookmark } = useProgress(examId)
@@ -36,7 +37,7 @@ export default function GuideContent({
     recordActivity(
       'guide',
       chapter.id,
-      `${base}/guide/${chapter.id}?section=${currentSectionId}`,
+      `${base}/guide/${chapter.id}/${currentSectionId}`,
       `${frontmatter.sectionNumber} ${frontmatter.sectionTitle}`,
     )
   }, [base, chapter.id, currentSectionId, frontmatter.sectionNumber, frontmatter.sectionTitle, loaded, recordActivity])
@@ -104,6 +105,27 @@ export default function GuideContent({
           maxWidth: 760,
           margin: '0 auto',
         }}>
+        <nav aria-label="パンくずリスト" style={{
+          display: 'flex',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: 8,
+          marginBottom: 18,
+          color: 'var(--color-text-muted)',
+          fontSize: '0.78rem',
+          fontWeight: 650,
+        }}>
+          <Link href={`${base}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+            {examShortName}
+          </Link>
+          <span aria-hidden="true">›</span>
+          <Link href={`${base}/guide`} style={{ color: 'inherit', textDecoration: 'none' }}>
+            学習ガイド
+          </Link>
+          <span aria-hidden="true">›</span>
+          <span>{frontmatter.sectionNumber} {frontmatter.sectionTitle}</span>
+        </nav>
+
         {/* セクションタイトル */}
         <h1 style={{
           fontSize: '2rem', fontWeight: 900,
