@@ -23,9 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!exam) return createPageMetadata({ title: '模擬試験', path: `/exams/${examId}/mock-exam`, noIndex: true })
   if (!canAccessMockExam(exam)) return createPageMetadata({ title: '模擬試験', path: `/exams/${examId}/mock-exam`, noIndex: true })
 
+  const mockQuestionSet = getMockQuestionSet(examId)
+  const questionCount = mockQuestionSet?.questions.length ?? 0
+
   return createPageMetadata({
-    title: `${exam.shortName} 模擬試験`,
-    description: `${exam.name}の模擬試験ページです。練習問題を使って実戦形式で確認できます。`,
+    title: `${exam.shortName} 模擬試験（${exam.mockExam?.durationMinutes ?? 60}分）`,
+    description: `${exam.name}の本番形式模擬試験。3大問・${questionCount}小問を${exam.mockExam?.durationMinutes ?? 60}分で解き、${exam.mockExam?.passRate ?? 70}点の合格ラインを確認できます。`,
     path: `/exams/${examId}/mock-exam`,
     noIndex: !isMockExamPublic(exam),
   })

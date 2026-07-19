@@ -18,7 +18,7 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
     color: 'blue',
     icon: 'BookOpen',
     mockExam: {
-      status: 'draft',
+      status: 'public',
       durationMinutes: 60,
       passRate: 70,
       sectionBlueprints: [

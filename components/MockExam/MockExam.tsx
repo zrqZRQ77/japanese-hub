@@ -163,6 +163,21 @@ function answerLabel(answer: AnswerValue | undefined) {
   return Array.isArray(answer) ? answer.join(', ') : answer
 }
 
+function scoreRatio(q: MockExamQuestion, answer: AnswerValue | undefined) {
+  if (!answer) return 0
+  if (q.answerSheet) {
+    if (!isAnswerRecord(answer)) return 0
+    const entries = expectedBlankEntries(q)
+    if (entries.length === 0) return 0
+    const correctEntries = entries.filter(([id, expected]) => {
+      const actual = answer[id] ?? ''
+      return normalizeAnswer(actual) === normalizeAnswer(expected)
+    }).length
+    return correctEntries / entries.length
+  }
+  return isCorrect(q, answer) ? 1 : 0
+}
+
 function sectionInstruction(sectionIndex: number) {
   if (sectionIndex === 0) {
     return '次の各取引について、答案用紙の借方・貸方に勘定科目と金額を記入しなさい。なお、消費税は指示がある場合のみ考慮する。'
@@ -296,8 +311,11 @@ export default function MockExam({
   const result = useMemo(() => {
     const sectionResults = sections.map(section => {
       const questionPoint = section.points / section.questions.length
-      const correctCount = section.questions.filter(q => isCorrect(q, answers[q.id])).length
-      const sectionScore = Math.round(correctCount * questionPoint * 10) / 10
+      const ratios = section.questions.map(question => scoreRatio(question, answers[question.id]))
+      const correctCount = ratios.filter(ratio => ratio === 1).length
+      const sectionScore = Math.round(
+        ratios.reduce((sum, ratio) => sum + ratio * questionPoint, 0) * 10
+      ) / 10
       return { ...section, correctCount, sectionScore }
     })
 

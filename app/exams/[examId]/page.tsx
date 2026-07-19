@@ -11,7 +11,7 @@ import ExamInfoSection from '@/components/features/dashboard/ExamInfoSection'
 import ExamFaqSection from '@/components/features/dashboard/ExamFaqSection'
 import AdSlot from '@/components/monetization/AdSlot'
 import AffiliateRecommendations from '@/components/monetization/AffiliateRecommendations'
-import { getExamById } from '@/lib/types/exams-registry'
+import { getExamById, isMockExamPublic } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
 import { createPageMetadata } from '@/lib/seo'
 
@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: `${exam.shortName} 学習ダッシュボード`,
-    description: `${exam.name}の学習ガイド、練習問題、知識カードを無料で利用できます。${exam.description}`,
+    description: `${exam.name}の学習ガイド、練習問題、知識カード${isMockExamPublic(exam) ? '、模擬試験' : ''}を無料で利用できます。${exam.description}`,
     path: `/exams/${examId}`,
   })
 }
