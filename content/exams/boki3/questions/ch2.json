@@ -8,157 +8,256 @@
       "examId": "boki3",
       "chapterId": "ch2",
       "type": "single",
-      "text": "次のうち、「資産」に分類される勘定科目はどれか。",
+      "text": "銀行から300,000円を借り入れ、普通預金へ入金された。使う勘定科目の組み合わせはどれか。",
       "options": [
-        {
-          "label": "A",
-          "text": "買掛金"
-        },
-        {
-          "label": "B",
-          "text": "備品"
-        },
-        {
-          "label": "C",
-          "text": "売上"
-        },
-        {
-          "label": "D",
-          "text": "資本金"
-        }
+        { "label": "A", "text": "普通預金・借入金" },
+        { "label": "B", "text": "普通預金・売上" },
+        { "label": "C", "text": "現金・資本金" },
+        { "label": "D", "text": "給料・未払金" }
       ],
-      "correctAnswer": "B",
-      "explanation": "備品は会社が所有する財産であるため「資産」に分類されます。買掛金は「負債」、売上は「収益」、資本金は「純資産」です。",
-      "tags": [
-        "勘定科目",
-        "資産"
-      ]
+      "correctAnswer": "A",
+      "explanation": "預金という資産と返済義務である借入金という負債が増加します。",
+      "tags": ["勘定科目", "借入金"]
     },
     {
       "id": "boki3-ch2-q2",
       "examId": "boki3",
       "chapterId": "ch2",
       "type": "single",
-      "text": "損益計算書（P/L）を構成する要素の組み合わせとして正しいものはどれか。",
+      "text": "備品200,000円を普通預金で購入した。五要素の組み合わせとして正しいものはどれか。",
       "options": [
-        {
-          "label": "A",
-          "text": "資産と負債"
-        },
-        {
-          "label": "B",
-          "text": "負債と純資産"
-        },
-        {
-          "label": "C",
-          "text": "収益と費用"
-        },
-        {
-          "label": "D",
-          "text": "資産と収益"
-        }
+        { "label": "A", "text": "資産の増加と資産の減少" },
+        { "label": "B", "text": "費用の増加と負債の増加" },
+        { "label": "C", "text": "収益の増加と資産の増加" },
+        { "label": "D", "text": "純資産の増加と費用の増加" }
       ],
-      "correctAnswer": "C",
-      "explanation": "損益計算書は、一定期間の経営成績を表すものであり、「収益」と「費用」から構成されます。資産、負債、純資産は貸借対照表（B/S）の要素です。",
-      "tags": [
-        "損益計算書",
-        "5要素"
-      ]
+      "correctAnswer": "A",
+      "explanation": "備品という資産が増え、普通預金という資産が減ります。",
+      "tags": ["五要素", "備品"]
     },
     {
       "id": "boki3-ch2-q3",
       "examId": "boki3",
       "chapterId": "ch2",
       "type": "single",
-      "text": "次のうち、「費用」に分類される勘定科目はどれか。",
+      "text": "商品240,000円を掛けで仕入れた。正しい仕訳はどれか。",
       "options": [
-        {
-          "label": "A",
-          "text": "売掛金"
-        },
-        {
-          "label": "B",
-          "text": "借入金"
-        },
-        {
-          "label": "C",
-          "text": "支払家賃"
-        },
-        {
-          "label": "D",
-          "text": "受取利息"
-        }
+        { "label": "A", "text": "(借) 仕入 240,000 / (貸) 買掛金 240,000" },
+        { "label": "B", "text": "(借) 買掛金 240,000 / (貸) 仕入 240,000" },
+        { "label": "C", "text": "(借) 備品 240,000 / (貸) 未払金 240,000" },
+        { "label": "D", "text": "(借) 売掛金 240,000 / (貸) 売上 240,000" }
       ],
-      "correctAnswer": "C",
-      "explanation": "支払家賃は収益を得るために支払う費用です。売掛金は資産、借入金は負債、受取利息は収益に分類されます。",
-      "tags": [
-        "勘定科目",
-        "費用",
-        "5要素"
-      ]
+      "correctAnswer": "A",
+      "explanation": "仕入は費用の増加で借方、買掛金は負債の増加で貸方です。",
+      "tags": ["仕入", "買掛金", "借貸"]
     },
     {
       "id": "boki3-ch2-q4",
       "examId": "boki3",
       "chapterId": "ch2",
       "type": "single",
-      "text": "貸借対照表（B/S）を構成する3つの要素として正しいものはどれか。",
+      "text": "商品360,000円を販売し、180,000円を現金で受け取り、残額を掛けとした。正しい仕訳はどれか。",
       "options": [
-        {
-          "label": "A",
-          "text": "資産・負債・純資産"
-        },
-        {
-          "label": "B",
-          "text": "資産・収益・費用"
-        },
-        {
-          "label": "C",
-          "text": "収益・費用・当期純利益"
-        },
-        {
-          "label": "D",
-          "text": "売上・仕入・繰越商品"
-        }
+        { "label": "A", "text": "現金180,000・売掛金180,000／売上360,000" },
+        { "label": "B", "text": "現金360,000／売上360,000" },
+        { "label": "C", "text": "売上360,000／現金180,000・売掛金180,000" },
+        { "label": "D", "text": "現金180,000・未収入金180,000／資本金360,000" }
       ],
       "correctAnswer": "A",
-      "explanation": "貸借対照表は一定時点の財政状態を示し、資産・負債・純資産で構成されます。収益と費用は損益計算書の要素です。",
-      "tags": [
-        "貸借対照表",
-        "5要素"
-      ]
+      "explanation": "現金と売掛金は資産の増加で借方、売上は収益の増加で貸方です。",
+      "tags": ["複合仕訳", "売掛金", "売上"]
     },
     {
       "id": "boki3-ch2-q5",
       "examId": "boki3",
       "chapterId": "ch2",
       "type": "single",
-      "text": "「売上」は簿記の5要素のうち、どれに分類されるか。",
+      "text": "次のうち、入金であっても収益に分類しないものはどれか。",
       "options": [
-        {
-          "label": "A",
-          "text": "資産"
-        },
-        {
-          "label": "B",
-          "text": "負債"
-        },
-        {
-          "label": "C",
-          "text": "収益"
-        },
-        {
-          "label": "D",
-          "text": "費用"
-        }
+        { "label": "A", "text": "商品販売による売上" },
+        { "label": "B", "text": "受取利息" },
+        { "label": "C", "text": "銀行からの借入金" },
+        { "label": "D", "text": "受取手数料" }
       ],
       "correctAnswer": "C",
-      "explanation": "売上は商品やサービスを提供して得た成果であるため、収益に分類されます。",
-      "tags": [
-        "勘定科目",
-        "収益",
-        "5要素"
-      ]
+      "explanation": "借入金は将来返済する義務であり負債です。入金原因を確認します。",
+      "tags": ["負債", "収益比較"]
+    },
+    {
+      "id": "boki3-ch2-q6",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "次のうち、出金であっても費用に分類しないものはどれか。",
+      "options": [
+        { "label": "A", "text": "給料の支払" },
+        { "label": "B", "text": "水道光熱費の支払" },
+        { "label": "C", "text": "備品の購入" },
+        { "label": "D", "text": "支払家賃" }
+      ],
+      "correctAnswer": "C",
+      "explanation": "長期間使用する備品は資産です。出金だけで費用と判断しません。",
+      "tags": ["資産", "費用比較"]
+    },
+    {
+      "id": "boki3-ch2-q7",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "販売目的の商品を掛けで販売した場合と、不要備品を後日受取で売却した場合の科目はどれか。",
+      "options": [
+        { "label": "A", "text": "商品＝売掛金、備品＝未収入金" },
+        { "label": "B", "text": "商品＝未収入金、備品＝売掛金" },
+        { "label": "C", "text": "どちらも売掛金" },
+        { "label": "D", "text": "どちらも前払金" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "商品販売は売掛金、商品以外の売却代金は未収入金です。",
+      "tags": ["売掛金", "未収入金"]
+    },
+    {
+      "id": "boki3-ch2-q8",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "商品引渡し前に支払った内金と、翌期分保険料の科目の組み合わせはどれか。",
+      "options": [
+        { "label": "A", "text": "内金＝前払金、翌期保険料＝前払費用" },
+        { "label": "B", "text": "内金＝前払費用、翌期保険料＝前払金" },
+        { "label": "C", "text": "どちらも仕入" },
+        { "label": "D", "text": "どちらも未払金" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "商品等の引渡し前の手付金は前払金、期間サービスの翌期分は前払費用です。",
+      "tags": ["前払金", "前払費用"]
+    },
+    {
+      "id": "boki3-ch2-q9",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "資産の増加と減少を記入する方向として正しいものはどれか。",
+      "options": [
+        { "label": "A", "text": "増加＝借方、減少＝貸方" },
+        { "label": "B", "text": "増加＝貸方、減少＝借方" },
+        { "label": "C", "text": "増減とも借方" },
+        { "label": "D", "text": "増減とも貸方" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "資産は借方増加・貸方減少です。",
+      "tags": ["資産", "借貸"]
+    },
+    {
+      "id": "boki3-ch2-q10",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "負債の増加と減少を記入する方向として正しいものはどれか。",
+      "options": [
+        { "label": "A", "text": "増加＝借方、減少＝貸方" },
+        { "label": "B", "text": "増加＝貸方、減少＝借方" },
+        { "label": "C", "text": "増減とも借方" },
+        { "label": "D", "text": "増減とも貸方" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "負債は貸方増加・借方減少です。",
+      "tags": ["負債", "借貸"]
+    },
+    {
+      "id": "boki3-ch2-q11",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "売上返品20,000円の基本的な処理として正しいものはどれか。",
+      "options": [
+        { "label": "A", "text": "売上を借方へ記入して収益を取り消す" },
+        { "label": "B", "text": "売上を貸方へ追加する" },
+        { "label": "C", "text": "給料を借方へ記入する" },
+        { "label": "D", "text": "資本金を貸方へ記入する" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "収益の減少・取消しは借方です。掛販売なら売上／売掛金となります。",
+      "tags": ["売上返品", "収益減少"]
+    },
+    {
+      "id": "boki3-ch2-q12",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "借入金100,000円を普通預金から返済した。正しい仕訳はどれか。",
+      "options": [
+        { "label": "A", "text": "(借) 借入金100,000 / (貸) 普通預金100,000" },
+        { "label": "B", "text": "(借) 普通預金100,000 / (貸) 借入金100,000" },
+        { "label": "C", "text": "(借) 支払利息100,000 / (貸) 普通預金100,000" },
+        { "label": "D", "text": "(借) 給料100,000 / (貸) 借入金100,000" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "借入金という負債の減少は借方、普通預金という資産の減少は貸方です。",
+      "tags": ["借入金返済", "借貸"]
+    },
+    {
+      "id": "boki3-ch2-q13",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "給料300,000円から所得税20,000円、社会保険料30,000円を差し引いた。手取支払額はいくらか。",
+      "options": [
+        { "label": "A", "text": "250,000円" },
+        { "label": "B", "text": "270,000円" },
+        { "label": "C", "text": "280,000円" },
+        { "label": "D", "text": "350,000円" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "300,000円−20,000円−30,000円＝250,000円です。給料費用は控除前総額です。",
+      "tags": ["複合仕訳", "給料"]
+    },
+    {
+      "id": "boki3-ch2-q14",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "当期純利益が損益計算書の費用側へ表示される理由はどれか。",
+      "options": [
+        { "label": "A", "text": "費用そのものだから" },
+        { "label": "B", "text": "収益と費用の差額で左右を一致させるため" },
+        { "label": "C", "text": "資産だから" },
+        { "label": "D", "text": "負債だから" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "当期純利益は収益が費用を上回る差額で、費用側へ記入してP/Lを一致させます。",
+      "tags": ["当期純利益", "P/L"]
+    },
+    {
+      "id": "boki3-ch2-q15",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "通常、借方残高となる組み合わせはどれか。",
+      "options": [
+        { "label": "A", "text": "資産と費用" },
+        { "label": "B", "text": "負債と収益" },
+        { "label": "C", "text": "純資産と負債" },
+        { "label": "D", "text": "収益と純資産" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "資産と費用は通常借方残高、負債・純資産・収益は通常貸方残高です。",
+      "tags": ["通常残高", "五要素"]
+    },
+    {
+      "id": "boki3-ch2-q16",
+      "examId": "boki3",
+      "chapterId": "ch2",
+      "type": "single",
+      "text": "科目選択から仕訳までの判断順序として正しいものはどれか。",
+      "options": [
+        { "label": "A", "text": "取引事実→勘定科目→五要素→増減→借方・貸方" },
+        { "label": "B", "text": "借方・貸方→財務諸表→取引事実" },
+        { "label": "C", "text": "金額→現金かどうか→すべて売上" },
+        { "label": "D", "text": "五要素を確認せず科目名の響きで決める" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "取引事実を読み、科目と五要素を決め、増減から借方・貸方を判断します。",
+      "tags": ["判断フロー", "総合"]
     }
   ]
 }

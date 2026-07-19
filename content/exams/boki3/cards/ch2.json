@@ -3,45 +3,21 @@
   "chapterId": "ch2",
   "chapterTitle": "勘定科目と5要素",
   "cards": [
-    {
-      "id": "boki3-ch2-card1",
-      "examId": "boki3",
-      "chapterId": "ch2",
-      "front": "取引を記録するための共通の見出し（名前）を何という？",
-      "back": "勘定科目（かんじょうかもく）",
-      "tags": [
-        "基本用語"
-      ]
-    },
-    {
-      "id": "boki3-ch2-card2",
-      "examId": "boki3",
-      "chapterId": "ch2",
-      "front": "簿記の5要素をすべて答えよ。",
-      "back": "資産、負債、純資産、収益、費用",
-      "tags": [
-        "5要素"
-      ]
-    },
-    {
-      "id": "boki3-ch2-card3",
-      "examId": "boki3",
-      "chapterId": "ch2",
-      "front": "一定時点の財政状態を表す財務諸表は？",
-      "back": "貸借対照表（B/S）",
-      "tags": [
-        "財務諸表"
-      ]
-    },
-    {
-      "id": "boki3-ch2-card4",
-      "examId": "boki3",
-      "chapterId": "ch2",
-      "front": "一定期間の経営成績を表す財務諸表は？",
-      "back": "損益計算書（P/L）",
-      "tags": [
-        "財務諸表"
-      ]
-    }
+    {"id":"boki3-ch2-card1","examId":"boki3","chapterId":"ch2","front":"勘定科目を選ぶ基本順序は？","back":"取引事実→増減したもの→勘定科目→五要素→増減→借方・貸方。","tags":["判断フロー"]},
+    {"id":"boki3-ch2-card2","examId":"boki3","chapterId":"ch2","front":"簿記の五要素は？","back":"資産、負債、純資産、収益、費用。","tags":["五要素"]},
+    {"id":"boki3-ch2-card3","examId":"boki3","chapterId":"ch2","front":"資産の判断基準は？","back":"会社が持つ財産、または将来お金やサービスを受け取る権利。","tags":["資産"]},
+    {"id":"boki3-ch2-card4","examId":"boki3","chapterId":"ch2","front":"負債の判断基準は？","back":"将来お金を支払う、返済する、商品を引き渡すなどの義務。","tags":["負債"]},
+    {"id":"boki3-ch2-card5","examId":"boki3","chapterId":"ch2","front":"純資産と収益の違いは？","back":"純資産は出資や蓄積利益、収益は当期の営業活動などによる成果。","tags":["純資産","収益"]},
+    {"id":"boki3-ch2-card6","examId":"boki3","chapterId":"ch2","front":"資産と費用をどう区別する？","back":"将来にも効果・権利が残るものは資産、当期の成果を得るための負担は費用。","tags":["資産","費用"]},
+    {"id":"boki3-ch2-card7","examId":"boki3","chapterId":"ch2","front":"入金でも収益ではない代表例は？","back":"出資、借入、売掛金回収。入金原因を確認する。","tags":["入金原因"]},
+    {"id":"boki3-ch2-card8","examId":"boki3","chapterId":"ch2","front":"出金でも費用ではない代表例は？","back":"備品購入、貸付、借入金元本返済。","tags":["出金原因"]},
+    {"id":"boki3-ch2-card9","examId":"boki3","chapterId":"ch2","front":"売掛金と未収入金の違いは？","back":"売掛金は商品販売、未収入金は備品など商品以外の売却による債権。","tags":["売掛金","未収入金"]},
+    {"id":"boki3-ch2-card10","examId":"boki3","chapterId":"ch2","front":"買掛金と未払金の違いは？","back":"買掛金は商品仕入、未払金は商品以外の購入による債務。","tags":["買掛金","未払金"]},
+    {"id":"boki3-ch2-card11","examId":"boki3","chapterId":"ch2","front":"前払金と前払費用の違いは？","back":"前払金は商品等の引渡し前の内金、前払費用は翌期の期間サービス分。","tags":["前払金","前払費用"]},
+    {"id":"boki3-ch2-card12","examId":"boki3","chapterId":"ch2","front":"五要素の増加方向は？","back":"資産・費用は借方増加。負債・純資産・収益は貸方増加。","tags":["五要素","借貸"]},
+    {"id":"boki3-ch2-card13","examId":"boki3","chapterId":"ch2","front":"資産の増加・減少方向は？","back":"増加は借方、減少は貸方。通常は借方残高。","tags":["資産","借貸"]},
+    {"id":"boki3-ch2-card14","examId":"boki3","chapterId":"ch2","front":"負債の増加・減少方向は？","back":"増加は貸方、減少は借方。通常は貸方残高。","tags":["負債","借貸"]},
+    {"id":"boki3-ch2-card15","examId":"boki3","chapterId":"ch2","front":"返品・取消しの借貸はどう決める？","back":"元の収益・費用の増加と反対側へ記入して取り消す。売上返品は売上を借方、仕入返品は仕入を貸方。","tags":["返品","取消し"]},
+    {"id":"boki3-ch2-card16","examId":"boki3","chapterId":"ch2","front":"複合仕訳の最終検算は？","back":"問題文の全金額・全科目を反映し、借方合計と貸方合計が一致するか確認する。","tags":["複合仕訳","検算"]}
   ]
 }
