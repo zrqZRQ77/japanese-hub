@@ -1,10 +1,11 @@
 // ============================================================
 // 検索API  GET /api/search?q=キーワード&examId=boki3
-// 問題・カード・章タイトルを横断検索する
+// 教材本文・問題・カードを横断検索する
 // ============================================================
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
 import { QuestionSet, CardSet } from '@/lib/types'
 import { EXAMS_REGISTRY } from '@/lib/types/exams-registry'
 import { CHAPTERS_REGISTRY } from '@/lib/types/chapters-registry'
@@ -33,6 +34,18 @@ function highlight(text: string, query: string): string {
   return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '')
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/[>*_|~-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
   const filterExamId = req.nextUrl.searchParams.get('examId') ?? ''
@@ -51,12 +64,11 @@ export async function GET(req: NextRequest) {
   for (const exam of exams) {
     const chapters = CHAPTERS_REGISTRY[exam.id] ?? []
 
-    // ── 章タイトル検索 ──────────────────────────────────────
+    // ── 学習ガイド全文検索 ────────────────────────────────
+    const guideDir = path.join(CONTENT_ROOT, exam.id, 'guide')
     for (const ch of chapters) {
-      if (
-        ch.title.toLowerCase().includes(lower) ||
-        ch.sections.some(s => s.title.toLowerCase().includes(lower))
-      ) {
+      const firstSectionId = ch.sections[0]?.id
+      if (ch.title.toLowerCase().includes(lower)) {
         results.push({
           type: 'chapter',
           examId: exam.id,
@@ -65,8 +77,36 @@ export async function GET(req: NextRequest) {
           chapterTitle: ch.title,
           title: `第${ch.number}章 ${ch.title}`,
           excerpt: ch.sections.map(s => s.title).join(' / '),
-          url: `/exams/${exam.id}/guide/${ch.id}`,
+          url: `/exams/${exam.id}/guide/${ch.id}${firstSectionId ? `?section=${firstSectionId}` : ''}`,
         })
+      }
+
+      for (const section of ch.sections) {
+        const guidePath = path.join(guideDir, ch.id, `${section.id}.mdx`)
+        let sectionTitle = section.title
+        let plainContent = ''
+
+        if (fs.existsSync(guidePath)) {
+          try {
+            const parsed = matter(fs.readFileSync(guidePath, 'utf-8'))
+            sectionTitle = String(parsed.data.sectionTitle ?? section.title)
+            plainContent = stripMarkdown(parsed.content)
+          } catch { /* skip malformed guide content */ }
+        }
+
+        const searchable = `${sectionTitle} ${plainContent}`
+        if (searchable.toLowerCase().includes(lower)) {
+          results.push({
+            type: 'chapter',
+            examId: exam.id,
+            examName: exam.name,
+            chapterId: ch.id,
+            chapterTitle: ch.title,
+            title: `${section.number} ${sectionTitle}`,
+            excerpt: highlight(plainContent || sectionTitle, q),
+            url: `/exams/${exam.id}/guide/${ch.id}?section=${section.id}`,
+          })
+        }
       }
     }
 
@@ -88,7 +128,7 @@ export async function GET(req: NextRequest) {
                 chapterTitle: set.chapterTitle,
                 title: q2.text.slice(0, 60) + (q2.text.length > 60 ? '…' : ''),
                 excerpt: highlight(q2.explanation, q),
-                url: `/exams/${exam.id}/questions/${set.chapterId}`,
+                url: `/exams/${exam.id}/questions/${set.chapterId}?question=${q2.id}`,
               })
             }
           }
@@ -114,7 +154,7 @@ export async function GET(req: NextRequest) {
                 chapterTitle: set.chapterTitle,
                 title: card.front.slice(0, 60) + (card.front.length > 60 ? '…' : ''),
                 excerpt: highlight(card.back, q),
-                url: `/exams/${exam.id}/cards`,
+                url: `/exams/${exam.id}/cards?chapter=${set.chapterId}&card=${card.id}`,
               })
             }
           }
