@@ -144,6 +144,8 @@ function main() {
   const questionIds = new Set()
   const cardIds = new Set()
   let questionCount = 0
+  let multipleChoiceQuestionCount = 0
+  let nonChoiceQuestionCount = 0
   let cardCount = 0
 
   for (const { file, data } of questionSets) {
@@ -159,11 +161,46 @@ function main() {
       if (question.examId !== EXAM_ID || question.chapterId !== data.chapterId) {
         issues.push(`${question.id}: metadata mismatch`)
       }
-      if (!Array.isArray(question.options) || !question.options.some(option => option.label === question.correctAnswer)) {
-        issues.push(`${question.id}: correctAnswer does not map to an option`)
-      }
-      if (new Set((question.options ?? []).map(option => option.label)).size !== (question.options ?? []).length) {
-        issues.push(`${question.id}: duplicate option labels`)
+      if (question.practiceSheet) {
+        nonChoiceQuestionCount += 1
+        const fields = question.practiceSheet.fields ?? []
+        if (fields.length === 0) issues.push(`${question.id}: non-choice practice has no fields`)
+        if (new Set(fields.map(field => field.id)).size !== fields.length) {
+          issues.push(`${question.id}: duplicate non-choice field ids`)
+        }
+        if (!Array.isArray(question.correctAnswer) || question.correctAnswer.length !== fields.length) {
+          issues.push(`${question.id}: non-choice correctAnswer must align with fields`)
+        }
+        for (const field of fields) {
+          if (!field.id || !field.label || !field.kind || String(field.correctAnswer ?? '').trim() === '') {
+            issues.push(`${question.id}: invalid non-choice field ${field.id || '(missing id)'}`)
+          }
+        }
+        const fieldIds = new Set(fields.map(field => field.id))
+        for (const row of question.practiceSheet.journalRows ?? []) {
+          for (const fieldId of [row.debitAccountFieldId, row.debitAmountFieldId, row.creditAccountFieldId, row.creditAmountFieldId].filter(Boolean)) {
+            if (!fieldIds.has(fieldId)) issues.push(`${question.id}: unknown journal field ${fieldId}`)
+          }
+        }
+        for (const row of question.practiceSheet.table?.rows ?? []) {
+          for (const cell of row.cells ?? []) {
+            if (cell.fieldId && !fieldIds.has(cell.fieldId)) issues.push(`${question.id}: unknown table field ${cell.fieldId}`)
+          }
+        }
+        if (!question.explanation || !question.explanationSteps?.length || !question.commonMistakes?.length) {
+          issues.push(`${question.id}: non-choice explanation structure is incomplete`)
+        }
+        if (!question.guideLink?.href?.startsWith('/exams/boki3/guide/')) {
+          issues.push(`${question.id}: non-choice guide link is missing or invalid`)
+        }
+      } else {
+        multipleChoiceQuestionCount += 1
+        if (!Array.isArray(question.options) || !question.options.some(option => option.label === question.correctAnswer)) {
+          issues.push(`${question.id}: correctAnswer does not map to an option`)
+        }
+        if (new Set((question.options ?? []).map(option => option.label)).size !== (question.options ?? []).length) {
+          issues.push(`${question.id}: duplicate option labels`)
+        }
       }
     }
   }
@@ -263,6 +300,8 @@ function main() {
     chapters: registry.length,
     guides: guideFiles.length,
     questions: questionCount,
+    multipleChoiceQuestions: multipleChoiceQuestionCount,
+    nonChoiceQuestions: nonChoiceQuestionCount,
     cards: cardCount,
     internalLinks: internalLinks.length,
     mockQuestions: mockQuestions.length,

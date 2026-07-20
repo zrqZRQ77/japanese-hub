@@ -8,6 +8,8 @@ import Link from 'next/link'
 import { Question } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
 import { trackEvent } from '@/lib/analytics'
+import { answersToRecord, gradePracticeAnswers } from '@/lib/questions/practice-grading'
+import NonChoiceQuestion from '@/components/features/questions/NonChoiceQuestion'
 import AdSlot from '@/components/monetization/AdSlot'
 
 interface Props {
@@ -21,8 +23,8 @@ interface Props {
 export default function QuestionClient({ questions, chapterTitle, examId, chapterId, initialQuestionId }: Props) {
   const initialQuestionIndex = Math.max(0, questions.findIndex(question => question.id === initialQuestionId))
   const [current, setCurrent] = useState(initialQuestionIndex)
-  const [selected, setSelected] = useState<string | null>(null)
-  const [answered, setAnswered] = useState<Record<number, string>>({})
+  const [selected, setSelected] = useState<string | string[] | null>(null)
+  const [answered, setAnswered] = useState<Record<number, string | string[]>>({})
   const [saved, setSaved] = useState(false)
   const { progress, recordQuestionAnswer } = useProgress(examId)
 
@@ -32,10 +34,11 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
 
   const getStoredAnswer = (index: number) => {
     const stored = progress?.questionProgress[questions[index]?.id]?.selectedAnswer
-    return typeof stored === 'string' ? stored : null
+    return typeof stored === 'string' || Array.isArray(stored) ? stored : null
   }
 
   const selectedAnswer = selected ?? getStoredAnswer(current)
+  const selectedChoiceAnswer = typeof selectedAnswer === 'string' ? selectedAnswer : null
   const isAnswered = selectedAnswer !== null
   const answeredIds = useMemo(() => {
     const ids = new Set(progress?.chapterProgress[chapterId]?.answeredQuestionIds ?? [])
@@ -46,10 +49,19 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
     return ids
   }, [answered, chapterId, progress, questions])
 
-  function isCorrect(question: Question, answer: string) {
-    return Array.isArray(question.correctAnswer)
-      ? question.correctAnswer.length === 1 && question.correctAnswer[0] === answer
-      : question.correctAnswer === answer
+  function isCorrect(question: Question, answer: string | string[]) {
+    if (question.practiceSheet) {
+      return gradePracticeAnswers(
+        question.practiceSheet.fields,
+        answersToRecord(question.practiceSheet.fields, answer),
+      ).isCorrect
+    }
+    if (Array.isArray(question.correctAnswer)) {
+      const actual = Array.isArray(answer) ? answer : [answer]
+      return question.correctAnswer.length === actual.length
+        && question.correctAnswer.every(item => actual.includes(item))
+    }
+    return typeof answer === 'string' && question.correctAnswer === answer
   }
 
   function isCorrectOption(question: Question, label: string) {
@@ -58,19 +70,17 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       : question.correctAnswer === label
   }
 
-  function handleSelect(label: string) {
-    if (isAnswered) return
-    const answerIsCorrect = isCorrect(q, label)
+  function recordAnswer(answer: string | string[], answerIsCorrect: boolean) {
     const completesChapter = !answeredIds.has(q.id)
       && answeredIds.size + 1 >= questions.length
-    const nextAnswered = { ...answered, [current]: label }
-    setSelected(label)
+    const nextAnswered = { ...answered, [current]: answer }
+    setSelected(answer)
     setAnswered(nextAnswered)
     recordQuestionAnswer(
       chapterId,
       chapterTitle,
       q,
-      label,
+      answer,
       answerIsCorrect,
       questions.length,
     )
@@ -79,6 +89,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       chapter_id: chapterId,
       question_id: q.id,
       question_number: current + 1,
+      question_type: q.practiceSheet ? 'non_choice' : 'choice',
       answer_result: answerIsCorrect ? 'correct' : 'incorrect',
     })
     if (completesChapter) {
@@ -89,6 +100,16 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       })
     }
     setSaved(true)
+  }
+
+  function handleSelect(label: string) {
+    if (isAnswered) return
+    recordAnswer(label, isCorrect(q, label))
+  }
+
+  function handlePracticeSubmit(answer: string[], answerIsCorrect: boolean) {
+    if (isAnswered) return
+    recordAnswer(answer, answerIsCorrect)
   }
 
   function goTo(index: number) {
@@ -131,7 +152,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       border: '1.5px solid var(--color-success)',
       boxShadow: '0 8px 24px rgba(47,107,95,0.08)',
     }
-    if (label === selectedAnswer && !isCorrectOption(q, label)) return {
+    if (label === selectedChoiceAnswer && !isCorrectOption(q, label)) return {
       ...base, background: 'var(--color-error-bg)',
       border: '1.5px solid var(--color-error)',
       boxShadow: '0 8px 24px rgba(184,74,58,0.08)',
@@ -153,7 +174,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
       ...base, background: 'var(--color-success)',
       color: 'var(--color-bg)', border: 'none',
     }
-    if (label === selectedAnswer && !isCorrectOption(q, label)) return {
+    if (label === selectedChoiceAnswer && !isCorrectOption(q, label)) return {
       ...base, background: 'var(--color-error)',
       color: 'var(--color-bg)', border: 'none',
     }
@@ -310,27 +331,36 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
             color: 'var(--color-text)',
           }}>{q.text}</p>
 
-          {(q.options ?? []).map(opt => (
-            <button key={opt.label}
-              type="button"
-              disabled={isAnswered}
-              style={optionStyle(opt.label)}
-              onClick={() => handleSelect(opt.label)}
-            >
-              <span style={circleStyle(opt.label)}>{opt.label}</span>
-              <span style={{ fontSize: '0.96rem', lineHeight: 1.7, color: 'var(--color-text)' }}>
-                {opt.text}
-              </span>
-              {isAnswered && isCorrectOption(q, opt.label) && (
-                <span style={{ marginLeft: 'auto', color: 'var(--color-success)', fontWeight: 700 }}>✓</span>
-              )}
-              {isAnswered && opt.label === selectedAnswer && !isCorrectOption(q, opt.label) && (
-                <span style={{ marginLeft: 'auto', color: 'var(--color-error)', fontWeight: 700 }}>✗</span>
-              )}
-            </button>
-          ))}
+          {q.practiceSheet ? (
+            <NonChoiceQuestion
+              key={`${q.id}:${Array.isArray(selectedAnswer) ? selectedAnswer.join('|') : selectedAnswer ?? 'new'}`}
+              question={q}
+              storedAnswer={selectedAnswer}
+              onSubmit={handlePracticeSubmit}
+            />
+          ) : (
+            (q.options ?? []).map(opt => (
+              <button key={opt.label}
+                type="button"
+                disabled={isAnswered}
+                style={optionStyle(opt.label)}
+                onClick={() => handleSelect(opt.label)}
+              >
+                <span style={circleStyle(opt.label)}>{opt.label}</span>
+                <span style={{ fontSize: '0.96rem', lineHeight: 1.7, color: 'var(--color-text)' }}>
+                  {opt.text}
+                </span>
+                {isAnswered && isCorrectOption(q, opt.label) && (
+                  <span style={{ marginLeft: 'auto', color: 'var(--color-success)', fontWeight: 700 }}>✓</span>
+                )}
+                {isAnswered && opt.label === selectedChoiceAnswer && !isCorrectOption(q, opt.label) && (
+                  <span style={{ marginLeft: 'auto', color: 'var(--color-error)', fontWeight: 700 }}>✗</span>
+                )}
+              </button>
+            ))
+          )}
 
-          {isAnswered && (
+          {isAnswered && !q.practiceSheet && (
             <div style={{
               marginTop: 20,
               background: 'var(--color-bg-muted)',

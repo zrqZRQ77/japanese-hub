@@ -1077,6 +1077,15 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
     padding: 14px 13px !important;
     gap: 10px !important;
   }
+  .practice-fields-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .practice-input-wrap {
+    min-width: 0 !important;
+  }
+  .practice-sheet input {
+    font-size: 16px !important;
+  }
   .question-actions {
     align-items: stretch !important;
     flex-direction: column !important;
