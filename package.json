@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "validate:boki3": "node ./scripts/validate-boki3-content.js",
+    "validate:boki3-a-baseline": "node ./scripts/validate-boki3-a-baseline.js",
     "validate:fp3": "node ./scripts/validate-fp3-content.js",
     "fetch-official": "node ./scripts/fetch-official-sample.js",
     "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js"
