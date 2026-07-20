@@ -144,8 +144,11 @@ const exerciseHeadings = combinedGuide.match(/^## .*?(?:練習|演習)/gm) || []
 assertEqual(exerciseHeadings.length, data.requiredGuideExerciseCount, 'chapter 12 guide exercise count')
 
 const questions = JSON.parse(fs.readFileSync(path.join(root, 'content/exams/boki3/questions/ch12.json'), 'utf8')).questions
+const choiceQuestions = questions.filter(question => !question.practiceSheet)
+const nonChoiceQuestions = questions.filter(question => question.practiceSheet)
 const cards = JSON.parse(fs.readFileSync(path.join(root, 'content/exams/boki3/cards/ch12.json'), 'utf8')).cards
-assertEqual(questions.length, 8, 'chapter 12 choice question count')
+assertEqual(choiceQuestions.length, 8, 'chapter 12 choice question count')
+assertEqual(nonChoiceQuestions.length, 1, 'chapter 12 pilot non-choice question count')
 assertEqual(cards.length, 12, 'chapter 12 card count')
 if (!questions.find(question => question.id === 'boki3-ch12-q8')?.text.includes('取引分解法')) {
   fail('boki3-ch12-q8 must specify 取引分解法 to ensure a unique answer')
@@ -173,7 +176,8 @@ const result = {
     worksheetProfitAndLossTotal: data.profitAndLoss.totalAfterNetIncome,
     worksheetBalanceSheetTotal: data.balanceSheet.total,
     guideExercises: exerciseHeadings.length,
-    choiceQuestions: questions.length,
+    choiceQuestions: choiceQuestions.length,
+    nonChoiceQuestions: nonChoiceQuestions.length,
     cards: cards.length,
     cardTypeCounts,
     checks: checks.length,

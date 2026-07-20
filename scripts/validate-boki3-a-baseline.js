@@ -68,6 +68,7 @@ function main() {
   const guideSectionIds = getGuideSectionIds()
   const guideSet = new Set(guideSectionIds)
   const questionItems = getAllJsonItems('questions', registry)
+  const multipleChoiceQuestionItems = questionItems.filter(question => !question.practiceSheet)
   const cardItems = getAllJsonItems('cards', registry)
   const questionChapterSet = new Set(registry.filter(chapter => loadJson('questions', chapter.id).length > 0).map(chapter => chapter.id))
   const cardChapterSet = new Set(registry.filter(chapter => loadJson('cards', chapter.id).length > 0).map(chapter => chapter.id))
@@ -88,7 +89,7 @@ function main() {
   const counts = {
     chapters: registry.length,
     guideSections: guideSectionIds.length,
-    multipleChoiceQuestions: questionItems.length,
+    multipleChoiceQuestions: multipleChoiceQuestionItems.length,
     cards: cardItems.length,
   }
   for (const [key, actual] of Object.entries(counts)) {
@@ -102,7 +103,7 @@ function main() {
       issue(issues, `missing chapter baseline: ${chapter.id}`)
       continue
     }
-    const questions = loadJson('questions', chapter.id).length
+    const questions = loadJson('questions', chapter.id).filter(question => !question.practiceSheet).length
     const cards = loadJson('cards', chapter.id).length
     if (expected.sections !== chapter.sections.length) issue(issues, `${chapter.id}: section count mismatch`)
     if (expected.multipleChoiceQuestions !== questions) issue(issues, `${chapter.id}: question count mismatch`)

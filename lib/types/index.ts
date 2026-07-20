@@ -46,12 +46,77 @@ export interface GuideFrontmatter {
 }
 
 /** 問題タイプ
- *  single    : 単一選択（既存形式、options必須、correctAnswer は "A"|"B"|"C"|"D"）
- *  multiple  : 複数選択（options必須、correctAnswer は ["A","C"] などの配列）
- *  truefalse : 正誤判定（options不要、correctAnswer は "true" | "false"）
- *  fillblank : 穴埋め  （options不要、correctAnswer は正解文字列）
+ *  single         : 単一選択（既存形式）
+ *  multiple       : 複数選択
+ *  truefalse      : 正誤判定
+ *  fillblank      : 単一穴埋め
+ *  account        : 勘定科目入力
+ *  journal        : 仕訳入力
+ *  numeric        : 数値計算
+ *  table          : 表の空欄入力
+ *  classification : P/L・B/Sなどの分類
+ *  correction     : 誤仕訳の訂正
  */
-export type QuestionType = 'single' | 'multiple' | 'truefalse' | 'fillblank'
+export type QuestionType =
+  | 'single'
+  | 'multiple'
+  | 'truefalse'
+  | 'fillblank'
+  | 'account'
+  | 'journal'
+  | 'numeric'
+  | 'table'
+  | 'classification'
+  | 'correction'
+
+export type PracticeInputKind = 'text' | 'account' | 'number' | 'side' | 'classification'
+
+export interface PracticeField {
+  id: string
+  label: string
+  kind: PracticeInputKind
+  correctAnswer: string
+  acceptedAnswers?: string[]
+  placeholder?: string
+  prefix?: string
+  suffix?: string
+  help?: string
+}
+
+export interface PracticeJournalRow {
+  id: string
+  debitAccountFieldId?: string
+  debitAmountFieldId?: string
+  creditAccountFieldId?: string
+  creditAmountFieldId?: string
+}
+
+export interface PracticeTableCell {
+  text?: string
+  fieldId?: string
+}
+
+export interface PracticeTableRow {
+  id: string
+  label?: string
+  cells: PracticeTableCell[]
+}
+
+export interface PracticeAnswerSheet {
+  kind: 'fields' | 'journal' | 'table'
+  fields: PracticeField[]
+  journalRows?: PracticeJournalRow[]
+  table?: {
+    headers: string[]
+    rows: PracticeTableRow[]
+  }
+  submitLabel?: string
+}
+
+export interface PracticeGuideLink {
+  href: string
+  label: string
+}
 
 /** 練習問題 */
 export interface Question {
@@ -64,9 +129,13 @@ export interface Question {
     label: string              // "A" | "B" | "C" | "D"
     text: string
   }[]
-  correctAnswer: string | string[]  // single/truefalse/fillblank → string、multiple → string[]
+  correctAnswer: string | string[]  // 選択式はラベル、非選択式は各入力欄の代表解答
   explanation: string
   tags?: string[]
+  practiceSheet?: PracticeAnswerSheet
+  explanationSteps?: string[]
+  commonMistakes?: string[]
+  guideLink?: PracticeGuideLink
 }
 
 export interface QuestionSet {

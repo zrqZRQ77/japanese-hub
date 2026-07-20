@@ -258,6 +258,92 @@
         "一部現金取引",
         "手順"
       ]
+    },
+    {
+      "id": "boki3-ch12-practice1",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "journal",
+      "text": "青空商事株式会社は、決算日に売掛金240,000円に対して2％の貸倒引当金を設定する。既存の貸倒引当金残高はない。決算整理仕訳の借方科目・借方金額・貸方科目・貸方金額を入力しなさい。",
+      "correctAnswer": [
+        "貸倒引当金繰入",
+        "4800",
+        "貸倒引当金",
+        "4800"
+      ],
+      "explanation": "必要な貸倒引当金は240,000円×2％＝4,800円です。既存残高がないため、必要額全額を貸倒引当金繰入として費用計上し、貸倒引当金を貸方に設定します。",
+      "explanationSteps": [
+        "対象となる売掛金240,000円を確認する。",
+        "240,000円×2％＝4,800円と計算する。",
+        "既存残高がないため、差額補充ではなく4,800円全額を繰り入れる。",
+        "借方は費用の貸倒引当金繰入、貸方は売掛金の控除科目である貸倒引当金とする。"
+      ],
+      "commonMistakes": [
+        "売掛金を直接4,800円減らすと、精算表で控除科目を別表示できません。",
+        "既存残高がないのに差額を推測すると金額が変わってしまいます。",
+        "貸倒引当金繰入と貸倒引当金の借貸を逆にすると、費用と控除科目の増加方向が逆になります。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 精算表―貸倒引当金の整理記入"
+      },
+      "practiceSheet": {
+        "kind": "journal",
+        "submitLabel": "仕訳を採点する",
+        "fields": [
+          {
+            "id": "debit-account",
+            "label": "借方科目",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金繰入",
+            "acceptedAnswers": [
+              "貸倒引当金繰入勘定"
+            ],
+            "placeholder": "勘定科目"
+          },
+          {
+            "id": "debit-amount",
+            "label": "借方金額",
+            "kind": "number",
+            "correctAnswer": "4,800",
+            "suffix": "円",
+            "placeholder": "金額"
+          },
+          {
+            "id": "credit-account",
+            "label": "貸方科目",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金",
+            "acceptedAnswers": [
+              "貸倒引当金勘定"
+            ],
+            "placeholder": "勘定科目"
+          },
+          {
+            "id": "credit-amount",
+            "label": "貸方金額",
+            "kind": "number",
+            "correctAnswer": "4,800",
+            "suffix": "円",
+            "placeholder": "金額"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "debit-account",
+            "debitAmountFieldId": "debit-amount",
+            "creditAccountFieldId": "credit-account",
+            "creditAmountFieldId": "credit-amount"
+          }
+        ]
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "貸倒引当金",
+        "決算整理仕訳"
+      ]
     }
   ]
 }
