@@ -19,6 +19,7 @@
     "validate:fp3": "node ./scripts/validate-fp3-content.js",
     "validate:fp3-a-baseline": "node ./scripts/validate-fp3-a-baseline.js",
     "validate:fp3-a-batch1": "node ./scripts/validate-fp3-a-batch1.js",
+    "validate:fp3-a-batch2": "node ./scripts/validate-fp3-a-batch2.js",
     "fetch-official": "node ./scripts/fetch-official-sample.js",
     "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js"
   },

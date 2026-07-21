@@ -84,6 +84,50 @@ function validateQuestion(question, setChapterId, ids, issues) {
   const options = Array.isArray(question.options) ? question.options : []
   const labels = options.map(option => option.label)
 
+  if (question.practiceSheet) {
+    const allowedTypes = new Set(['numeric', 'table', 'classification', 'fillblank', 'account', 'journal', 'correction'])
+    const sheet = question.practiceSheet
+    const fields = Array.isArray(sheet.fields) ? sheet.fields : []
+    const fieldIds = fields.map(field => field.id)
+
+    if (!allowedTypes.has(type)) issues.push(`${question.id}: unsupported practice question type ${type}`)
+    if (!['fields', 'journal', 'table'].includes(sheet.kind)) issues.push(`${question.id}: invalid practice sheet kind`)
+    if (fields.length === 0) issues.push(`${question.id}: practice sheet has no fields`)
+    if (new Set(fieldIds).size !== fieldIds.length) issues.push(`${question.id}: duplicate practice field ids`)
+    if (fields.some(field => !field.id || !field.label || String(field.correctAnswer ?? '').trim() === '')) {
+      issues.push(`${question.id}: practice field is incomplete`)
+    }
+    if (!Array.isArray(question.correctAnswer) || question.correctAnswer.length !== fields.length) {
+      issues.push(`${question.id}: practice correctAnswer must match field count`)
+    } else if (question.correctAnswer.some((answer, index) => String(answer) !== String(fields[index].correctAnswer))) {
+      issues.push(`${question.id}: practice correctAnswer differs from field answers`)
+    }
+
+    if (sheet.kind === 'table') {
+      const table = sheet.table
+      const rows = Array.isArray(table?.rows) ? table.rows : []
+      if (!Array.isArray(table?.headers) || table.headers.length === 0 || rows.length === 0) {
+        issues.push(`${question.id}: table practice layout is incomplete`)
+      }
+      const referencedFieldIds = rows.flatMap(row => (row.cells ?? []).map(cell => cell.fieldId).filter(Boolean))
+      if (referencedFieldIds.some(fieldId => !fieldIds.includes(fieldId))) {
+        issues.push(`${question.id}: table references an unknown field`)
+      }
+      if (new Set(referencedFieldIds).size !== fields.length || fields.some(field => !referencedFieldIds.includes(field.id))) {
+        issues.push(`${question.id}: table does not reference every practice field exactly once`)
+      }
+    }
+
+    if (!question.guideLink?.href || !question.guideLink?.label) issues.push(`${question.id}: practice guide link is missing`)
+    if (!Array.isArray(question.explanationSteps) || question.explanationSteps.length < 2) {
+      issues.push(`${question.id}: practice explanation steps are incomplete`)
+    }
+    if (!Array.isArray(question.commonMistakes) || question.commonMistakes.length < 2) {
+      issues.push(`${question.id}: practice common mistakes are incomplete`)
+    }
+    return
+  }
+
   if (new Set(labels).size !== labels.length) {
     issues.push(`${question.id}: duplicate option labels`)
   }

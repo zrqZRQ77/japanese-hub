@@ -280,13 +280,25 @@
       "type": "single",
       "text": "所得税の計算において、課税所得金額を求める流れとして最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "各所得の金額から所得控除を差し引く" },
-        { "label": "B", "text": "所得税額から必要経費を差し引く" },
-        { "label": "C", "text": "税額控除から収入金額を差し引く" }
+        {
+          "label": "A",
+          "text": "各所得の金額から所得控除を差し引く"
+        },
+        {
+          "label": "B",
+          "text": "所得税額から必要経費を差し引く"
+        },
+        {
+          "label": "C",
+          "text": "税額控除から収入金額を差し引く"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "所得税では、各所得の金額を計算し、損益通算等を行ったうえで所得控除を差し引き、課税所得金額を求めます。",
-      "tags": ["所得税の基本", "計算の流れ"]
+      "tags": [
+        "所得税の基本",
+        "計算の流れ"
+      ]
     },
     {
       "id": "fp3-ch4-q12",
@@ -295,13 +307,25 @@
       "type": "single",
       "text": "預貯金の利子所得の課税方法として、原則として最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "総合課税" },
-        { "label": "B", "text": "源泉分離課税" },
-        { "label": "C", "text": "非課税" }
+        {
+          "label": "A",
+          "text": "総合課税"
+        },
+        {
+          "label": "B",
+          "text": "源泉分離課税"
+        },
+        {
+          "label": "C",
+          "text": "非課税"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "預貯金の利子は、原則として20.315％の源泉分離課税により課税関係が終了します。",
-      "tags": ["所得の計算", "利子所得"]
+      "tags": [
+        "所得の計算",
+        "利子所得"
+      ]
     },
     {
       "id": "fp3-ch4-q13",
@@ -310,13 +334,25 @@
       "type": "single",
       "text": "給与所得控除に関する記述として、令和7年分以後の内容に照らして最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "最低保障額は65万円である" },
-        { "label": "B", "text": "最低保障額は38万円である" },
-        { "label": "C", "text": "給与所得控除は給与所得者には適用されない" }
+        {
+          "label": "A",
+          "text": "最低保障額は65万円である"
+        },
+        {
+          "label": "B",
+          "text": "最低保障額は38万円である"
+        },
+        {
+          "label": "C",
+          "text": "給与所得控除は給与所得者には適用されない"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "令和7年分以後、給与所得控除の最低保障額は65万円です。",
-      "tags": ["所得の計算", "給与所得"]
+      "tags": [
+        "所得の計算",
+        "給与所得"
+      ]
     },
     {
       "id": "fp3-ch4-q14",
@@ -325,13 +361,25 @@
       "type": "single",
       "text": "一時所得の金額が80万円である場合、総所得金額に算入される金額はいくらか。",
       "options": [
-        { "label": "A", "text": "40万円" },
-        { "label": "B", "text": "80万円" },
-        { "label": "C", "text": "160万円" }
+        {
+          "label": "A",
+          "text": "40万円"
+        },
+        {
+          "label": "B",
+          "text": "80万円"
+        },
+        {
+          "label": "C",
+          "text": "160万円"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "一時所得は、その金額の2分の1を総所得金額に算入します。80万円×1/2＝40万円です。",
-      "tags": ["所得の計算", "一時所得"]
+      "tags": [
+        "所得の計算",
+        "一時所得"
+      ]
     },
     {
       "id": "fp3-ch4-q15",
@@ -340,13 +388,25 @@
       "type": "single",
       "text": "所得税の扶養控除に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "16歳未満の扶養親族は扶養控除の対象外である" },
-        { "label": "B", "text": "すべての扶養親族について年齢に関係なく扶養控除を受けられる" },
-        { "label": "C", "text": "扶養控除は税額控除である" }
+        {
+          "label": "A",
+          "text": "16歳未満の扶養親族は扶養控除の対象外である"
+        },
+        {
+          "label": "B",
+          "text": "すべての扶養親族について年齢に関係なく扶養控除を受けられる"
+        },
+        {
+          "label": "C",
+          "text": "扶養控除は税額控除である"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "扶養控除は16歳以上の扶養親族が対象であり、16歳未満の扶養親族は対象外です。",
-      "tags": ["所得控除", "扶養控除"]
+      "tags": [
+        "所得控除",
+        "扶養控除"
+      ]
     },
     {
       "id": "fp3-ch4-q16",
@@ -355,13 +415,25 @@
       "type": "single",
       "text": "iDeCoの掛金が対象となる所得控除はどれか。",
       "options": [
-        { "label": "A", "text": "小規模企業共済等掛金控除" },
-        { "label": "B", "text": "医療費控除" },
-        { "label": "C", "text": "配偶者控除" }
+        {
+          "label": "A",
+          "text": "小規模企業共済等掛金控除"
+        },
+        {
+          "label": "B",
+          "text": "医療費控除"
+        },
+        {
+          "label": "C",
+          "text": "配偶者控除"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "iDeCoの掛金は全額が小規模企業共済等掛金控除の対象です。",
-      "tags": ["所得控除", "iDeCo"]
+      "tags": [
+        "所得控除",
+        "iDeCo"
+      ]
     },
     {
       "id": "fp3-ch4-q17",
@@ -370,13 +442,25 @@
       "type": "single",
       "text": "住宅ローン控除の初年度の適用を受けるための手続きとして、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "確定申告が必要である" },
-        { "label": "B", "text": "年末調整だけで必ず完結する" },
-        { "label": "C", "text": "住民税の申告だけでよい" }
+        {
+          "label": "A",
+          "text": "確定申告が必要である"
+        },
+        {
+          "label": "B",
+          "text": "年末調整だけで必ず完結する"
+        },
+        {
+          "label": "C",
+          "text": "住民税の申告だけでよい"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "住宅ローン控除は、初年度は確定申告が必要です。会社員の場合、2年目以降は年末調整で受けられます。",
-      "tags": ["税額控除", "住宅ローン控除"]
+      "tags": [
+        "税額控除",
+        "住宅ローン控除"
+      ]
     },
     {
       "id": "fp3-ch4-q18",
@@ -385,13 +469,25 @@
       "type": "single",
       "text": "個人住民税に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "原則として前年の所得に対して翌年に課税される" },
-        { "label": "B", "text": "所得税と同じく国税である" },
-        { "label": "C", "text": "所得割はなく、均等割だけで構成される" }
+        {
+          "label": "A",
+          "text": "原則として前年の所得に対して翌年に課税される"
+        },
+        {
+          "label": "B",
+          "text": "所得税と同じく国税である"
+        },
+        {
+          "label": "C",
+          "text": "所得割はなく、均等割だけで構成される"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "個人住民税は地方税で、原則として前年の所得に基づき翌年に課税されます。所得割と均等割があります。",
-      "tags": ["申告と納付", "住民税"]
+      "tags": [
+        "申告と納付",
+        "住民税"
+      ]
     },
     {
       "id": "fp3-ch4-q19",
@@ -400,13 +496,25 @@
       "type": "single",
       "text": "個人事業税における事業主控除の額として、原則として最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "290万円" },
-        { "label": "B", "text": "110万円" },
-        { "label": "C", "text": "65万円" }
+        {
+          "label": "A",
+          "text": "290万円"
+        },
+        {
+          "label": "B",
+          "text": "110万円"
+        },
+        {
+          "label": "C",
+          "text": "65万円"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "個人事業税には、原則として年290万円の事業主控除があります。",
-      "tags": ["申告と納付", "個人事業税"]
+      "tags": [
+        "申告と納付",
+        "個人事業税"
+      ]
     },
     {
       "id": "fp3-ch4-q20",
@@ -415,13 +523,559 @@
       "type": "single",
       "text": "復興特別所得税の税率として、所得税額に乗じる割合はどれか。",
       "options": [
-        { "label": "A", "text": "2.1％" },
-        { "label": "B", "text": "5％" },
-        { "label": "C", "text": "10％" }
+        {
+          "label": "A",
+          "text": "2.1％"
+        },
+        {
+          "label": "B",
+          "text": "5％"
+        },
+        {
+          "label": "C",
+          "text": "10％"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "復興特別所得税は、所得税額に2.1％を乗じて計算し、所得税とあわせて課されます。",
-      "tags": ["申告と納付", "復興特別所得税"]
+      "tags": [
+        "申告と納付",
+        "復興特別所得税"
+      ]
+    },
+    {
+      "id": "fp3-ch4-practice1",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "classification",
+      "text": "次の5項目を所得区分へ分類しなさい。①会社からの賞与、②賃貸マンションの家賃、③老齢基礎年金、④生命保険の満期保険金（一時金、契約者＝受取人）、⑤土地の売却益。",
+      "correctAnswer": [
+        "給与所得",
+        "不動産所得",
+        "雑所得",
+        "一時所得",
+        "譲渡所得"
+      ],
+      "explanation": "発生原因で分類します。雇用の対価は給与、土地建物の貸付けは不動産、老齢年金は雑、一時の満期保険金は一時、資産売却益は譲渡です。",
+      "explanationSteps": [
+        "雇用・貸付け・年金・偶発的収入・資産売却の順に発生原因を確認する。",
+        "非課税の遺族年金・障害年金と、課税される老齢年金を区別する。"
+      ],
+      "commonMistakes": [
+        "老齢年金を非課税とする。",
+        "満期保険金をすべて雑所得とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s1",
+        "label": "4-1 所得税の基本"
+      },
+      "tags": [
+        "所得分類",
+        "非選択式",
+        "判断"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "分類を採点する",
+        "fields": [
+          {
+            "id": "income-1",
+            "label": "①会社からの賞与",
+            "kind": "classification",
+            "correctAnswer": "給与所得",
+            "acceptedAnswers": [
+              "給与"
+            ]
+          },
+          {
+            "id": "income-2",
+            "label": "②賃貸マンションの家賃",
+            "kind": "classification",
+            "correctAnswer": "不動産所得",
+            "acceptedAnswers": [
+              "不動産"
+            ]
+          },
+          {
+            "id": "income-3",
+            "label": "③老齢基礎年金",
+            "kind": "classification",
+            "correctAnswer": "雑所得",
+            "acceptedAnswers": [
+              "雑"
+            ]
+          },
+          {
+            "id": "income-4",
+            "label": "④満期保険金",
+            "kind": "classification",
+            "correctAnswer": "一時所得",
+            "acceptedAnswers": [
+              "一時"
+            ]
+          },
+          {
+            "id": "income-5",
+            "label": "⑤土地の売却益",
+            "kind": "classification",
+            "correctAnswer": "譲渡所得",
+            "acceptedAnswers": [
+              "譲渡"
+            ]
+          }
+        ],
+        "table": {
+          "headers": [
+            "項目",
+            "所得区分"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "label": "①会社からの賞与",
+              "cells": [
+                {
+                  "text": "会社からの賞与"
+                },
+                {
+                  "fieldId": "income-1"
+                }
+              ]
+            },
+            {
+              "id": "r2",
+              "label": "②賃貸マンションの家賃",
+              "cells": [
+                {
+                  "text": "賃貸マンションの家賃"
+                },
+                {
+                  "fieldId": "income-2"
+                }
+              ]
+            },
+            {
+              "id": "r3",
+              "label": "③老齢基礎年金",
+              "cells": [
+                {
+                  "text": "老齢基礎年金"
+                },
+                {
+                  "fieldId": "income-3"
+                }
+              ]
+            },
+            {
+              "id": "r4",
+              "label": "④満期保険金",
+              "cells": [
+                {
+                  "text": "満期保険金（一時金）"
+                },
+                {
+                  "fieldId": "income-4"
+                }
+              ]
+            },
+            {
+              "id": "r5",
+              "label": "⑤土地の売却益",
+              "cells": [
+                {
+                  "text": "土地の売却益"
+                },
+                {
+                  "fieldId": "income-5"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fp3-ch4-practice2",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "給与収入600万円の給与所得を求めなさい。給与所得控除は「収入×20％＋44万円」を使用する。",
+      "correctAnswer": [
+        "1640000",
+        "4360000"
+      ],
+      "explanation": "給与所得控除は600万円×20％＋44万円＝164万円、給与所得は600万円－164万円＝436万円です。",
+      "explanationSteps": [
+        "給与収入600万円が360万円超660万円以下の区分であることを確認する。",
+        "給与所得控除164万円を計算する。",
+        "収入600万円から控除164万円を引く。"
+      ],
+      "commonMistakes": [
+        "給与収入から基礎控除を直接引く。",
+        "20％を掛けた120万円だけを控除額とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 給与・退職所得"
+      },
+      "tags": [
+        "給与所得",
+        "計算",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "給与所得を採点する",
+        "fields": [
+          {
+            "id": "salary-deduction",
+            "label": "給与所得控除額",
+            "kind": "number",
+            "correctAnswer": "1640000",
+            "suffix": "円"
+          },
+          {
+            "id": "salary-income",
+            "label": "給与所得",
+            "kind": "number",
+            "correctAnswer": "4360000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice3",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "勤続25年の会社員が退職金1,500万円を受け取った。通常の退職所得控除額と退職所得を求めなさい。",
+      "correctAnswer": [
+        "11500000",
+        "1750000"
+      ],
+      "explanation": "控除額は800万円＋70万円×5年＝1,150万円。退職所得は（1,500万円－1,150万円）×1/2＝175万円です。",
+      "explanationSteps": [
+        "20年を超える5年分だけ70万円を掛ける。",
+        "退職収入から控除額を引く。",
+        "例外がないことを確認して1/2を掛ける。"
+      ],
+      "commonMistakes": [
+        "25年全体に70万円を掛ける。",
+        "控除額だけを答え、退職所得を計算しない。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 給与・退職所得"
+      },
+      "tags": [
+        "退職所得",
+        "計算",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "退職所得を採点する",
+        "fields": [
+          {
+            "id": "retirement-deduction",
+            "label": "退職所得控除額",
+            "kind": "number",
+            "correctAnswer": "11500000",
+            "suffix": "円"
+          },
+          {
+            "id": "retirement-income",
+            "label": "退職所得",
+            "kind": "number",
+            "correctAnswer": "1750000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice4",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "満期保険金300万円、払込保険料220万円を受け取った。一時所得の金額と総所得金額への算入額を求めなさい。特別控除は50万円とする。",
+      "correctAnswer": [
+        "300000",
+        "150000"
+      ],
+      "explanation": "一時所得は300万円－220万円－50万円＝30万円。総所得への算入額は30万円×1/2＝15万円です。",
+      "explanationSteps": [
+        "収入から直接支出額を引く。",
+        "特別控除50万円を引く。",
+        "最後に1/2を掛ける。"
+      ],
+      "commonMistakes": [
+        "最初に収入へ1/2を掛ける。",
+        "一時所得30万円をそのまま総所得へ算入する。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s4",
+        "label": "4-4 譲渡・一時・雑所得"
+      },
+      "tags": [
+        "一時所得",
+        "計算",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "一時所得を採点する",
+        "fields": [
+          {
+            "id": "temporary-income",
+            "label": "一時所得の金額",
+            "kind": "number",
+            "correctAnswer": "300000",
+            "suffix": "円"
+          },
+          {
+            "id": "temporary-included",
+            "label": "総所得金額への算入額",
+            "kind": "number",
+            "correctAnswer": "150000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice5",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "青葉直人さんの給与所得は436万円、不動産所得は30万円の赤字（うち土地取得借入金利子10万円）、一時所得の総所得算入額15万円、副業の雑所得20万円である。損益通算できる不動産赤字と合計所得金額を求めなさい。",
+      "correctAnswer": [
+        "200000",
+        "4510000"
+      ],
+      "explanation": "不動産赤字30万円のうち土地取得借入金利子10万円は通算不可なので20万円だけ通算します。436万円－20万円＋15万円＋20万円＝451万円です。",
+      "explanationSteps": [
+        "不動産赤字から土地取得借入金利子を除く。",
+        "一時所得はすでに1/2後の15万円を使う。",
+        "雑所得20万円を加える。"
+      ],
+      "commonMistakes": [
+        "赤字30万円を全額通算する。",
+        "一時所得30万円を加える。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s2",
+        "label": "4-2 不動産・事業所得"
+      },
+      "tags": [
+        "損益通算",
+        "連続ケース",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "損益通算を採点する",
+        "fields": [
+          {
+            "id": "eligible-rental-loss",
+            "label": "損益通算できる不動産赤字",
+            "kind": "number",
+            "correctAnswer": "200000",
+            "suffix": "円"
+          },
+          {
+            "id": "aggregate-income",
+            "label": "合計所得金額",
+            "kind": "number",
+            "correctAnswer": "4510000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice6",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "合計所得金額451万円。社会保険料70万円、医療費30万円・補填5万円、iDeCo24万円、生命保険料控除8万円、基礎控除を適用する。医療費控除、所得控除合計、課税所得を求めなさい。",
+      "correctAnswer": [
+        "150000",
+        "1850000",
+        "2660000"
+      ],
+      "explanation": "医療費控除は30－5－10＝15万円。基礎控除は合計所得451万円なので68万円。控除合計185万円、課税所得451－185＝266万円です。",
+      "explanationSteps": [
+        "医療費から補填額と10万円を引く。",
+        "合計所得451万円の基礎控除68万円を選ぶ。",
+        "全控除を合計し、合計所得から引く。"
+      ],
+      "commonMistakes": [
+        "基礎控除58万円を選ぶ。",
+        "医療費の補填5万円を無視する。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "tags": [
+        "所得控除",
+        "課税所得",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "課税所得を採点する",
+        "fields": [
+          {
+            "id": "medical-deduction",
+            "label": "医療費控除",
+            "kind": "number",
+            "correctAnswer": "150000",
+            "suffix": "円"
+          },
+          {
+            "id": "total-deductions",
+            "label": "所得控除合計",
+            "kind": "number",
+            "correctAnswer": "1850000",
+            "suffix": "円"
+          },
+          {
+            "id": "taxable-income",
+            "label": "課税所得金額",
+            "kind": "number",
+            "correctAnswer": "2660000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice7",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "numeric",
+      "text": "課税所得266万円に速算表（税率10％、控除額97,500円）を適用し、住宅ローン控除10万円を差し引く。算出所得税額、控除後所得税額、復興特別所得税、合計税額を求めなさい。復興特別所得税は1円未満切捨て。",
+      "correctAnswer": [
+        "168500",
+        "68500",
+        "1438",
+        "69938"
+      ],
+      "explanation": "266万円×10％－97,500円＝168,500円。住宅ローン控除後68,500円。68,500円×2.1％＝1,438.5円を切り捨て1,438円、合計69,938円です。",
+      "explanationSteps": [
+        "速算表の控除額97,500円を引く。",
+        "住宅ローン控除を税額から引く。",
+        "控除後所得税額へ2.1％を掛ける。",
+        "所得税と復興特別所得税を合計する。"
+      ],
+      "commonMistakes": [
+        "266万円へ10％を掛けるだけで終える。",
+        "住宅ローン控除を課税所得から引く。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "tags": [
+        "速算表",
+        "税額控除",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "税額を採点する",
+        "fields": [
+          {
+            "id": "calculated-tax",
+            "label": "算出所得税額",
+            "kind": "number",
+            "correctAnswer": "168500",
+            "suffix": "円"
+          },
+          {
+            "id": "after-credit",
+            "label": "住宅ローン控除後の所得税額",
+            "kind": "number",
+            "correctAnswer": "68500",
+            "suffix": "円"
+          },
+          {
+            "id": "reconstruction-tax",
+            "label": "復興特別所得税",
+            "kind": "number",
+            "correctAnswer": "1438",
+            "suffix": "円"
+          },
+          {
+            "id": "combined-tax",
+            "label": "所得税・復興特別所得税合計",
+            "kind": "number",
+            "correctAnswer": "69938",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch4-practice8",
+      "examId": "fp3",
+      "chapterId": "ch4",
+      "type": "classification",
+      "text": "1か所から給与を受け、年末調整済みの会社員に副業所得18万円がある。通常は所得税の確定申告不要だが、医療費控除を受けるため還付申告をすることにした。この場合の扱いを入力しなさい。",
+      "correctAnswer": [
+        "確定申告する",
+        "副業所得18万円も申告する"
+      ],
+      "explanation": "医療費控除を受けるため確定申告する場合、20万円以下の副業所得も含めて申告します。20万円基準は非課税規定ではありません。",
+      "explanationSteps": [
+        "副業所得18万円だけなら原則申告不要制度の範囲と確認する。",
+        "医療費控除のため実際に確定申告することを確認する。",
+        "申告する以上、副業所得18万円も申告へ含める。"
+      ],
+      "commonMistakes": [
+        "18万円は非課税なので申告書から除く。",
+        "医療費控除を年末調整だけで受ける。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "tags": [
+        "確定申告",
+        "20万円基準",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "申告判断を採点する",
+        "fields": [
+          {
+            "id": "filing-action",
+            "label": "医療費控除を受ける手続",
+            "kind": "classification",
+            "correctAnswer": "確定申告する",
+            "acceptedAnswers": [
+              "確定申告",
+              "還付申告する",
+              "還付申告"
+            ]
+          },
+          {
+            "id": "side-income-action",
+            "label": "副業所得18万円の扱い",
+            "kind": "classification",
+            "correctAnswer": "副業所得18万円も申告する",
+            "acceptedAnswers": [
+              "申告する",
+              "副業所得も申告する",
+              "18万円も申告する"
+            ]
+          }
+        ]
+      }
     }
   ]
 }

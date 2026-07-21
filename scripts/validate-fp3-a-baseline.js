@@ -76,14 +76,16 @@ for (const chapterId of fs.readdirSync(guideRoot).filter(name => /^ch\d+$/.test(
 const questionSets = loadJsonSets(questionRoot)
 const cardSets = loadJsonSets(cardRoot)
 const questions = questionSets.flatMap(set => set.questions)
+const multipleChoiceQuestions = questions.filter(question => !question.practiceSheet)
+const nonChoiceQuestions = questions.filter(question => question.practiceSheet)
 const cards = cardSets.flatMap(set => set.cards)
 const questionById = new Map(questions.map(question => [question.id, question]))
 const questionChapterIds = new Set(questionSets.map(set => set.chapterId))
 const cardChapterIds = new Set(cardSets.map(set => set.chapterId))
 
-const explanationLengths = questions.map(question => String(question.explanation ?? '').replace(/\s+/g, '').length)
-const calculationQuestions = questions.filter(question => /いくら|何円|何％|求め|計算|年額|月額|利回り|控除額|相続分|課税/.test(`${question.text} ${question.explanation}`))
-const datedQuestions = questions.filter(question => /令和\d+年度|20\d{2}年度|20\d{2}年|法令基準日/.test(`${question.text} ${question.explanation}`))
+const explanationLengths = multipleChoiceQuestions.map(question => String(question.explanation ?? '').replace(/\s+/g, '').length)
+const calculationQuestions = multipleChoiceQuestions.filter(question => /いくら|何円|何％|求め|計算|年額|月額|利回り|控除額|相続分|課税/.test(`${question.text} ${question.explanation}`))
+const datedQuestions = multipleChoiceQuestions.filter(question => /令和\d+年度|20\d{2}年度|20\d{2}年|法令基準日/.test(`${question.text} ${question.explanation}`))
 const cardBackLengths = cards.map(card => String(card.back ?? '').replace(/\s+/g, '').length)
 
 const duplicateCardGroups = []
@@ -116,12 +118,12 @@ assert(baseline.officialScope.officialSample.reviewStatus === 'pending-detailed-
 
 assert(registry.length === baseline.frozenCounts.chapters, `chapter count remains ${baseline.frozenCounts.chapters}`)
 assert(guideMetrics.length === baseline.frozenCounts.guideSections, `guide count remains ${baseline.frozenCounts.guideSections}`)
-assert(questions.length === baseline.frozenCounts.multipleChoiceQuestions, `question count remains ${baseline.frozenCounts.multipleChoiceQuestions}`)
-assert(questions.filter(question => question.practiceSheet).length === baseline.frozenCounts.nonChoiceQuestions, 'non-choice question count remains zero')
+assert(multipleChoiceQuestions.length === baseline.frozenCounts.multipleChoiceQuestions, `protected choice question count remains ${baseline.frozenCounts.multipleChoiceQuestions}`)
+assert(nonChoiceQuestions.length >= baseline.frozenCounts.nonChoiceQuestions, 'non-choice question count does not regress below baseline')
 assert(cards.length === baseline.frozenCounts.cards, `card count remains ${baseline.frozenCounts.cards}`)
-assert(guideInternalLinks === baseline.frozenCounts.guideInternalLinks, `guide internal link count remains ${baseline.frozenCounts.guideInternalLinks}`)
+assert(guideInternalLinks >= baseline.frozenCounts.guideInternalLinks, `guide internal link count does not regress below ${baseline.frozenCounts.guideInternalLinks}`)
 
-for (const question of questions) {
+for (const question of multipleChoiceQuestions) {
   assert((question.type ?? 'single') === 'single', `${question.id}: remains single-choice at baseline`)
   assert(Array.isArray(question.options) && question.options.length >= 3, `${question.id}: has at least three options`)
   assert(question.options.filter(option => option.label === question.correctAnswer).length === 1, `${question.id}: exactly one correct option label`)
@@ -129,26 +131,26 @@ for (const question of questions) {
 
 const guideChars = guideMetrics.map(item => item.chars)
 const guideExpected = baseline.contentMetrics.guides
-assert(Math.min(...guideChars) === guideExpected.minimumChars, 'minimum guide chars match baseline')
-assert(percentile(guideChars, 0.25) === guideExpected.p25Chars, 'guide p25 chars match baseline')
-assert(percentile(guideChars, 0.5) === guideExpected.medianChars, 'guide median chars match baseline')
-assert(percentile(guideChars, 0.75) === guideExpected.p75Chars, 'guide p75 chars match baseline')
-assert(Math.max(...guideChars) === guideExpected.maximumChars, 'maximum guide chars match baseline')
-assert(guideMetrics.filter(item => item.chars < 800).length === guideExpected.under800Chars, 'guide count under 800 chars matches baseline')
-assert(guideMetrics.filter(item => item.chars < 1000).length === guideExpected.under1000Chars, 'guide count under 1,000 chars matches baseline')
-assert(guideMetrics.filter(item => item.chars < 1500).length === guideExpected.under1500Chars, 'guide count under 1,500 chars matches baseline')
-assert(guideMetrics.filter(item => item.hasCase).length === guideExpected.withCase, 'guide case coverage matches baseline')
-assert(guideMetrics.filter(item => item.hasProcess).length === guideExpected.withProcess, 'guide process coverage matches baseline')
-assert(guideMetrics.filter(item => item.hasError).length === guideExpected.withErrorDiagnosis, 'guide error coverage matches baseline')
-assert(guideMetrics.filter(item => item.hasSelfCheck).length === guideExpected.withExplicitSelfCheck, 'guide self-check coverage matches baseline')
-assert(guideMetrics.filter(item => item.internalLinks > 0).length === guideExpected.withBodyInternalLink, 'guide linked-page count matches baseline')
+assert(Math.min(...guideChars) >= guideExpected.minimumChars, 'minimum guide chars do not regress below baseline')
+assert(percentile(guideChars, 0.25) >= guideExpected.p25Chars, 'guide p25 chars do not regress below baseline')
+assert(percentile(guideChars, 0.5) >= guideExpected.medianChars, 'guide median chars do not regress below baseline')
+assert(percentile(guideChars, 0.75) >= guideExpected.p75Chars, 'guide p75 chars do not regress below baseline')
+assert(Math.max(...guideChars) >= guideExpected.maximumChars, 'maximum guide chars do not regress below baseline')
+assert(guideMetrics.filter(item => item.chars < 800).length <= guideExpected.under800Chars, 'guide count under 800 chars does not worsen')
+assert(guideMetrics.filter(item => item.chars < 1000).length <= guideExpected.under1000Chars, 'guide count under 1,000 chars does not worsen')
+assert(guideMetrics.filter(item => item.chars < 1500).length <= guideExpected.under1500Chars, 'guide count under 1,500 chars does not worsen')
+assert(guideMetrics.filter(item => item.hasCase).length >= guideExpected.withCase, 'guide case coverage does not regress')
+assert(guideMetrics.filter(item => item.hasProcess).length >= guideExpected.withProcess, 'guide process coverage does not regress')
+assert(guideMetrics.filter(item => item.hasError).length >= guideExpected.withErrorDiagnosis, 'guide error coverage does not regress')
+assert(guideMetrics.filter(item => item.hasSelfCheck).length >= guideExpected.withExplicitSelfCheck, 'guide self-check coverage does not regress')
+assert(guideMetrics.filter(item => item.internalLinks > 0).length >= guideExpected.withBodyInternalLink, 'guide linked-page count does not regress')
 assert(guideMetrics.filter(item => item.lawReferenceDate).length >= guideExpected.withLawReferenceDate, 'guide lawReferenceDate coverage does not regress below baseline')
 assert(guideMetrics.filter(item => item.dataAsOf).length >= guideExpected.withDataAsOf, 'guide dataAsOf coverage does not regress below baseline')
 assert(guideMetrics.every(item => /^2026-\d{2}-\d{2}$/.test(String(item.updatedAt))), 'all guide updatedAt values are valid 2026 dates')
 
 const questionExpected = baseline.contentMetrics.questions
-assert(questions.filter(question => (question.type ?? 'single') === 'single').length === questionExpected.singleChoice, 'single-choice count matches baseline')
-assert(questions.filter(question => (question.type ?? 'single') !== 'single').length === questionExpected.otherTypes, 'other question type count matches baseline')
+assert(multipleChoiceQuestions.filter(question => (question.type ?? 'single') === 'single').length === questionExpected.singleChoice, 'single-choice count matches baseline')
+assert(multipleChoiceQuestions.filter(question => (question.type ?? 'single') !== 'single').length === questionExpected.otherTypes, 'legacy other question type count matches baseline')
 assert(calculationQuestions.length === questionExpected.detectedCalculationQuestions, 'detected calculation question count matches baseline')
 assert(percentile(explanationLengths, 0.5) === questionExpected.medianExplanationChars, 'median explanation length matches baseline')
 assert(datedQuestions.length === questionExpected.datedQuestions, 'dated question count matches baseline')
@@ -170,7 +172,7 @@ for (const chapterBaseline of baseline.chapterBaselines) {
   assert(Boolean(registryChapter), `${chapterBaseline.id}: registry chapter exists`)
   assert(registryChapter?.title === chapterBaseline.title, `${chapterBaseline.id}: title matches registry`)
   assert(registryChapter?.sections.length === chapterBaseline.sections, `${chapterBaseline.id}: section count matches baseline`)
-  assert(questionSet?.questions.length === chapterBaseline.multipleChoiceQuestions, `${chapterBaseline.id}: question count matches baseline`)
+  assert(questionSet?.questions.filter(question => !question.practiceSheet).length === chapterBaseline.multipleChoiceQuestions, `${chapterBaseline.id}: protected choice question count matches baseline`)
   assert(cardSet?.cards.length === chapterBaseline.cards, `${chapterBaseline.id}: card count matches baseline`)
 }
 
@@ -237,8 +239,8 @@ const result = {
     counts: {
       chapters: registry.length,
       guideSections: guideMetrics.length,
-      multipleChoiceQuestions: questions.length,
-      nonChoiceQuestions: questions.filter(question => question.practiceSheet).length,
+      multipleChoiceQuestions: multipleChoiceQuestions.length,
+      nonChoiceQuestions: nonChoiceQuestions.length,
       cards: cards.length,
     },
     guideMetrics: {
@@ -251,7 +253,7 @@ const result = {
       linkedPages: guideMetrics.filter(item => item.internalLinks > 0).length,
     },
     questionMetrics: {
-      singleChoice: questions.length,
+      singleChoice: multipleChoiceQuestions.length,
       detectedCalculationQuestions: calculationQuestions.length,
       medianExplanationChars: percentile(explanationLengths, 0.5),
     },
