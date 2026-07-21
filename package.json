@@ -22,7 +22,8 @@
     "validate:fp3-a-batch2": "node ./scripts/validate-fp3-a-batch2.js",
     "validate:fp3-a-batch3": "node ./scripts/validate-fp3-a-batch3.js",
     "fetch-official": "node ./scripts/fetch-official-sample.js",
-    "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js"
+    "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js",
+    "validate:fp3-a-batch4": "node ./scripts/validate-fp3-a-batch4.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
