@@ -287,6 +287,17 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
         background: 'transparent',
         padding: '28px 32px 36px',
       }}>
+        <h1 style={{
+          maxWidth: 960,
+          width: '100%',
+          margin: '0 auto 14px',
+          color: 'var(--color-text)',
+          fontSize: 'clamp(1.25rem, 2.4vw, 1.65rem)',
+          fontWeight: 900,
+          lineHeight: 1.35,
+        }}>
+          {chapterTitle} 練習問題
+        </h1>
         {/* ヘッダー */}
         <div className="question-header" style={{
           display: 'flex', justifyContent: 'space-between',

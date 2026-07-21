@@ -58,6 +58,23 @@ export default async function ExamDashboardPage({
           background: 'var(--color-bg-subtle)',
           padding: '32px',
         }}>
+          <h1 style={{
+            fontSize: 'clamp(1.45rem, 3vw, 2rem)',
+            fontWeight: 900,
+            lineHeight: 1.3,
+            marginBottom: 8,
+          }}>
+            {exam.shortName} 学習ダッシュボード
+          </h1>
+          <p style={{
+            color: 'var(--color-text-secondary)',
+            fontSize: '0.92rem',
+            lineHeight: 1.7,
+            marginBottom: 24,
+          }}>
+            教材で理解し、問題で確認し、知識カードで復習できます。
+          </p>
+
           {/* 全体進捗ヘッダー（個人の学習状況を最優先で表示） */}
           <h2 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: 16 }}>
             全体の学習進捗

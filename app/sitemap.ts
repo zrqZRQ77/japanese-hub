@@ -66,15 +66,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     for (const chapter of getChaptersByExam(exam.id)) {
-      for (const section of chapter.sections) {
-        const frontmatter = getGuideFrontmatter(exam.id, chapter.id, section.id)
-        const updatedAt = frontmatter?.updatedAt ? new Date(frontmatter.updatedAt) : now
-        urls.push({
-          url: absoluteUrl(`${examBase}/guide/${chapter.id}/${section.id}`),
-          lastModified: updatedAt,
-          changeFrequency: 'monthly',
-          priority: 0.78,
-        })
+      if (exam.indexing?.guides !== 'noindex') {
+        for (const section of chapter.sections) {
+          const frontmatter = getGuideFrontmatter(exam.id, chapter.id, section.id)
+          const updatedAt = frontmatter?.updatedAt ? new Date(frontmatter.updatedAt) : now
+          urls.push({
+            url: absoluteUrl(`${examBase}/guide/${chapter.id}/${section.id}`),
+            lastModified: updatedAt,
+            changeFrequency: 'monthly',
+            priority: 0.78,
+          })
+        }
       }
 
       urls.push({

@@ -17,6 +17,9 @@ export interface ExamMeta {
   color: string        // Tailwind color key e.g. "blue"
   icon: string         // lucide icon name
   mockExam?: ExamMockConfig
+  indexing?: {
+    guides?: 'index' | 'noindex'
+  }
   info?: ExamInfo
 }
 
