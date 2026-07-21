@@ -35,11 +35,15 @@ function assertField(question, fieldId, expected, label) {
 
 const expectedDistribution = {
   ch3: 7,
+  ch4: 1,
   ch5: 6,
+  ch6: 1,
+  ch7: 1,
+  ch8: 1,
   ch9: 5,
   ch10: 5,
   ch11: 7,
-  ch12: 6,
+  ch12: 7,
   ch13: 4,
 }
 
@@ -54,7 +58,7 @@ for (let chapter = 1; chapter <= 13; chapter += 1) {
 }
 
 assert(choiceQuestions.length === 204, `choice question baseline remains 204, got ${choiceQuestions.length}`)
-assert(capabilityQuestions.length === 40, `capability question total is 40, got ${capabilityQuestions.length}`)
+assert(capabilityQuestions.length === 45, `capability question total is 45, got ${capabilityQuestions.length}`)
 
 for (const [chapterId, expected] of Object.entries(expectedDistribution)) {
   const actual = capabilityQuestions.filter(question => question.chapterId === chapterId).length
@@ -74,7 +78,7 @@ for (const question of capabilityQuestions) {
   ids.add(question.id)
   assert(!texts.has(question.text), `${question.id}: question text is unique`)
   texts.add(question.text)
-  assert(/^boki3-ch(?:3|5|9|10|11|12|13)-practice\d+$/.test(question.id), `${question.id}: id format is valid`)
+  assert(/^boki3-ch(?:3|4|5|6|7|8|9|10|11|12|13)-practice\d+$/.test(question.id), `${question.id}: id format is valid`)
   assert(!question.options, `${question.id}: no multiple-choice options`)
   assert(Array.isArray(question.correctAnswer), `${question.id}: correctAnswer is an array`)
   assert(question.explanation?.length >= 30, `${question.id}: explanation is complete`)
@@ -160,6 +164,11 @@ const q = id => byId.get(id)
 
 assertField(q('boki3-ch3-practice4'), 'ending-cash', 250000 + 80000 + 45000 - 60000 - 35000, 'ending cash')
 assertField(q('boki3-ch3-practice6'), 'r1-c3', 500000 - 120000 + 200000, 'ordinary deposit balance')
+assertField(q('boki3-ch4-practice1'), 'r4-debit-amount', 5500 - 3200 + 1000, 'unexplained cash shortage')
+assertField(q('boki3-ch6-practice1'), 'r1-debit-amount', 120000 - 120000 * 0.03, 'credit card receivable')
+assertField(q('boki3-ch6-practice1'), 'r2-debit-amount', 120000 * 0.03, 'credit card fee')
+assertField(q('boki3-ch7-practice1'), 'r2-debit-amount', 200000 - 120000, 'electronic receivable portion')
+assertField(q('boki3-ch8-practice1'), 'r4-credit-amount', 300000 - 20000 - 30000 - 10000, 'salary net payment')
 assertField(q('boki3-ch5-practice4'), 'cost-of-sales', 90000 + 540000 - 110000, 'cost of goods sold')
 assertField(q('boki3-ch5-practice5'), 'ending-inventory', 70 * 900, 'FIFO ending inventory')
 assertField(q('boki3-ch5-practice5'), 'cost-of-sales', 100 * 800 + 80 * 900, 'FIFO cost of goods sold')
@@ -189,6 +198,7 @@ assertField(q('boki3-ch12-practice2'), 'difference', 2950000 - 2860000, 'trial b
 assertField(q('boki3-ch12-practice3'), 'adjusted-balance', 720000 + 120000 - 150000, 'worksheet adjusted purchases')
 assertField(q('boki3-ch12-practice4'), 'net-income', 1600000 - 1391800, 'worksheet net income')
 assertField(q('boki3-ch12-practice6'), 'r2-debit-amount', 690000 + 325000 + 150000 + 60000 + 120000 + 4800 + 42000, 'closing expense total')
+assertField(q('boki3-ch12-practice7'), 'r2-debit-amount', 80000 - 30000, 'voucher credit-sale portion')
 assertField(q('boki3-ch13-practice1'), 'revenue-total', 700000 + 4000, 'income statement revenue total')
 assertField(q('boki3-ch13-practice1'), 'expense-total', 420000 + 100000 + 48000 + 20000 + 30000 + 6000, 'income statement expense total')
 assertField(q('boki3-ch13-practice1'), 'net-income', 704000 - 624000, 'income statement net income')

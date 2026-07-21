@@ -975,6 +975,119 @@
         ],
         "submitLabel": "仕訳を採点する"
       }
+    },
+    {
+      "id": "boki3-ch12-practice7",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "journal",
+      "text": "商品80,000円を販売し、30,000円は現金で受け取り、残額は掛けとした。三伝票制の取引分解法を指定された場合の、入金伝票に対応する仕訳と振替伝票に対応する仕訳を入力しなさい。",
+      "correctAnswer": [
+        "現金",
+        "30000",
+        "売上",
+        "30000",
+        "売掛金",
+        "50000",
+        "売上",
+        "50000"
+      ],
+      "explanation": "取引分解法では現金売上30,000円を入金伝票、掛売上50,000円を振替伝票へ分けます。合算すると借方現金30,000円・売掛金50,000円、貸方売上80,000円です。",
+      "explanationSteps": [
+        "売上総額80,000円を確認する。",
+        "掛け部分を80,000円−30,000円＝50,000円と計算する。",
+        "現金部分を入金伝票、掛け部分を振替伝票へ分ける。",
+        "2つの仕訳を合算し、完全仕訳と一致するか確認する。"
+      ],
+      "commonMistakes": [
+        "取引分解法と全額掛取引とみなす方法を混ぜると、売上や売掛金を二重計上します。",
+        "入金伝票の相手科目を売掛金にするのは、全額掛取引とみなす方法です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s4",
+        "label": "12-4 証ひょう・伝票会計"
+      },
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "現金"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-debit-account",
+            "label": "借方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "売掛金"
+          },
+          {
+            "id": "r2-debit-amount",
+            "label": "借方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "50000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-credit-account",
+            "label": "貸方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r2-credit-amount",
+            "label": "貸方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "50000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "debitAccountFieldId": "r2-debit-account",
+            "debitAmountFieldId": "r2-debit-amount",
+            "creditAccountFieldId": "r2-credit-account",
+            "creditAmountFieldId": "r2-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "伝票会計",
+        "取引分解法",
+        "一部現金取引"
+      ]
     }
   ]
 }
