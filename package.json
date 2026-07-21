@@ -25,6 +25,7 @@
     "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js",
     "validate:fp3-a-batch4": "node ./scripts/validate-fp3-a-batch4.js",
     "validate:fp3-a-batch5": "node ./scripts/validate-fp3-a-batch5.js",
+    "validate:fp3-a-batch6": "node ./scripts/validate-fp3-a-batch6.js",
     "validate:fp3-a-batch7": "node ./scripts/validate-fp3-a-batch7.js"
   },
   "dependencies": {
