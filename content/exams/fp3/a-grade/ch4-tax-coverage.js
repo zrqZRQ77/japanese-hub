@@ -32,12 +32,12 @@ const ch4TaxCoverage = {
     },
   ],
   calculationAssertions: [
-    { id: 'fp3-tax-calc-01', label: '給与所得控除と給与所得', questionId: 'fp3-ch4-practice2' },
-    { id: 'fp3-tax-calc-02', label: '退職所得控除と退職所得', questionId: 'fp3-ch4-practice3' },
-    { id: 'fp3-tax-calc-03', label: '一時所得と総所得算入額', questionId: 'fp3-ch4-practice4' },
-    { id: 'fp3-tax-calc-04', label: '不動産赤字の通算限度と合計所得', questionId: 'fp3-ch4-practice5' },
-    { id: 'fp3-tax-calc-05', label: '医療費控除・所得控除・課税所得', questionId: 'fp3-ch4-practice6' },
-    { id: 'fp3-tax-calc-06', label: '速算税額・税額控除・復興特別所得税', questionId: 'fp3-ch4-practice7' },
+    { id: 'fp3-tax-calc-01', baselineCalculationId: null, label: '給与所得控除と給与所得', questionId: 'fp3-ch4-practice2' },
+    { id: 'fp3-tax-calc-02', baselineCalculationId: 'fp3-calc-10', label: '退職所得控除と退職所得', questionId: 'fp3-ch4-practice3' },
+    { id: 'fp3-tax-calc-03', baselineCalculationId: 'fp3-calc-11', label: '一時所得と総所得算入額', questionId: 'fp3-ch4-practice4' },
+    { id: 'fp3-tax-calc-04', baselineCalculationId: 'fp3-calc-12', label: '不動産赤字の通算限度と合計所得', questionId: 'fp3-ch4-practice5' },
+    { id: 'fp3-tax-calc-05', baselineCalculationId: 'fp3-calc-12', label: '医療費控除・所得控除・課税所得', questionId: 'fp3-ch4-practice6' },
+    { id: 'fp3-tax-calc-06', baselineCalculationId: 'fp3-calc-12', label: '速算税額・税額控除・復興特別所得税', questionId: 'fp3-ch4-practice7' },
   ],
   officialSourceGroups: [
     '国税庁 所得税の仕組み・所得区分',
