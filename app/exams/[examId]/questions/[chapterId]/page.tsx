@@ -5,6 +5,8 @@ import QuestionClient from '@/components/features/questions/QuestionClient'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChapterById } from '@/lib/types/chapters-registry'
 import { getQuestionSet } from '@/lib/content/question-loader'
+import { getCardSet } from '@/lib/content/card-loader'
+import { createReviewCardMap } from '@/lib/questions/review-card'
 import { BookOpen, PencilLine } from 'lucide-react'
 import { createPageMetadata } from '@/lib/seo'
 
@@ -42,6 +44,7 @@ export default async function QuestionsPage({ params, searchParams }: Props) {
   const chapter = getChapterById(examId, chapterId)
   if (!chapter) notFound()
   const questionSet = getQuestionSet(examId, chapterId)
+  const cardSet = getCardSet(examId, chapterId)
 
   if (!questionSet || questionSet.questions.length === 0) {
     return (
@@ -115,6 +118,7 @@ export default async function QuestionsPage({ params, searchParams }: Props) {
           examId={examId}
           chapterId={chapterId}
           initialQuestionId={initialQuestionId}
+          reviewCardsByQuestion={createReviewCardMap(questionSet.questions, cardSet?.cards ?? [])}
         />
       </div>
     </>

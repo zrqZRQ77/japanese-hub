@@ -1470,6 +1470,38 @@ body { line-height: 1.6; -webkit-font-smoothing: antialiased; background: var(--
   font-weight: 700;
 }
 
+.flashcard-type-badge {
+  align-self: flex-start;
+  margin: 10px 0 4px;
+  padding: 4px 9px;
+  border-radius: var(--radius-sm);
+  background: var(--color-success-bg);
+  border: 1px solid rgba(47,107,95,0.22);
+  color: var(--color-success);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.flashcard-learning-links {
+  max-width: 640px;
+  margin: 12px auto 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flashcard-learning-links a {
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
 .flashcard-tags {
   display: flex;
   gap: 8px;

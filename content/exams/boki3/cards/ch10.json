@@ -9,7 +9,26 @@
       "chapterId": "ch10",
       "front": "見越し・繰延べを判断する最初の2つの観点は？",
       "back": "①費用か収益か、②現金の支払・受取が先に行われたか、まだ行われていないか。",
-      "tags": ["判断手順", "見越し", "繰延べ"]
+      "tags": [
+        "判断手順",
+        "見越し",
+        "繰延べ"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card2",
@@ -17,7 +36,25 @@
       "chapterId": "ch10",
       "front": "費用で、現金を先に支払って次期分が含まれる場合の処理は？",
       "back": "費用の繰延べ。次期分を費用から除き、前払費用という資産へ振り替える。",
-      "tags": ["費用の繰延べ", "前払費用"]
+      "tags": [
+        "費用の繰延べ",
+        "前払費用"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card3",
@@ -25,7 +62,25 @@
       "chapterId": "ch10",
       "front": "収益で、現金を先に受け取って次期分が含まれる場合の処理は？",
       "back": "収益の繰延べ。次期分を収益から除き、前受収益という負債へ振り替える。",
-      "tags": ["収益の繰延べ", "前受収益"]
+      "tags": [
+        "収益の繰延べ",
+        "前受収益"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card4",
@@ -33,7 +88,25 @@
       "chapterId": "ch10",
       "front": "当期分の費用が発生しているが、まだ支払っていない場合の処理は？",
       "back": "費用の見越し。費用を借方へ追加し、未払費用という負債を貸方へ計上する。",
-      "tags": ["費用の見越し", "未払費用"]
+      "tags": [
+        "費用の見越し",
+        "未払費用"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card5",
@@ -41,7 +114,25 @@
       "chapterId": "ch10",
       "front": "当期分の収益が発生しているが、まだ受け取っていない場合の処理は？",
       "back": "収益の見越し。未収収益という資産を借方へ、収益を貸方へ追加する。",
-      "tags": ["収益の見越し", "未収収益"]
+      "tags": [
+        "収益の見越し",
+        "未収収益"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-practice3",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch10-practice3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card6",
@@ -49,7 +140,26 @@
       "chapterId": "ch10",
       "front": "前払費用・未収収益・前受収益・未払費用を資産と負債に分類すると？",
       "back": "前払費用・未収収益は資産。前受収益・未払費用は負債。権利か義務かで判断する。",
-      "tags": ["資産", "負債", "4分類"]
+      "tags": [
+        "資産",
+        "負債",
+        "4分類"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s3",
+        "label": "10-3 再振替と翌期の支払・受取"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card7",
@@ -57,7 +167,26 @@
       "chapterId": "ch10",
       "front": "前払金と前払費用の違いは？",
       "back": "前払金は商品などの引渡し前の手付金。前払費用は保険料・家賃など、時間の経過に応じて費用になる契約の次期分。",
-      "tags": ["前払金", "前払費用", "科目比較"]
+      "tags": [
+        "前払金",
+        "前払費用",
+        "科目比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card8",
@@ -65,7 +194,26 @@
       "chapterId": "ch10",
       "front": "未払金と未払費用の違いは？",
       "back": "未払金は備品など商品以外の購入代金債務。未払費用は利息・家賃・給料など、時間の経過や役務により当期分が発生した費用の未払い。",
-      "tags": ["未払金", "未払費用", "科目比較"]
+      "tags": [
+        "未払金",
+        "未払費用",
+        "科目比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s2",
+        "label": "10-2 費用・収益の見越しと整理後残高"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card9",
@@ -73,7 +221,26 @@
       "chapterId": "ch10",
       "front": "繰延べの月割計算を行う手順は？",
       "back": "契約期間を確認→1か月分を計算→当期月数と次期月数を分ける→次期分を費用・収益から除く。",
-      "tags": ["月割計算", "繰延べ", "判断手順"]
+      "tags": [
+        "月割計算",
+        "繰延べ",
+        "判断手順"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s2",
+        "label": "10-2 費用・収益の見越しと整理後残高"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card10",
@@ -81,7 +248,26 @@
       "chapterId": "ch10",
       "front": "利息の見越額を計算する基本式は？",
       "back": "元金×年利率×当期月数÷12。契約日、決算日、支払・受取日を先に確認する。",
-      "tags": ["利息", "見越し", "月割計算"]
+      "tags": [
+        "利息",
+        "見越し",
+        "月割計算"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s2",
+        "label": "10-2 費用・収益の見越しと整理後残高"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card11",
@@ -89,7 +275,26 @@
       "chapterId": "ch10",
       "front": "費用・収益の繰延べでは、決算整理仕訳に現金や普通預金を使う？",
       "back": "使わない。現金は期中にすでに動いており、決算では費用・収益と前払・前受を調整する。",
-      "tags": ["繰延べ", "誤り診断", "現金"]
+      "tags": [
+        "繰延べ",
+        "誤り診断",
+        "現金"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card12",
@@ -97,7 +302,26 @@
       "chapterId": "ch10",
       "front": "見越し・繰延べが当期純利益へ与える基本的な影響は？",
       "back": "費用減少・収益増加は利益を増やし、費用増加・収益減少は利益を減らす。各整理仕訳のP/L側を確認する。",
-      "tags": ["当期純利益", "P/L", "検算"]
+      "tags": [
+        "当期純利益",
+        "P/L",
+        "検算"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s2",
+        "label": "10-2 費用・収益の見越しと整理後残高"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q12",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q12"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card13",
@@ -105,7 +329,25 @@
       "chapterId": "ch10",
       "front": "再振替仕訳の基本ルールは？",
       "back": "問題で求められた場合、前期末の決算整理仕訳と同額で借方・貸方を逆にする。現金は動かさない。",
-      "tags": ["再振替仕訳", "期首"]
+      "tags": [
+        "再振替仕訳",
+        "期首"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s3",
+        "label": "10-3 再振替と翌期の支払・受取"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q13",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q13"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card14",
@@ -113,7 +355,26 @@
       "chapterId": "ch10",
       "front": "未払費用を再振替した後、翌期に実際の支払を記録する考え方は？",
       "back": "期首に未払費用／費用で前期分を差し引き、支払時に費用／現金で総額を記録する。純額が翌期分になる。",
-      "tags": ["未払費用", "再振替仕訳", "翌期処理"]
+      "tags": [
+        "未払費用",
+        "再振替仕訳",
+        "翌期処理"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s3",
+        "label": "10-3 再振替と翌期の支払・受取"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q15",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q15"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card15",
@@ -121,7 +382,26 @@
       "chapterId": "ch10",
       "front": "未収収益を再振替した後、翌期に実際の受取を記録する考え方は？",
       "back": "期首に収益／未収収益で前期分を差し引き、受取時に現金・預金／収益で総額を記録する。純額が翌期分になる。",
-      "tags": ["未収収益", "再振替仕訳", "翌期処理"]
+      "tags": [
+        "未収収益",
+        "再振替仕訳",
+        "翌期処理"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s3",
+        "label": "10-3 再振替と翌期の支払・受取"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q15",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q15"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch10-card16",
@@ -129,7 +409,26 @@
       "chapterId": "ch10",
       "front": "見越し・繰延べの最終検算項目は？",
       "back": "契約月数、当期・次期の区分、整理前後残高、P/L・B/S分類、純利益影響、借貸一致、再振替後の翌期純額を確認する。",
-      "tags": ["検算", "判断手順", "総合"]
+      "tags": [
+        "検算",
+        "判断手順",
+        "総合"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch10/ch10-s1",
+        "label": "10-1 4つの決算整理を1つの判断法で理解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch10?question=boki3-ch10-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch10-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     }
   ]
 }

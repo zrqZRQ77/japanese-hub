@@ -168,19 +168,28 @@ export default function GuideContent({
               練習問題で知識を定着させましょう
             </div>
           </div>
-          <Link
-            href={`${base}/questions/${chapter.id}`}
-            onClick={() => trackEvent('guide_practice_click', {
-              exam_id: examId,
-              chapter_id: chapter.id,
-              section_id: currentSectionId,
-            })}
-            style={{
-            padding: '9px 20px',
-            background: 'var(--color-primary)', color: 'var(--color-bg)',
-            borderRadius: 'var(--radius-sm)', fontWeight: 700,
-            fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'nowrap',
-          }}>練習問題を解く →</Link>
+          <div style={{ display: 'flex', gap: 9, flexWrap: 'wrap' }}>
+            <Link
+              href={`${base}/questions/${chapter.id}`}
+              onClick={() => trackEvent('guide_practice_click', {
+                exam_id: examId,
+                chapter_id: chapter.id,
+                section_id: currentSectionId,
+              })}
+              style={{
+              padding: '9px 20px',
+              background: 'var(--color-primary)', color: 'var(--color-bg)',
+              borderRadius: 'var(--radius-sm)', fontWeight: 700,
+              fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'nowrap',
+            }}>練習問題を解く →</Link>
+            <Link href={`${base}/cards?chapter=${chapter.id}`} style={{
+              padding: '9px 20px',
+              background: 'var(--color-bg)', color: 'var(--color-success)',
+              border: '1px solid var(--color-success)',
+              borderRadius: 'var(--radius-sm)', fontWeight: 700,
+              fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'nowrap',
+            }}>知識カードで復習 →</Link>
+          </div>
         </div>
       </div>
 

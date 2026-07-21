@@ -9,7 +9,25 @@
       "chapterId": "ch8",
       "front": "その他の債権・債務を選ぶ基本順序は？",
       "back": "債権か債務か→取引原因→商品か商品以外か→内容・金額が確定しているか→自社分か他人分か、の順で判断する。",
-      "tags": ["判断フロー", "科目選択"]
+      "tags": [
+        "判断フロー",
+        "科目選択"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q20",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q20"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card2",
@@ -17,7 +35,25 @@
       "chapterId": "ch8",
       "front": "金銭を他社へ貸し付けたときの資産科目は？",
       "back": "貸付金。返済を受ける元本の権利であり、利息は受取利息として分ける。",
-      "tags": ["貸付金", "受取利息"]
+      "tags": [
+        "貸付金",
+        "受取利息"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card3",
@@ -25,7 +61,25 @@
       "chapterId": "ch8",
       "front": "借入金返済時に元本と利息をどう分ける？",
       "back": "元本は借入金の減少、利息は支払利息という費用。支払総額＝元本＋利息。",
-      "tags": ["借入金", "支払利息"]
+      "tags": [
+        "借入金",
+        "支払利息"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card4",
@@ -33,7 +87,26 @@
       "chapterId": "ch8",
       "front": "商品販売の後日受取と、商品以外の売却代金の後日受取は？",
       "back": "商品販売は売掛金、固定資産など商品以外の売却は未収入金。",
-      "tags": ["売掛金", "未収入金", "比較"]
+      "tags": [
+        "売掛金",
+        "未収入金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s2",
+        "label": "8-2 未収入金・未払金と似た科目の比較"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card5",
@@ -41,7 +114,26 @@
       "chapterId": "ch8",
       "front": "商品仕入の後日支払と、備品購入の後日支払は？",
       "back": "商品仕入は買掛金、備品など商品以外の購入は未払金。",
-      "tags": ["買掛金", "未払金", "比較"]
+      "tags": [
+        "買掛金",
+        "未払金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s2",
+        "label": "8-2 未収入金・未払金と似た科目の比較"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card6",
@@ -49,7 +141,26 @@
       "chapterId": "ch8",
       "front": "未収入金と未収収益の違いは？",
       "back": "未収入金は商品以外の売却代金など確定した債権。未収収益は時間の経過で発生した当期収益の未収分。",
-      "tags": ["未収入金", "未収収益", "比較"]
+      "tags": [
+        "未収入金",
+        "未収収益",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s2",
+        "label": "8-2 未収入金・未払金と似た科目の比較"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card7",
@@ -57,7 +168,26 @@
       "chapterId": "ch8",
       "front": "未払金と未払費用の違いは？",
       "back": "未払金は商品以外の購入代金など。未払費用は利息・家賃・給料など当期分費用の未払い。",
-      "tags": ["未払金", "未払費用", "比較"]
+      "tags": [
+        "未払金",
+        "未払費用",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s2",
+        "label": "8-2 未収入金・未払金と似た科目の比較"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card8",
@@ -65,7 +195,24 @@
       "chapterId": "ch8",
       "front": "他社発行の商品券を代金として受け取ったときの資産科目は？",
       "back": "受取商品券。発行者へ請求・換金できる権利で、換金時に売上を再計上しない。",
-      "tags": ["受取商品券"]
+      "tags": [
+        "受取商品券"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card9",
@@ -73,7 +220,24 @@
       "chapterId": "ch8",
       "front": "商品引渡し前に買い手が支払った内金は？",
       "back": "前払金という資産。商品引渡し時に取り崩し、仕入を総額で計上する。",
-      "tags": ["前払金"]
+      "tags": [
+        "前払金"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card10",
@@ -81,7 +245,24 @@
       "chapterId": "ch8",
       "front": "商品引渡し前に売り手が受け取った内金は？",
       "back": "前受金という負債。商品引渡し時に借方で取り崩し、売上を総額で計上する。",
-      "tags": ["前受金"]
+      "tags": [
+        "前受金"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q10",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q10"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card11",
@@ -89,7 +270,26 @@
       "chapterId": "ch8",
       "front": "前払金と前払費用の違いは？",
       "back": "前払金は商品などの引渡し前の手付金。前払費用は保険料・家賃など期間サービスの次期分。",
-      "tags": ["前払金", "前払費用", "比較"]
+      "tags": [
+        "前払金",
+        "前払費用",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s3",
+        "label": "8-3 前払金・前受金・差入保証金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q11",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q11"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card12",
@@ -97,7 +297,24 @@
       "chapterId": "ch8",
       "front": "返還予定の敷金・保証金を支払ったときの資産科目は？",
       "back": "差入保証金。返還・控除時に全額を取り崩し、返還額と差し引かれた費用へ分ける。",
-      "tags": ["差入保証金"]
+      "tags": [
+        "差入保証金"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q12",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q12"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card13",
@@ -105,7 +322,25 @@
       "chapterId": "ch8",
       "front": "出張旅費など実費未確定の概算払いは？",
       "back": "仮払金。精算時に実費を費用、残額を返金または追加払いとして処理し、仮払金をゼロにする。",
-      "tags": ["仮払金", "精算"]
+      "tags": [
+        "仮払金",
+        "精算"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s4",
+        "label": "8-4 仮払金・仮受金・立替金・預り金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q14",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q14"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card14",
@@ -113,7 +348,25 @@
       "chapterId": "ch8",
       "front": "内容不明の入金があったときの負債科目は？",
       "back": "仮受金。内容判明後に正しい債権・収益などへ振り替え、預金を二重計上しない。",
-      "tags": ["仮受金", "内容判明"]
+      "tags": [
+        "仮受金",
+        "内容判明"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s4",
+        "label": "8-4 仮払金・仮受金・立替金・預り金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q15",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q15"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card15",
@@ -121,7 +374,24 @@
       "chapterId": "ch8",
       "front": "他人が負担すべき確定額を会社が先に支払ったときは？",
       "back": "立替金。後で相手から回収する権利であり、会社の費用ではない。",
-      "tags": ["立替金"]
+      "tags": [
+        "立替金"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q16",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q16"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card16",
@@ -129,7 +399,25 @@
       "chapterId": "ch8",
       "front": "給料から差し引いた所得税・社会保険料は？",
       "back": "所得税預り金・社会保険料預り金などの負債。後日納付時に取り崩す。",
-      "tags": ["預り金", "給料"]
+      "tags": [
+        "預り金",
+        "給料"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s1",
+        "label": "8-1 科目選択の共通判断と貸付金・借入金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q17",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q17"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card17",
@@ -137,7 +425,26 @@
       "chapterId": "ch8",
       "front": "仮払金と立替金をどう見分ける？",
       "back": "内容・金額が未確定なら仮払金。他人の負担額と確定しているなら立替金。",
-      "tags": ["仮払金", "立替金", "比較"]
+      "tags": [
+        "仮払金",
+        "立替金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s3",
+        "label": "8-3 前払金・前受金・差入保証金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q16",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q16"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card18",
@@ -145,7 +452,26 @@
       "chapterId": "ch8",
       "front": "仮受金と預り金をどう見分ける？",
       "back": "入金原因・処理科目が不明なら仮受金。誰から何のために預かったか明確なら預り金。",
-      "tags": ["仮受金", "預り金", "比較"]
+      "tags": [
+        "仮受金",
+        "預り金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s3",
+        "label": "8-3 前払金・前受金・差入保証金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q19",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q19"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card19",
@@ -153,7 +479,26 @@
       "chapterId": "ch8",
       "front": "給料支給時、費用として計上する金額は手取額か総額か？",
       "back": "控除前の給料総額。所得税・社会保険料・立替金などを貸方へ分け、差額が実際の手取支払額。",
-      "tags": ["給料", "手取額", "預り金"]
+      "tags": [
+        "給料",
+        "手取額",
+        "預り金"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s4",
+        "label": "8-4 仮払金・仮受金・立替金・預り金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q17",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q17"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card20",
@@ -161,7 +506,25 @@
       "chapterId": "ch8",
       "front": "社会保険料を納付するとき、従業員負担分と会社負担分は？",
       "back": "従業員負担分は社会保険料預り金を取り崩し、会社負担分は法定福利費として計上する。",
-      "tags": ["社会保険料預り金", "法定福利費"]
+      "tags": [
+        "社会保険料預り金",
+        "法定福利費"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s4",
+        "label": "8-4 仮払金・仮受金・立替金・預り金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q18",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q18"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card21",
@@ -169,7 +532,26 @@
       "chapterId": "ch8",
       "front": "税抜方式で仕入時に支払った消費税と、売上時に預かった消費税は？",
       "back": "仕入・費用に伴う消費税は仮払消費税という資産、売上に伴い預かった消費税は仮受消費税という負債。",
-      "tags": ["仮払消費税", "仮受消費税", "税抜方式"]
+      "tags": [
+        "仮払消費税",
+        "仮受消費税",
+        "税抜方式"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s3",
+        "label": "8-3 前払金・前受金・差入保証金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q21",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q21"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card22",
@@ -177,7 +559,26 @@
       "chapterId": "ch8",
       "front": "決算時の消費税精算で、仮受消費税が仮払消費税より多い場合は？",
       "back": "仮受消費税と仮払消費税を取り崩し、差額を未払消費税という負債へ振り替える。",
-      "tags": ["未払消費税", "決算整理", "消費税"]
+      "tags": [
+        "未払消費税",
+        "決算整理",
+        "消費税"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s5",
+        "label": "8-5 税金・消費税の債権と債務"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q22",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q22"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card23",
@@ -185,7 +586,25 @@
       "chapterId": "ch8",
       "front": "決算で法人税等を計上するときの仕訳は？",
       "back": "法人税等／未払法人税等。納付時は未払法人税等／普通預金とし、費用を二重計上しない。",
-      "tags": ["法人税等", "未払法人税等"]
+      "tags": [
+        "法人税等",
+        "未払法人税等"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s5",
+        "label": "8-5 税金・消費税の債権と債務"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q23",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q23"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     },
     {
       "id": "boki3-ch8-card24",
@@ -193,7 +612,26 @@
       "chapterId": "ch8",
       "front": "受取商品券の期末残高を求める基本式は？",
       "back": "期首残高＋当期受取額−発行者への請求・換金額。受取商品券は通常、借方残高の資産。",
-      "tags": ["受取商品券", "元帳", "残高計算"]
+      "tags": [
+        "受取商品券",
+        "元帳",
+        "残高計算"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch8/ch8-s2",
+        "label": "8-2 未収入金・未払金と似た科目の比較"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch8?question=boki3-ch8-q24",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch8-q24"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch10",
+        "label": "第10章 費用・収益の見越し繰延べ",
+        "chapterId": "ch10"
+      }
     }
   ]
 }

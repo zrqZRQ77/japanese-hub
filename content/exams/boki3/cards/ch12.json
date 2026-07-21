@@ -12,7 +12,22 @@
       "tags": [
         "試算表",
         "誤り診断"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 精算表"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch12-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card2",
@@ -23,7 +38,22 @@
       "tags": [
         "試算表",
         "記憶"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s1",
+        "label": "12-1 試算表"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch12-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card3",
@@ -34,7 +64,22 @@
       "tags": [
         "精算表",
         "手順"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s1",
+        "label": "12-1 試算表"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-practice3",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch12-practice3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card4",
@@ -46,7 +91,22 @@
         "精算表",
         "当期純利益",
         "判断"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 精算表"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card5",
@@ -57,7 +117,22 @@
       "tags": [
         "決算振替仕訳",
         "手順"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s3",
+        "label": "12-3 決算の流れ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card6",
@@ -68,7 +143,22 @@
       "tags": [
         "繰越利益剰余金",
         "判断"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s1",
+        "label": "12-1 試算表"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q5",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q5"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card7",
@@ -79,7 +169,22 @@
       "tags": [
         "帳簿の締め切り",
         "誤り診断"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s3",
+        "label": "12-3 決算の流れ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card8",
@@ -90,7 +195,22 @@
       "tags": [
         "証ひょう",
         "判断"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s3",
+        "label": "12-3 決算の流れ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card9",
@@ -102,7 +222,22 @@
         "伝票会計",
         "入金伝票",
         "手順"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s4",
+        "label": "12-4 証ひょうと伝票会計"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card10",
@@ -114,7 +249,22 @@
         "伝票会計",
         "出金伝票",
         "手順"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s4",
+        "label": "12-4 証ひょうと伝票会計"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card11",
@@ -126,7 +276,22 @@
         "伝票会計",
         "振替伝票",
         "判断"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s4",
+        "label": "12-4 証ひょうと伝票会計"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     },
     {
       "id": "boki3-ch12-card12",
@@ -138,7 +303,22 @@
         "伝票会計",
         "一部現金取引",
         "誤り診断"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s3",
+        "label": "12-3 決算の流れ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch12?question=boki3-ch12-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch12-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch13",
+        "label": "第13章 財務諸表",
+        "chapterId": "ch13"
+      }
     }
   ]
 }

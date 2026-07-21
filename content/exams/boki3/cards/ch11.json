@@ -7,63 +7,153 @@
       "id": "boki3-ch11-card1",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "期末に帳簿の記録を実際の状態に修正し、正しい財務諸表を作成する手続きを何という？",
-      "back": "決算整理（けっさんせいり）",
+      "front": "決算整理とは何を、どの時点の状態へ合わせる手続き？",
+      "back": "期中記録の漏れや期間ずれを修正し、当期の正しい収益・費用と決算日の資産・負債・純資産へ帳簿を合わせる手続き。",
       "tags": [
         "決算整理"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card2",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "当期に「売れた商品」の仕入原価を何という？",
-      "back": "売上原価（うりあげげんか）",
+      "front": "売上原価とは何で、期末商品を含めない理由は？",
+      "back": "当期に販売された商品の取得原価。期末商品はまだ販売されておらず、翌期へ繰り越す資産なので当期の売上原価から除く。",
       "tags": [
         "売上原価"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice1",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card3",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "売上原価を「仕入」勘定で計算する際の、期首商品の仕訳（しーくり）は？",
-      "back": "(借) 仕入 ／ (貸) 繰越商品",
+      "front": "期首商品を売上原価へ含める「しーくり」の仕訳と理由は？",
+      "back": "（借）仕入／（貸）繰越商品。前期から繰り越した商品を当期の販売可能商品へ加え、仕入勘定で売上原価を計算するため。",
       "tags": [
         "売上原価",
         "仕訳"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice1",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card4",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "売上原価を「仕入」勘定で計算する際の、期末商品の仕訳（くりしー）は？",
-      "back": "(借) 繰越商品 ／ (貸) 仕入",
+      "front": "期末商品を翌期へ繰り越す「くりしー」の仕訳と理由は？",
+      "back": "（借）繰越商品／（貸）仕入。未販売の商品を売上原価から除き、決算日の資産として翌期へ繰り越すため。",
       "tags": [
         "売上原価",
         "仕訳"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice1",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card5",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "得意先の倒産などにより、売掛金等の債権が回収できなくなることを何という？",
-      "back": "貸倒れ（かしだおれ）",
+      "front": "貸倒れと貸倒引当金は同じもの？",
+      "back": "異なる。貸倒れは債権が実際に回収不能になること。貸倒引当金は将来の貸倒見積額を事前に債権から控除表示する評価勘定。",
       "tags": [
         "貸倒引当金"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card6",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "貸倒引当金を設定する際、目標額と現在の残高との差額だけを繰り入れる方法を何という？",
-      "back": "差額補充法（さがくほじゅうほう）",
+      "front": "差額補充法では、必要額をそのまま繰り入れる？",
+      "back": "既存の貸方残高がある場合は、そのまま全額を繰り入れない。必要残高から既存残高を差し引き、不足額だけを貸倒引当金繰入とする。",
       "tags": [
         "差額補充法"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s3",
+        "label": "11-3 貸倒引当金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card7",
@@ -74,7 +164,22 @@
       "tags": [
         "貯蔵品",
         "消耗品費"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice3",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card8",
@@ -85,7 +190,22 @@
       "tags": [
         "貯蔵品",
         "消耗品費"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice3",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card9",
@@ -96,18 +216,48 @@
       "tags": [
         "決算整理",
         "目的"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card10",
       "examId": "boki3",
       "chapterId": "ch11",
-      "front": "株式会社が利益に対して負担する法人税・住民税・事業税をまとめて処理する費用科目は？",
-      "back": "法人税等（ほうじんぜいとう）",
+      "front": "決算で法人税等を計上する科目と、納付時に再計上しないものは？",
+      "back": "決算では（借）法人税等／（貸）未払法人税等。納付時は未払法人税等を取り崩し、法人税等という費用を二重計上しない。",
       "tags": [
         "法人税等",
         "決算整理"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card11",
@@ -118,7 +268,22 @@
       "tags": [
         "未処理事項",
         "決算整理"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card12",
@@ -129,7 +294,22 @@
       "tags": [
         "決算整理",
         "処理順序"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card13",
@@ -140,7 +320,22 @@
       "tags": [
         "売上原価",
         "原理"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice1",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card14",
@@ -152,7 +347,22 @@
         "売上原価",
         "P/L",
         "B/S"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q14",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q14"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card15",
@@ -164,7 +374,22 @@
         "貸倒引当金",
         "差額補充法",
         "解答手順"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s3",
+        "label": "11-3 貸倒引当金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card16",
@@ -175,7 +400,22 @@
       "tags": [
         "貸倒引当金",
         "貸倒引当金戻入"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s3",
+        "label": "11-3 貸倒引当金"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q11",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q11"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card17",
@@ -187,7 +427,22 @@
         "貯蔵品",
         "前払費用",
         "比較"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-practice3",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch11-practice3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card18",
@@ -199,7 +454,22 @@
         "決算整理",
         "P/L",
         "B/S"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q14",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q14"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     },
     {
       "id": "boki3-ch11-card19",
@@ -211,7 +481,22 @@
         "決算整理",
         "検算",
         "誤り診断"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理とは"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch11?question=boki3-ch11-q16",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch11-q16"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch12",
+        "label": "第12章 試算表と精算表",
+        "chapterId": "ch12"
+      }
     }
   ]
 }
