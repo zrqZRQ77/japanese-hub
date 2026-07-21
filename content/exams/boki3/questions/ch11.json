@@ -512,6 +512,662 @@
         "売上原価",
         "誤り診断"
       ]
+    },
+    {
+      "id": "boki3-ch11-practice1",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "journal",
+      "text": "期首商品120,000円、期末商品150,000円である。三分法で売上原価を仕入勘定により計算する決算整理仕訳2本を入力しなさい。",
+      "explanation": "期首商品を仕入へ振り替え、期末商品を仕入から繰越商品へ振り替えます。",
+      "explanationSteps": [
+        "期首商品について借方仕入・貸方繰越商品とする。",
+        "期末商品について借方繰越商品・貸方仕入とする。",
+        "仕入の整理後残高が売上原価になることを確認する。"
+      ],
+      "commonMistakes": [
+        "「しーくり・くりしー」の金額を逆にしないよう期首と期末を区別します。",
+        "期末商品は資産として翌期へ繰り越します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s2",
+        "label": "11-2 売上原価の決算整理"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "売上原価",
+        "繰越商品"
+      ],
+      "correctAnswer": [
+        "仕入",
+        "120000",
+        "繰越商品",
+        "120000",
+        "繰越商品",
+        "150000",
+        "仕入",
+        "150000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "仕入"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "120000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "繰越商品"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "120000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-debit-account",
+            "label": "借方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "繰越商品"
+          },
+          {
+            "id": "r2-debit-amount",
+            "label": "借方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "150000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-credit-account",
+            "label": "貸方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "仕入"
+          },
+          {
+            "id": "r2-credit-amount",
+            "label": "貸方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "150000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "debitAccountFieldId": "r2-debit-account",
+            "debitAmountFieldId": "r2-debit-amount",
+            "creditAccountFieldId": "r2-credit-account",
+            "creditAmountFieldId": "r2-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice2",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "journal",
+      "text": "決算日の売掛金240,000円に対し2％の貸倒引当金を設定する。決算整理前の貸倒引当金は貸方残高1,800円である。差額補充法による決算整理仕訳を入力しなさい。",
+      "explanation": "必要残高4,800円から既存残高1,800円を差し引き、3,000円を追加します。",
+      "explanationSteps": [
+        "必要な貸倒引当金240,000×2％＝4,800円を求める。",
+        "既存貸方残高1,800円を確認する。",
+        "不足額3,000円を貸倒引当金繰入として追加する。"
+      ],
+      "commonMistakes": [
+        "必要残高4,800円全額を繰り入れると既存残高を二重に含めます。",
+        "既存残高が借方か貸方かを確認します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s3",
+        "label": "11-3 貸倒引当金の差額補充"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "貸倒引当金",
+        "差額補充法"
+      ],
+      "correctAnswer": [
+        "貸倒引当金繰入",
+        "3000",
+        "貸倒引当金",
+        "3000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金繰入"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "3000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "3000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice3",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "journal",
+      "text": "消耗品を購入時に全額「貯蔵品」60,000円として処理していた。決算日の未使用高は18,000円である。決算整理仕訳を入力しなさい。",
+      "explanation": "使用済み額は60,000−18,000＝42,000円です。使用済み部分を消耗品費へ振り替え、未使用18,000円を貯蔵品として残します。",
+      "explanationSteps": [
+        "購入時処理が資産計上であることを確認する。",
+        "使用済み額42,000円を計算する。",
+        "借方消耗品費、貸方貯蔵品で資産を費用へ振り替える。"
+      ],
+      "commonMistakes": [
+        "未使用高18,000円を仕訳額にすると使用済みと未使用を取り違えます。",
+        "購入時に費用処理した場合とは仕訳方向が異なります。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s4",
+        "label": "11-4 消耗品の処理"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "貯蔵品",
+        "消耗品費"
+      ],
+      "correctAnswer": [
+        "消耗品費",
+        "42000",
+        "貯蔵品",
+        "42000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "消耗品費"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "42000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "貯蔵品"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "42000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice4",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "journal",
+      "text": "決算日に給料25,000円が未払いであり、支払家賃180,000円のうち翌期分30,000円が含まれている。2本の決算整理仕訳を入力しなさい。",
+      "explanation": "未払給料25,000円は当期に発生した費用を追加し、同額の負債を計上します。前払家賃30,000円は翌期分なので当期費用から除外し、資産へ振り替えます。",
+      "explanationSteps": [
+        "未払い給料を当期費用と負債へ追加する。",
+        "翌期分家賃30,000円を当期費用から資産へ振り替える。",
+        "整理後給料と支払家賃の金額を確認する。"
+      ],
+      "commonMistakes": [
+        "未払給料を翌期費用にすると当期費用が過少です。",
+        "前払家賃の仕訳方向を逆にすると当期費用が増えてしまいます。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 決算整理の判断順序"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "見越し",
+        "繰延べ",
+        "複合"
+      ],
+      "correctAnswer": [
+        "給料",
+        "25000",
+        "未払給料",
+        "25000",
+        "前払家賃",
+        "30000",
+        "支払家賃",
+        "30000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "給料"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "25000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "未払給料"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "25000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-debit-account",
+            "label": "借方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "前払家賃"
+          },
+          {
+            "id": "r2-debit-amount",
+            "label": "借方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-credit-account",
+            "label": "貸方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "支払家賃"
+          },
+          {
+            "id": "r2-credit-amount",
+            "label": "貸方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "debitAccountFieldId": "r2-debit-account",
+            "debitAmountFieldId": "r2-debit-amount",
+            "creditAccountFieldId": "r2-credit-account",
+            "creditAmountFieldId": "r2-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice5",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "numeric",
+      "text": "備品の取得原価600,000円、決算整理前の備品減価償却累計額120,000円、当期減価償却費120,000円である。当期末累計額と当期末帳簿価額を求めなさい。",
+      "explanation": "当期末累計額は120,000＋120,000＝240,000円、帳簿価額は600,000−240,000＝360,000円です。",
+      "explanationSteps": [
+        "前期までの累計額と当期分を加える。",
+        "取得原価から当期末累計額を差し引く。",
+        "当期費用と累計額を区別する。"
+      ],
+      "commonMistakes": [
+        "当期減価償却費120,000円だけを累計額とすると前期分が消えます。",
+        "帳簿価額を取得原価から当期費用だけ差し引かないようにします。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 減価償却の決算整理"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "減価償却累計額",
+        "帳簿価額"
+      ],
+      "correctAnswer": [
+        "240000",
+        "360000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "ending-accumulated-depreciation",
+            "label": "当期末減価償却累計額",
+            "kind": "number",
+            "correctAnswer": "240000",
+            "suffix": "円"
+          },
+          {
+            "id": "ending-book-value",
+            "label": "当期末帳簿価額",
+            "kind": "number",
+            "correctAnswer": "360000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice6",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "table",
+      "text": "整理前残高と決算整理事項を反映し、各科目の整理後残高とP/L・B/S分類を入力しなさい。仕入680,000円に期首商品90,000円を加え期末商品130,000円を除く。給料280,000円に未払20,000円を加える。支払家賃168,000円から前払28,000円を除く。貯蔵品45,000円から使用済み32,000円を除く。",
+      "explanation": "整理後残高は仕入640,000円、給料300,000円、支払家賃140,000円、貯蔵品13,000円です。前三者は費用でP/L、貯蔵品は資産でB/Sです。",
+      "explanationSteps": [
+        "科目ごとに同側加算・異側控除を行う。",
+        "整理後残高を五要素で分類する。",
+        "費用をP/L、資産をB/Sへ送る。"
+      ],
+      "commonMistakes": [
+        "整理仕訳額をそのまま整理後残高にしません。",
+        "貯蔵品は未使用分なのでB/Sです。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s1",
+        "label": "11-1 整理後残高の確認"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "整理後残高",
+        "P/LとB/S"
+      ],
+      "correctAnswer": [
+        "640000",
+        "P/L",
+        "300000",
+        "P/L",
+        "140000",
+        "P/L",
+        "13000",
+        "B/S"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "fields": [
+          {
+            "id": "r1-c2",
+            "label": "整理後仕入",
+            "kind": "number",
+            "correctAnswer": "640000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-c3",
+            "label": "仕入の分類",
+            "kind": "classification",
+            "correctAnswer": "P/L"
+          },
+          {
+            "id": "r2-c2",
+            "label": "整理後給料",
+            "kind": "number",
+            "correctAnswer": "300000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-c3",
+            "label": "給料の分類",
+            "kind": "classification",
+            "correctAnswer": "P/L"
+          },
+          {
+            "id": "r3-c2",
+            "label": "整理後支払家賃",
+            "kind": "number",
+            "correctAnswer": "140000",
+            "suffix": "円"
+          },
+          {
+            "id": "r3-c3",
+            "label": "支払家賃の分類",
+            "kind": "classification",
+            "correctAnswer": "P/L"
+          },
+          {
+            "id": "r4-c2",
+            "label": "整理後貯蔵品",
+            "kind": "number",
+            "correctAnswer": "13000",
+            "suffix": "円"
+          },
+          {
+            "id": "r4-c3",
+            "label": "貯蔵品の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          }
+        ],
+        "table": {
+          "headers": [
+            "科目",
+            "整理後残高",
+            "分類"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "cells": [
+                {
+                  "text": "仕入"
+                },
+                {
+                  "fieldId": "r1-c2"
+                },
+                {
+                  "fieldId": "r1-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-2",
+              "cells": [
+                {
+                  "text": "給料"
+                },
+                {
+                  "fieldId": "r2-c2"
+                },
+                {
+                  "fieldId": "r2-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-3",
+              "cells": [
+                {
+                  "text": "支払家賃"
+                },
+                {
+                  "fieldId": "r3-c2"
+                },
+                {
+                  "fieldId": "r3-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-4",
+              "cells": [
+                {
+                  "text": "貯蔵品"
+                },
+                {
+                  "fieldId": "r4-c2"
+                },
+                {
+                  "fieldId": "r4-c3"
+                }
+              ]
+            }
+          ]
+        },
+        "submitLabel": "表を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch11-practice7",
+      "examId": "boki3",
+      "chapterId": "ch11",
+      "type": "correction",
+      "text": "貸倒引当金4,800円を設定する際、誤って「借方 貸倒引当金繰入4,800／貸方 売掛金4,800」と記帳した。借方の費用計上は正しいものとして、訂正仕訳を入力しなさい。",
+      "explanation": "売掛金を貸方へ直接記帳した誤りを借方で取り消し、本来の控除科目である貸倒引当金を貸方へ計上します。",
+      "explanationSteps": [
+        "誤仕訳と正しい仕訳を比較する。",
+        "共通する借方貸倒引当金繰入を相殺する。",
+        "借方売掛金・貸方貸倒引当金で貸方科目だけを訂正する。"
+      ],
+      "commonMistakes": [
+        "貸倒引当金繰入をもう一度借方にすると費用を二重計上します。",
+        "売掛金と貸倒引当金は精算表で別行表示します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch11/ch11-s3",
+        "label": "11-3 貸倒引当金の誤り訂正"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "訂正仕訳",
+        "貸倒引当金"
+      ],
+      "correctAnswer": [
+        "売掛金",
+        "4800",
+        "貸倒引当金",
+        "4800"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売掛金"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "4800",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "4800",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
     }
   ]
 }

@@ -344,6 +344,637 @@
         "貸倒引当金",
         "決算整理仕訳"
       ]
+    },
+    {
+      "id": "boki3-ch12-practice2",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "correction",
+      "text": "青空商事株式会社の整理前残高試算表は本来借方・貸方とも2,860,000円であるが、借方2,950,000円、貸方2,860,000円となった。買掛金90,000円の現金支払について買掛金借方は転記済みである。差額、最初に確認する科目、方向、金額を入力しなさい。",
+      "explanation": "差額は90,000円で、現金貸方90,000円の転記漏れを最初に確認します。",
+      "explanationSteps": [
+        "借方合計と貸方合計の差90,000円を求める。",
+        "同額の買掛金支払取引を特定する。",
+        "借方が多い原因として現金貸方の転記漏れを確認する。"
+      ],
+      "commonMistakes": [
+        "買掛金借方の漏れなら貸方が多くなります。",
+        "差額診断後は元帳と仕訳を必ず照合します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s1",
+        "label": "12-1 試算表の差額診断"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "試算表",
+        "転記漏れ"
+      ],
+      "correctAnswer": [
+        "90000",
+        "現金",
+        "貸方",
+        "90000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "difference",
+            "label": "貸借差額",
+            "kind": "number",
+            "correctAnswer": "90000",
+            "suffix": "円"
+          },
+          {
+            "id": "account",
+            "label": "確認する科目",
+            "kind": "account",
+            "correctAnswer": "現金"
+          },
+          {
+            "id": "side",
+            "label": "確認する方向",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "amount",
+            "label": "確認する金額",
+            "kind": "number",
+            "correctAnswer": "90000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch12-practice3",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "table",
+      "text": "8桁精算表の仕入行について、残高試算表借方720,000円、整理記入借方120,000円、整理記入貸方150,000円である。整理後残高、記入先、記入側を入力しなさい。",
+      "explanation": "720,000＋120,000−150,000＝690,000円で、売上原価を表す費用としてP/L借方へ記入します。",
+      "explanationSteps": [
+        "残高試算表借方と整理借方を加える。",
+        "反対側の整理貸方150,000円を差し引く。",
+        "仕入の整理後残高を費用としてP/L借方へ送る。"
+      ],
+      "commonMistakes": [
+        "690,000円を整理記入欄へ直接書きません。",
+        "期末商品は仕入から控除されるため足しません。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 精算表の横計算"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "精算表",
+        "仕入行"
+      ],
+      "correctAnswer": [
+        "690000",
+        "P/L",
+        "借方"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "adjusted-balance",
+            "label": "仕入の整理後残高",
+            "kind": "number",
+            "correctAnswer": "690000",
+            "suffix": "円"
+          },
+          {
+            "id": "statement",
+            "label": "記入先",
+            "kind": "classification",
+            "correctAnswer": "P/L"
+          },
+          {
+            "id": "side",
+            "label": "記入側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch12-practice4",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "numeric",
+      "text": "精算表のP/L欄に売上1,600,000円、費用合計1,391,800円がある。当期純利益を求め、P/L欄とB/S欄の記入側を入力しなさい。",
+      "explanation": "当期純利益は1,600,000−1,391,800＝208,200円です。利益はP/L借方、B/S貸方へ記入します。",
+      "explanationSteps": [
+        "収益から費用を差し引く。",
+        "P/Lの収益超過を埋めるため借方へ利益を置く。",
+        "利益による純資産増加をB/S貸方へ置く。"
+      ],
+      "commonMistakes": [
+        "当期純利益は費用ではなく差額です。",
+        "当期純損失の場合は記入側が反対になります。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 当期純利益と勘定関係"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "当期純利益",
+        "P/LとB/S"
+      ],
+      "correctAnswer": [
+        "208200",
+        "借方",
+        "貸方"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "net-income",
+            "label": "当期純利益",
+            "kind": "number",
+            "correctAnswer": "208200",
+            "suffix": "円"
+          },
+          {
+            "id": "pl-side",
+            "label": "P/L欄の記入側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "bs-side",
+            "label": "B/S欄の記入側",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch12-practice5",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "classification",
+      "text": "精算表の各科目について、P/L・B/Sの分類と記入側を入力しなさい。",
+      "explanation": "収益・費用はP/L、資産・負債・純資産はB/Sです。控除科目の貸倒引当金はB/S貸方へ置きます。",
+      "explanationSteps": [
+        "各科目を五要素へ分類する。",
+        "収益・費用とB/S要素を分ける。",
+        "通常残高方向または控除表示の方向を確認する。"
+      ],
+      "commonMistakes": [
+        "貸倒引当金は負債ではありませんがB/S貸方に表示します。",
+        "減価償却費と減価償却累計額を混同しないようにします。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s2",
+        "label": "12-2 P/L・B/S分類"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "精算表",
+        "分類"
+      ],
+      "correctAnswer": [
+        "B/S",
+        "借方",
+        "B/S",
+        "貸方",
+        "P/L",
+        "借方",
+        "B/S",
+        "貸方",
+        "B/S",
+        "借方"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "fields": [
+          {
+            "id": "r1-c2",
+            "label": "売掛金の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          },
+          {
+            "id": "r1-c3",
+            "label": "売掛金の記入側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "r2-c2",
+            "label": "貸倒引当金の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          },
+          {
+            "id": "r2-c3",
+            "label": "貸倒引当金の記入側",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "r3-c2",
+            "label": "減価償却費の分類",
+            "kind": "classification",
+            "correctAnswer": "P/L"
+          },
+          {
+            "id": "r3-c3",
+            "label": "減価償却費の記入側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "r4-c2",
+            "label": "未払給料の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          },
+          {
+            "id": "r4-c3",
+            "label": "未払給料の記入側",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "r5-c2",
+            "label": "前払家賃の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          },
+          {
+            "id": "r5-c3",
+            "label": "前払家賃の記入側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          }
+        ],
+        "table": {
+          "headers": [
+            "科目",
+            "分類",
+            "記入側"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "cells": [
+                {
+                  "text": "売掛金240,000円"
+                },
+                {
+                  "fieldId": "r1-c2"
+                },
+                {
+                  "fieldId": "r1-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-2",
+              "cells": [
+                {
+                  "text": "貸倒引当金4,800円"
+                },
+                {
+                  "fieldId": "r2-c2"
+                },
+                {
+                  "fieldId": "r2-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-3",
+              "cells": [
+                {
+                  "text": "減価償却費120,000円"
+                },
+                {
+                  "fieldId": "r3-c2"
+                },
+                {
+                  "fieldId": "r3-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-4",
+              "cells": [
+                {
+                  "text": "未払給料25,000円"
+                },
+                {
+                  "fieldId": "r4-c2"
+                },
+                {
+                  "fieldId": "r4-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-5",
+              "cells": [
+                {
+                  "text": "前払家賃30,000円"
+                },
+                {
+                  "fieldId": "r5-c2"
+                },
+                {
+                  "fieldId": "r5-c3"
+                }
+              ]
+            }
+          ]
+        },
+        "submitLabel": "表を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch12-practice6",
+      "examId": "boki3",
+      "chapterId": "ch12",
+      "type": "journal",
+      "text": "青空商事株式会社の決算振替を完成させなさい。売上1,600,000円、費用は仕入690,000円、給料325,000円、支払家賃150,000円、水道光熱費60,000円、減価償却費120,000円、貸倒引当金繰入4,800円、消耗品費42,000円である。当期純利益は208,200円。収益振替、費用振替、利益振替をすべて入力しなさい。",
+      "explanation": "収益は損益貸方、費用は損益借方へ集め、貸方超過208,200円を繰越利益剰余金へ振り替えます。",
+      "explanationSteps": [
+        "売上を借方、損益を貸方へ振り替える。",
+        "費用合計1,391,800円を損益借方、各費用を貸方へ振り替える。",
+        "損益貸方残高208,200円を借方損益・貸方繰越利益剰余金で閉じる。"
+      ],
+      "commonMistakes": [
+        "費用の貸借を逆にすると各費用勘定がゼロになりません。",
+        "利益振替を損益貸方へ置くと損益勘定の差が拡大します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch12/ch12-s3",
+        "label": "12-3 決算振替と締め切り"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "決算振替",
+        "多行複合仕訳"
+      ],
+      "correctAnswer": [
+        "売上",
+        "1600000",
+        "損益",
+        "1600000",
+        "損益",
+        "1391800",
+        "仕入",
+        "690000",
+        "給料",
+        "325000",
+        "支払家賃",
+        "150000",
+        "水道光熱費",
+        "60000",
+        "減価償却費",
+        "120000",
+        "貸倒引当金繰入",
+        "4800",
+        "消耗品費",
+        "42000",
+        "損益",
+        "208200",
+        "繰越利益剰余金",
+        "208200"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "1600000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "損益"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "1600000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-debit-account",
+            "label": "借方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "損益"
+          },
+          {
+            "id": "r2-debit-amount",
+            "label": "借方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "1391800",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-credit-account",
+            "label": "貸方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "仕入"
+          },
+          {
+            "id": "r2-credit-amount",
+            "label": "貸方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "690000",
+            "suffix": "円"
+          },
+          {
+            "id": "r3-credit-account",
+            "label": "貸方科目（3行目）",
+            "kind": "account",
+            "correctAnswer": "給料"
+          },
+          {
+            "id": "r3-credit-amount",
+            "label": "貸方金額（3行目）",
+            "kind": "number",
+            "correctAnswer": "325000",
+            "suffix": "円"
+          },
+          {
+            "id": "r4-credit-account",
+            "label": "貸方科目（4行目）",
+            "kind": "account",
+            "correctAnswer": "支払家賃"
+          },
+          {
+            "id": "r4-credit-amount",
+            "label": "貸方金額（4行目）",
+            "kind": "number",
+            "correctAnswer": "150000",
+            "suffix": "円"
+          },
+          {
+            "id": "r5-credit-account",
+            "label": "貸方科目（5行目）",
+            "kind": "account",
+            "correctAnswer": "水道光熱費"
+          },
+          {
+            "id": "r5-credit-amount",
+            "label": "貸方金額（5行目）",
+            "kind": "number",
+            "correctAnswer": "60000",
+            "suffix": "円"
+          },
+          {
+            "id": "r6-credit-account",
+            "label": "貸方科目（6行目）",
+            "kind": "account",
+            "correctAnswer": "減価償却費"
+          },
+          {
+            "id": "r6-credit-amount",
+            "label": "貸方金額（6行目）",
+            "kind": "number",
+            "correctAnswer": "120000",
+            "suffix": "円"
+          },
+          {
+            "id": "r7-credit-account",
+            "label": "貸方科目（7行目）",
+            "kind": "account",
+            "correctAnswer": "貸倒引当金繰入"
+          },
+          {
+            "id": "r7-credit-amount",
+            "label": "貸方金額（7行目）",
+            "kind": "number",
+            "correctAnswer": "4800",
+            "suffix": "円"
+          },
+          {
+            "id": "r8-credit-account",
+            "label": "貸方科目（8行目）",
+            "kind": "account",
+            "correctAnswer": "消耗品費"
+          },
+          {
+            "id": "r8-credit-amount",
+            "label": "貸方金額（8行目）",
+            "kind": "number",
+            "correctAnswer": "42000",
+            "suffix": "円"
+          },
+          {
+            "id": "r9-debit-account",
+            "label": "借方科目（9行目）",
+            "kind": "account",
+            "correctAnswer": "損益"
+          },
+          {
+            "id": "r9-debit-amount",
+            "label": "借方金額（9行目）",
+            "kind": "number",
+            "correctAnswer": "208200",
+            "suffix": "円"
+          },
+          {
+            "id": "r9-credit-account",
+            "label": "貸方科目（9行目）",
+            "kind": "account",
+            "correctAnswer": "繰越利益剰余金"
+          },
+          {
+            "id": "r9-credit-amount",
+            "label": "貸方金額（9行目）",
+            "kind": "number",
+            "correctAnswer": "208200",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "debitAccountFieldId": "r2-debit-account",
+            "debitAmountFieldId": "r2-debit-amount",
+            "creditAccountFieldId": "r2-credit-account",
+            "creditAmountFieldId": "r2-credit-amount"
+          },
+          {
+            "id": "row-3",
+            "creditAccountFieldId": "r3-credit-account",
+            "creditAmountFieldId": "r3-credit-amount"
+          },
+          {
+            "id": "row-4",
+            "creditAccountFieldId": "r4-credit-account",
+            "creditAmountFieldId": "r4-credit-amount"
+          },
+          {
+            "id": "row-5",
+            "creditAccountFieldId": "r5-credit-account",
+            "creditAmountFieldId": "r5-credit-amount"
+          },
+          {
+            "id": "row-6",
+            "creditAccountFieldId": "r6-credit-account",
+            "creditAmountFieldId": "r6-credit-amount"
+          },
+          {
+            "id": "row-7",
+            "creditAccountFieldId": "r7-credit-account",
+            "creditAmountFieldId": "r7-credit-amount"
+          },
+          {
+            "id": "row-8",
+            "creditAccountFieldId": "r8-credit-account",
+            "creditAmountFieldId": "r8-credit-amount"
+          },
+          {
+            "id": "row-9",
+            "debitAccountFieldId": "r9-debit-account",
+            "debitAmountFieldId": "r9-debit-amount",
+            "creditAccountFieldId": "r9-credit-account",
+            "creditAmountFieldId": "r9-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
     }
   ]
 }

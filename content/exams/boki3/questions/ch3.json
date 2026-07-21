@@ -514,6 +514,608 @@
         "誤り診断",
         "貸借平均"
       ]
+    },
+    {
+      "id": "boki3-ch3-practice1",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "journal",
+      "text": "商品125,000円を掛けで販売した。借方科目・金額、貸方科目・金額を入力しなさい。",
+      "explanation": "後日代金を受け取る権利である売掛金が増加し、販売による収益である売上が増加します。",
+      "explanationSteps": [
+        "販売目的の商品を販売したことを確認する。",
+        "代金が後日回収なので売掛金を選ぶ。",
+        "資産の増加を借方、収益の増加を貸方に置く。"
+      ],
+      "commonMistakes": [
+        "未収入金は商品以外の売却代金に使います。",
+        "掛売上で現金はまだ増加していません。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引から仕訳を作る"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "掛売上",
+        "仕訳"
+      ],
+      "correctAnswer": [
+        "売掛金",
+        "125000",
+        "売上",
+        "125000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売掛金"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "125000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "125000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice2",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "journal",
+      "text": "商品180,000円を販売し、70,000円は現金で受け取り、残額は掛けとした。複合仕訳を完成させなさい。",
+      "explanation": "現金70,000円と売掛金110,000円の資産増加を借方に置き、売上180,000円を貸方に置きます。",
+      "explanationSteps": [
+        "売上総額180,000円を確認する。",
+        "掛け部分を180,000円−70,000円＝110,000円と計算する。",
+        "借方2科目の合計と貸方売上が一致するか確認する。"
+      ],
+      "commonMistakes": [
+        "売上を現金受取額70,000円だけにすると収益が過少になります。",
+        "売掛金を180,000円とすると現金受取分を二重計上します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s2",
+        "label": "3-2 複合仕訳の組み立て"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "複合仕訳",
+        "一部現金売上"
+      ],
+      "correctAnswer": [
+        "現金",
+        "70000",
+        "売上",
+        "180000",
+        "売掛金",
+        "110000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "現金"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "70000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "180000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-debit-account",
+            "label": "借方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "売掛金"
+          },
+          {
+            "id": "r2-debit-amount",
+            "label": "借方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "110000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "debitAccountFieldId": "r2-debit-account",
+            "debitAmountFieldId": "r2-debit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice3",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "correction",
+      "text": "備品90,000円を現金購入した際、誤って「借方 消耗品費90,000／貸方 現金90,000」と記帳した。現金の記帳は正しいものとして、訂正仕訳を入力しなさい。",
+      "explanation": "誤って費用計上した消耗品費を貸方で取り消し、本来の資産である備品を借方へ計上します。現金はすでに正しく記帳されているため動かしません。",
+      "explanationSteps": [
+        "誤仕訳と正しい仕訳を並べる。",
+        "両方に共通する貸方現金90,000円を相殺する。",
+        "残った借方備品と貸方消耗品費で訂正する。"
+      ],
+      "commonMistakes": [
+        "現金をもう一度貸方にすると支払を二重計上します。",
+        "備品購入は当期費用ではなく固定資産の取得です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s2",
+        "label": "3-2 誤仕訳の訂正"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "訂正仕訳",
+        "備品"
+      ],
+      "correctAnswer": [
+        "備品",
+        "90000",
+        "消耗品費",
+        "90000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "備品"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "90000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "消耗品費"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "90000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice4",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "現金の期首残高は250,000円である。当期に現金売上80,000円、売掛金の現金回収45,000円、買掛金の現金支払60,000円、給料の現金支払35,000円があった。期末現金残高を求めなさい。",
+      "explanation": "現金の増加125,000円と減少95,000円を期首残高へ反映すると、250,000＋80,000＋45,000−60,000−35,000＝280,000円です。",
+      "explanationSteps": [
+        "現金が増える取引と減る取引に分ける。",
+        "増加額80,000円＋45,000円＝125,000円を求める。",
+        "減少額60,000円＋35,000円＝95,000円を求め、期首残高へ加減する。"
+      ],
+      "commonMistakes": [
+        "売掛金回収を売上としても、現金増加額自体は同じなので科目の意味を別途確認します。",
+        "買掛金支払と給料支払は現金の減少です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 元帳残高の計算"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "元帳",
+        "現金残高"
+      ],
+      "correctAnswer": [
+        "280000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "ending-cash",
+            "label": "期末現金残高",
+            "kind": "number",
+            "correctAnswer": "280000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice5",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "table",
+      "text": "普通預金へ300,000円を借り入れた。各科目の五要素、増加側の借方・貸方を入力しなさい。",
+      "explanation": "普通預金は資産で増加は借方、借入金は負債で増加は貸方です。現金が入ったという表面だけで収益にしません。",
+      "explanationSteps": [
+        "増加した普通預金と借入金を特定する。",
+        "普通預金を資産、借入金を負債へ分類する。",
+        "資産増加は借方、負債増加は貸方と判断する。"
+      ],
+      "commonMistakes": [
+        "借入による入金は売上ではありません。",
+        "借入金は返済義務なので負債です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引から仕訳を作る"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "五要素",
+        "借入"
+      ],
+      "correctAnswer": [
+        "資産",
+        "借方",
+        "負債",
+        "貸方"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "fields": [
+          {
+            "id": "r1-c2",
+            "label": "普通預金の五要素",
+            "kind": "text",
+            "correctAnswer": "資産"
+          },
+          {
+            "id": "r1-c3",
+            "label": "普通預金の増加側",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "r2-c2",
+            "label": "借入金の五要素",
+            "kind": "text",
+            "correctAnswer": "負債"
+          },
+          {
+            "id": "r2-c3",
+            "label": "借入金の増加側",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          }
+        ],
+        "table": {
+          "headers": [
+            "科目",
+            "五要素",
+            "増加側"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "cells": [
+                {
+                  "text": "普通預金"
+                },
+                {
+                  "fieldId": "r1-c2"
+                },
+                {
+                  "fieldId": "r1-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-2",
+              "cells": [
+                {
+                  "text": "借入金"
+                },
+                {
+                  "fieldId": "r2-c2"
+                },
+                {
+                  "fieldId": "r2-c3"
+                }
+              ]
+            }
+          ]
+        },
+        "submitLabel": "表を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice6",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "table",
+      "text": "株主から普通預金へ500,000円の出資を受け、備品120,000円を普通預金から購入し、さらに200,000円を借り入れて普通預金へ入金した。取引後の各勘定残高と残高方向を入力しなさい。期首残高はすべてゼロとする。",
+      "explanation": "普通預金は500,000−120,000＋200,000＝580,000円、備品120,000円、借入金200,000円、資本金500,000円です。資産は借方残高、負債・純資産は貸方残高です。",
+      "explanationSteps": [
+        "3取引を個別に仕訳する。",
+        "科目別に増減を集計する。",
+        "五要素から残高方向を確認し、借方残高合計700,000円と貸方残高合計700,000円を照合する。"
+      ],
+      "commonMistakes": [
+        "備品購入を費用にすると資産合計が変わります。",
+        "借入金入金を収益にすると負債が欠落します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 元帳と残高試算表"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "残高試算表",
+        "総合"
+      ],
+      "correctAnswer": [
+        "借方",
+        "580000",
+        "借方",
+        "120000",
+        "貸方",
+        "200000",
+        "貸方",
+        "500000"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "fields": [
+          {
+            "id": "r1-c2",
+            "label": "普通預金の残高方向",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "r1-c3",
+            "label": "普通預金残高",
+            "kind": "number",
+            "correctAnswer": "580000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-c2",
+            "label": "備品の残高方向",
+            "kind": "side",
+            "correctAnswer": "借方"
+          },
+          {
+            "id": "r2-c3",
+            "label": "備品残高",
+            "kind": "number",
+            "correctAnswer": "120000",
+            "suffix": "円"
+          },
+          {
+            "id": "r3-c2",
+            "label": "借入金の残高方向",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "r3-c3",
+            "label": "借入金残高",
+            "kind": "number",
+            "correctAnswer": "200000",
+            "suffix": "円"
+          },
+          {
+            "id": "r4-c2",
+            "label": "資本金の残高方向",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "r4-c3",
+            "label": "資本金残高",
+            "kind": "number",
+            "correctAnswer": "500000",
+            "suffix": "円"
+          }
+        ],
+        "table": {
+          "headers": [
+            "勘定科目",
+            "残高方向",
+            "残高"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "cells": [
+                {
+                  "text": "普通預金"
+                },
+                {
+                  "fieldId": "r1-c2"
+                },
+                {
+                  "fieldId": "r1-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-2",
+              "cells": [
+                {
+                  "text": "備品"
+                },
+                {
+                  "fieldId": "r2-c2"
+                },
+                {
+                  "fieldId": "r2-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-3",
+              "cells": [
+                {
+                  "text": "借入金"
+                },
+                {
+                  "fieldId": "r3-c2"
+                },
+                {
+                  "fieldId": "r3-c3"
+                }
+              ]
+            },
+            {
+              "id": "row-4",
+              "cells": [
+                {
+                  "text": "資本金"
+                },
+                {
+                  "fieldId": "r4-c2"
+                },
+                {
+                  "fieldId": "r4-c3"
+                }
+              ]
+            }
+          ]
+        },
+        "submitLabel": "表を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch3-practice7",
+      "examId": "boki3",
+      "chapterId": "ch3",
+      "type": "correction",
+      "text": "残高試算表の借方合計が890,000円、貸方合計が840,000円であった。買掛金50,000円を現金で支払った仕訳のうち、買掛金の借方転記は済んでいる。最初に確認すべき転記漏れの科目、方向、金額を答えなさい。",
+      "explanation": "借方が50,000円多いのは、現金の貸方50,000円が転記されず、現金借方残高が50,000円多く残った可能性が高いためです。",
+      "explanationSteps": [
+        "貸借差額890,000−840,000＝50,000円を求める。",
+        "同額50,000円の取引を探す。",
+        "買掛金支払の相手側である現金貸方の転記を確認する。"
+      ],
+      "commonMistakes": [
+        "買掛金借方が漏れた場合は貸方合計が多くなります。",
+        "差額だけで断定せず、元帳と仕訳を照合します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 試算表の差額診断"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "転記漏れ",
+        "エラー診断"
+      ],
+      "correctAnswer": [
+        "現金",
+        "貸方",
+        "50000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "missing-account",
+            "label": "転記漏れを確認する科目",
+            "kind": "account",
+            "correctAnswer": "現金"
+          },
+          {
+            "id": "missing-side",
+            "label": "転記漏れを確認する方向",
+            "kind": "side",
+            "correctAnswer": "貸方"
+          },
+          {
+            "id": "missing-amount",
+            "label": "転記漏れを確認する金額",
+            "kind": "number",
+            "correctAnswer": "50000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
     }
   ]
 }
