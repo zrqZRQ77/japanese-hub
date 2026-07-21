@@ -1,0 +1,72 @@
+const ch3InvestmentCoverage = {
+  examId: 'fp3',
+  chapterId: 'ch3',
+  batch: 5,
+  verifiedAt: '2026-07-21',
+  lawReferenceDate: '2026-04-01',
+  protectedChoiceQuestions: 21,
+  addedNonChoiceQuestions: 14,
+  guideSectionIds: ['ch3-s1', 'ch3-s2', 'ch3-s3', 'ch3-s4', 'ch3-s5', 'ch3-s6', 'ch3-s7', 'ch3-s8'],
+  abilityCoverage: [
+    {
+      abilityId: 'fp3-ability-09',
+      label: '経済指標・金融政策・預貯金・預金保険',
+      guideSectionIds: ['ch3-s1', 'ch3-s2'],
+      practiceQuestionIds: ['fp3-ch3-practice1', 'fp3-ch3-practice2'],
+    },
+    {
+      abilityId: 'fp3-ability-10',
+      label: '債券利回り・株式指標・価格と金利の関係',
+      guideSectionIds: ['ch3-s3', 'ch3-s4'],
+      practiceQuestionIds: ['fp3-ch3-practice3', 'fp3-ch3-practice4', 'fp3-ch3-practice5'],
+    },
+    {
+      abilityId: 'fp3-ability-11',
+      label: '投資信託・外貨建商品のコストと損益',
+      guideSectionIds: ['ch3-s5', 'ch3-s6'],
+      practiceQuestionIds: ['fp3-ch3-practice6', 'fp3-ch3-practice7', 'fp3-ch3-practice8'],
+    },
+    {
+      abilityId: 'fp3-ability-12',
+      label: '金融税務・NISA・ポートフォリオ・派生商品',
+      guideSectionIds: ['ch3-s7', 'ch3-s8'],
+      practiceQuestionIds: [
+        'fp3-ch3-practice9',
+        'fp3-ch3-practice10',
+        'fp3-ch3-practice11',
+        'fp3-ch3-practice12',
+        'fp3-ch3-practice13',
+        'fp3-ch3-practice14',
+      ],
+    },
+  ],
+  calculationAssertions: [
+    { id: 'fp3-invest-calc-01', baselineCalculationId: null, label: '実質金利・預金保護・税引後利息', questionId: 'fp3-ch3-practice2' },
+    { id: 'fp3-invest-calc-02', baselineCalculationId: 'fp3-calc-06', label: '債券直接利回り・最終利回り', questionId: 'fp3-ch3-practice3' },
+    { id: 'fp3-invest-calc-03', baselineCalculationId: 'fp3-calc-07', label: 'EPS・BPS・PER・PBR・ROE・配当指標', questionId: 'fp3-ch3-practice5' },
+    { id: 'fp3-invest-calc-04', baselineCalculationId: null, label: '投資信託基準価額・口数・評価額', questionId: 'fp3-ch3-practice6' },
+    { id: 'fp3-invest-calc-05', baselineCalculationId: null, label: '投資信託コスト', questionId: 'fp3-ch3-practice7' },
+    { id: 'fp3-invest-calc-06', baselineCalculationId: 'fp3-calc-08', label: '外貨換算・為替差損益', questionId: 'fp3-ch3-practice8' },
+    { id: 'fp3-invest-calc-07', baselineCalculationId: 'fp3-calc-09', label: 'NISA年間枠・非課税保有限度額', questionId: 'fp3-ch3-practice9' },
+    { id: 'fp3-invest-calc-08', baselineCalculationId: 'fp3-calc-09', label: 'NISA売却後の枠再利用', questionId: 'fp3-ch3-practice10' },
+    { id: 'fp3-invest-calc-09', baselineCalculationId: null, label: 'ポートフォリオ期待収益率', questionId: 'fp3-ch3-practice11' },
+    { id: 'fp3-invest-calc-10', baselineCalculationId: null, label: 'ポートフォリオ分散・標準偏差', questionId: 'fp3-ch3-practice12' },
+  ],
+  officialSourceGroups: [
+    '金融庁 NISA特設ウェブサイト',
+    '日本証券業協会・J-FLEC 債券利回り・株式指標',
+    '投資信託協会 基準価額・目論見書・信託報酬',
+    '日本銀行 基準外国為替相場',
+  ],
+  boundaries: {
+    existingChoiceQuestionsPreserved: true,
+    existingCardsPreserved: true,
+    usesOnlyLawEffectiveAtReferenceDate: true,
+    futureNisaChangesExcluded: true,
+    nisaReuseUsesAcquisitionCost: true,
+    officialQuestionTextCopied: false,
+    mockExamIncluded: false,
+  },
+}
+
+module.exports = ch3InvestmentCoverage
