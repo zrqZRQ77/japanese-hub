@@ -148,7 +148,7 @@ const choiceQuestions = questions.filter(question => !question.practiceSheet)
 const nonChoiceQuestions = questions.filter(question => question.practiceSheet)
 const cards = JSON.parse(fs.readFileSync(path.join(root, 'content/exams/boki3/cards/ch12.json'), 'utf8')).cards
 assertEqual(choiceQuestions.length, 8, 'chapter 12 choice question count')
-assertEqual(nonChoiceQuestions.length, 6, 'chapter 12 non-choice question count')
+assertEqual(nonChoiceQuestions.length, 7, 'chapter 12 non-choice question count')
 assertEqual(cards.length, 12, 'chapter 12 card count')
 if (!questions.find(question => question.id === 'boki3-ch12-q8')?.text.includes('取引分解法')) {
   fail('boki3-ch12-q8 must specify 取引分解法 to ensure a unique answer')
