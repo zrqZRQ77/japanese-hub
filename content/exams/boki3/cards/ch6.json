@@ -9,7 +9,25 @@
       "chapterId": "ch6",
       "front": "商品の掛販売で使う資産科目は？",
       "back": "売掛金。商品を販売し、代金を後日受け取る権利。",
-      "tags": ["売掛金", "掛販売"]
+      "tags": [
+        "売掛金",
+        "掛販売"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card2",
@@ -17,7 +35,25 @@
       "chapterId": "ch6",
       "front": "商品の掛仕入で使う負債科目は？",
       "back": "買掛金。商品を仕入れ、代金を後日支払う義務。",
-      "tags": ["買掛金", "掛仕入"]
+      "tags": [
+        "買掛金",
+        "掛仕入"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card3",
@@ -25,7 +61,25 @@
       "chapterId": "ch6",
       "front": "掛販売の商品が返品されたときの基本仕訳は？",
       "back": "売上／売掛金。売上と回収予定額を同額取り消す。",
-      "tags": ["売上返品", "売掛金"]
+      "tags": [
+        "売上返品",
+        "売掛金"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card4",
@@ -33,7 +87,25 @@
       "chapterId": "ch6",
       "front": "掛仕入の商品を返品したときの基本仕訳は？",
       "back": "買掛金／仕入。支払義務と仕入を同額取り消す。",
-      "tags": ["仕入返品", "買掛金"]
+      "tags": [
+        "仕入返品",
+        "買掛金"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card5",
@@ -41,7 +113,25 @@
       "chapterId": "ch6",
       "front": "売掛金回収時に当社負担の振込手数料が差し引かれた場合は？",
       "back": "普通預金と支払手数料を借方、売掛金全額を貸方。",
-      "tags": ["売掛金回収", "振込手数料"]
+      "tags": [
+        "売掛金回収",
+        "振込手数料"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q5",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q5"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card6",
@@ -49,7 +139,25 @@
       "chapterId": "ch6",
       "front": "買掛金支払時に当社負担の振込手数料が発生した場合は？",
       "back": "買掛金と支払手数料を借方、合計出金額を預金の貸方。",
-      "tags": ["買掛金支払", "支払手数料"]
+      "tags": [
+        "買掛金支払",
+        "支払手数料"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card7",
@@ -57,7 +165,25 @@
       "chapterId": "ch6",
       "front": "得意先ごとの売掛金を管理する補助簿は？",
       "back": "売掛金元帳（得意先元帳）。得意先別残高合計を総勘定元帳と照合する。",
-      "tags": ["売掛金元帳", "補助簿"]
+      "tags": [
+        "売掛金元帳",
+        "補助簿"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card8",
@@ -65,23 +191,79 @@
       "chapterId": "ch6",
       "front": "仕入先ごとの買掛金を管理する補助簿は？",
       "back": "買掛金元帳（仕入先元帳）。仕入先別残高合計を総勘定元帳と照合する。",
-      "tags": ["買掛金元帳", "補助簿"]
+      "tags": [
+        "買掛金元帳",
+        "補助簿"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card9",
       "examId": "boki3",
       "chapterId": "ch6",
-      "front": "売掛金と未収入金の違いは？",
-      "back": "売掛金は商品販売、未収入金は備品など商品以外の売却による債権。",
-      "tags": ["売掛金", "未収入金", "比較"]
+      "front": "商品販売ではなく備品を後払いで売却した。売掛金を使ってよい？",
+      "back": "使わない。商品販売による債権ではないため未収入金を使う。物の名称ではなく、通常の商品売買か商品以外の売却かで判断する。",
+      "tags": [
+        "売掛金",
+        "未収入金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q10",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q10"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card10",
       "examId": "boki3",
       "chapterId": "ch6",
-      "front": "買掛金と未払金の違いは？",
-      "back": "買掛金は商品仕入、未払金は備品など商品以外の購入による債務。",
-      "tags": ["買掛金", "未払金", "比較"]
+      "front": "商品仕入ではなく備品を後払いで購入した。買掛金を使ってよい？",
+      "back": "使わない。商品仕入による債務ではないため未払金を使う。物の名称ではなく、販売目的の商品仕入か商品以外の購入かで判断する。",
+      "tags": [
+        "買掛金",
+        "未払金",
+        "比較"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card11",
@@ -89,7 +271,25 @@
       "chapterId": "ch6",
       "front": "売掛金を約束手形で回収したときの仕訳は？",
       "back": "受取手形／売掛金。売上は再計上しない。",
-      "tags": ["売掛金", "受取手形"]
+      "tags": [
+        "売掛金",
+        "受取手形"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card12",
@@ -97,7 +297,25 @@
       "chapterId": "ch6",
       "front": "買掛金について電子記録債務の発生記録が行われたときは？",
       "back": "買掛金／電子記録債務。仕入は再計上しない。",
-      "tags": ["買掛金", "電子記録債務"]
+      "tags": [
+        "買掛金",
+        "電子記録債務"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card13",
@@ -105,7 +323,24 @@
       "chapterId": "ch6",
       "front": "クレジットカード販売で後日信販会社から受け取る権利は？",
       "back": "クレジット売掛金という資産。通常の売掛金と区別する。",
-      "tags": ["クレジット売掛金"]
+      "tags": [
+        "クレジット売掛金"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q11",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q11"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card14",
@@ -113,7 +348,25 @@
       "chapterId": "ch6",
       "front": "クレジット販売の決済手数料は何の科目？",
       "back": "支払手数料という費用。売上から直接差し引かない。",
-      "tags": ["クレジット売掛金", "支払手数料"]
+      "tags": [
+        "クレジット売掛金",
+        "支払手数料"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q13",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q13"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card15",
@@ -121,7 +374,25 @@
       "chapterId": "ch6",
       "front": "販売時にカード手数料を計上する場合のクレジット売掛金は？",
       "back": "売上総額−決済手数料。支払手数料との合計が売上総額に一致する。",
-      "tags": ["クレジット売掛金", "手数料計算"]
+      "tags": [
+        "クレジット売掛金",
+        "手数料計算"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s1",
+        "label": "6-1 売掛金・買掛金の発生・返品・決済・元帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q11",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q11"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     },
     {
       "id": "boki3-ch6-card16",
@@ -129,7 +400,26 @@
       "chapterId": "ch6",
       "front": "クレジット売掛金の入金時にしてはいけないことは？",
       "back": "売上や販売時に計上済みの手数料を再計上しない。預金／クレジット売掛金で債権を取り崩す。",
-      "tags": ["クレジット売掛金", "入金", "二重計上"]
+      "tags": [
+        "クレジット売掛金",
+        "入金",
+        "二重計上"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch6/ch6-s2",
+        "label": "6-2 クレジット売掛金と決済手数料"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch6?question=boki3-ch6-q13",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch6-q13"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch8",
+        "label": "第8章 その他の債権・債務",
+        "chapterId": "ch8"
+      }
     }
   ]
 }

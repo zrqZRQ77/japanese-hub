@@ -7,23 +7,53 @@
       "id": "boki3-ch3-card1",
       "examId": "boki3",
       "chapterId": "ch3",
-      "front": "簿記において、帳簿の左側を何と呼ぶ？",
-      "back": "借方（かりかた）。",
+      "front": "仕訳や元帳で左側を何と呼び、どの五要素の増加を記録する？",
+      "back": "左側は借方。資産の増加と費用の発生を記録する。借方が常に増加という意味ではなく、負債・純資産・収益の減少も借方へ記録する。",
       "tags": [
         "基本ルール",
         "借方"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card2",
       "examId": "boki3",
       "chapterId": "ch3",
-      "front": "簿記において、帳簿の右側を何と呼ぶ？",
-      "back": "貸方（かしかた）。",
+      "front": "「現金が増えたので貸方」と判断した。何が誤り？",
+      "back": "現金は資産なので、増加は借方。入金・出金という言葉だけで借貸を決めず、最初に勘定科目の五要素と増減を確認する。",
       "tags": [
         "基本ルール",
         "貸方"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card3",
@@ -35,7 +65,22 @@
         "5要素",
         "資産",
         "判断手順"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card4",
@@ -47,7 +92,22 @@
         "5要素",
         "収益",
         "費用"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card5",
@@ -58,7 +118,22 @@
       "tags": [
         "帳簿",
         "仕訳帳"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s2",
+        "label": "3-2 取引から仕訳を完成させる"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card6",
@@ -69,7 +144,22 @@
       "tags": [
         "帳簿",
         "総勘定元帳"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card7",
@@ -80,7 +170,22 @@
       "tags": [
         "帳簿",
         "転記"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card8",
@@ -91,7 +196,22 @@
       "tags": [
         "帳簿",
         "補助簿"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card9",
@@ -103,7 +223,22 @@
         "5要素",
         "借方",
         "貸方"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card10",
@@ -114,7 +249,22 @@
       "tags": [
         "取引の8要素",
         "基本ルール"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card11",
@@ -126,7 +276,22 @@
         "仕訳",
         "判断手順",
         "検算"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card12",
@@ -140,7 +305,22 @@
         "買掛金",
         "未収入金",
         "未払金"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s2",
+        "label": "3-2 取引から仕訳を完成させる"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q7",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q7"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card13",
@@ -152,7 +332,22 @@
         "前払金",
         "仕入",
         "判断手順"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s1",
+        "label": "3-1 取引を会計の変化に分解する"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q9",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q9"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card14",
@@ -164,7 +359,22 @@
         "複合仕訳",
         "貸借平均",
         "検算"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch3-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card15",
@@ -176,7 +386,22 @@
         "複合仕訳",
         "転記",
         "諸口"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q14",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q14"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     },
     {
       "id": "boki3-ch3-card16",
@@ -188,7 +413,22 @@
         "試算表",
         "誤り診断",
         "検算"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch3/ch3-s3",
+        "label": "3-3 仕訳帳から元帳・試算表へ"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch3?question=boki3-ch3-q16",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch3-q16"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch2",
+        "label": "第2章 勘定科目と5要素",
+        "chapterId": "ch2"
+      }
     }
   ]
 }

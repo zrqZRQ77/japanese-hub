@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from 'react'
 import { useMemo, useState } from 'react'
+import Link from 'next/link'
 import { RotateCcw, Layers, CheckCircle2 } from 'lucide-react'
 import { ChapterMeta, KnowledgeCard } from '@/lib/types'
 import { useProgress } from '@/lib/hooks/useProgress'
@@ -269,6 +270,7 @@ export default function FlashcardDeck({
                 total={visibleCards.length}
                 remembered={rememberedCardIds.has(activeCard.id)}
               />
+              <div className="flashcard-type-badge">{activeCard.cardType ?? '記憶'}</div>
               <div className="flashcard-main-text">{activeCard.front}</div>
               <div className="flashcard-hint">クリックして答えを見る</div>
             </div>
@@ -279,12 +281,19 @@ export default function FlashcardDeck({
                 total={visibleCards.length}
                 remembered={rememberedCardIds.has(activeCard.id)}
               />
+              <div className="flashcard-type-badge">{activeCard.cardType ?? '記憶'}</div>
               <div className="flashcard-answer">{activeCard.back}</div>
               <div className="flashcard-tags">
                 {activeCard.tags?.map(tag => <span key={tag}>{tag}</span>)}
               </div>
             </div>
           </button>
+        </div>
+
+        <div className="flashcard-learning-links" aria-label="関連学習リンク">
+          {activeCard.guideLink && <Link href={activeCard.guideLink.href}>教材：{activeCard.guideLink.label}</Link>}
+          {activeCard.questionLink && <Link href={activeCard.questionLink.href}>{activeCard.questionLink.label}</Link>}
+          {activeCard.relatedChapterLink && <Link href={activeCard.relatedChapterLink.href}>関連：{activeCard.relatedChapterLink.label}</Link>}
         </div>
 
         <div className="flashcard-actions">

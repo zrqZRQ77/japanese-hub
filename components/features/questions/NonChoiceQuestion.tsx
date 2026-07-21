@@ -13,13 +13,14 @@ interface Props {
   question: Question
   storedAnswer: string | string[] | null
   onSubmit: (answers: string[], isCorrect: boolean) => void
+  reviewCardLink?: { href: string; label: string; cardType?: string }
 }
 
 function fieldInputMode(field: PracticeField): 'text' | 'numeric' {
   return field.kind === 'number' ? 'numeric' : 'text'
 }
 
-export default function NonChoiceQuestion({ question, storedAnswer, onSubmit }: Props) {
+export default function NonChoiceQuestion({ question, storedAnswer, onSubmit, reviewCardLink }: Props) {
   const sheet = question.practiceSheet!
 
   const initialValues = useMemo(
@@ -286,6 +287,23 @@ export default function NonChoiceQuestion({ question, storedAnswer, onSubmit }: 
               fontWeight: 800,
             }}>
               教材で復習：{question.guideLink.label}
+            </Link>
+          )}
+          {!grade.isCorrect && reviewCardLink && (
+            <Link href={reviewCardLink.href} style={{
+              display: 'inline-flex',
+              marginTop: 10,
+              marginLeft: 8,
+              padding: '9px 13px',
+              borderRadius: 'var(--radius-sm)',
+              background: 'var(--color-bg)',
+              border: '1px solid var(--color-border)',
+              color: 'var(--color-success)',
+              textDecoration: 'none',
+              fontSize: '0.84rem',
+              fontWeight: 800,
+            }}>
+              {reviewCardLink.cardType ? `${reviewCardLink.cardType}カード：` : '知識カード：'}{reviewCardLink.label}
             </Link>
           )}
         </div>

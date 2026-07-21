@@ -18,9 +18,10 @@ interface Props {
   examId: string
   chapterId: string
   initialQuestionId?: string
+  reviewCardsByQuestion?: Record<string, { href: string; label: string; cardType?: string }>
 }
 
-export default function QuestionClient({ questions, chapterTitle, examId, chapterId, initialQuestionId }: Props) {
+export default function QuestionClient({ questions, chapterTitle, examId, chapterId, initialQuestionId, reviewCardsByQuestion = {} }: Props) {
   const initialQuestionIndex = Math.max(0, questions.findIndex(question => question.id === initialQuestionId))
   const [current, setCurrent] = useState(initialQuestionIndex)
   const [selected, setSelected] = useState<string | string[] | null>(null)
@@ -29,6 +30,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
   const { progress, recordQuestionAnswer } = useProgress(examId)
 
   const q = questions[current]
+  const reviewCardLink = reviewCardsByQuestion[q?.id]
   const base = `/exams/${examId}`
   const chapterCardsPath = `${base}/cards?chapter=${chapterId}`
 
@@ -337,6 +339,7 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
               question={q}
               storedAnswer={selectedAnswer}
               onSubmit={handlePracticeSubmit}
+              reviewCardLink={reviewCardLink}
             />
           ) : (
             (q.options ?? []).map(opt => (
@@ -392,6 +395,23 @@ export default function QuestionClient({ questions, chapterTitle, examId, chapte
                 fontSize: '0.93rem', lineHeight: 1.85,
                 color: 'var(--color-text)',
               }}>{q.explanation}</p>
+            </div>
+          )}
+
+          {isAnswered && currentAnswerState === 'wrong' && !q.practiceSheet && reviewCardLink && (
+            <div style={{
+              marginTop: 12,
+              padding: '14px 16px',
+              borderRadius: 'var(--radius-md)',
+              border: '1px solid var(--color-border)',
+              background: 'var(--color-success-bg)',
+              fontSize: '0.86rem',
+              lineHeight: 1.7,
+            }}>
+              <strong style={{ display: 'block', marginBottom: 7 }}>間違えた内容をカードで復習</strong>
+              <Link href={reviewCardLink.href} style={{ color: 'var(--color-success)', fontWeight: 800, textDecoration: 'none' }}>
+                {reviewCardLink.cardType ? `${reviewCardLink.cardType}カード：` : ''}{reviewCardLink.label} →
+              </Link>
             </div>
           )}
 

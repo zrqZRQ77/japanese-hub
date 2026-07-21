@@ -201,6 +201,13 @@ export interface ExamMockConfig {
 }
 
 /** 知識カード */
+export type KnowledgeCardType = '記憶' | '判断' | '手順' | '誤り診断'
+
+export interface KnowledgeCardLink {
+  href: string
+  label: string
+}
+
 export interface KnowledgeCard {
   id: string
   examId: string
@@ -208,6 +215,10 @@ export interface KnowledgeCard {
   front: string
   back: string
   tags?: string[]
+  cardType?: KnowledgeCardType
+  guideLink?: KnowledgeCardLink
+  questionLink?: KnowledgeCardLink & { questionId: string }
+  relatedChapterLink?: KnowledgeCardLink & { chapterId: string }
 }
 
 export interface CardSet {

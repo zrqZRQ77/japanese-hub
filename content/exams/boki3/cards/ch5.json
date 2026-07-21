@@ -7,42 +7,102 @@
       "id": "boki3-ch5-card1",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "三分法で用いる3つの勘定科目を答えよ。",
-      "back": "仕入、売上、繰越商品",
+      "front": "三分法の3科目と、それぞれを使う場面は？",
+      "back": "期中の仕入れは仕入、販売は売上、決算日の売れ残りは繰越商品を使う。期中に商品勘定を直接増減させない点が三分法の特徴。",
       "tags": [
         "三分法"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q1",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q1"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card2",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "商品を仕入れ、代金を後日支払う義務を何という？",
-      "back": "買掛金（かいかけきん）【負債】",
+      "front": "商品を掛けで仕入れた。買掛金を使う理由と基本仕訳は？",
+      "back": "商品代金を後日支払う義務なので買掛金という負債を使う。基本仕訳は（借）仕入／（貸）買掛金。備品の後払いなら未払金。",
       "tags": [
         "掛取引"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s2",
+        "label": "5-2 売上・仕入の処理（掛取引）"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q2",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card3",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "商品を販売し、代金を後日受け取る権利を何という？",
-      "back": "売掛金（うりかけきん）【資産】",
+      "front": "商品を掛けで販売した。売掛金を使う理由と基本仕訳は？",
+      "back": "商品代金を後日受け取る権利なので売掛金という資産を使う。基本仕訳は（借）売掛金／（貸）売上。備品売却の後日受取なら未収入金。",
       "tags": [
         "掛取引"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s2",
+        "label": "5-2 売上・仕入の処理（掛取引）"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card4",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "顧客がクレジットカードで代金を決済した場合に使用する勘定科目は？",
-      "back": "クレジット売掛金【資産】",
+      "front": "クレジットカード販売で、通常の売掛金ではなく何を使う？手数料はどうする？",
+      "back": "信販会社への債権はクレジット売掛金。決済手数料は支払手数料として分け、売上総額とクレジット売掛金・手数料の合計を一致させる。",
       "tags": [
         "掛取引",
         "クレジットカード"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s2",
+        "label": "5-2 売上・仕入の処理（掛取引）"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice2",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice2"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card5",
@@ -52,7 +112,22 @@
       "back": "元の決済条件を確認し、返品された金額だけ元の仕訳と逆にする。",
       "tags": [
         "返品"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card6",
@@ -63,7 +138,22 @@
       "tags": [
         "諸掛り",
         "仕入"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card7",
@@ -74,7 +164,22 @@
       "tags": [
         "諸掛り",
         "売上"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q5",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q5"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card8",
@@ -85,40 +190,100 @@
       "tags": [
         "諸掛り",
         "立替金"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s4",
+        "label": "5-4 諸掛り"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q10",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q10"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card9",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "商品の仕入れに関する明細を記録する補助簿は？",
-      "back": "仕入帳（しいれちょう）",
+      "front": "仕入帳は何を記録し、どの帳簿と照合する？",
+      "back": "商品仕入れの明細を日付順に記録する補助簿。仕入勘定や買掛金元帳などと照合し、記入漏れや金額誤りを確認する。",
       "tags": [
         "補助簿",
         "仕入帳"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s5",
+        "label": "5-5 補助簿と商品有高帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card10",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "商品の売上げに関する明細を記録する補助簿は？",
-      "back": "売上帳（うりあげちょう）",
+      "front": "売上帳は何を記録し、現金売上も含む？",
+      "back": "商品売上の明細を記録する補助簿で、現金売上・掛売上の両方を含む。売掛金元帳は掛売上の得意先別債権だけを管理する。",
       "tags": [
         "補助簿",
         "売上帳"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s5",
+        "label": "5-5 補助簿と商品有高帳"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q8",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q8"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card11",
       "examId": "boki3",
       "chapterId": "ch5",
-      "front": "商品の受入・払出・残高を数量と金額で管理する補助簿は？",
-      "back": "商品有高帳（しょうひんありだかちょう）",
+      "front": "商品有高帳で管理する3つの数量・金額情報は？",
+      "back": "商品の受入、払出、残高を数量・単価・金額で管理する。帳簿上の期末数量と実地棚卸数量を照合する基礎にもなる。",
       "tags": [
         "補助簿",
         "商品有高帳"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s4",
+        "label": "5-4 諸掛り"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q6",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card12",
@@ -129,7 +294,22 @@
       "tags": [
         "商品有高帳",
         "先入先出法"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice5",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice5"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card13",
@@ -140,7 +320,22 @@
       "tags": [
         "商品有高帳",
         "移動平均法"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s4",
+        "label": "5-4 諸掛り"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice6",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card14",
@@ -148,7 +343,25 @@
       "chapterId": "ch5",
       "front": "三分法で売上原価を求める基本式は？",
       "back": "期首商品棚卸高＋当期純仕入高−期末商品棚卸高＝売上原価",
-      "tags": ["三分法", "売上原価"]
+      "tags": [
+        "三分法",
+        "売上原価"
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q15",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q15"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card15",
@@ -156,7 +369,26 @@
       "chapterId": "ch5",
       "front": "売上仕訳と商品有高帳では、どの金額を使い分ける？",
       "back": "売上仕訳は販売価格（売価）、商品有高帳の払出は取得原価を使う。",
-      "tags": ["売価", "原価", "商品有高帳"]
+      "tags": [
+        "売価",
+        "原価",
+        "商品有高帳"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q13",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q13"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card16",
@@ -164,7 +396,25 @@
       "chapterId": "ch5",
       "front": "商品有高帳で仕入返品と売上返品はどの欄に記入する？",
       "back": "仕入返品は商品が外へ出るため払出欄、売上返品は商品が戻るため受入欄。どちらも原価で記入する。",
-      "tags": ["返品", "商品有高帳"]
+      "tags": [
+        "返品",
+        "商品有高帳"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q3",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q3"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card17",
@@ -172,7 +422,25 @@
       "chapterId": "ch5",
       "front": "諸掛りを判断する2つの中心条件は？",
       "back": "仕入に関するか売上に関するか、当店負担か先方負担かを確認する。",
-      "tags": ["諸掛り", "判断手順"]
+      "tags": [
+        "諸掛り",
+        "判断手順"
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-q4",
+        "label": "練習問題で確認",
+        "questionId": "boki3-ch5-q4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card18",
@@ -180,7 +448,26 @@
       "chapterId": "ch5",
       "front": "先入先出法で払出額を計算する手順は？",
       "back": "最も古い在庫の数量と単価から使い、足りない数量だけ次に古い単価へ移る。",
-      "tags": ["商品有高帳", "先入先出法", "計算手順"]
+      "tags": [
+        "商品有高帳",
+        "先入先出法",
+        "計算手順"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice5",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice5"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card19",
@@ -188,7 +475,26 @@
       "chapterId": "ch5",
       "front": "移動平均法の新しい平均単価の計算式は？",
       "back": "（仕入直前の残高金額＋今回の仕入金額）÷（仕入直前の残高数量＋今回の仕入数量）",
-      "tags": ["商品有高帳", "移動平均法", "計算式"]
+      "tags": [
+        "商品有高帳",
+        "移動平均法",
+        "計算式"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s4",
+        "label": "5-4 諸掛り"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice6",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice6"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     },
     {
       "id": "boki3-ch5-card20",
@@ -196,7 +502,26 @@
       "chapterId": "ch5",
       "front": "商品有高帳の金額を検算する式は？",
       "back": "前月繰越原価＋当期受入原価＝売上原価（払出原価）＋期末商品原価",
-      "tags": ["商品有高帳", "検算", "売上原価"]
+      "tags": [
+        "商品有高帳",
+        "検算",
+        "売上原価"
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法"
+      },
+      "questionLink": {
+        "href": "/exams/boki3/questions/ch5?question=boki3-ch5-practice4",
+        "label": "能力型練習で確認",
+        "questionId": "boki3-ch5-practice4"
+      },
+      "relatedChapterLink": {
+        "href": "/exams/boki3/guide/ch11",
+        "label": "第11章 決算整理",
+        "chapterId": "ch11"
+      }
     }
   ]
 }
