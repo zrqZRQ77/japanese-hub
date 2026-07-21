@@ -5,7 +5,7 @@ import FlashcardDeck from '@/components/features/cards/FlashcardDeck'
 import { getExamById } from '@/lib/types/exams-registry'
 import { getChaptersByExam } from '@/lib/types/chapters-registry'
 import { getCardSet } from '@/lib/content/card-loader'
-import { createPageMetadata } from '@/lib/seo'
+import { absoluteUrl, createPageMetadata } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -41,9 +41,23 @@ export default async function Page({
     return set && set.cards.length > 0 ? [{ chapter: ch, set }] : []
   })
   const groups = cardSets.map(({ chapter, set }) => ({ chapter, cards: set.cards }))
+  const base = `/exams/${examId}`
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '資格合格ナビ', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name: exam.shortName, item: absoluteUrl(base) },
+      { '@type': 'ListItem', position: 3, name: '知識カード', item: absoluteUrl(`${base}/cards`) },
+    ],
+  }
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
+      />
       <Navbar />
       <div className="flashcard-page-shell" style={{
         height: 'calc(100vh - 64px)',

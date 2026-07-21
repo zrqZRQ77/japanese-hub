@@ -13,6 +13,7 @@
     "validate:boki3-capability-practice": "node --no-warnings --experimental-strip-types ./scripts/validate-boki3-capability-practice.mjs",
     "validate:boki3-learning-loop": "node --no-warnings --experimental-strip-types ./scripts/validate-boki3-learning-loop.mjs",
     "validate:boki3-a-grade": "node --no-warnings --experimental-strip-types ./scripts/validate-boki3-a-grade.mjs",
+    "audit:boki3-a-final": "node --no-warnings --experimental-strip-types ./scripts/audit-boki3-a-final.mjs",
     "validate:boki3-a-baseline": "node ./scripts/validate-boki3-a-baseline.js",
     "validate:boki3-a-ch12": "node ./scripts/validate-boki3-a-ch12.js",
     "validate:fp3": "node ./scripts/validate-fp3-content.js",
