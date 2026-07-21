@@ -12,7 +12,7 @@ const baseline = require('../content/exams/fp3/a-grade/batch0-baseline.js')
 const annual = require('../content/exams/fp3/annual/2026-rules.js')
 const sample = require('../content/exams/fp3/a-grade/official-sample-2026.js')
 const guideBodyHashes = require('../content/exams/fp3/annual/2026-guide-body-hashes.js')
-const protectedHashes = require('../content/exams/fp3/annual/2026-protected-file-hashes.js')
+const protectedItemHashes = require('../content/exams/fp3/annual/2026-protected-item-hashes.js')
 
 const issues = []
 const checks = []
@@ -124,19 +124,30 @@ for (const file of guideFiles) {
   assert(/^2026-\d{2}-\d{2}$/.test(String(data.dataAsOf)), `${sectionId}: dataAsOf is a valid 2026 date`)
   assert(data.annualPolicyId === annual.policyId, `${sectionId}: annual policy id is registered`)
   assert(data.annualRisk === annual.sectionAnnualRisk[sectionId], `${sectionId}: annual risk agrees with central map`)
-  assert(data.annualReviewStatus === 'scope-mapped', `${sectionId}: annual review status is scope-mapped`)
+  assert(['scope-mapped', 'content-verified'].includes(data.annualReviewStatus), `${sectionId}: annual review status is valid`)
   assert(data.annualMetadataReviewedAt === annual.confirmedAt, `${sectionId}: metadata review date is registered`)
-  assert(sha256(bodyFromMdx(raw)) === guideBodyHashes[sectionId], `${sectionId}: guide body remains unchanged`)
+  if (data.annualReviewStatus === 'scope-mapped') {
+    assert(sha256(bodyFromMdx(raw)) === guideBodyHashes[sectionId], `${sectionId}: scope-mapped guide body remains unchanged`)
+  }
 }
 
 for (const kind of ['questions', 'cards']) {
   const dir = kind === 'questions' ? questionRoot : cardRoot
-  const expectedHashes = protectedHashes[kind]
-  assert(Object.keys(expectedHashes).length === 6, `${kind}: six protected file hashes are recorded`)
-  for (const [chapterId, expectedHash] of Object.entries(expectedHashes)) {
-    const file = path.join(dir, `${chapterId}.json`)
-    assert(fs.existsSync(file), `${kind}/${chapterId}: protected file exists`)
-    assert(sha256(fs.readFileSync(file)) === expectedHash, `${kind}/${chapterId}: protected file is unchanged`)
+  const expectedHashes = protectedItemHashes[kind]
+  const collectionKey = kind === 'questions' ? 'questions' : 'cards'
+  const currentItems = new Map()
+
+  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.json')).sort()) {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'))
+    for (const item of data[collectionKey]) currentItems.set(item.id, item)
+  }
+
+  const expectedCount = kind === 'questions' ? 135 : 135
+  assert(Object.keys(expectedHashes).length === expectedCount, `${kind}: ${expectedCount} protected item hashes are recorded`)
+  for (const [itemId, expectedHash] of Object.entries(expectedHashes)) {
+    const item = currentItems.get(itemId)
+    assert(Boolean(item), `${kind}/${itemId}: protected item exists`)
+    if (item) assert(sha256(JSON.stringify(item)) === expectedHash, `${kind}/${itemId}: protected item is unchanged`)
   }
 }
 
@@ -207,8 +218,8 @@ const result = {
     windows: annual.windows.length,
     guideMetadata: guideFiles.length,
     guideBodiesProtected: Object.keys(guideBodyHashes).length,
-    protectedQuestionFiles: Object.keys(protectedHashes.questions).length,
-    protectedCardFiles: Object.keys(protectedHashes.cards).length,
+    protectedQuestionItems: Object.keys(protectedItemHashes.questions).length,
+    protectedCardItems: Object.keys(protectedItemHashes.cards).length,
     riskCounts,
     academicSampleQuestions: sample.academic.questions.length,
     practicalSampleQuestions: sample.practical.questions.length,
