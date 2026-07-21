@@ -280,13 +280,25 @@
       "type": "single",
       "text": "一般に、市場金利が上昇した場合、既に発行されている固定利付債券の価格はどうなるか。",
       "options": [
-        { "label": "A", "text": "上昇しやすい" },
-        { "label": "B", "text": "下落しやすい" },
-        { "label": "C", "text": "必ず額面と同じになる" }
+        {
+          "label": "A",
+          "text": "上昇しやすい"
+        },
+        {
+          "label": "B",
+          "text": "下落しやすい"
+        },
+        {
+          "label": "C",
+          "text": "必ず額面と同じになる"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "市場金利が上がると、既存債券の利率の魅力が相対的に下がるため、債券価格は下落しやすくなります。",
-      "tags": ["債券投資", "金利"]
+      "tags": [
+        "債券投資",
+        "金利"
+      ]
     },
     {
       "id": "fp3-ch3-q12",
@@ -295,13 +307,25 @@
       "type": "single",
       "text": "債券の格付けにおいて、一般に投資適格債とされる格付けの下限はどれか。",
       "options": [
-        { "label": "A", "text": "BBB格" },
-        { "label": "B", "text": "BB格" },
-        { "label": "C", "text": "B格" }
+        {
+          "label": "A",
+          "text": "BBB格"
+        },
+        {
+          "label": "B",
+          "text": "BB格"
+        },
+        {
+          "label": "C",
+          "text": "B格"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "一般にBBB格以上が投資適格債、BB格以下が投資不適格債とされます。",
-      "tags": ["債券投資", "格付け"]
+      "tags": [
+        "債券投資",
+        "格付け"
+      ]
     },
     {
       "id": "fp3-ch3-q13",
@@ -310,13 +334,25 @@
       "type": "single",
       "text": "株式の注文方法のうち、価格を指定せず、成立しやすい一方で想定外の価格で約定する可能性がある注文はどれか。",
       "options": [
-        { "label": "A", "text": "指値注文" },
-        { "label": "B", "text": "成行注文" },
-        { "label": "C", "text": "逆指値注文" }
+        {
+          "label": "A",
+          "text": "指値注文"
+        },
+        {
+          "label": "B",
+          "text": "成行注文"
+        },
+        {
+          "label": "C",
+          "text": "逆指値注文"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "成行注文は価格を指定しないため成立しやすい一方、市場状況によって想定外の価格で約定することがあります。",
-      "tags": ["株式投資", "注文方法"]
+      "tags": [
+        "株式投資",
+        "注文方法"
+      ]
     },
     {
       "id": "fp3-ch3-q14",
@@ -325,13 +361,25 @@
       "type": "single",
       "text": "日経平均株価などの指数に連動する運用成果を目指す投資信託はどれか。",
       "options": [
-        { "label": "A", "text": "インデックス型投資信託" },
-        { "label": "B", "text": "アクティブ型投資信託" },
-        { "label": "C", "text": "単位型投資信託" }
+        {
+          "label": "A",
+          "text": "インデックス型投資信託"
+        },
+        {
+          "label": "B",
+          "text": "アクティブ型投資信託"
+        },
+        {
+          "label": "C",
+          "text": "単位型投資信託"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "インデックス型投資信託は、日経平均株価やTOPIXなどの指数に連動する運用を目指します。",
-      "tags": ["投資信託", "分類"]
+      "tags": [
+        "投資信託",
+        "分類"
+      ]
     },
     {
       "id": "fp3-ch3-q15",
@@ -340,13 +388,25 @@
       "type": "single",
       "text": "投資信託の分配金のうち、元本の一部を払い戻す性質があり非課税となるものはどれか。",
       "options": [
-        { "label": "A", "text": "普通分配金" },
-        { "label": "B", "text": "元本払戻金（特別分配金）" },
-        { "label": "C", "text": "配当所得" }
+        {
+          "label": "A",
+          "text": "普通分配金"
+        },
+        {
+          "label": "B",
+          "text": "元本払戻金（特別分配金）"
+        },
+        {
+          "label": "C",
+          "text": "配当所得"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "元本払戻金（特別分配金）は元本の払い戻しにあたるため非課税です。普通分配金は課税対象です。",
-      "tags": ["投資信託", "分配金"]
+      "tags": [
+        "投資信託",
+        "分配金"
+      ]
     },
     {
       "id": "fp3-ch3-q16",
@@ -355,13 +415,25 @@
       "type": "single",
       "text": "外貨預金に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "預金保険制度の保護対象である" },
-        { "label": "B", "text": "預金保険制度の保護対象外である" },
-        { "label": "C", "text": "為替変動リスクはない" }
+        {
+          "label": "A",
+          "text": "預金保険制度の保護対象である"
+        },
+        {
+          "label": "B",
+          "text": "預金保険制度の保護対象外である"
+        },
+        {
+          "label": "C",
+          "text": "為替変動リスクはない"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "外貨預金は預金保険制度の対象外であり、為替変動リスクがあります。",
-      "tags": ["外貨建金融商品", "預金保険"]
+      "tags": [
+        "外貨建金融商品",
+        "預金保険"
+      ]
     },
     {
       "id": "fp3-ch3-q17",
@@ -370,13 +442,25 @@
       "type": "single",
       "text": "証券会社が破綻した場合、分別管理されていない顧客資産について投資者保護基金が補償する上限額は、顧客1人あたりいくらか。",
       "options": [
-        { "label": "A", "text": "500万円" },
-        { "label": "B", "text": "1,000万円" },
-        { "label": "C", "text": "全額" }
+        {
+          "label": "A",
+          "text": "500万円"
+        },
+        {
+          "label": "B",
+          "text": "1,000万円"
+        },
+        {
+          "label": "C",
+          "text": "全額"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "投資者保護基金は、証券会社破綻時に分別管理されていない顧客資産について、顧客1人あたり1,000万円まで補償します。",
-      "tags": ["セーフティネット", "投資者保護基金"]
+      "tags": [
+        "セーフティネット",
+        "投資者保護基金"
+      ]
     },
     {
       "id": "fp3-ch3-q18",
@@ -385,13 +469,25 @@
       "type": "single",
       "text": "特定口座（源泉徴収あり）に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "証券会社が税金を源泉徴収するため、原則として確定申告不要である" },
-        { "label": "B", "text": "年間取引報告書は作成されない" },
-        { "label": "C", "text": "NISA口座と同じく損益通算ができない" }
+        {
+          "label": "A",
+          "text": "証券会社が税金を源泉徴収するため、原則として確定申告不要である"
+        },
+        {
+          "label": "B",
+          "text": "年間取引報告書は作成されない"
+        },
+        {
+          "label": "C",
+          "text": "NISA口座と同じく損益通算ができない"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "特定口座（源泉徴収あり）では、証券会社が年間取引報告書を作成し、税金も源泉徴収するため、原則として確定申告不要です。",
-      "tags": ["金融商品の税金", "特定口座"]
+      "tags": [
+        "金融商品の税金",
+        "特定口座"
+      ]
     },
     {
       "id": "fp3-ch3-q19",
@@ -400,13 +496,25 @@
       "type": "single",
       "text": "投資におけるリスクの意味として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "必ず損をする可能性" },
-        { "label": "B", "text": "リターンの振れ幅" },
-        { "label": "C", "text": "元本保証の有無だけを示すもの" }
+        {
+          "label": "A",
+          "text": "必ず損をする可能性"
+        },
+        {
+          "label": "B",
+          "text": "リターンの振れ幅"
+        },
+        {
+          "label": "C",
+          "text": "元本保証の有無だけを示すもの"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "投資理論でいうリスクは、危険という意味だけでなく、リターンのばらつき・振れ幅を意味します。",
-      "tags": ["ポートフォリオ", "リスク"]
+      "tags": [
+        "ポートフォリオ",
+        "リスク"
+      ]
     },
     {
       "id": "fp3-ch3-q20",
@@ -415,13 +523,25 @@
       "type": "single",
       "text": "将来の一定日に、あらかじめ決めた価格で売買する契約を何というか。",
       "options": [
-        { "label": "A", "text": "先物取引" },
-        { "label": "B", "text": "普通預金" },
-        { "label": "C", "text": "定期保険" }
+        {
+          "label": "A",
+          "text": "先物取引"
+        },
+        {
+          "label": "B",
+          "text": "普通預金"
+        },
+        {
+          "label": "C",
+          "text": "定期保険"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "先物取引は、将来の一定日に、あらかじめ決めた価格で売買する契約です。",
-      "tags": ["派生商品", "先物取引"]
+      "tags": [
+        "派生商品",
+        "先物取引"
+      ]
     },
     {
       "id": "fp3-ch3-q21",
@@ -430,13 +550,1229 @@
       "type": "single",
       "text": "日本銀行が「マイナス金利政策」を解除した後、主な政策金利として目標水準を調整しているものはどれか。",
       "options": [
-        { "label": "A", "text": "無担保コール翌日物レート" },
-        { "label": "B", "text": "預金準備率" },
-        { "label": "C", "text": "固定資産税評価額" }
+        {
+          "label": "A",
+          "text": "無担保コール翌日物レート"
+        },
+        {
+          "label": "B",
+          "text": "預金準備率"
+        },
+        {
+          "label": "C",
+          "text": "固定資産税評価額"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "日銀はマイナス金利政策を解除し、現在は無担保コール翌日物レートを主な政策金利として、その目標水準を上下させることで金融市場調節を行っています。利上げ局面では市場金利全般が上昇しやすくなります。",
-      "tags": ["金融・経済の基本", "金融政策"]
+      "tags": [
+        "金融・経済の基本",
+        "金融政策"
+      ]
+    },
+    {
+      "id": "fp3-ch3-practice1",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "classification",
+      "text": "次の経済・市場関係を入力しなさい。①物価上昇率3％、名目金利2％の概算実質金利、②市場金利上昇時の既発固定利率債価格、③円安時の外貨資産円換算額、④金融緩和が目指す一般的な金利方向、⑤日銀短観が主に示すもの。",
+      "correctAnswer": [
+        "-1",
+        "下落",
+        "増加",
+        "低下",
+        "企業の景況感"
+      ],
+      "explanation": "実質金利は約マイナス1％。市場金利上昇で既発債価格は下落しやすく、円安で外貨資産の円換算額は増加しやすいです。日銀短観は企業景況感等を示します。",
+      "explanationSteps": [
+        "名目金利から物価上昇率を引く。",
+        "金利と債券価格、円相場と外貨資産の方向を分ける。"
+      ],
+      "commonMistakes": [
+        "名目金利だけで実質収益を判断する。",
+        "市場金利と債券価格が同方向に動くとする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s1",
+        "label": "3-1 金融・経済の基本"
+      },
+      "tags": [
+        "経済指標",
+        "市場関係",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "市場関係を採点する",
+        "fields": [
+          {
+            "id": "econ-1",
+            "label": "①概算実質金利",
+            "kind": "number",
+            "correctAnswer": "-1",
+            "suffix": "％"
+          },
+          {
+            "id": "econ-2",
+            "label": "②既発債価格",
+            "kind": "classification",
+            "correctAnswer": "下落",
+            "acceptedAnswers": [
+              "下がる"
+            ]
+          },
+          {
+            "id": "econ-3",
+            "label": "③外貨資産円換算額",
+            "kind": "classification",
+            "correctAnswer": "増加",
+            "acceptedAnswers": [
+              "増える",
+              "上昇"
+            ]
+          },
+          {
+            "id": "econ-4",
+            "label": "④一般的な金利方向",
+            "kind": "classification",
+            "correctAnswer": "低下",
+            "acceptedAnswers": [
+              "下がる"
+            ]
+          },
+          {
+            "id": "econ-5",
+            "label": "⑤日銀短観",
+            "kind": "classification",
+            "correctAnswer": "企業の景況感",
+            "acceptedAnswers": [
+              "企業景況感",
+              "景況感"
+            ]
+          }
+        ],
+        "table": {
+          "headers": [
+            "条件",
+            "答え"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "cells": [
+                {
+                  "text": "名目2％・物価3％"
+                },
+                {
+                  "fieldId": "econ-1"
+                }
+              ]
+            },
+            {
+              "id": "r2",
+              "cells": [
+                {
+                  "text": "市場金利上昇"
+                },
+                {
+                  "fieldId": "econ-2"
+                }
+              ]
+            },
+            {
+              "id": "r3",
+              "cells": [
+                {
+                  "text": "円安"
+                },
+                {
+                  "fieldId": "econ-3"
+                }
+              ]
+            },
+            {
+              "id": "r4",
+              "cells": [
+                {
+                  "text": "金融緩和"
+                },
+                {
+                  "fieldId": "econ-4"
+                }
+              ]
+            },
+            {
+              "id": "r5",
+              "cells": [
+                {
+                  "text": "日銀短観"
+                },
+                {
+                  "fieldId": "econ-5"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fp3-ch3-practice2",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "A銀行に一般預金等1,200万円、決済用預金300万円がある。一般預金等の保護元本、決済用預金の保護元本を求める。また税引前利息10万円、税率20.315％の税引後利息を求め、外貨預金と銀行販売投資信託が預金保険対象か入力しなさい。",
+      "correctAnswer": [
+        "10000000",
+        "3000000",
+        "79685",
+        "対象外",
+        "対象外"
+      ],
+      "explanation": "一般預金等は一金融機関・一預金者につき元本1,000万円まで。決済用預金は要件を満たせば全額保護。税引後利息は79,685円です。",
+      "explanationSteps": [
+        "同一金融機関内で一般預金を名寄せする。",
+        "決済用預金を別区分で確認する。",
+        "税引前利息から20.315％を差し引く。"
+      ],
+      "commonMistakes": [
+        "支店ごとに1,000万円保護とする。",
+        "外貨預金や投資信託も預金保険対象とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s2",
+        "label": "3-2 預貯金と預金保険制度"
+      },
+      "tags": [
+        "預金保険",
+        "税引後利息",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "預金保護を採点する",
+        "fields": [
+          {
+            "id": "deposit-general",
+            "label": "一般預金等の保護元本",
+            "kind": "number",
+            "correctAnswer": "10000000",
+            "suffix": "円"
+          },
+          {
+            "id": "deposit-settlement",
+            "label": "決済用預金の保護元本",
+            "kind": "number",
+            "correctAnswer": "3000000",
+            "suffix": "円"
+          },
+          {
+            "id": "deposit-interest",
+            "label": "税引後利息",
+            "kind": "number",
+            "correctAnswer": "79685",
+            "suffix": "円"
+          },
+          {
+            "id": "deposit-foreign",
+            "label": "外貨預金の預金保険",
+            "kind": "classification",
+            "correctAnswer": "対象外",
+            "acceptedAnswers": [
+              "対象ではない"
+            ]
+          },
+          {
+            "id": "deposit-fund",
+            "label": "銀行販売投資信託の預金保険",
+            "kind": "classification",
+            "correctAnswer": "対象外",
+            "acceptedAnswers": [
+              "対象ではない"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice3",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "額面・償還価格100万円、表面利率2％、購入価格96万円、残存4年の利付債について、年間利子、直接利回り、年平均償還差益、最終利回りを求めなさい。利回りは％で小数第3位まで。",
+      "correctAnswer": [
+        "20000",
+        "2.083",
+        "10000",
+        "3.125"
+      ],
+      "explanation": "年間利子2万円、直接利回り約2.083％、年平均償還差益1万円、最終利回り3.125％です。",
+      "explanationSteps": [
+        "年間利子は額面×表面利率。",
+        "償還差益を残存年数で割る。",
+        "利子と年平均差益を購入価格で割る。"
+      ],
+      "commonMistakes": [
+        "購入価格へ表面利率を掛ける。",
+        "償還差益4万円を年数で割らない。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s3",
+        "label": "3-3 債券投資"
+      },
+      "tags": [
+        "債券利回り",
+        "最終利回り",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "債券利回りを採点する",
+        "fields": [
+          {
+            "id": "bond-coupon",
+            "label": "年間利子",
+            "kind": "number",
+            "correctAnswer": "20000",
+            "suffix": "円"
+          },
+          {
+            "id": "bond-current-yield",
+            "label": "直接利回り",
+            "kind": "number",
+            "correctAnswer": "2.083",
+            "acceptedAnswers": [
+              "2.08"
+            ],
+            "suffix": "％"
+          },
+          {
+            "id": "bond-redemption-gain",
+            "label": "年平均償還差益",
+            "kind": "number",
+            "correctAnswer": "10000",
+            "suffix": "円"
+          },
+          {
+            "id": "bond-final-yield",
+            "label": "最終利回り",
+            "kind": "number",
+            "correctAnswer": "3.125",
+            "suffix": "％"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice4",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "classification",
+      "text": "債券について入力しなさい。①市場金利上昇時の既発債価格、②市場金利低下時の既発債価格、③一般に残存期間が長い債券の価格変動、④発行体が償還不能になるリスク、⑤希望価格で売れないリスク。",
+      "correctAnswer": [
+        "下落",
+        "上昇",
+        "大きい",
+        "信用リスク",
+        "流動性リスク"
+      ],
+      "explanation": "金利と既発債価格は一般に逆方向。残存期間が長いほど価格変動が大きくなりやすく、償還不能は信用リスク、売れない可能性は流動性リスクです。",
+      "explanationSteps": [
+        "市場金利と既発債価格の逆関係を使う。",
+        "原因からリスク名称を特定する。"
+      ],
+      "commonMistakes": [
+        "市場金利と債券価格を同方向とする。",
+        "信用リスクと流動性リスクを逆にする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s3",
+        "label": "3-3 債券投資"
+      },
+      "tags": [
+        "債券価格",
+        "債券リスク",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "債券判断を採点する",
+        "fields": [
+          {
+            "id": "bond-rel-1",
+            "label": "①金利上昇時の価格",
+            "kind": "classification",
+            "correctAnswer": "下落",
+            "acceptedAnswers": [
+              "下がる"
+            ]
+          },
+          {
+            "id": "bond-rel-2",
+            "label": "②金利低下時の価格",
+            "kind": "classification",
+            "correctAnswer": "上昇",
+            "acceptedAnswers": [
+              "上がる"
+            ]
+          },
+          {
+            "id": "bond-rel-3",
+            "label": "③長期債の価格変動",
+            "kind": "classification",
+            "correctAnswer": "大きい",
+            "acceptedAnswers": [
+              "大きくなる"
+            ]
+          },
+          {
+            "id": "bond-rel-4",
+            "label": "④償還不能のリスク",
+            "kind": "classification",
+            "correctAnswer": "信用リスク"
+          },
+          {
+            "id": "bond-rel-5",
+            "label": "⑤希望価格で売れないリスク",
+            "kind": "classification",
+            "correctAnswer": "流動性リスク"
+          }
+        ],
+        "table": {
+          "headers": [
+            "条件",
+            "答え"
+          ],
+          "rows": [
+            {
+              "id": "b1",
+              "cells": [
+                {
+                  "text": "市場金利上昇"
+                },
+                {
+                  "fieldId": "bond-rel-1"
+                }
+              ]
+            },
+            {
+              "id": "b2",
+              "cells": [
+                {
+                  "text": "市場金利低下"
+                },
+                {
+                  "fieldId": "bond-rel-2"
+                }
+              ]
+            },
+            {
+              "id": "b3",
+              "cells": [
+                {
+                  "text": "残存期間が長い"
+                },
+                {
+                  "fieldId": "bond-rel-3"
+                }
+              ]
+            },
+            {
+              "id": "b4",
+              "cells": [
+                {
+                  "text": "発行体が償還不能"
+                },
+                {
+                  "fieldId": "bond-rel-4"
+                }
+              ]
+            },
+            {
+              "id": "b5",
+              "cells": [
+                {
+                  "text": "希望価格で売れない"
+                },
+                {
+                  "fieldId": "bond-rel-5"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fp3-ch3-practice5",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "株価2,400円、発行済株式100万株、当期純利益1億2,000万円、自己資本8億円、1株配当60円。EPS、BPS、PER、PBR、ROE、配当利回り、配当性向を求めなさい。",
+      "correctAnswer": [
+        "120",
+        "800",
+        "20",
+        "3",
+        "15",
+        "2.5",
+        "50"
+      ],
+      "explanation": "EPS120円、BPS800円、PER20倍、PBR3倍、ROE15％、配当利回り2.5％、配当性向50％です。",
+      "explanationSteps": [
+        "利益と自己資本を株式数で割る。",
+        "株価をEPS・BPSで割る。",
+        "利益・配当の比率を計算する。"
+      ],
+      "commonMistakes": [
+        "PERをEPS÷株価とする。",
+        "ROEを純利益÷総資産とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s4",
+        "label": "3-4 株式投資"
+      },
+      "tags": [
+        "PER",
+        "PBR",
+        "ROE",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "株式指標を採点する",
+        "fields": [
+          {
+            "id": "stock-eps",
+            "label": "EPS",
+            "kind": "number",
+            "correctAnswer": "120",
+            "suffix": "円"
+          },
+          {
+            "id": "stock-bps",
+            "label": "BPS",
+            "kind": "number",
+            "correctAnswer": "800",
+            "suffix": "円"
+          },
+          {
+            "id": "stock-per",
+            "label": "PER",
+            "kind": "number",
+            "correctAnswer": "20",
+            "suffix": "倍"
+          },
+          {
+            "id": "stock-pbr",
+            "label": "PBR",
+            "kind": "number",
+            "correctAnswer": "3",
+            "suffix": "倍"
+          },
+          {
+            "id": "stock-roe",
+            "label": "ROE",
+            "kind": "number",
+            "correctAnswer": "15",
+            "suffix": "％"
+          },
+          {
+            "id": "stock-dividend-yield",
+            "label": "配当利回り",
+            "kind": "number",
+            "correctAnswer": "2.5",
+            "suffix": "％"
+          },
+          {
+            "id": "stock-payout",
+            "label": "配当性向",
+            "kind": "number",
+            "correctAnswer": "50",
+            "suffix": "％"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice6",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "資産総額25億5,000万円、負債・費用3,000万円、総口数20億口のファンドについて純資産総額と1万口当たり基準価額を求める。基準価額12,500円で100万円投資した口数と、基準価額13,000円時の評価額も求めなさい。",
+      "correctAnswer": [
+        "2520000000",
+        "12600",
+        "800000",
+        "1040000"
+      ],
+      "explanation": "純資産25億2,000万円、基準価額12,600円。購入口数80万口、後の評価額104万円です。",
+      "explanationSteps": [
+        "資産総額から負債等を引く。",
+        "純資産を総口数で割り1万口換算する。",
+        "投資額から口数、口数から評価額を求める。"
+      ],
+      "commonMistakes": [
+        "資産総額をそのまま基準価額計算に使う。",
+        "1万口換算を忘れる。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s5",
+        "label": "3-5 投資信託"
+      },
+      "tags": [
+        "基準価額",
+        "投資信託",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "基準価額を採点する",
+        "fields": [
+          {
+            "id": "fund-net-assets",
+            "label": "純資産総額",
+            "kind": "number",
+            "correctAnswer": "2520000000",
+            "suffix": "円"
+          },
+          {
+            "id": "fund-nav",
+            "label": "1万口当たり基準価額",
+            "kind": "number",
+            "correctAnswer": "12600",
+            "suffix": "円"
+          },
+          {
+            "id": "fund-units",
+            "label": "購入口数",
+            "kind": "number",
+            "correctAnswer": "800000",
+            "suffix": "口"
+          },
+          {
+            "id": "fund-value",
+            "label": "後の評価額",
+            "kind": "number",
+            "correctAnswer": "1040000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice7",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "classification",
+      "text": "100万円の投資について購入時手数料1.1％、信託報酬年率0.55％の単純概算を求める。また、購入時手数料、信託報酬、信託財産留保額の負担時点、個別元本を下回る部分の分配金区分を入力しなさい。",
+      "correctAnswer": [
+        "11000",
+        "5500",
+        "購入時",
+        "保有中",
+        "換金時",
+        "元本払戻金"
+      ],
+      "explanation": "購入時手数料1万1,000円、信託報酬概算5,500円。費用の負担時点と元本払戻金を区別します。",
+      "explanationSteps": [
+        "投資額へ各料率を掛ける。",
+        "費用を購入・保有・換金へ分類する。",
+        "個別元本を下回る分配を元本払戻金とする。"
+      ],
+      "commonMistakes": [
+        "信託報酬を購入時だけの費用とする。",
+        "元本払戻金を運用利益とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s5",
+        "label": "3-5 投資信託"
+      },
+      "tags": [
+        "投資信託コスト",
+        "分配金",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "投信コストを採点する",
+        "fields": [
+          {
+            "id": "fund-purchase-fee",
+            "label": "購入時手数料",
+            "kind": "number",
+            "correctAnswer": "11000",
+            "suffix": "円"
+          },
+          {
+            "id": "fund-trust-fee",
+            "label": "信託報酬概算",
+            "kind": "number",
+            "correctAnswer": "5500",
+            "suffix": "円"
+          },
+          {
+            "id": "fund-cost-1",
+            "label": "購入時手数料の時点",
+            "kind": "classification",
+            "correctAnswer": "購入時"
+          },
+          {
+            "id": "fund-cost-2",
+            "label": "信託報酬の時点",
+            "kind": "classification",
+            "correctAnswer": "保有中",
+            "acceptedAnswers": [
+              "運用中"
+            ]
+          },
+          {
+            "id": "fund-cost-3",
+            "label": "信託財産留保額の時点",
+            "kind": "classification",
+            "correctAnswer": "換金時",
+            "acceptedAnswers": [
+              "解約時"
+            ]
+          },
+          {
+            "id": "fund-distribution",
+            "label": "個別元本を下回る分配",
+            "kind": "classification",
+            "correctAnswer": "元本払戻金",
+            "acceptedAnswers": [
+              "特別分配金"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice8",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "10,000米ドルをTTS151円で購入し、利息200米ドルを受け取り、10,200米ドルをTTB148円で円転した。預入円額、満期外貨額、円換算受取額、円ベース損益を求めなさい。",
+      "correctAnswer": [
+        "1510000",
+        "10200",
+        "1509600",
+        "-400"
+      ],
+      "explanation": "預入151万円、満期10,200米ドル、円受取150万9,600円、円ベースでは400円の損失です。",
+      "explanationSteps": [
+        "円から外貨はTTSを使う。",
+        "元本と外貨利息を合計する。",
+        "外貨から円はTTBを使い、預入円額との差を求める。"
+      ],
+      "commonMistakes": [
+        "預入時にTTBを使う。",
+        "外貨が増えたため円でも必ず利益とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s6",
+        "label": "3-6 外貨建金融商品"
+      },
+      "tags": [
+        "TTS・TTB",
+        "為替損益",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "外貨損益を採点する",
+        "fields": [
+          {
+            "id": "fx-purchase-yen",
+            "label": "預入円額",
+            "kind": "number",
+            "correctAnswer": "1510000",
+            "suffix": "円"
+          },
+          {
+            "id": "fx-maturity-usd",
+            "label": "満期外貨額",
+            "kind": "number",
+            "correctAnswer": "10200",
+            "suffix": "米ドル"
+          },
+          {
+            "id": "fx-redemption-yen",
+            "label": "円換算受取額",
+            "kind": "number",
+            "correctAnswer": "1509600",
+            "suffix": "円"
+          },
+          {
+            "id": "fx-gainloss",
+            "label": "円ベース損益",
+            "kind": "number",
+            "correctAnswer": "-400",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice9",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "2026年現行NISAについて、つみたて投資枠の年間上限、成長投資枠の年間上限、年間併用上限、非課税保有限度額、成長投資枠の生涯内数を求めなさい。",
+      "correctAnswer": [
+        "1200000",
+        "2400000",
+        "3600000",
+        "18000000",
+        "12000000"
+      ],
+      "explanation": "年間は120万円、240万円、合計360万円。生涯総枠1,800万円、成長投資枠内数1,200万円です。",
+      "explanationSteps": [
+        "年間枠と生涯枠を分ける。",
+        "成長投資枠の生涯上限は1,800万円の内数とする。"
+      ],
+      "commonMistakes": [
+        "年間合計を240万円とする。",
+        "1,800万円を年間上限とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "tags": [
+        "NISA",
+        "年間投資枠",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "NISA枠を採点する",
+        "fields": [
+          {
+            "id": "nisa-tsumitate",
+            "label": "つみたて投資枠年間上限",
+            "kind": "number",
+            "correctAnswer": "1200000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-growth",
+            "label": "成長投資枠年間上限",
+            "kind": "number",
+            "correctAnswer": "2400000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-annual",
+            "label": "年間併用上限",
+            "kind": "number",
+            "correctAnswer": "3600000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-lifetime",
+            "label": "非課税保有限度額",
+            "kind": "number",
+            "correctAnswer": "18000000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-growth-life",
+            "label": "成長投資枠の生涯内数",
+            "kind": "number",
+            "correctAnswer": "12000000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice10",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "NISA総枠1,800万円、成長投資枠内数1,200万円を全て使用中に、取得価額200万円・売却時価260万円の成長投資枠商品を売却した。翌年以後に復活する総枠、成長投資枠内数、翌年の年間成長投資上限を求めなさい。",
+      "correctAnswer": [
+        "2000000",
+        "2000000",
+        "2400000"
+      ],
+      "explanation": "復活額は売却時価ではなく取得価額200万円。成長投資枠内数も200万円空きますが、翌年の年間成長枠は240万円です。",
+      "explanationSteps": [
+        "取得価額と売却時価を区別する。",
+        "復活は翌年以後とする。",
+        "生涯枠と年間枠を別に確認する。"
+      ],
+      "commonMistakes": [
+        "時価260万円が復活するとする。",
+        "復活総枠を年間上限と混同する。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "tags": [
+        "NISA枠再利用",
+        "取得価額",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "NISA再利用を採点する",
+        "fields": [
+          {
+            "id": "nisa-restored-total",
+            "label": "復活する総枠",
+            "kind": "number",
+            "correctAnswer": "2000000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-restored-growth",
+            "label": "復活する成長枠内数",
+            "kind": "number",
+            "correctAnswer": "2000000",
+            "suffix": "円"
+          },
+          {
+            "id": "nisa-next-annual-growth",
+            "label": "翌年の年間成長投資上限",
+            "kind": "number",
+            "correctAnswer": "2400000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice11",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "国内株式60％・期待収益率8％、国内債券40％・期待収益率2％のポートフォリオについて、株式寄与、債券寄与、ポートフォリオ期待収益率を求めなさい。",
+      "correctAnswer": [
+        "4.8",
+        "0.8",
+        "5.6"
+      ],
+      "explanation": "株式寄与4.8％、債券寄与0.8％、合計期待収益率5.6％です。",
+      "explanationSteps": [
+        "各期待収益率へ資産比率を掛ける。",
+        "寄与度を合計する。"
+      ],
+      "commonMistakes": [
+        "8％と2％を単純平均する。",
+        "比率を60と40のまま掛ける。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s8",
+        "label": "3-8 ポートフォリオと派生商品"
+      },
+      "tags": [
+        "ポートフォリオ",
+        "期待収益率",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "期待収益率を採点する",
+        "fields": [
+          {
+            "id": "portfolio-stock-contribution",
+            "label": "株式の収益寄与",
+            "kind": "number",
+            "correctAnswer": "4.8",
+            "suffix": "％"
+          },
+          {
+            "id": "portfolio-bond-contribution",
+            "label": "債券の収益寄与",
+            "kind": "number",
+            "correctAnswer": "0.8",
+            "suffix": "％"
+          },
+          {
+            "id": "portfolio-return",
+            "label": "ポートフォリオ期待収益率",
+            "kind": "number",
+            "correctAnswer": "5.6",
+            "suffix": "％"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice12",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "numeric",
+      "text": "株式比率60％・標準偏差15％、債券比率40％・標準偏差5％、相関係数0とする。分散と標準偏差を求め、相関係数＋1と－1のうち分散効果が大きい方を入力しなさい。標準偏差は小数第2位まで。",
+      "correctAnswer": [
+        "0.0085",
+        "9.22",
+        "-1"
+      ],
+      "explanation": "分散0.0085、標準偏差約9.22％。相関係数は低いほど分散効果が大きく、－1が最大です。",
+      "explanationSteps": [
+        "各資産の比率二乗×標準偏差二乗を求める。",
+        "相関0なので共分散項は0。",
+        "分散の平方根を％表示する。"
+      ],
+      "commonMistakes": [
+        "標準偏差を単純加重平均する。",
+        "相関0ならリスク0とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s8",
+        "label": "3-8 ポートフォリオと派生商品"
+      },
+      "tags": [
+        "標準偏差",
+        "相関係数",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "ポートフォリオリスクを採点する",
+        "fields": [
+          {
+            "id": "portfolio-variance",
+            "label": "ポートフォリオ分散",
+            "kind": "number",
+            "correctAnswer": "0.0085"
+          },
+          {
+            "id": "portfolio-risk",
+            "label": "ポートフォリオ標準偏差",
+            "kind": "number",
+            "correctAnswer": "9.22",
+            "suffix": "％"
+          },
+          {
+            "id": "portfolio-correlation",
+            "label": "分散効果が大きい相関係数",
+            "kind": "classification",
+            "correctAnswer": "-1",
+            "acceptedAnswers": [
+              "－1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice13",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "classification",
+      "text": "金融商品の税務について入力しなさい。①預金利息の所得区分、②上場株式配当の所得区分、③上場株式譲渡益の基本的課税方式、④一定の譲渡損失の繰越期間、⑤NISA損失と課税口座利益の損益通算。",
+      "correctAnswer": [
+        "利子所得",
+        "配当所得",
+        "申告分離課税",
+        "3年",
+        "できない"
+      ],
+      "explanation": "預金利息は利子所得、配当は配当所得、上場株式譲渡益は申告分離課税が基本。一定の損失は申告により3年繰越可能ですがNISA損失は通算できません。",
+      "explanationSteps": [
+        "商品と所得区分を対応させる。",
+        "課税口座とNISA口座を分ける。"
+      ],
+      "commonMistakes": [
+        "預金利息を配当所得とする。",
+        "NISA損失も課税口座と通算できるとする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "tags": [
+        "金融税務",
+        "損益通算",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "金融税務を採点する",
+        "fields": [
+          {
+            "id": "tax-fin-1",
+            "label": "①預金利息",
+            "kind": "classification",
+            "correctAnswer": "利子所得"
+          },
+          {
+            "id": "tax-fin-2",
+            "label": "②上場株式配当",
+            "kind": "classification",
+            "correctAnswer": "配当所得"
+          },
+          {
+            "id": "tax-fin-3",
+            "label": "③上場株式譲渡益",
+            "kind": "classification",
+            "correctAnswer": "申告分離課税"
+          },
+          {
+            "id": "tax-fin-4",
+            "label": "④損失繰越期間",
+            "kind": "classification",
+            "correctAnswer": "3年",
+            "acceptedAnswers": [
+              "３年"
+            ]
+          },
+          {
+            "id": "tax-fin-5",
+            "label": "⑤NISA損失の損益通算",
+            "kind": "classification",
+            "correctAnswer": "できない",
+            "acceptedAnswers": [
+              "不可"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch3-practice14",
+      "examId": "fp3",
+      "chapterId": "ch3",
+      "type": "classification",
+      "text": "デリバティブのヘッジを入力しなさい。①保有株の下落ヘッジ、②将来買う株の値上がりヘッジ、③コールの権利、④プットの権利、⑤オプション買い手の最大損失の基本。",
+      "correctAnswer": [
+        "プット買い",
+        "コール買い",
+        "買う権利",
+        "売る権利",
+        "プレミアム"
+      ],
+      "explanation": "保有株下落にはプット買い、将来買付価格上昇にはコール買い。コールは買う権利、プットは売る権利で、買い手の損失は原則プレミアムまでです。",
+      "explanationSteps": [
+        "守りたい価格変動が下落か上昇か確認する。",
+        "コールとプットの権利を対応させる。"
+      ],
+      "commonMistakes": [
+        "株価下落ヘッジでコールを買う。",
+        "オプション売り手も自由に権利放棄できるとする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s8",
+        "label": "3-8 ポートフォリオと派生商品"
+      },
+      "tags": [
+        "デリバティブ",
+        "ヘッジ",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "ヘッジ判断を採点する",
+        "fields": [
+          {
+            "id": "derivative-1",
+            "label": "①保有株の下落ヘッジ",
+            "kind": "classification",
+            "correctAnswer": "プット買い",
+            "acceptedAnswers": [
+              "プットオプション買い"
+            ]
+          },
+          {
+            "id": "derivative-2",
+            "label": "②将来買う株の値上がりヘッジ",
+            "kind": "classification",
+            "correctAnswer": "コール買い",
+            "acceptedAnswers": [
+              "コールオプション買い"
+            ]
+          },
+          {
+            "id": "derivative-3",
+            "label": "③コール",
+            "kind": "classification",
+            "correctAnswer": "買う権利"
+          },
+          {
+            "id": "derivative-4",
+            "label": "④プット",
+            "kind": "classification",
+            "correctAnswer": "売る権利"
+          },
+          {
+            "id": "derivative-5",
+            "label": "⑤買い手の最大損失",
+            "kind": "classification",
+            "correctAnswer": "プレミアム",
+            "acceptedAnswers": [
+              "支払プレミアム"
+            ]
+          }
+        ],
+        "table": {
+          "headers": [
+            "条件",
+            "答え"
+          ],
+          "rows": [
+            {
+              "id": "d1",
+              "cells": [
+                {
+                  "text": "保有株の下落"
+                },
+                {
+                  "fieldId": "derivative-1"
+                }
+              ]
+            },
+            {
+              "id": "d2",
+              "cells": [
+                {
+                  "text": "将来買う株の上昇"
+                },
+                {
+                  "fieldId": "derivative-2"
+                }
+              ]
+            },
+            {
+              "id": "d3",
+              "cells": [
+                {
+                  "text": "コール"
+                },
+                {
+                  "fieldId": "derivative-3"
+                }
+              ]
+            },
+            {
+              "id": "d4",
+              "cells": [
+                {
+                  "text": "プット"
+                },
+                {
+                  "fieldId": "derivative-4"
+                }
+              ]
+            },
+            {
+              "id": "d5",
+              "cells": [
+                {
+                  "text": "オプション買い手の最大損失"
+                },
+                {
+                  "fieldId": "derivative-5"
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
 }
