@@ -12,7 +12,17 @@
       "tags": [
         "相続の基礎",
         "法定相続人"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q01"
+      }
     },
     {
       "id": "fp3-ch6-card2",
@@ -23,7 +33,17 @@
       "tags": [
         "相続の基礎",
         "相続順位"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q01"
+      }
     },
     {
       "id": "fp3-ch6-card3",
@@ -34,7 +54,17 @@
       "tags": [
         "相続の基礎",
         "代襲相続"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q11"
+      }
     },
     {
       "id": "fp3-ch6-card4",
@@ -45,7 +75,17 @@
       "tags": [
         "相続の基礎",
         "相続放棄"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q12",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q12"
+      }
     },
     {
       "id": "fp3-ch6-card5",
@@ -56,7 +96,17 @@
       "tags": [
         "相続の基礎",
         "承認と放棄"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q02"
+      }
     },
     {
       "id": "fp3-ch6-card6",
@@ -67,7 +117,17 @@
       "tags": [
         "相続の基礎",
         "遺産分割"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎知識"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q13"
+      }
     },
     {
       "id": "fp3-ch6-card7",
@@ -78,7 +138,17 @@
       "tags": [
         "遺言",
         "自筆証書遺言"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s2",
+        "label": "6-2 遺言と遺留分"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q14",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q14"
+      }
     },
     {
       "id": "fp3-ch6-card8",
@@ -89,7 +159,17 @@
       "tags": [
         "遺言",
         "公正証書遺言"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s2",
+        "label": "6-2 遺言と遺留分"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q03",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q03"
+      }
     },
     {
       "id": "fp3-ch6-card9",
@@ -100,7 +180,17 @@
       "tags": [
         "遺言",
         "遺留分"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s2",
+        "label": "6-2 遺言と遺留分"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-practice2",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-practice2"
+      }
     },
     {
       "id": "fp3-ch6-card10",
@@ -111,7 +201,17 @@
       "tags": [
         "相続税",
         "基礎控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税の仕組みと計算"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q16",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q16"
+      }
     },
     {
       "id": "fp3-ch6-card11",
@@ -122,7 +222,17 @@
       "tags": [
         "相続税",
         "配偶者の税額軽減"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税の仕組みと計算"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q05"
+      }
     },
     {
       "id": "fp3-ch6-card12",
@@ -133,7 +243,17 @@
       "tags": [
         "相続税",
         "非課税財産"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税の仕組みと計算"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q16",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q16"
+      }
     },
     {
       "id": "fp3-ch6-card13",
@@ -144,7 +264,17 @@
       "tags": [
         "相続税",
         "2割加算"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税の仕組みと計算"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q17",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q17"
+      }
     },
     {
       "id": "fp3-ch6-card14",
@@ -155,7 +285,17 @@
       "tags": [
         "相続財産の評価",
         "宅地評価"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s4",
+        "label": "6-4 相続財産の評価"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q18",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q18"
+      }
     },
     {
       "id": "fp3-ch6-card15",
@@ -166,7 +306,17 @@
       "tags": [
         "相続財産の評価",
         "小規模宅地等"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s4",
+        "label": "6-4 相続財産の評価"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q06",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q06"
+      }
     },
     {
       "id": "fp3-ch6-card16",
@@ -177,7 +327,17 @@
       "tags": [
         "贈与税",
         "暦年課税"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税の仕組み"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q07",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q07"
+      }
     },
     {
       "id": "fp3-ch6-card17",
@@ -188,7 +348,17 @@
       "tags": [
         "贈与税",
         "相続時精算課税"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税の仕組み"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q19",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q19"
+      }
     },
     {
       "id": "fp3-ch6-card18",
@@ -199,7 +369,17 @@
       "tags": [
         "贈与税",
         "相続時精算課税"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税の仕組み"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q19",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q19"
+      }
     },
     {
       "id": "fp3-ch6-card19",
@@ -210,7 +390,17 @@
       "tags": [
         "贈与税",
         "配偶者控除"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税の仕組み"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q08",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q08"
+      }
     },
     {
       "id": "fp3-ch6-card20",
@@ -221,7 +411,17 @@
       "tags": [
         "事業承継",
         "非上場株式"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s6",
+        "label": "6-6 贈与税の特例と事業承継"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q20",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q20"
+      }
     },
     {
       "id": "fp3-ch6-card21",
@@ -232,7 +432,17 @@
       "tags": [
         "贈与税",
         "生前贈与加算"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税の仕組み"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q21",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q21"
+      }
     },
     {
       "id": "fp3-ch6-card22",
@@ -243,7 +453,17 @@
       "tags": [
         "事業承継",
         "納税猶予"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s6",
+        "label": "6-6 贈与税の特例と事業承継"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch6?question=fp3-ch6-q22",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch6-q22"
+      }
     }
   ]
 }

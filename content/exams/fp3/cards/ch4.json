@@ -12,7 +12,17 @@
       "tags": [
         "所得税の基本",
         "課税期間"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s1",
+        "label": "4-1 所得税の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q11"
+      }
     },
     {
       "id": "fp3-ch4-card2",
@@ -23,7 +33,17 @@
       "tags": [
         "所得税の基本",
         "非課税所得"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s1",
+        "label": "4-1 所得税の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q01"
+      }
     },
     {
       "id": "fp3-ch4-card3",
@@ -34,7 +54,17 @@
       "tags": [
         "所得税の基本",
         "計算の流れ"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s1",
+        "label": "4-1 所得税の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q11"
+      }
     },
     {
       "id": "fp3-ch4-card4",
@@ -45,7 +75,17 @@
       "tags": [
         "所得の計算",
         "利子所得"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s2",
+        "label": "4-2 各種所得の計算1（利子・配当・不動産・事業）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q12",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q12"
+      }
     },
     {
       "id": "fp3-ch4-card5",
@@ -56,7 +96,17 @@
       "tags": [
         "所得の計算",
         "給与所得"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 各種所得の計算2（給与・退職）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q13"
+      }
     },
     {
       "id": "fp3-ch4-card6",
@@ -67,7 +117,17 @@
       "tags": [
         "所得の計算",
         "給与所得控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 各種所得の計算2（給与・退職）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q13"
+      }
     },
     {
       "id": "fp3-ch4-card7",
@@ -78,7 +138,17 @@
       "tags": [
         "所得の計算",
         "退職所得"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 各種所得の計算2（給与・退職）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q02"
+      }
     },
     {
       "id": "fp3-ch4-card8",
@@ -89,7 +159,17 @@
       "tags": [
         "所得の計算",
         "退職所得控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s3",
+        "label": "4-3 各種所得の計算2（給与・退職）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q02"
+      }
     },
     {
       "id": "fp3-ch4-card9",
@@ -100,7 +180,17 @@
       "tags": [
         "所得の計算",
         "一時所得"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s4",
+        "label": "4-4 各種所得の計算3（譲渡・一時・雑）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q03",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q03"
+      }
     },
     {
       "id": "fp3-ch4-card10",
@@ -111,7 +201,17 @@
       "tags": [
         "所得の計算",
         "一時所得"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s4",
+        "label": "4-4 各種所得の計算3（譲渡・一時・雑）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q14",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q14"
+      }
     },
     {
       "id": "fp3-ch4-card11",
@@ -122,7 +222,17 @@
       "tags": [
         "損益通算",
         "ふじさんじょう"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q04"
+      }
     },
     {
       "id": "fp3-ch4-card12",
@@ -133,7 +243,17 @@
       "tags": [
         "所得控除",
         "医療費控除"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q05"
+      }
     },
     {
       "id": "fp3-ch4-card13",
@@ -144,7 +264,17 @@
       "tags": [
         "所得控除",
         "基礎控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q06",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q06"
+      }
     },
     {
       "id": "fp3-ch4-card14",
@@ -155,7 +285,17 @@
       "tags": [
         "所得控除",
         "扶養控除"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q15",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q15"
+      }
     },
     {
       "id": "fp3-ch4-card15",
@@ -166,7 +306,17 @@
       "tags": [
         "所得控除",
         "iDeCo"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s5",
+        "label": "4-5 損益通算と所得控除"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q16",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q16"
+      }
     },
     {
       "id": "fp3-ch4-card16",
@@ -177,7 +327,17 @@
       "tags": [
         "税額控除",
         "住宅ローン控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q17",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q17"
+      }
     },
     {
       "id": "fp3-ch4-card17",
@@ -188,7 +348,17 @@
       "tags": [
         "申告と納付",
         "確定申告"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q09",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q09"
+      }
     },
     {
       "id": "fp3-ch4-card18",
@@ -199,7 +369,17 @@
       "tags": [
         "申告と納付",
         "青色申告"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q10",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q10"
+      }
     },
     {
       "id": "fp3-ch4-card19",
@@ -210,7 +390,17 @@
       "tags": [
         "申告と納付",
         "個人事業税"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q19",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q19"
+      }
     },
     {
       "id": "fp3-ch4-card20",
@@ -221,7 +411,17 @@
       "tags": [
         "申告と納付",
         "復興特別所得税"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch4/ch4-s6",
+        "label": "4-6 税額控除と申告・納付"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch4?question=fp3-ch4-q20",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch4-q20"
+      }
     }
   ]
 }

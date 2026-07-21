@@ -12,7 +12,17 @@
       "tags": [
         "不動産の見方",
         "登記"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q11"
+      }
     },
     {
       "id": "fp3-ch5-card2",
@@ -23,7 +33,17 @@
       "tags": [
         "不動産の見方",
         "登記"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q11"
+      }
     },
     {
       "id": "fp3-ch5-card3",
@@ -34,7 +54,17 @@
       "tags": [
         "不動産の見方",
         "対抗力"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q11"
+      }
     },
     {
       "id": "fp3-ch5-card4",
@@ -45,7 +75,17 @@
       "tags": [
         "不動産の価格",
         "路線価"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q02"
+      }
     },
     {
       "id": "fp3-ch5-card5",
@@ -56,7 +96,17 @@
       "tags": [
         "不動産の価格",
         "固定資産税評価額"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q02"
+      }
     },
     {
       "id": "fp3-ch5-card6",
@@ -67,7 +117,17 @@
       "tags": [
         "不動産の見方",
         "鑑定評価"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 不動産の見方（登記と価格）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q12",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q12"
+      }
     },
     {
       "id": "fp3-ch5-card7",
@@ -78,7 +138,17 @@
       "tags": [
         "不動産の取引",
         "媒介契約"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s2",
+        "label": "5-2 不動産の取引"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q03",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q03"
+      }
     },
     {
       "id": "fp3-ch5-card8",
@@ -89,7 +159,17 @@
       "tags": [
         "不動産の取引",
         "借地借家法"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s2",
+        "label": "5-2 不動産の取引"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q13"
+      }
     },
     {
       "id": "fp3-ch5-card9",
@@ -100,7 +180,17 @@
       "tags": [
         "不動産の取引",
         "借地借家法"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s2",
+        "label": "5-2 不動産の取引"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q14",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q14"
+      }
     },
     {
       "id": "fp3-ch5-card10",
@@ -111,7 +201,17 @@
       "tags": [
         "不動産の法令",
         "都市計画法"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q15",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q15"
+      }
     },
     {
       "id": "fp3-ch5-card11",
@@ -122,7 +222,17 @@
       "tags": [
         "不動産の法令",
         "用途地域"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q16",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q16"
+      }
     },
     {
       "id": "fp3-ch5-card12",
@@ -133,7 +243,17 @@
       "tags": [
         "不動産の法令",
         "農地法"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q17",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q17"
+      }
     },
     {
       "id": "fp3-ch5-card13",
@@ -144,7 +264,17 @@
       "tags": [
         "不動産の法令",
         "建蔽率"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q10",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q10"
+      }
     },
     {
       "id": "fp3-ch5-card14",
@@ -155,7 +285,17 @@
       "tags": [
         "不動産の法令",
         "容積率"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q10",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q10"
+      }
     },
     {
       "id": "fp3-ch5-card15",
@@ -166,7 +306,17 @@
       "tags": [
         "不動産の法令",
         "セットバック"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 不動産に関する法令（都市計画法・建築基準法）"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q04"
+      }
     },
     {
       "id": "fp3-ch5-card16",
@@ -177,7 +327,17 @@
       "tags": [
         "不動産の税金",
         "不動産取得税"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 不動産の取得・保有にかかる税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q05"
+      }
     },
     {
       "id": "fp3-ch5-card17",
@@ -188,7 +348,17 @@
       "tags": [
         "不動産の税金",
         "消費税"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 不動産の取得・保有にかかる税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q18",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q18"
+      }
     },
     {
       "id": "fp3-ch5-card18",
@@ -199,7 +369,17 @@
       "tags": [
         "不動産の税金",
         "固定資産税"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 不動産の取得・保有にかかる税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q19",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q19"
+      }
     },
     {
       "id": "fp3-ch5-card19",
@@ -210,7 +390,17 @@
       "tags": [
         "不動産の税金",
         "譲渡所得"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s5",
+        "label": "5-5 不動産の譲渡にかかる税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q07",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q07"
+      }
     },
     {
       "id": "fp3-ch5-card20",
@@ -221,7 +411,17 @@
       "tags": [
         "不動産の有効活用",
         "J-REIT"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s6",
+        "label": "5-6 不動産の有効活用と投資指標"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q20",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q20"
+      }
     },
     {
       "id": "fp3-ch5-card21",
@@ -232,7 +432,17 @@
       "tags": [
         "不動産の有効活用",
         "J-REIT"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s6",
+        "label": "5-6 不動産の有効活用と投資指標"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q21",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q21"
+      }
     },
     {
       "id": "fp3-ch5-card22",
@@ -243,7 +453,17 @@
       "tags": [
         "不動産の税金",
         "減税措置"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 不動産の取得・保有にかかる税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch5?question=fp3-ch5-q22",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch5-q22"
+      }
     }
   ]
 }

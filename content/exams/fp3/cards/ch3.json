@@ -12,7 +12,17 @@
       "tags": [
         "経済指標",
         "GDP"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s1",
+        "label": "3-1 金融・経済の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q01"
+      }
     },
     {
       "id": "fp3-ch3-card2",
@@ -23,7 +33,17 @@
       "tags": [
         "経済指標",
         "日銀短観"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s1",
+        "label": "3-1 金融・経済の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q01"
+      }
     },
     {
       "id": "fp3-ch3-card3",
@@ -34,7 +54,17 @@
       "tags": [
         "金融政策",
         "オペレーション"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s1",
+        "label": "3-1 金融・経済の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q10",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q10"
+      }
     },
     {
       "id": "fp3-ch3-card4",
@@ -45,7 +75,17 @@
       "tags": [
         "債券投資",
         "金利"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s3",
+        "label": "3-3 債券投資"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q11"
+      }
     },
     {
       "id": "fp3-ch3-card5",
@@ -56,7 +96,17 @@
       "tags": [
         "債券投資",
         "格付け"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s3",
+        "label": "3-3 債券投資"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q12",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q12"
+      }
     },
     {
       "id": "fp3-ch3-card6",
@@ -67,7 +117,17 @@
       "tags": [
         "預貯金",
         "預金保険"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s2",
+        "label": "3-2 預貯金と預金保険制度"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-practice2",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-practice2"
+      }
     },
     {
       "id": "fp3-ch3-card7",
@@ -78,7 +138,17 @@
       "tags": [
         "預貯金",
         "預金保険"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s2",
+        "label": "3-2 預貯金と預金保険制度"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-practice2",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-practice2"
+      }
     },
     {
       "id": "fp3-ch3-card8",
@@ -89,7 +159,17 @@
       "tags": [
         "外貨建金融商品",
         "預金保険"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s6",
+        "label": "3-6 外貨建金融商品"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q16",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q16"
+      }
     },
     {
       "id": "fp3-ch3-card9",
@@ -100,7 +180,17 @@
       "tags": [
         "セーフティネット",
         "投資者保護基金"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s2",
+        "label": "3-2 預貯金と預金保険制度"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q17",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q17"
+      }
     },
     {
       "id": "fp3-ch3-card10",
@@ -111,7 +201,17 @@
       "tags": [
         "株式投資",
         "PER"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s4",
+        "label": "3-4 株式投資"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q04"
+      }
     },
     {
       "id": "fp3-ch3-card11",
@@ -122,7 +222,17 @@
       "tags": [
         "株式投資",
         "ROE"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s4",
+        "label": "3-4 株式投資"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q04"
+      }
     },
     {
       "id": "fp3-ch3-card12",
@@ -133,7 +243,17 @@
       "tags": [
         "株式投資",
         "注文方法"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s4",
+        "label": "3-4 株式投資"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q13"
+      }
     },
     {
       "id": "fp3-ch3-card13",
@@ -144,7 +264,17 @@
       "tags": [
         "投資信託",
         "関係機関"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s5",
+        "label": "3-5 投資信託"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q06",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q06"
+      }
     },
     {
       "id": "fp3-ch3-card14",
@@ -155,7 +285,17 @@
       "tags": [
         "投資信託",
         "分類"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s5",
+        "label": "3-5 投資信託"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q14",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q14"
+      }
     },
     {
       "id": "fp3-ch3-card15",
@@ -166,7 +306,17 @@
       "tags": [
         "投資信託",
         "分配金"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s5",
+        "label": "3-5 投資信託"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q15",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q15"
+      }
     },
     {
       "id": "fp3-ch3-card16",
@@ -177,7 +327,17 @@
       "tags": [
         "外貨建金融商品",
         "為替レート"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s6",
+        "label": "3-6 外貨建金融商品"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q05"
+      }
     },
     {
       "id": "fp3-ch3-card17",
@@ -188,7 +348,17 @@
       "tags": [
         "新NISA",
         "投資枠"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q08",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q08"
+      }
     },
     {
       "id": "fp3-ch3-card18",
@@ -199,7 +369,17 @@
       "tags": [
         "新NISA",
         "非課税限度額"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q08",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q08"
+      }
     },
     {
       "id": "fp3-ch3-card19",
@@ -210,7 +390,17 @@
       "tags": [
         "金融商品の税金",
         "特定口座"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s7",
+        "label": "3-7 金融商品の税金と新NISA"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q18",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q18"
+      }
     },
     {
       "id": "fp3-ch3-card20",
@@ -221,7 +411,17 @@
       "tags": [
         "ポートフォリオ",
         "相関係数"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s8",
+        "label": "3-8 ポートフォリオと派生商品"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q09",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q09"
+      }
     },
     {
       "id": "fp3-ch3-card21",
@@ -232,7 +432,17 @@
       "tags": [
         "金融・経済の基本",
         "金融政策"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch3/ch3-s1",
+        "label": "3-1 金融・経済の基本"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch3?question=fp3-ch3-q21",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch3-q21"
+      }
     }
   ]
 }

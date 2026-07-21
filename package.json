@@ -24,7 +24,8 @@
     "fetch-official": "node ./scripts/fetch-official-sample.js",
     "validate:boki3-mock": "node ./scripts/validate-boki3-mock.js",
     "validate:fp3-a-batch4": "node ./scripts/validate-fp3-a-batch4.js",
-    "validate:fp3-a-batch5": "node ./scripts/validate-fp3-a-batch5.js"
+    "validate:fp3-a-batch5": "node ./scripts/validate-fp3-a-batch5.js",
+    "validate:fp3-a-batch7": "node ./scripts/validate-fp3-a-batch7.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
