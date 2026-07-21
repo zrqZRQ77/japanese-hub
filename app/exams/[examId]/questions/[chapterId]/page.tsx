@@ -8,7 +8,7 @@ import { getQuestionSet } from '@/lib/content/question-loader'
 import { getCardSet } from '@/lib/content/card-loader'
 import { createReviewCardMap } from '@/lib/questions/review-card'
 import { BookOpen, PencilLine } from 'lucide-react'
-import { createPageMetadata } from '@/lib/seo'
+import { absoluteUrl, createPageMetadata } from '@/lib/seo'
 
 interface Props {
   params: Promise<{ examId: string; chapterId: string }>
@@ -108,8 +108,25 @@ export default async function QuestionsPage({ params, searchParams }: Props) {
     )
   }
 
+  const base = `/exams/${examId}`
+  const currentPath = `${base}/questions/${chapterId}`
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '資格合格ナビ', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name: exam.shortName, item: absoluteUrl(base) },
+      { '@type': 'ListItem', position: 3, name: '練習問題', item: absoluteUrl(`${base}/questions`) },
+      { '@type': 'ListItem', position: 4, name: `第${chapter.number}章 ${chapter.title}`, item: absoluteUrl(currentPath) },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
+      />
       <Navbar />
       <div className="question-page-shell" style={{ display: 'flex', height: 'calc(100vh - 64px)', overflow: 'hidden' }}>
         <QuestionClient
