@@ -80,6 +80,17 @@ function isJournalTable(table: HastNode): boolean {
     && headerTexts.every((text, i) => text === JOURNAL_TABLE_HEADERS[i])
 }
 
+function rehypeNormalizeHeadingLevels() {
+  return (tree: HastNode) => {
+    const visit = (node: HastNode) => {
+      if (node.type === 'element' && node.tagName === 'h1') node.tagName = 'h2'
+      node.children?.forEach(visit)
+    }
+
+    visit(tree)
+  }
+}
+
 function rehypeTableFrames() {
   return (tree: HastNode) => {
     const visit = (node: HastNode) => {
@@ -119,6 +130,7 @@ export async function getGuideContent(examId: string, chapterId: string, section
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeNormalizeHeadingLevels)
     .use(rehypeTableFrames)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content)

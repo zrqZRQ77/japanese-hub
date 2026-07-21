@@ -194,6 +194,10 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
     totalChapters: 6,
     color: 'blue',
     icon: 'Monitor',
+    indexing: {
+      // 教材本文は公開中だが、公開前審査で薄内容リスクが解消するまで検索インデックス対象外とする。
+      guides: 'noindex',
+    },
     mockExam: {
       durationMinutes: 30,
       passRate: 60,

@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description: createDescription(guideData.content, fallback),
     path,
+    noIndex: exam.indexing?.guides === 'noindex',
   })
 }
 
