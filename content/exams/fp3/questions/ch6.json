@@ -280,13 +280,25 @@
       "type": "single",
       "text": "相続開始前に被相続人の子が死亡していた場合、その子の子（被相続人の孫）が代わって相続する制度を何というか。",
       "options": [
-        { "label": "A", "text": "代襲相続" },
-        { "label": "B", "text": "限定承認" },
-        { "label": "C", "text": "遺留分" }
+        {
+          "label": "A",
+          "text": "代襲相続"
+        },
+        {
+          "label": "B",
+          "text": "限定承認"
+        },
+        {
+          "label": "C",
+          "text": "遺留分"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "本来相続人となる人が相続開始前に死亡している場合などに、その子が代わって相続する制度を代襲相続といいます。",
-      "tags": ["相続の基礎", "代襲相続"]
+      "tags": [
+        "相続の基礎",
+        "代襲相続"
+      ]
     },
     {
       "id": "fp3-ch6-q12",
@@ -295,13 +307,25 @@
       "type": "single",
       "text": "相続放棄をした人について、代襲相続は発生するか。",
       "options": [
-        { "label": "A", "text": "発生する" },
-        { "label": "B", "text": "発生しない" },
-        { "label": "C", "text": "家庭裁判所が必ず決定する" }
+        {
+          "label": "A",
+          "text": "発生する"
+        },
+        {
+          "label": "B",
+          "text": "発生しない"
+        },
+        {
+          "label": "C",
+          "text": "家庭裁判所が必ず決定する"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "相続放棄をした人は初めから相続人でなかったものと扱われるため、その人について代襲相続は発生しません。",
-      "tags": ["相続の基礎", "相続放棄"]
+      "tags": [
+        "相続の基礎",
+        "相続放棄"
+      ]
     },
     {
       "id": "fp3-ch6-q13",
@@ -310,13 +334,25 @@
       "type": "single",
       "text": "遺産分割協議に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "相続人の過半数の同意で成立する" },
-        { "label": "B", "text": "相続人全員の参加と合意が必要である" },
-        { "label": "C", "text": "配偶者だけで成立させることができる" }
+        {
+          "label": "A",
+          "text": "相続人の過半数の同意で成立する"
+        },
+        {
+          "label": "B",
+          "text": "相続人全員の参加と合意が必要である"
+        },
+        {
+          "label": "C",
+          "text": "配偶者だけで成立させることができる"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "遺産分割協議は、相続人全員の参加と合意が必要です。一部の相続人を除外した協議は無効です。",
-      "tags": ["相続の基礎", "遺産分割"]
+      "tags": [
+        "相続の基礎",
+        "遺産分割"
+      ]
     },
     {
       "id": "fp3-ch6-q14",
@@ -325,13 +361,25 @@
       "type": "single",
       "text": "自筆証書遺言に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "本文は遺言者が自書する必要がある" },
-        { "label": "B", "text": "証人2人以上の立会いが必ず必要である" },
-        { "label": "C", "text": "財産目録も含めてすべて必ず手書きでなければならない" }
+        {
+          "label": "A",
+          "text": "本文は遺言者が自書する必要がある"
+        },
+        {
+          "label": "B",
+          "text": "証人2人以上の立会いが必ず必要である"
+        },
+        {
+          "label": "C",
+          "text": "財産目録も含めてすべて必ず手書きでなければならない"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "自筆証書遺言は本文、日付、氏名を自書し押印します。財産目録はパソコン等で作成可能ですが、各ページに署名押印が必要です。",
-      "tags": ["遺言", "自筆証書遺言"]
+      "tags": [
+        "遺言",
+        "自筆証書遺言"
+      ]
     },
     {
       "id": "fp3-ch6-q15",
@@ -340,13 +388,25 @@
       "type": "single",
       "text": "遺留分が認められない法定相続人はどれか。",
       "options": [
-        { "label": "A", "text": "配偶者" },
-        { "label": "B", "text": "子" },
-        { "label": "C", "text": "兄弟姉妹" }
+        {
+          "label": "A",
+          "text": "配偶者"
+        },
+        {
+          "label": "B",
+          "text": "子"
+        },
+        {
+          "label": "C",
+          "text": "兄弟姉妹"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "遺留分は配偶者、子、直系尊属に認められますが、兄弟姉妹には認められません。",
-      "tags": ["遺言", "遺留分"]
+      "tags": [
+        "遺言",
+        "遺留分"
+      ]
     },
     {
       "id": "fp3-ch6-q16",
@@ -355,13 +415,25 @@
       "type": "single",
       "text": "死亡保険金の相続税における非課税限度額として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "300万円 × 法定相続人の数" },
-        { "label": "B", "text": "500万円 × 法定相続人の数" },
-        { "label": "C", "text": "1,000万円 × 法定相続人の数" }
+        {
+          "label": "A",
+          "text": "300万円 × 法定相続人の数"
+        },
+        {
+          "label": "B",
+          "text": "500万円 × 法定相続人の数"
+        },
+        {
+          "label": "C",
+          "text": "1,000万円 × 法定相続人の数"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "死亡保険金を法定相続人が受け取る場合、500万円×法定相続人の数までが非課税です。死亡退職金も同じ非課税枠があります。",
-      "tags": ["相続税", "非課税財産"]
+      "tags": [
+        "相続税",
+        "非課税財産"
+      ]
     },
     {
       "id": "fp3-ch6-q17",
@@ -370,13 +442,25 @@
       "type": "single",
       "text": "相続税額の2割加算の対象となる者として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "被相続人の配偶者" },
-        { "label": "B", "text": "被相続人の子" },
-        { "label": "C", "text": "被相続人の兄弟姉妹" }
+        {
+          "label": "A",
+          "text": "被相続人の配偶者"
+        },
+        {
+          "label": "B",
+          "text": "被相続人の子"
+        },
+        {
+          "label": "C",
+          "text": "被相続人の兄弟姉妹"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "被相続人の配偶者および一親等の血族以外の者が財産を取得した場合、原則として相続税額の2割加算の対象です。兄弟姉妹は対象です。",
-      "tags": ["相続税", "2割加算"]
+      "tags": [
+        "相続税",
+        "2割加算"
+      ]
     },
     {
       "id": "fp3-ch6-q18",
@@ -385,13 +469,25 @@
       "type": "single",
       "text": "相続税評価において、路線価が定められていない地域の宅地を評価する方法はどれか。",
       "options": [
-        { "label": "A", "text": "倍率方式" },
-        { "label": "B", "text": "類似業種比準方式" },
-        { "label": "C", "text": "配当還元方式" }
+        {
+          "label": "A",
+          "text": "倍率方式"
+        },
+        {
+          "label": "B",
+          "text": "類似業種比準方式"
+        },
+        {
+          "label": "C",
+          "text": "配当還元方式"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "路線価が定められていない地域の宅地は、固定資産税評価額に一定倍率を掛ける倍率方式で評価します。",
-      "tags": ["相続財産の評価", "宅地評価"]
+      "tags": [
+        "相続財産の評価",
+        "宅地評価"
+      ]
     },
     {
       "id": "fp3-ch6-q19",
@@ -400,13 +496,25 @@
       "type": "single",
       "text": "相続時精算課税を選択した場合の特別控除額として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "累計2,500万円" },
-        { "label": "B", "text": "毎年2,500万円" },
-        { "label": "C", "text": "累計110万円" }
+        {
+          "label": "A",
+          "text": "累計2,500万円"
+        },
+        {
+          "label": "B",
+          "text": "毎年2,500万円"
+        },
+        {
+          "label": "C",
+          "text": "累計110万円"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "相続時精算課税の特別控除額は累計2,500万円です。改正により、精算課税選択後も年110万円の基礎控除があります。",
-      "tags": ["贈与税", "相続時精算課税"]
+      "tags": [
+        "贈与税",
+        "相続時精算課税"
+      ]
     },
     {
       "id": "fp3-ch6-q20",
@@ -415,13 +523,25 @@
       "type": "single",
       "text": "非上場株式の評価方法のうち、類似する上場会社の株価、配当、利益、純資産を参考に評価する方式はどれか。",
       "options": [
-        { "label": "A", "text": "類似業種比準方式" },
-        { "label": "B", "text": "純資産価額方式" },
-        { "label": "C", "text": "原価法" }
+        {
+          "label": "A",
+          "text": "類似業種比準方式"
+        },
+        {
+          "label": "B",
+          "text": "純資産価額方式"
+        },
+        {
+          "label": "C",
+          "text": "原価法"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "類似業種比準方式は、類似する上場会社の株価、配当、利益、純資産を参考に非上場株式を評価する方法です。",
-      "tags": ["事業承継", "非上場株式"]
+      "tags": [
+        "事業承継",
+        "非上場株式"
+      ]
     },
     {
       "id": "fp3-ch6-q21",
@@ -430,13 +550,25 @@
       "type": "single",
       "text": "暦年課税における生前贈与加算の対象期間が、改正により3年から7年へ延長される経過措置に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "令和6年1月1日以後の贈与から、即座にすべて7年が適用される" },
-        { "label": "B", "text": "令和6年1月1日以後の贈与から段階的に延長され、令和13年1月1日以後の相続から完全に7年間が適用される" },
-        { "label": "C", "text": "加算対象期間は改正後も3年のまま変わらない" }
+        {
+          "label": "A",
+          "text": "令和6年1月1日以後の贈与から、即座にすべて7年が適用される"
+        },
+        {
+          "label": "B",
+          "text": "令和6年1月1日以後の贈与から段階的に延長され、令和13年1月1日以後の相続から完全に7年間が適用される"
+        },
+        {
+          "label": "C",
+          "text": "加算対象期間は改正後も3年のまま変わらない"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "生前贈与加算の対象期間は令和6年1月1日以後の贈与から段階的に延長され、令和13年（2031年）1月1日以後の相続から完全に7年間が適用されます。延長された4年間部分（3年超7年以内）については総額100万円まで加算しない扱いがあります。",
-      "tags": ["贈与税", "生前贈与加算"]
+      "tags": [
+        "贈与税",
+        "生前贈与加算"
+      ]
     },
     {
       "id": "fp3-ch6-q22",
@@ -445,13 +577,630 @@
       "type": "single",
       "text": "事業承継税制の特例措置（特例承継計画の提出が必要）における、非上場株式等にかかる贈与税・相続税の納税猶予の割合として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "対象株式数の制限はなく、贈与税・相続税ともに100％が猶予される" },
-        { "label": "B", "text": "相続税は常に80％部分のみが猶予される" },
-        { "label": "C", "text": "贈与税のみが猶予され、相続税は対象外である" }
+        {
+          "label": "A",
+          "text": "対象株式数の制限はなく、贈与税・相続税ともに100％が猶予される"
+        },
+        {
+          "label": "B",
+          "text": "相続税は常に80％部分のみが猶予される"
+        },
+        {
+          "label": "C",
+          "text": "贈与税のみが猶予され、相続税は対象外である"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "事業承継税制の特例措置では、事前に特例承継計画を提出することで、対象株式数の制限がなくなり、贈与税・相続税ともに100％が納税猶予の対象となります（一般措置では相続税は株式等の課税価格の80％部分が対象）。",
-      "tags": ["事業承継", "納税猶予"]
+      "tags": [
+        "事業承継",
+        "納税猶予"
+      ]
+    },
+    {
+      "id": "fp3-ch6-practice1",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "classification",
+      "text": "被相続人太郎、配偶者花子、長女由美、相続開始前に死亡した長男一郎、その子美紀・蓮がいる。法定相続人数と各人の法定相続分を入力しなさい。",
+      "correctAnswer": [
+        "4",
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/8"
+      ],
+      "explanation": "配偶者と子の系統が相続人です。亡一郎の1/4の枝を美紀と蓮で均等に分けるため各1/8です。",
+      "explanationSteps": [
+        "配偶者を相続人に置く。",
+        "子の系統全体1/2を由美と一郎の枝へ分ける。",
+        "一郎の枝を孫2人で分ける。"
+      ],
+      "commonMistakes": [
+        "孫2人へそれぞれ1/4を与える。",
+        "亡一郎を人数に含めて5人とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s1",
+        "label": "6-1 相続の基礎"
+      },
+      "tags": [
+        "法定相続人",
+        "代襲相続",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "相続分を採点する",
+        "fields": [
+          {
+            "id": "heir-count",
+            "label": "法定相続人の数",
+            "kind": "number",
+            "correctAnswer": "4",
+            "suffix": "人"
+          },
+          {
+            "id": "share-spouse",
+            "label": "花子の相続分",
+            "kind": "classification",
+            "correctAnswer": "1/2",
+            "acceptedAnswers": [
+              "2分の1"
+            ]
+          },
+          {
+            "id": "share-daughter",
+            "label": "由美の相続分",
+            "kind": "classification",
+            "correctAnswer": "1/4",
+            "acceptedAnswers": [
+              "4分の1"
+            ]
+          },
+          {
+            "id": "share-grandchild1",
+            "label": "美紀の相続分",
+            "kind": "classification",
+            "correctAnswer": "1/8",
+            "acceptedAnswers": [
+              "8分の1"
+            ]
+          },
+          {
+            "id": "share-grandchild2",
+            "label": "蓮の相続分",
+            "kind": "classification",
+            "correctAnswer": "1/8",
+            "acceptedAnswers": [
+              "8分の1"
+            ]
+          }
+        ],
+        "table": {
+          "headers": [
+            "項目",
+            "人数・割合"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "cells": [
+                {
+                  "text": "法定相続人の数"
+                },
+                {
+                  "fieldId": "heir-count"
+                }
+              ]
+            },
+            {
+              "id": "r2",
+              "cells": [
+                {
+                  "text": "花子"
+                },
+                {
+                  "fieldId": "share-spouse"
+                }
+              ]
+            },
+            {
+              "id": "r3",
+              "cells": [
+                {
+                  "text": "由美"
+                },
+                {
+                  "fieldId": "share-daughter"
+                }
+              ]
+            },
+            {
+              "id": "r4",
+              "cells": [
+                {
+                  "text": "美紀"
+                },
+                {
+                  "fieldId": "share-grandchild1"
+                }
+              ]
+            },
+            {
+              "id": "r5",
+              "cells": [
+                {
+                  "text": "蓮"
+                },
+                {
+                  "fieldId": "share-grandchild2"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fp3-ch6-practice2",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "classification",
+      "text": "次の扱いを入力しなさい。①公正証書遺言の検認、②法務局保管の自筆証書遺言の検認、③兄弟姉妹の遺留分、④限定承認を行う主体、⑤相続放棄者の子の代襲相続。",
+      "correctAnswer": [
+        "不要",
+        "不要",
+        "なし",
+        "共同相続人全員",
+        "発生しない"
+      ],
+      "explanation": "公正証書と法務局保管自筆証書は検認不要。兄弟姉妹に遺留分なし。限定承認は全員共同、放棄を原因とする代襲はありません。",
+      "explanationSteps": [
+        "遺言方式と保管方法を確認する。",
+        "遺留分権利者から兄弟姉妹を除く。",
+        "限定承認と放棄を区別する。"
+      ],
+      "commonMistakes": [
+        "全ての自筆証書遺言に検認が必要とする。",
+        "放棄者の子を代襲相続人にする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s2",
+        "label": "6-2 遺言と遺留分"
+      },
+      "tags": [
+        "遺言",
+        "遺留分",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "相続判断を採点する",
+        "fields": [
+          {
+            "id": "will-1",
+            "label": "①公正証書遺言の検認",
+            "kind": "classification",
+            "correctAnswer": "不要"
+          },
+          {
+            "id": "will-2",
+            "label": "②法務局保管自筆証書の検認",
+            "kind": "classification",
+            "correctAnswer": "不要"
+          },
+          {
+            "id": "will-3",
+            "label": "③兄弟姉妹の遺留分",
+            "kind": "classification",
+            "correctAnswer": "なし",
+            "acceptedAnswers": [
+              "無",
+              "ない"
+            ]
+          },
+          {
+            "id": "will-4",
+            "label": "④限定承認を行う主体",
+            "kind": "classification",
+            "correctAnswer": "共同相続人全員",
+            "acceptedAnswers": [
+              "相続人全員"
+            ]
+          },
+          {
+            "id": "will-5",
+            "label": "⑤放棄者の子の代襲相続",
+            "kind": "classification",
+            "correctAnswer": "発生しない",
+            "acceptedAnswers": [
+              "なし",
+              "しない"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch6-practice3",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "numeric",
+      "text": "法定相続人4人。その他課税財産7,900万円、小規模宅地適用後土地900万円、死亡保険金2,400万円、債務500万円、葬式費用300万円。保険金非課税額、保険金課税部分、基礎控除、課税価格合計、課税遺産総額を求めなさい。",
+      "correctAnswer": [
+        "20000000",
+        "4000000",
+        "54000000",
+        "84000000",
+        "30000000"
+      ],
+      "explanation": "保険金非課税2,000万円、課税部分400万円。課税価格8,400万円、基礎控除5,400万円、課税遺産総額3,000万円です。",
+      "explanationSteps": [
+        "500万円×4人で保険金非課税を求める。",
+        "財産へ課税保険金を加え債務・葬式費用を引く。",
+        "3,000万円＋600万円×4人を引く。"
+      ],
+      "commonMistakes": [
+        "保険金2,400万円を全額非課税にする。",
+        "債務と葬式費用を基礎控除後に引く。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税計算"
+      },
+      "tags": [
+        "相続税基礎控除",
+        "死亡保険金",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "課税遺産を採点する",
+        "fields": [
+          {
+            "id": "insurance-exemption",
+            "label": "死亡保険金の非課税額",
+            "kind": "number",
+            "correctAnswer": "20000000",
+            "suffix": "円"
+          },
+          {
+            "id": "taxable-insurance",
+            "label": "死亡保険金の課税部分",
+            "kind": "number",
+            "correctAnswer": "4000000",
+            "suffix": "円"
+          },
+          {
+            "id": "inheritance-deduction",
+            "label": "相続税の基礎控除",
+            "kind": "number",
+            "correctAnswer": "54000000",
+            "suffix": "円"
+          },
+          {
+            "id": "taxable-price",
+            "label": "課税価格の合計額",
+            "kind": "number",
+            "correctAnswer": "84000000",
+            "suffix": "円"
+          },
+          {
+            "id": "taxable-estate",
+            "label": "課税遺産総額",
+            "kind": "number",
+            "correctAnswer": "30000000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch6-practice4",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "numeric",
+      "text": "課税遺産総額3,000万円を花子1/2、由美1/4、美紀1/8、蓮1/8で仮分けする。1,000万円以下は10％、1,000万円超3,000万円以下は15％－50万円とする。各人の仮取得額、花子の仮税額、由美の仮税額、孫各人の仮税額、相続税総額を求めなさい。",
+      "correctAnswer": [
+        "15000000",
+        "7500000",
+        "3750000",
+        "1750000",
+        "750000",
+        "375000",
+        "3250000"
+      ],
+      "explanation": "仮取得額は1,500万円、750万円、375万円ずつです。花子は1,500万円×15％から速算控除額50万円を差し引いて175万円、由美は75万円、孫は各37万5,000円となり、相続税総額は325万円です。",
+      "explanationSteps": [
+        "課税遺産総額を法定相続分で仮分けする。",
+        "各人の仮取得額へ税率を掛け、該当する速算控除額を差し引く。",
+        "仮税額を合計する。"
+      ],
+      "commonMistakes": [
+        "実際の取得額へ直接税率を掛ける。",
+        "花子1,500万円へ10％だけを掛ける。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s3",
+        "label": "6-3 相続税計算"
+      },
+      "tags": [
+        "相続税総額",
+        "法定相続分",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "相続税総額を採点する",
+        "fields": [
+          {
+            "id": "spouse-acquisition",
+            "label": "花子の仮取得額",
+            "kind": "number",
+            "correctAnswer": "15000000",
+            "suffix": "円"
+          },
+          {
+            "id": "daughter-acquisition",
+            "label": "由美の仮取得額",
+            "kind": "number",
+            "correctAnswer": "7500000",
+            "suffix": "円"
+          },
+          {
+            "id": "grandchild-acquisition",
+            "label": "孫各人の仮取得額",
+            "kind": "number",
+            "correctAnswer": "3750000",
+            "suffix": "円"
+          },
+          {
+            "id": "spouse-tax",
+            "label": "花子の仮税額",
+            "kind": "number",
+            "correctAnswer": "1750000",
+            "suffix": "円"
+          },
+          {
+            "id": "daughter-tax",
+            "label": "由美の仮税額",
+            "kind": "number",
+            "correctAnswer": "750000",
+            "suffix": "円"
+          },
+          {
+            "id": "grandchild-tax",
+            "label": "孫各人の仮税額",
+            "kind": "number",
+            "correctAnswer": "375000",
+            "suffix": "円"
+          },
+          {
+            "id": "inheritance-total",
+            "label": "相続税総額",
+            "kind": "number",
+            "correctAnswer": "3250000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch6-practice5",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "numeric",
+      "text": "路線価150千円、地積300㎡、補正率1.00の自宅土地を、要件を満たす配偶者が取得する。特定居住用宅地等として330㎡まで80％減額できる。通常評価額、減額額、課税価格算入額を求めなさい。",
+      "correctAnswer": [
+        "45000000",
+        "36000000",
+        "9000000"
+      ],
+      "explanation": "通常評価4,500万円。全300㎡が限度内なので80％の3,600万円を減額し、900万円を課税価格へ算入します。",
+      "explanationSteps": [
+        "路線価の千円単位を円へ直す。",
+        "路線価×地積で通常評価を求める。",
+        "80％減額後の20％を残す。"
+      ],
+      "commonMistakes": [
+        "150千円を150円として計算する。",
+        "評価額を80％残す。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s4",
+        "label": "6-4 相続財産評価"
+      },
+      "tags": [
+        "小規模宅地",
+        "路線価",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "宅地評価を採点する",
+        "fields": [
+          {
+            "id": "land-normal-value",
+            "label": "通常評価額",
+            "kind": "number",
+            "correctAnswer": "45000000",
+            "suffix": "円"
+          },
+          {
+            "id": "land-reduction",
+            "label": "小規模宅地の減額額",
+            "kind": "number",
+            "correctAnswer": "36000000",
+            "suffix": "円"
+          },
+          {
+            "id": "land-taxable-value",
+            "label": "課税価格算入額",
+            "kind": "number",
+            "correctAnswer": "9000000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch6-practice6",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "numeric",
+      "text": "A：父300万円、母100万円の贈与を暦年課税で受ける。基礎控除110万円、一般税率15％、控除10万円。B：父から3,000万円を相続時精算課税で初めて受ける。年間控除110万円、特別控除2,500万円、税率20％。Aの課税価格・税額、Bの年間控除後額・特別控除後課税額・税額を求めなさい。",
+      "correctAnswer": [
+        "2900000",
+        "335000",
+        "28900000",
+        "3900000",
+        "780000"
+      ],
+      "explanation": "暦年課税は合計400万円－110万円＝290万円、税額33万5,000円。精算課税は3,000－110－2,500＝390万円、20％で78万円です。",
+      "explanationSteps": [
+        "暦年課税は贈与者別でなく受贈者年間合計から110万円を引く。",
+        "精算課税は年間110万円、累計2,500万円の順に引く。"
+      ],
+      "commonMistakes": [
+        "父母それぞれから110万円を引く。",
+        "精算課税で2,500万円だけを引き年間110万円を忘れる。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s5",
+        "label": "6-5 贈与税"
+      },
+      "tags": [
+        "贈与税",
+        "相続時精算課税",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "贈与税を採点する",
+        "fields": [
+          {
+            "id": "calendar-taxable",
+            "label": "A 暦年課税の課税価格",
+            "kind": "number",
+            "correctAnswer": "2900000",
+            "suffix": "円"
+          },
+          {
+            "id": "calendar-tax",
+            "label": "A 暦年課税の贈与税",
+            "kind": "number",
+            "correctAnswer": "335000",
+            "suffix": "円"
+          },
+          {
+            "id": "settlement-after-annual",
+            "label": "B 年間控除後の金額",
+            "kind": "number",
+            "correctAnswer": "28900000",
+            "suffix": "円"
+          },
+          {
+            "id": "settlement-taxable",
+            "label": "B 特別控除後の課税額",
+            "kind": "number",
+            "correctAnswer": "3900000",
+            "suffix": "円"
+          },
+          {
+            "id": "settlement-tax",
+            "label": "B 相続時精算課税の贈与税",
+            "kind": "number",
+            "correctAnswer": "780000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch6-practice7",
+      "examId": "fp3",
+      "chapterId": "ch6",
+      "type": "classification",
+      "text": "非上場株式・事業承継の判断を入力しなさい。①同族株主が取得する大会社株式の中心方式、②同族株主が取得する小会社株式の中心方式、③少数株主の方式、④事業承継税制の効果、⑤取消事由発生時の基本的扱い。",
+      "correctAnswer": [
+        "類似業種比準方式",
+        "純資産価額方式",
+        "配当還元方式",
+        "納税猶予",
+        "猶予税額等を納付"
+      ],
+      "explanation": "大会社は類似業種、小会社は純資産、少数株主は配当還元が中心です。事業承継税制は納税猶予で、取消時は猶予税額と利子税等を納付する場合があります。",
+      "explanationSteps": [
+        "取得者が同族株主等か確認する。",
+        "会社規模を確認する。",
+        "猶予制度と免除制度を区別する。"
+      ],
+      "commonMistakes": [
+        "少数株主へ純資産価額方式だけを使う。",
+        "事業承継税制を即時免税とする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch6/ch6-s6",
+        "label": "6-6 特例と事業承継"
+      },
+      "tags": [
+        "非上場株式",
+        "事業承継",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "事業承継判断を採点する",
+        "fields": [
+          {
+            "id": "business-1",
+            "label": "①大会社株式の中心方式",
+            "kind": "classification",
+            "correctAnswer": "類似業種比準方式",
+            "acceptedAnswers": [
+              "類似業種比準"
+            ]
+          },
+          {
+            "id": "business-2",
+            "label": "②小会社株式の中心方式",
+            "kind": "classification",
+            "correctAnswer": "純資産価額方式",
+            "acceptedAnswers": [
+              "純資産価額"
+            ]
+          },
+          {
+            "id": "business-3",
+            "label": "③少数株主の方式",
+            "kind": "classification",
+            "correctAnswer": "配当還元方式",
+            "acceptedAnswers": [
+              "配当還元"
+            ]
+          },
+          {
+            "id": "business-4",
+            "label": "④事業承継税制の効果",
+            "kind": "classification",
+            "correctAnswer": "納税猶予",
+            "acceptedAnswers": [
+              "猶予"
+            ]
+          },
+          {
+            "id": "business-5",
+            "label": "⑤取消事由発生時",
+            "kind": "classification",
+            "correctAnswer": "猶予税額等を納付",
+            "acceptedAnswers": [
+              "猶予税額を納付",
+              "税額を納付"
+            ]
+          }
+        ]
+      }
     }
   ]
 }

@@ -280,13 +280,25 @@
       "type": "single",
       "text": "不動産の登記に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "登記には公信力がある" },
-        { "label": "B", "text": "第三者に権利を主張するには、原則として登記が必要である" },
-        { "label": "C", "text": "登記記録は所有者本人しか閲覧できない" }
+        {
+          "label": "A",
+          "text": "登記には公信力がある"
+        },
+        {
+          "label": "B",
+          "text": "第三者に権利を主張するには、原則として登記が必要である"
+        },
+        {
+          "label": "C",
+          "text": "登記記録は所有者本人しか閲覧できない"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "不動産登記には対抗力がありますが、公信力はありません。登記記録は誰でも交付請求できます。",
-      "tags": ["不動産の見方", "登記"]
+      "tags": [
+        "不動産の見方",
+        "登記"
+      ]
     },
     {
       "id": "fp3-ch5-q12",
@@ -295,13 +307,25 @@
       "type": "single",
       "text": "収益還元法に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "将来得られる収益をもとに不動産価格を求める方法" },
-        { "label": "B", "text": "似た不動産の取引事例だけで価格を求める方法" },
-        { "label": "C", "text": "再調達原価だけで価格を求める方法" }
+        {
+          "label": "A",
+          "text": "将来得られる収益をもとに不動産価格を求める方法"
+        },
+        {
+          "label": "B",
+          "text": "似た不動産の取引事例だけで価格を求める方法"
+        },
+        {
+          "label": "C",
+          "text": "再調達原価だけで価格を求める方法"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "収益還元法は、不動産から将来得られる収益をもとに価格を求める方法で、賃貸不動産の評価で重要です。",
-      "tags": ["不動産の見方", "鑑定評価"]
+      "tags": [
+        "不動産の見方",
+        "鑑定評価"
+      ]
     },
     {
       "id": "fp3-ch5-q13",
@@ -310,13 +334,25 @@
       "type": "single",
       "text": "普通借地権の存続期間として、原則として最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "10年以上" },
-        { "label": "B", "text": "20年以上" },
-        { "label": "C", "text": "30年以上" }
+        {
+          "label": "A",
+          "text": "10年以上"
+        },
+        {
+          "label": "B",
+          "text": "20年以上"
+        },
+        {
+          "label": "C",
+          "text": "30年以上"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "普通借地権の存続期間は原則30年以上です。定期借地権とは異なり更新があります。",
-      "tags": ["不動産の取引", "借地借家法"]
+      "tags": [
+        "不動産の取引",
+        "借地借家法"
+      ]
     },
     {
       "id": "fp3-ch5-q14",
@@ -325,13 +361,25 @@
       "type": "single",
       "text": "定期借家契約に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "契約期間満了により終了する契約である" },
-        { "label": "B", "text": "口頭契約でも必ず有効に成立する" },
-        { "label": "C", "text": "貸主からの更新拒絶には常に正当事由が必要である" }
+        {
+          "label": "A",
+          "text": "契約期間満了により終了する契約である"
+        },
+        {
+          "label": "B",
+          "text": "口頭契約でも必ず有効に成立する"
+        },
+        {
+          "label": "C",
+          "text": "貸主からの更新拒絶には常に正当事由が必要である"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "定期借家契約は、契約で定めた期間満了により終了します。契約は書面等により行う必要があります。",
-      "tags": ["不動産の取引", "借地借家法"]
+      "tags": [
+        "不動産の取引",
+        "借地借家法"
+      ]
     },
     {
       "id": "fp3-ch5-q15",
@@ -340,13 +388,25 @@
       "type": "single",
       "text": "都市計画法において、市街化を抑制すべき区域とされるものはどれか。",
       "options": [
-        { "label": "A", "text": "市街化区域" },
-        { "label": "B", "text": "市街化調整区域" },
-        { "label": "C", "text": "準都市計画区域" }
+        {
+          "label": "A",
+          "text": "市街化区域"
+        },
+        {
+          "label": "B",
+          "text": "市街化調整区域"
+        },
+        {
+          "label": "C",
+          "text": "準都市計画区域"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "市街化調整区域は、市街化を抑制すべき区域です。市街化区域は優先的・計画的に市街化を図る区域です。",
-      "tags": ["不動産の法令", "都市計画法"]
+      "tags": [
+        "不動産の法令",
+        "都市計画法"
+      ]
     },
     {
       "id": "fp3-ch5-q16",
@@ -355,13 +415,25 @@
       "type": "single",
       "text": "工業専用地域に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "住宅を建てることができる" },
-        { "label": "B", "text": "住宅を建てることができない" },
-        { "label": "C", "text": "低層住宅だけを建てることができる" }
+        {
+          "label": "A",
+          "text": "住宅を建てることができる"
+        },
+        {
+          "label": "B",
+          "text": "住宅を建てることができない"
+        },
+        {
+          "label": "C",
+          "text": "低層住宅だけを建てることができる"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "工業専用地域は工業の利便を増進する地域であり、住宅を建てることはできません。",
-      "tags": ["不動産の法令", "用途地域"]
+      "tags": [
+        "不動産の法令",
+        "用途地域"
+      ]
     },
     {
       "id": "fp3-ch5-q17",
@@ -370,13 +442,25 @@
       "type": "single",
       "text": "自己所有の農地を宅地に転用する場合、原則として必要となる農地法上の手続きはどれか。",
       "options": [
-        { "label": "A", "text": "農地法3条の許可" },
-        { "label": "B", "text": "農地法4条の許可" },
-        { "label": "C", "text": "農地法5条の許可" }
+        {
+          "label": "A",
+          "text": "農地法3条の許可"
+        },
+        {
+          "label": "B",
+          "text": "農地法4条の許可"
+        },
+        {
+          "label": "C",
+          "text": "農地法5条の許可"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "自分の農地を農地以外に転用する場合は農地法4条、農地を取得して転用する場合は5条、農地のまま権利移転する場合は3条です。",
-      "tags": ["不動産の法令", "農地法"]
+      "tags": [
+        "不動産の法令",
+        "農地法"
+      ]
     },
     {
       "id": "fp3-ch5-q18",
@@ -385,13 +469,25 @@
       "type": "single",
       "text": "土地の譲渡や貸付けに係る消費税の取扱いとして、原則として最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "課税取引である" },
-        { "label": "B", "text": "非課税取引である" },
-        { "label": "C", "text": "不課税取引である" }
+        {
+          "label": "A",
+          "text": "課税取引である"
+        },
+        {
+          "label": "B",
+          "text": "非課税取引である"
+        },
+        {
+          "label": "C",
+          "text": "不課税取引である"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "土地の譲渡や貸付けは、原則として消費税の非課税取引です。一方、建物の譲渡や仲介手数料は課税対象です。",
-      "tags": ["不動産の税金", "消費税"]
+      "tags": [
+        "不動産の税金",
+        "消費税"
+      ]
     },
     {
       "id": "fp3-ch5-q19",
@@ -400,13 +496,25 @@
       "type": "single",
       "text": "固定資産税の小規模住宅用地（200㎡以下の部分）について、課税標準は原則として固定資産税評価額のいくらに軽減されるか。",
       "options": [
-        { "label": "A", "text": "6分の1" },
-        { "label": "B", "text": "3分の1" },
-        { "label": "C", "text": "2分の1" }
+        {
+          "label": "A",
+          "text": "6分の1"
+        },
+        {
+          "label": "B",
+          "text": "3分の1"
+        },
+        {
+          "label": "C",
+          "text": "2分の1"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "小規模住宅用地（200㎡以下の部分）は、固定資産税の課税標準が評価額の6分の1に軽減されます。",
-      "tags": ["不動産の税金", "固定資産税"]
+      "tags": [
+        "不動産の税金",
+        "固定資産税"
+      ]
     },
     {
       "id": "fp3-ch5-q20",
@@ -415,13 +523,25 @@
       "type": "single",
       "text": "J-REITに関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "不動産に投資する投資信託であり、上場しているものは市場で売買できる" },
-        { "label": "B", "text": "元本と分配金が必ず保証されている" },
-        { "label": "C", "text": "預金保険制度により全額保護される" }
+        {
+          "label": "A",
+          "text": "不動産に投資する投資信託であり、上場しているものは市場で売買できる"
+        },
+        {
+          "label": "B",
+          "text": "元本と分配金が必ず保証されている"
+        },
+        {
+          "label": "C",
+          "text": "預金保険制度により全額保護される"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "J-REITは不動産投資信託です。上場J-REITは市場で売買できますが、価格変動や分配金変動などのリスクがあります。",
-      "tags": ["不動産の有効活用", "J-REIT"]
+      "tags": [
+        "不動産の有効活用",
+        "J-REIT"
+      ]
     },
     {
       "id": "fp3-ch5-q21",
@@ -430,13 +550,25 @@
       "type": "single",
       "text": "上場J-REITの分配金に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "配当所得に区分され、配当控除の対象となる" },
-        { "label": "B", "text": "配当所得に区分されるが、配当控除の対象とはならない" },
-        { "label": "C", "text": "事業所得に区分される" }
+        {
+          "label": "A",
+          "text": "配当所得に区分され、配当控除の対象となる"
+        },
+        {
+          "label": "B",
+          "text": "配当所得に区分されるが、配当控除の対象とはならない"
+        },
+        {
+          "label": "C",
+          "text": "事業所得に区分される"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "J-REIT（投資法人）は、利益の90％超を分配するなどの要件を満たすと法人税が実質的に課されません。そのため、分配金は配当所得に区分されますが配当控除の対象にはなりません。",
-      "tags": ["不動産の有効活用", "J-REIT"]
+      "tags": [
+        "不動産の有効活用",
+        "J-REIT"
+      ]
     },
     {
       "id": "fp3-ch5-q22",
@@ -445,13 +577,595 @@
       "type": "single",
       "text": "住宅用不動産の登録免許税の軽減措置や不動産取得税の住宅用地特例に関する記述として、最も適切なものはどれか。",
       "options": [
-        { "label": "A", "text": "恒久的な制度であり、適用期限は設けられていない" },
-        { "label": "B", "text": "期限が定められた特例措置であり、試験では法令基準日における適用期限を確認する必要がある" },
-        { "label": "C", "text": "相続による取得の場合のみ適用される" }
+        {
+          "label": "A",
+          "text": "恒久的な制度であり、適用期限は設けられていない"
+        },
+        {
+          "label": "B",
+          "text": "期限が定められた特例措置であり、試験では法令基準日における適用期限を確認する必要がある"
+        },
+        {
+          "label": "C",
+          "text": "相続による取得の場合のみ適用される"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "登録免許税の軽減措置や不動産取得税の住宅用地特例は時限的な特例であり、毎年度の税制改正で適用期限が見直されます。恒久措置と誤解しないよう注意が必要です。",
-      "tags": ["不動産の税金", "減税措置"]
+      "tags": [
+        "不動産の税金",
+        "減税措置"
+      ]
+    },
+    {
+      "id": "fp3-ch5-practice1",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "classification",
+      "text": "不動産資料の確認先を入力しなさい。①土地の地積、②所有者、③抵当権、④相続税評価用の1㎡当たり価格、⑤一般土地取引の指標価格。",
+      "correctAnswer": [
+        "表題部",
+        "甲区",
+        "乙区",
+        "路線価",
+        "地価公示価格"
+      ],
+      "explanation": "物理情報は表題部、所有権は甲区、抵当権等は乙区です。相続税評価は路線価、一般取引の指標は地価公示価格を使います。",
+      "explanationSteps": [
+        "資料を物理情報・所有権・所有権以外・税務価格・市場指標へ分ける。",
+        "登記と価格資料を別の表で確認する。"
+      ],
+      "commonMistakes": [
+        "抵当権を甲区で探す。",
+        "路線価を地価公示価格と同じものとする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s1",
+        "label": "5-1 登記と価格"
+      },
+      "tags": [
+        "不動産登記",
+        "価格資料",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "table",
+        "submitLabel": "資料分類を採点する",
+        "fields": [
+          {
+            "id": "source-1",
+            "label": "①土地の地積",
+            "kind": "classification",
+            "correctAnswer": "表題部"
+          },
+          {
+            "id": "source-2",
+            "label": "②所有者",
+            "kind": "classification",
+            "correctAnswer": "甲区"
+          },
+          {
+            "id": "source-3",
+            "label": "③抵当権",
+            "kind": "classification",
+            "correctAnswer": "乙区"
+          },
+          {
+            "id": "source-4",
+            "label": "④相続税評価用価格",
+            "kind": "classification",
+            "correctAnswer": "路線価"
+          },
+          {
+            "id": "source-5",
+            "label": "⑤一般取引の指標価格",
+            "kind": "classification",
+            "correctAnswer": "地価公示価格",
+            "acceptedAnswers": [
+              "公示価格"
+            ]
+          }
+        ],
+        "table": {
+          "headers": [
+            "確認事項",
+            "資料・区分"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "cells": [
+                {
+                  "text": "土地の地積"
+                },
+                {
+                  "fieldId": "source-1"
+                }
+              ]
+            },
+            {
+              "id": "r2",
+              "cells": [
+                {
+                  "text": "所有者"
+                },
+                {
+                  "fieldId": "source-2"
+                }
+              ]
+            },
+            {
+              "id": "r3",
+              "cells": [
+                {
+                  "text": "抵当権"
+                },
+                {
+                  "fieldId": "source-3"
+                }
+              ]
+            },
+            {
+              "id": "r4",
+              "cells": [
+                {
+                  "text": "相続税評価用価格"
+                },
+                {
+                  "fieldId": "source-4"
+                }
+              ]
+            },
+            {
+              "id": "r5",
+              "cells": [
+                {
+                  "text": "一般取引の指標価格"
+                },
+                {
+                  "fieldId": "source-5"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fp3-ch5-practice2",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "classification",
+      "text": "次の条件に合う契約を入力しなさい。①一社だけに依頼し自己発見取引を残す、②一社だけに依頼し自己発見取引も禁止、③複数業者へ依頼、④期間満了で更新なく建物賃貸借を終了。",
+      "correctAnswer": [
+        "専任媒介契約",
+        "専属専任媒介契約",
+        "一般媒介契約",
+        "定期借家契約"
+      ],
+      "explanation": "専任媒介は自己発見可、専属専任は不可、一般媒介は複数依頼可です。更新なしで期間満了終了を目的とする建物賃貸借は定期借家契約です。",
+      "explanationSteps": [
+        "複数依頼の可否を確認する。",
+        "自己発見取引の可否を確認する。",
+        "賃貸借では更新の有無を確認する。"
+      ],
+      "commonMistakes": [
+        "専任と専属専任を逆にする。",
+        "普通借家を期間満了で当然終了するとする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s2",
+        "label": "5-2 不動産取引"
+      },
+      "tags": [
+        "媒介契約",
+        "借家契約",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "契約判断を採点する",
+        "fields": [
+          {
+            "id": "contract-1",
+            "label": "①一社・自己発見可",
+            "kind": "classification",
+            "correctAnswer": "専任媒介契約",
+            "acceptedAnswers": [
+              "専任媒介"
+            ]
+          },
+          {
+            "id": "contract-2",
+            "label": "②一社・自己発見不可",
+            "kind": "classification",
+            "correctAnswer": "専属専任媒介契約",
+            "acceptedAnswers": [
+              "専属専任媒介"
+            ]
+          },
+          {
+            "id": "contract-3",
+            "label": "③複数業者へ依頼",
+            "kind": "classification",
+            "correctAnswer": "一般媒介契約",
+            "acceptedAnswers": [
+              "一般媒介"
+            ]
+          },
+          {
+            "id": "contract-4",
+            "label": "④更新なく期間満了終了",
+            "kind": "classification",
+            "correctAnswer": "定期借家契約",
+            "acceptedAnswers": [
+              "定期借家"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch5-practice3",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "登記地積240㎡、セットバック20㎡。指定建蔽率60％で角地10ポイント、防火地域内の耐火建築物等10ポイントの緩和。指定容積率200％、前面道路4m、住居系法定乗数0.4とする。有効敷地、適用建蔽率、最大建築面積、道路容積率、適用容積率、最大延べ面積を求めなさい。",
+      "correctAnswer": [
+        "220",
+        "80",
+        "176",
+        "160",
+        "160",
+        "352"
+      ],
+      "explanation": "有効敷地220㎡。建蔽率は60＋10＋10＝80％、建築面積176㎡。道路容積率4×0.4＝160％で指定200％より厳しいため、最大延べ面積352㎡です。",
+      "explanationSteps": [
+        "登記地積からセットバックを除く。",
+        "建蔽率緩和をポイント加算する。",
+        "指定容積率と道路容積率の小さい方を選ぶ。"
+      ],
+      "commonMistakes": [
+        "セットバックを敷地面積に含める。",
+        "60％を1.2倍して72％とする。",
+        "指定容積率200％だけを使う。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s3",
+        "label": "5-3 都市計画法・建築基準法"
+      },
+      "tags": [
+        "建蔽率",
+        "容積率",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "建築制限を採点する",
+        "fields": [
+          {
+            "id": "effective-lot",
+            "label": "有効敷地面積",
+            "kind": "number",
+            "correctAnswer": "220",
+            "suffix": "㎡"
+          },
+          {
+            "id": "bcr",
+            "label": "適用建蔽率",
+            "kind": "number",
+            "correctAnswer": "80",
+            "suffix": "％"
+          },
+          {
+            "id": "building-area",
+            "label": "最大建築面積",
+            "kind": "number",
+            "correctAnswer": "176",
+            "suffix": "㎡"
+          },
+          {
+            "id": "road-far",
+            "label": "道路幅員による容積率",
+            "kind": "number",
+            "correctAnswer": "160",
+            "suffix": "％"
+          },
+          {
+            "id": "far",
+            "label": "適用容積率",
+            "kind": "number",
+            "correctAnswer": "160",
+            "suffix": "％"
+          },
+          {
+            "id": "floor-area",
+            "label": "最大延べ面積",
+            "kind": "number",
+            "correctAnswer": "352",
+            "suffix": "㎡"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch5-practice4",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "住宅用地240㎡、固定資産税評価額3,600万円。200㎡まで1/6、超過40㎡は1/3、固定資産税率1.4％とする。また宅地取得時の課税標準は評価額の1/2、税率3％とする。小規模部分、一般部分、固定資産税課税標準、固定資産税、不動産取得税を求めなさい。",
+      "correctAnswer": [
+        "5000000",
+        "2000000",
+        "7000000",
+        "98000",
+        "540000"
+      ],
+      "explanation": "200㎡部分は500万円、40㎡部分は200万円、課税標準700万円、固定資産税9万8,000円。不動産取得税は3,600万円×1/2×3％＝54万円です。",
+      "explanationSteps": [
+        "評価額を面積比例で200㎡と40㎡に分ける。",
+        "それぞれ1/6と1/3を適用する。",
+        "取得税は別に評価額×1/2×3％で計算する。"
+      ],
+      "commonMistakes": [
+        "240㎡全体に1/6を使う。",
+        "購入価格へ不動産取得税率を掛ける。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 取得・保有税"
+      },
+      "tags": [
+        "固定資産税",
+        "不動産取得税",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "不動産税を採点する",
+        "fields": [
+          {
+            "id": "small-base",
+            "label": "小規模住宅用地部分の課税標準",
+            "kind": "number",
+            "correctAnswer": "5000000",
+            "suffix": "円"
+          },
+          {
+            "id": "general-base",
+            "label": "一般住宅用地部分の課税標準",
+            "kind": "number",
+            "correctAnswer": "2000000",
+            "suffix": "円"
+          },
+          {
+            "id": "fixed-base",
+            "label": "固定資産税課税標準合計",
+            "kind": "number",
+            "correctAnswer": "7000000",
+            "suffix": "円"
+          },
+          {
+            "id": "fixed-tax",
+            "label": "固定資産税",
+            "kind": "number",
+            "correctAnswer": "98000",
+            "suffix": "円"
+          },
+          {
+            "id": "acquisition-tax",
+            "label": "不動産取得税",
+            "kind": "number",
+            "correctAnswer": "540000",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch5-practice5",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "2020年5月1日取得の土地を2026年6月30日に4,500万円で譲渡した。取得費2,500万円、譲渡費用200万円、特別控除なし。2026年1月1日判定で長期とする。課税譲渡所得、所得税、住民税、復興特別所得税、合計税額を求めなさい。",
+      "correctAnswer": [
+        "18000000",
+        "2700000",
+        "900000",
+        "56700",
+        "3656700"
+      ],
+      "explanation": "課税譲渡所得1,800万円。長期の所得税15％で270万円、住民税5％で90万円、復興特別所得税5万6,700円、合計365万6,700円です。",
+      "explanationSteps": [
+        "収入から取得費と譲渡費用を引く。",
+        "譲渡年1月1日で長期判定する。",
+        "所得税額へ2.1％を掛けて復興特別所得税を求める。"
+      ],
+      "commonMistakes": [
+        "売却日で5年を判定する。",
+        "復興特別所得税を課税譲渡所得へ直接掛ける。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s5",
+        "label": "5-5 譲渡税"
+      },
+      "tags": [
+        "譲渡所得",
+        "長期譲渡",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "譲渡税を採点する",
+        "fields": [
+          {
+            "id": "transfer-income",
+            "label": "課税譲渡所得",
+            "kind": "number",
+            "correctAnswer": "18000000",
+            "suffix": "円"
+          },
+          {
+            "id": "income-tax",
+            "label": "所得税",
+            "kind": "number",
+            "correctAnswer": "2700000",
+            "suffix": "円"
+          },
+          {
+            "id": "resident-tax",
+            "label": "住民税",
+            "kind": "number",
+            "correctAnswer": "900000",
+            "suffix": "円"
+          },
+          {
+            "id": "reconstruction-tax",
+            "label": "復興特別所得税",
+            "kind": "number",
+            "correctAnswer": "56700",
+            "suffix": "円"
+          },
+          {
+            "id": "total-tax",
+            "label": "合計税額",
+            "kind": "number",
+            "correctAnswer": "3656700",
+            "suffix": "円"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch5-practice6",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "投資総額5,000万円、年間賃料400万円、年間運営費100万円の物件について、表面利回り、NOI、実質利回りを求めなさい。",
+      "correctAnswer": [
+        "8",
+        "3000000",
+        "6"
+      ],
+      "explanation": "表面利回りは400÷5,000＝8％。NOIは300万円、実質利回りは300÷5,000＝6％です。",
+      "explanationSteps": [
+        "表面利回りでは経費を引かない。",
+        "NOIは賃料から運営費を引く。",
+        "実質利回りはNOIを投資総額で割る。"
+      ],
+      "commonMistakes": [
+        "表面利回りで経費を引く。",
+        "実質利回りの分母を年間賃料にする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s6",
+        "label": "5-6 有効活用と投資指標"
+      },
+      "tags": [
+        "不動産投資",
+        "利回り",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "利回りを採点する",
+        "fields": [
+          {
+            "id": "gross-yield",
+            "label": "表面利回り",
+            "kind": "number",
+            "correctAnswer": "8",
+            "suffix": "％"
+          },
+          {
+            "id": "noi",
+            "label": "NOI",
+            "kind": "number",
+            "correctAnswer": "3000000",
+            "suffix": "円"
+          },
+          {
+            "id": "net-yield",
+            "label": "実質利回り",
+            "kind": "number",
+            "correctAnswer": "6",
+            "suffix": "％"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fp3-ch5-practice7",
+      "examId": "fp3",
+      "chapterId": "ch5",
+      "type": "classification",
+      "text": "次の取引・時点の扱いを入力しなさい。①土地売買の消費税、②事業者による建物売買の消費税、③相続取得の不動産取得税、④贈与取得の不動産取得税、⑤固定資産税の基準日。",
+      "correctAnswer": [
+        "非課税",
+        "課税",
+        "非課税",
+        "課税",
+        "1月1日"
+      ],
+      "explanation": "土地の譲渡は消費税非課税、建物は原則課税。相続取得は不動産取得税非課税、贈与は課税。固定資産税は1月1日現在の所有者へ課税されます。",
+      "explanationSteps": [
+        "税目を消費税と不動産取得税へ分ける。",
+        "取得原因が相続か贈与か確認する。",
+        "固定資産税の賦課期日を確認する。"
+      ],
+      "commonMistakes": [
+        "土地と建物を同じ消費税区分にする。",
+        "贈与を相続と同じ非課税にする。"
+      ],
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch5/ch5-s4",
+        "label": "5-4 取得・保有税"
+      },
+      "tags": [
+        "不動産税",
+        "課税区分",
+        "非選択式"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "submitLabel": "課税区分を採点する",
+        "fields": [
+          {
+            "id": "tax-class-1",
+            "label": "①土地売買の消費税",
+            "kind": "classification",
+            "correctAnswer": "非課税"
+          },
+          {
+            "id": "tax-class-2",
+            "label": "②建物売買の消費税",
+            "kind": "classification",
+            "correctAnswer": "課税"
+          },
+          {
+            "id": "tax-class-3",
+            "label": "③相続取得の不動産取得税",
+            "kind": "classification",
+            "correctAnswer": "非課税"
+          },
+          {
+            "id": "tax-class-4",
+            "label": "④贈与取得の不動産取得税",
+            "kind": "classification",
+            "correctAnswer": "課税"
+          },
+          {
+            "id": "tax-class-5",
+            "label": "⑤固定資産税の基準日",
+            "kind": "classification",
+            "correctAnswer": "1月1日",
+            "acceptedAnswers": [
+              "1/1",
+              "１月１日"
+            ]
+          }
+        ]
+      }
     }
   ]
 }
