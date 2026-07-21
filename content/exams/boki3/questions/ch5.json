@@ -263,14 +263,30 @@
       "type": "single",
       "text": "商品200,000円を掛けで仕入れた後、品違いのため30,000円分を返品した。返品時の仕訳として正しいものはどれか。",
       "options": [
-        { "label": "A", "text": "(借) 仕入 30,000 / (貸) 買掛金 30,000" },
-        { "label": "B", "text": "(借) 買掛金 30,000 / (貸) 仕入 30,000" },
-        { "label": "C", "text": "(借) 現金 30,000 / (貸) 売上 30,000" },
-        { "label": "D", "text": "(借) 売上 30,000 / (貸) 売掛金 30,000" }
+        {
+          "label": "A",
+          "text": "(借) 仕入 30,000 / (貸) 買掛金 30,000"
+        },
+        {
+          "label": "B",
+          "text": "(借) 買掛金 30,000 / (貸) 仕入 30,000"
+        },
+        {
+          "label": "C",
+          "text": "(借) 現金 30,000 / (貸) 売上 30,000"
+        },
+        {
+          "label": "D",
+          "text": "(借) 売上 30,000 / (貸) 売掛金 30,000"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "元の掛仕入は借方仕入、貸方買掛金です。返品分だけ逆にし、借方買掛金、貸方仕入とします。Aは仕入を追加する方向、Cは元の決済条件を無視し、Dは売上返品の仕訳です。",
-      "tags": ["仕入返品", "買掛金", "逆仕訳"]
+      "tags": [
+        "仕入返品",
+        "買掛金",
+        "逆仕訳"
+      ]
     },
     {
       "id": "boki3-ch5-q10",
@@ -279,14 +295,30 @@
       "type": "single",
       "text": "商品100,000円を掛けで仕入れ、仕入先が負担すべき運賃8,000円を当店が現金で立て替えた。立替金を使わず買掛金と相殺する場合の仕訳はどれか。",
       "options": [
-        { "label": "A", "text": "(借) 仕入 108,000 / (貸) 買掛金 100,000・現金 8,000" },
-        { "label": "B", "text": "(借) 仕入 100,000 / (貸) 買掛金 92,000・現金 8,000" },
-        { "label": "C", "text": "(借) 発送費 8,000・仕入 100,000 / (貸) 買掛金 108,000" },
-        { "label": "D", "text": "(借) 買掛金 8,000 / (貸) 現金 8,000" }
+        {
+          "label": "A",
+          "text": "(借) 仕入 108,000 / (貸) 買掛金 100,000・現金 8,000"
+        },
+        {
+          "label": "B",
+          "text": "(借) 仕入 100,000 / (貸) 買掛金 92,000・現金 8,000"
+        },
+        {
+          "label": "C",
+          "text": "(借) 発送費 8,000・仕入 100,000 / (貸) 買掛金 108,000"
+        },
+        {
+          "label": "D",
+          "text": "(借) 買掛金 8,000 / (貸) 現金 8,000"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "運賃は仕入先負担なので当店の仕入原価には含めません。当店が立て替えた8,000円を掛代金100,000円から差し引き、買掛金を92,000円とします。Aは当店負担の仕入諸掛り、Cは費用負担者と科目が誤り、Dは商品仕入を記録していません。",
-      "tags": ["諸掛り", "先方負担", "買掛金"]
+      "tags": [
+        "諸掛り",
+        "先方負担",
+        "買掛金"
+      ]
     },
     {
       "id": "boki3-ch5-q11",
@@ -295,14 +327,30 @@
       "type": "single",
       "text": "前月繰越40個（単価1,000円）と当月仕入60個（単価1,200円）がある。移動平均法で50個を売り上げた場合の払出金額はいくらか。",
       "options": [
-        { "label": "A", "text": "50,000円" },
-        { "label": "B", "text": "52,000円" },
-        { "label": "C", "text": "56,000円" },
-        { "label": "D", "text": "60,000円" }
+        {
+          "label": "A",
+          "text": "50,000円"
+        },
+        {
+          "label": "B",
+          "text": "52,000円"
+        },
+        {
+          "label": "C",
+          "text": "56,000円"
+        },
+        {
+          "label": "D",
+          "text": "60,000円"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "平均単価は（40,000円＋72,000円）÷100個＝1,120円です。したがって払出金額は50個×1,120円＝56,000円です。50,000円は旧単価だけ、52,000円は先入先出法、60,000円は新しい仕入単価だけで計算した誤りです。",
-      "tags": ["商品有高帳", "移動平均法", "計算"]
+      "tags": [
+        "商品有高帳",
+        "移動平均法",
+        "計算"
+      ]
     },
     {
       "id": "boki3-ch5-q12",
@@ -311,14 +359,30 @@
       "type": "single",
       "text": "移動平均法で、払出後の残高が50個・56,000円である。その後50個を単価1,360円で仕入れた。新しい平均単価はいくらか。",
       "options": [
-        { "label": "A", "text": "1,120円" },
-        { "label": "B", "text": "1,200円" },
-        { "label": "C", "text": "1,240円" },
-        { "label": "D", "text": "1,360円" }
+        {
+          "label": "A",
+          "text": "1,120円"
+        },
+        {
+          "label": "B",
+          "text": "1,200円"
+        },
+        {
+          "label": "C",
+          "text": "1,240円"
+        },
+        {
+          "label": "D",
+          "text": "1,360円"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "今回の仕入金額は50個×1,360円＝68,000円です。新平均単価は（残高56,000円＋仕入68,000円）÷（50個＋50個）＝1,240円です。単価同士を単純に選ぶのではなく、金額合計を数量合計で割ります。",
-      "tags": ["商品有高帳", "移動平均法", "平均単価"]
+      "tags": [
+        "商品有高帳",
+        "移動平均法",
+        "平均単価"
+      ]
     },
     {
       "id": "boki3-ch5-q13",
@@ -327,14 +391,30 @@
       "type": "single",
       "text": "商品30個を1個2,000円で掛け販売した。商品有高帳上の払出単価は1,240円である。売上仕訳の金額と商品有高帳の払出金額の組み合わせとして正しいものはどれか。",
       "options": [
-        { "label": "A", "text": "売上37,200円・払出60,000円" },
-        { "label": "B", "text": "売上60,000円・払出37,200円" },
-        { "label": "C", "text": "売上60,000円・払出60,000円" },
-        { "label": "D", "text": "売上37,200円・払出37,200円" }
+        {
+          "label": "A",
+          "text": "売上37,200円・払出60,000円"
+        },
+        {
+          "label": "B",
+          "text": "売上60,000円・払出37,200円"
+        },
+        {
+          "label": "C",
+          "text": "売上60,000円・払出60,000円"
+        },
+        {
+          "label": "D",
+          "text": "売上37,200円・払出37,200円"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "売上仕訳は売価30個×2,000円＝60,000円で記録します。商品有高帳は原価30個×1,240円＝37,200円で払出します。売価と原価を同じ欄に使わないことが重要です。",
-      "tags": ["売価", "原価", "商品有高帳"]
+      "tags": [
+        "売価",
+        "原価",
+        "商品有高帳"
+      ]
     },
     {
       "id": "boki3-ch5-q14",
@@ -343,14 +423,30 @@
       "type": "single",
       "text": "当期仕入300,000円、仕入返品20,000円、当期売上500,000円、売上返品30,000円であった。純仕入高と純売上高の正しい組み合わせはどれか。",
       "options": [
-        { "label": "A", "text": "純仕入高280,000円・純売上高470,000円" },
-        { "label": "B", "text": "純仕入高320,000円・純売上高530,000円" },
-        { "label": "C", "text": "純仕入高270,000円・純売上高480,000円" },
-        { "label": "D", "text": "純仕入高300,000円・純売上高500,000円" }
+        {
+          "label": "A",
+          "text": "純仕入高280,000円・純売上高470,000円"
+        },
+        {
+          "label": "B",
+          "text": "純仕入高320,000円・純売上高530,000円"
+        },
+        {
+          "label": "C",
+          "text": "純仕入高270,000円・純売上高480,000円"
+        },
+        {
+          "label": "D",
+          "text": "純仕入高300,000円・純売上高500,000円"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "返品は元の取引を取り消すため、純仕入高は300,000円−20,000円＝280,000円、純売上高は500,000円−30,000円＝470,000円です。返品を加算したり、仕入返品と売上返品を入れ替えないようにします。",
-      "tags": ["返品", "純仕入高", "純売上高"]
+      "tags": [
+        "返品",
+        "純仕入高",
+        "純売上高"
+      ]
     },
     {
       "id": "boki3-ch5-q15",
@@ -359,14 +455,30 @@
       "type": "single",
       "text": "期首商品棚卸高50,000円、当期純仕入高350,000円、期末商品棚卸高80,000円である。売上原価はいくらか。",
       "options": [
-        { "label": "A", "text": "220,000円" },
-        { "label": "B", "text": "320,000円" },
-        { "label": "C", "text": "380,000円" },
-        { "label": "D", "text": "480,000円" }
+        {
+          "label": "A",
+          "text": "220,000円"
+        },
+        {
+          "label": "B",
+          "text": "320,000円"
+        },
+        {
+          "label": "C",
+          "text": "380,000円"
+        },
+        {
+          "label": "D",
+          "text": "480,000円"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "売上原価＝期首商品50,000円＋当期純仕入350,000円−期末商品80,000円＝320,000円です。期末商品は売れ残った資産なので売上原価から差し引きます。",
-      "tags": ["三分法", "売上原価", "期末棚卸"]
+      "tags": [
+        "三分法",
+        "売上原価",
+        "期末棚卸"
+      ]
     },
     {
       "id": "boki3-ch5-q16",
@@ -375,14 +487,440 @@
       "type": "single",
       "text": "期首商品40,000円、当期仕入160,000円（当店負担の仕入諸掛りを含む）、仕入返品10,000円、期末商品50,000円、当期売上300,000円、売上返品20,000円である。売上総利益はいくらか。",
       "options": [
-        { "label": "A", "text": "120,000円" },
-        { "label": "B", "text": "130,000円" },
-        { "label": "C", "text": "140,000円" },
-        { "label": "D", "text": "160,000円" }
+        {
+          "label": "A",
+          "text": "120,000円"
+        },
+        {
+          "label": "B",
+          "text": "130,000円"
+        },
+        {
+          "label": "C",
+          "text": "140,000円"
+        },
+        {
+          "label": "D",
+          "text": "160,000円"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "純仕入高は160,000円−10,000円＝150,000円、売上原価は40,000円＋150,000円−50,000円＝140,000円です。純売上高は300,000円−20,000円＝280,000円なので、売上総利益は280,000円−140,000円＝140,000円です。",
-      "tags": ["総合問題", "売上原価", "売上総利益"]
+      "tags": [
+        "総合問題",
+        "売上原価",
+        "売上総利益"
+      ]
+    },
+    {
+      "id": "boki3-ch5-practice1",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "journal",
+      "text": "商品240,000円を掛けで仕入れ、当社負担の引取運賃12,000円を現金で支払った。三分法による仕訳を入力しなさい。",
+      "explanation": "当社負担の仕入諸掛りは商品の取得原価に含めるため、仕入は240,000＋12,000＝252,000円です。買掛金240,000円と現金12,000円を貸方に置きます。",
+      "explanationSteps": [
+        "商品本体価格と当社負担の引取運賃を確認する。",
+        "取得原価252,000円を仕入へ集約する。",
+        "決済方法ごとに買掛金240,000円と現金12,000円へ分ける。"
+      ],
+      "commonMistakes": [
+        "引取運賃を旅費交通費にすると商品取得原価が過少になります。",
+        "仕入を240,000円のままにすると借貸が一致しません。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s4",
+        "label": "5-4 仕入諸掛り"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "仕入諸掛り",
+        "複合仕訳"
+      ],
+      "correctAnswer": [
+        "仕入",
+        "252000",
+        "買掛金",
+        "240000",
+        "現金",
+        "12000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "仕入"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "252000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "買掛金"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "240000",
+            "suffix": "円"
+          },
+          {
+            "id": "r2-credit-account",
+            "label": "貸方科目（2行目）",
+            "kind": "account",
+            "correctAnswer": "現金"
+          },
+          {
+            "id": "r2-credit-amount",
+            "label": "貸方金額（2行目）",
+            "kind": "number",
+            "correctAnswer": "12000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          },
+          {
+            "id": "row-2",
+            "creditAccountFieldId": "r2-credit-account",
+            "creditAmountFieldId": "r2-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch5-practice2",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "journal",
+      "text": "以前掛けで仕入れた商品のうち、品質不良品30,000円を仕入先へ返品した。三分法による仕訳を入力しなさい。",
+      "explanation": "仕入返品では、以前増加した買掛金を借方で減らし、仕入を貸方で減額します。",
+      "explanationSteps": [
+        "元の掛仕入が「仕入／買掛金」であることを確認する。",
+        "返品は元の仕訳を30,000円分反対にする。",
+        "現金は動かないことを確認する。"
+      ],
+      "commonMistakes": [
+        "新しい売上として処理しません。",
+        "買掛金の減少は借方です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s3",
+        "label": "5-3 返品と値引き"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "仕入返品",
+        "掛取引"
+      ],
+      "correctAnswer": [
+        "買掛金",
+        "30000",
+        "仕入",
+        "30000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "買掛金"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "仕入"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "30000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch5-practice3",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "journal",
+      "text": "以前掛けで販売した商品のうち18,000円が返品された。三分法による仕訳を入力しなさい。",
+      "explanation": "売上返品では、以前計上した売上を借方で減らし、売掛金を貸方で減額します。",
+      "explanationSteps": [
+        "元の掛売上が「売掛金／売上」であることを確認する。",
+        "返品額18,000円について元の仕訳を反対にする。",
+        "売掛金と売上が同額減少することを確認する。"
+      ],
+      "commonMistakes": [
+        "仕入を使うのは仕入側の返品です。",
+        "売掛金の減少は貸方です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s3",
+        "label": "5-3 売上返品"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "売上返品",
+        "掛取引"
+      ],
+      "correctAnswer": [
+        "売上",
+        "18000",
+        "売掛金",
+        "18000"
+      ],
+      "practiceSheet": {
+        "kind": "journal",
+        "fields": [
+          {
+            "id": "r1-debit-account",
+            "label": "借方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売上"
+          },
+          {
+            "id": "r1-debit-amount",
+            "label": "借方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "18000",
+            "suffix": "円"
+          },
+          {
+            "id": "r1-credit-account",
+            "label": "貸方科目（1行目）",
+            "kind": "account",
+            "correctAnswer": "売掛金"
+          },
+          {
+            "id": "r1-credit-amount",
+            "label": "貸方金額（1行目）",
+            "kind": "number",
+            "correctAnswer": "18000",
+            "suffix": "円"
+          }
+        ],
+        "journalRows": [
+          {
+            "id": "row-1",
+            "debitAccountFieldId": "r1-debit-account",
+            "debitAmountFieldId": "r1-debit-amount",
+            "creditAccountFieldId": "r1-credit-account",
+            "creditAmountFieldId": "r1-credit-amount"
+          }
+        ],
+        "submitLabel": "仕訳を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch5-practice4",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "期首商品90,000円、当期仕入純額540,000円、期末商品110,000円である。売上原価を求め、期末商品の財務諸表上の分類を入力しなさい。",
+      "explanation": "売上原価は90,000＋540,000−110,000＝520,000円です。期末商品110,000円は翌期に販売する資産なのでB/Sへ表示します。",
+      "explanationSteps": [
+        "期首商品と当期仕入純額を加える。",
+        "未販売の期末商品を差し引く。",
+        "期末商品は費用ではなく資産として繰り越す。"
+      ],
+      "commonMistakes": [
+        "期末商品を差し引かないと売上原価が過大になります。",
+        "期末商品はP/LではなくB/Sです。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s1",
+        "label": "5-1 三分法と売上原価"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "売上原価",
+        "期末商品"
+      ],
+      "correctAnswer": [
+        "520000",
+        "B/S"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "cost-of-sales",
+            "label": "売上原価",
+            "kind": "number",
+            "correctAnswer": "520000",
+            "suffix": "円"
+          },
+          {
+            "id": "ending-inventory-class",
+            "label": "期末商品の分類",
+            "kind": "classification",
+            "correctAnswer": "B/S"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch5-practice5",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "期首在庫は100個（1個800円）、当期仕入は150個（1個900円）で、180個を販売した。先入先出法による期末数量、期末商品金額、売上原価を求めなさい。",
+      "explanation": "先に期首100個を払い出し、次に当期仕入80個を払い出します。期末は当期仕入分70個×900円＝63,000円、売上原価は総原価215,000円−63,000円＝152,000円です。",
+      "explanationSteps": [
+        "販売可能数量250個から販売180個を差し引き、期末70個を求める。",
+        "先入先出法では期末70個は新しい900円層から残る。",
+        "総原価80,000＋135,000＝215,000円から期末63,000円を差し引く。"
+      ],
+      "commonMistakes": [
+        "期末在庫を800円で評価すると先入先出の層を逆にしています。",
+        "数量と金額を混同しないよう単価を明記します。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s5",
+        "label": "5-5 先入先出法"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "商品有高帳",
+        "先入先出法"
+      ],
+      "correctAnswer": [
+        "70",
+        "63000",
+        "152000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "ending-quantity",
+            "label": "期末数量",
+            "kind": "number",
+            "correctAnswer": "70",
+            "suffix": "個"
+          },
+          {
+            "id": "ending-inventory",
+            "label": "期末商品金額",
+            "kind": "number",
+            "correctAnswer": "63000",
+            "suffix": "円"
+          },
+          {
+            "id": "cost-of-sales",
+            "label": "売上原価",
+            "kind": "number",
+            "correctAnswer": "152000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
+    },
+    {
+      "id": "boki3-ch5-practice6",
+      "examId": "boki3",
+      "chapterId": "ch5",
+      "type": "numeric",
+      "text": "期首在庫は100個（1個800円）、当期仕入は100個（1個1,000円）で、その後150個を販売した。移動平均法による平均単価、売上原価、期末商品金額を求めなさい。端数は生じない。",
+      "explanation": "仕入後の平均単価は（80,000＋100,000）÷200個＝900円です。販売150個の売上原価は135,000円、残り50個の期末商品は45,000円です。",
+      "explanationSteps": [
+        "仕入前後の数量200個と原価180,000円を合計する。",
+        "移動平均単価900円を求める。",
+        "販売数量150個と期末数量50個へ同じ平均単価を適用する。"
+      ],
+      "commonMistakes": [
+        "単純に800円と1,000円を別々に払い出すのは先入先出法です。",
+        "平均単価を求める分母は販売数量ではなく保有数量200個です。"
+      ],
+      "guideLink": {
+        "href": "/exams/boki3/guide/ch5/ch5-s5",
+        "label": "5-5 移動平均法"
+      },
+      "tags": [
+        "能力型練習",
+        "非選択式",
+        "商品有高帳",
+        "移動平均法"
+      ],
+      "correctAnswer": [
+        "900",
+        "135000",
+        "45000"
+      ],
+      "practiceSheet": {
+        "kind": "fields",
+        "fields": [
+          {
+            "id": "average-unit-cost",
+            "label": "移動平均単価",
+            "kind": "number",
+            "correctAnswer": "900",
+            "suffix": "円"
+          },
+          {
+            "id": "cost-of-sales",
+            "label": "売上原価",
+            "kind": "number",
+            "correctAnswer": "135000",
+            "suffix": "円"
+          },
+          {
+            "id": "ending-inventory",
+            "label": "期末商品金額",
+            "kind": "number",
+            "correctAnswer": "45000",
+            "suffix": "円"
+          }
+        ],
+        "submitLabel": "解答を採点する"
+      }
     }
   ]
 }
