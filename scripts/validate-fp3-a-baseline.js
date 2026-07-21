@@ -142,8 +142,8 @@ assert(guideMetrics.filter(item => item.hasProcess).length === guideExpected.wit
 assert(guideMetrics.filter(item => item.hasError).length === guideExpected.withErrorDiagnosis, 'guide error coverage matches baseline')
 assert(guideMetrics.filter(item => item.hasSelfCheck).length === guideExpected.withExplicitSelfCheck, 'guide self-check coverage matches baseline')
 assert(guideMetrics.filter(item => item.internalLinks > 0).length === guideExpected.withBodyInternalLink, 'guide linked-page count matches baseline')
-assert(guideMetrics.filter(item => item.lawReferenceDate).length === guideExpected.withLawReferenceDate, 'guide lawReferenceDate count matches baseline')
-assert(guideMetrics.filter(item => item.dataAsOf).length === guideExpected.withDataAsOf, 'guide dataAsOf count matches baseline')
+assert(guideMetrics.filter(item => item.lawReferenceDate).length >= guideExpected.withLawReferenceDate, 'guide lawReferenceDate coverage does not regress below baseline')
+assert(guideMetrics.filter(item => item.dataAsOf).length >= guideExpected.withDataAsOf, 'guide dataAsOf coverage does not regress below baseline')
 assert(guideMetrics.every(item => /^2026-\d{2}-\d{2}$/.test(String(item.updatedAt))), 'all guide updatedAt values are valid 2026 dates')
 
 const questionExpected = baseline.contentMetrics.questions

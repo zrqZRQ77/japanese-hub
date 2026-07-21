@@ -35,6 +35,9 @@ export interface SectionMeta {
 }
 
 /** 学习ガイド（MDXフロントマター） */
+export type AnnualContentRisk = 'low' | 'medium' | 'high'
+export type AnnualReviewStatus = 'scope-mapped' | 'content-verified'
+
 export interface GuideFrontmatter {
   examId: string
   chapterId: string
@@ -43,6 +46,13 @@ export interface GuideFrontmatter {
   sectionNumber: string
   sectionTitle: string
   updatedAt: string
+  lawReferenceDate?: string
+  previousLawReferenceDate?: string
+  dataAsOf?: string
+  annualPolicyId?: string
+  annualRisk?: AnnualContentRisk
+  annualReviewStatus?: AnnualReviewStatus
+  annualMetadataReviewedAt?: string
 }
 
 /** 問題タイプ
