@@ -269,8 +269,18 @@ export interface ChapterLearningProgress {
   lastStudiedAt: string
 }
 
+export type CardLearningStatus = 'learning' | 'mastered'
+
+export interface CardLearningProgress {
+  cardId: string
+  chapterId: string
+  status: CardLearningStatus
+  reviewCount: number
+  updatedAt: string
+}
+
 export interface ExamProgress {
-  version: 2
+  version: 3
   examId: string
   completedChapters: string[]
   currentChapterId: string
@@ -281,6 +291,7 @@ export interface ExamProgress {
   lastStudiedAt: string
   chapterProgress: Record<string, ChapterLearningProgress>
   questionProgress: Record<string, QuestionProgress>
+  cardProgress: Record<string, CardLearningProgress>
   rememberedCardIds: string[]
   bookmarkedSectionIds: string[]
   lastActivity: LearningActivity | null

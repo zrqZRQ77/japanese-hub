@@ -7,6 +7,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import {
   ExamProgress,
+  CardLearningStatus,
   LearningActivity,
   LearningActivityType,
   Question,
@@ -19,7 +20,7 @@ import {
 
 export function getDefaultProgress(examId: string): ExamProgress {
   return {
-    version: 2,
+    version: 3,
     examId,
     completedChapters: [],
     currentChapterId: 'ch1',
@@ -30,6 +31,7 @@ export function getDefaultProgress(examId: string): ExamProgress {
     lastStudiedAt: '',
     chapterProgress: {},
     questionProgress: {},
+    cardProgress: {},
     rememberedCardIds: [],
     bookmarkedSectionIds: [],
     lastActivity: null,
@@ -40,15 +42,30 @@ function normalizeProgress(examId: string, stored: Partial<ExamProgress> | null)
   const defaults = getDefaultProgress(examId)
   if (!stored) return defaults
 
+  const rememberedCardIds = Array.isArray(stored.rememberedCardIds) ? stored.rememberedCardIds : []
+  const migratedCardProgress = Object.fromEntries(
+    rememberedCardIds.map(cardId => [cardId, {
+      cardId,
+      chapterId: '',
+      status: 'mastered' as const,
+      reviewCount: 1,
+      updatedAt: stored.lastStudiedAt ?? '',
+    }]),
+  )
+
   return {
     ...defaults,
     ...stored,
-    version: 2,
+    version: 3,
     examId,
     completedChapters: Array.isArray(stored.completedChapters) ? stored.completedChapters : [],
     chapterProgress: stored.chapterProgress ?? {},
     questionProgress: stored.questionProgress ?? {},
-    rememberedCardIds: Array.isArray(stored.rememberedCardIds) ? stored.rememberedCardIds : [],
+    cardProgress: {
+      ...migratedCardProgress,
+      ...(stored.cardProgress ?? {}),
+    },
+    rememberedCardIds,
     bookmarkedSectionIds: Array.isArray(stored.bookmarkedSectionIds) ? stored.bookmarkedSectionIds : [],
     lastActivity: stored.lastActivity ?? null,
   }
@@ -210,22 +227,38 @@ export function useProgress(examId: string) {
     })
   }, [examId])
 
-  const setCardRemembered = useCallback((
+  const setCardStatus = useCallback((
     cardId: string,
-    remembered: boolean,
+    status: CardLearningStatus | null,
     chapterId: string,
     chapterTitle: string,
   ) => {
     setProgress(prev => {
       const base = prev ?? normalizeProgress(examId, loadProgressFromStorage(examId))
       const rememberedCardIds = new Set(base.rememberedCardIds)
-      if (remembered) rememberedCardIds.add(cardId)
-      else rememberedCardIds.delete(cardId)
+      const cardProgress = { ...base.cardProgress }
+      const previous = cardProgress[cardId]
+
+      if (status === null) {
+        delete cardProgress[cardId]
+        rememberedCardIds.delete(cardId)
+      } else {
+        cardProgress[cardId] = {
+          cardId,
+          chapterId,
+          status,
+          reviewCount: (previous?.reviewCount ?? 0) + 1,
+          updatedAt: new Date().toISOString(),
+        }
+        if (status === 'mastered') rememberedCardIds.add(cardId)
+        else rememberedCardIds.delete(cardId)
+      }
 
       const next: ExamProgress = {
         ...base,
         ...withStudyDay(base),
         currentChapterId: chapterId,
+        cardProgress,
         rememberedCardIds: Array.from(rememberedCardIds),
         lastActivity: activityFor(
           'cards',
@@ -238,6 +271,15 @@ export function useProgress(examId: string) {
       return next
     })
   }, [examId])
+
+  const setCardRemembered = useCallback((
+    cardId: string,
+    remembered: boolean,
+    chapterId: string,
+    chapterTitle: string,
+  ) => {
+    setCardStatus(cardId, remembered ? 'mastered' : null, chapterId, chapterTitle)
+  }, [setCardStatus])
 
   const toggleBookmark = useCallback((sectionId: string) => {
     setProgress(prev => {
@@ -267,6 +309,7 @@ export function useProgress(examId: string) {
     update,
     recordQuestionAnswer,
     recordActivity,
+    setCardStatus,
     setCardRemembered,
     toggleBookmark,
     resetProgress,

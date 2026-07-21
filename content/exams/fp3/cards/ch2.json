@@ -12,7 +12,17 @@
       "tags": [
         "保険の基礎",
         "リスクマネジメント"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q11",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q11"
+      }
     },
     {
       "id": "fp3-ch2-card2",
@@ -23,7 +33,17 @@
       "tags": [
         "保険の基礎",
         "収支相等の原則"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q02"
+      }
     },
     {
       "id": "fp3-ch2-card3",
@@ -34,7 +54,17 @@
       "tags": [
         "保険の基礎",
         "告知義務"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q12",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q12"
+      }
     },
     {
       "id": "fp3-ch2-card4",
@@ -45,7 +75,17 @@
       "tags": [
         "保険の基礎",
         "クーリング・オフ"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q01"
+      }
     },
     {
       "id": "fp3-ch2-card5",
@@ -56,7 +96,17 @@
       "tags": [
         "保険の基礎",
         "クーリング・オフ"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q01",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q01"
+      }
     },
     {
       "id": "fp3-ch2-card6",
@@ -67,7 +117,17 @@
       "tags": [
         "保険の基礎",
         "契約者保護機構"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s1",
+        "label": "2-1 保険の基礎と関連法規"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q02",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q02"
+      }
     },
     {
       "id": "fp3-ch2-card7",
@@ -78,7 +138,17 @@
       "tags": [
         "生命保険",
         "収入保障保険"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q13",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q13"
+      }
     },
     {
       "id": "fp3-ch2-card8",
@@ -89,7 +159,17 @@
       "tags": [
         "生命保険",
         "変額保険"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q14",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q14"
+      }
     },
     {
       "id": "fp3-ch2-card9",
@@ -100,7 +180,17 @@
       "tags": [
         "生命保険",
         "生命保険料控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q15",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q15"
+      }
     },
     {
       "id": "fp3-ch2-card10",
@@ -111,7 +201,17 @@
       "tags": [
         "生命保険",
         "生命保険料控除"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q15",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q15"
+      }
     },
     {
       "id": "fp3-ch2-card11",
@@ -122,7 +222,17 @@
       "tags": [
         "生命保険",
         "税金"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q04"
+      }
     },
     {
       "id": "fp3-ch2-card12",
@@ -133,18 +243,40 @@
       "tags": [
         "生命保険",
         "税金"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q10",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q10"
+      }
     },
     {
       "id": "fp3-ch2-card13",
       "examId": "fp3",
       "chapterId": "ch2",
-      "front": "死亡保険金の相続税非課税枠は？",
-      "back": "500万円 × 法定相続人の数",
+      "front": "生命保険で受取人が相続人の場合、死亡保険金の非課税限度額は？",
+      "back": "500万円×法定相続人の数。契約者＝被保険者で相続税の対象となる死亡保険金のうち、相続人が取得した部分に適用する。",
       "tags": [
         "生命保険",
-        "相続税"
-      ]
+        "相続税",
+        "非課税枠",
+        "易錯点"
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s2",
+        "label": "2-2 生命保険と税金"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q04",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q04"
+      }
     },
     {
       "id": "fp3-ch2-card14",
@@ -155,7 +287,17 @@
       "tags": [
         "損害保険",
         "地震保険"
-      ]
+      ],
+      "cardType": "誤り診断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s3",
+        "label": "2-3 損害保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q05"
+      }
     },
     {
       "id": "fp3-ch2-card15",
@@ -166,7 +308,17 @@
       "tags": [
         "損害保険",
         "地震保険"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s3",
+        "label": "2-3 損害保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q05",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q05"
+      }
     },
     {
       "id": "fp3-ch2-card16",
@@ -177,7 +329,17 @@
       "tags": [
         "損害保険",
         "自賠責保険"
-      ]
+      ],
+      "cardType": "手順",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s3",
+        "label": "2-3 損害保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q06",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q06"
+      }
     },
     {
       "id": "fp3-ch2-card17",
@@ -188,7 +350,17 @@
       "tags": [
         "損害保険",
         "傷害保険"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s3",
+        "label": "2-3 損害保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q07",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q07"
+      }
     },
     {
       "id": "fp3-ch2-card18",
@@ -199,7 +371,17 @@
       "tags": [
         "第三分野の保険",
         "がん保険"
-      ]
+      ],
+      "cardType": "記憶",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s4",
+        "label": "2-4 第三分野の保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q08",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q08"
+      }
     },
     {
       "id": "fp3-ch2-card19",
@@ -210,7 +392,17 @@
       "tags": [
         "第三分野の保険",
         "先進医療特約"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s4",
+        "label": "2-4 第三分野の保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q09",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q09"
+      }
     },
     {
       "id": "fp3-ch2-card20",
@@ -221,7 +413,17 @@
       "tags": [
         "第三分野の保険",
         "所得補償"
-      ]
+      ],
+      "cardType": "判断",
+      "guideLink": {
+        "href": "/exams/fp3/guide/ch2/ch2-s4",
+        "label": "2-4 第三分野の保険"
+      },
+      "questionLink": {
+        "href": "/exams/fp3/questions/ch2?question=fp3-ch2-q19",
+        "label": "対応問題で確認",
+        "questionId": "fp3-ch2-q19"
+      }
     }
   ]
 }

@@ -156,13 +156,13 @@ assert(percentile(explanationLengths, 0.5) === questionExpected.medianExplanatio
 assert(datedQuestions.length === questionExpected.datedQuestions, 'dated question count matches baseline')
 
 const cardExpected = baseline.contentMetrics.cards
-assert(cards.filter(card => String(card.back ?? '').replace(/\s+/g, '').length < 30).length === cardExpected.shortBackUnder30Chars, 'short card count matches baseline')
-assert(percentile(cardBackLengths, 0.5) === cardExpected.medianBackChars, 'median card back length matches baseline')
-assert(cards.filter(card => card.cardType).length === cardExpected.withCardType, 'typed card count matches baseline')
-assert(cards.filter(card => card.guideLink).length === cardExpected.withGuideLink, 'card guide-link count matches baseline')
-assert(cards.filter(card => card.questionLink).length === cardExpected.withQuestionLink, 'card question-link count matches baseline')
-assert(cards.filter(card => card.relatedChapterLink).length === cardExpected.withRelatedChapterLink, 'card related-link count matches baseline')
-assert(JSON.stringify(duplicateCardGroups) === JSON.stringify(cardExpected.exactDuplicateGroups), 'exact duplicate card groups match baseline')
+assert(cards.filter(card => String(card.back ?? '').replace(/\s+/g, '').length < 30).length <= cardExpected.shortBackUnder30Chars, 'short card count does not worsen')
+assert(percentile(cardBackLengths, 0.5) >= cardExpected.medianBackChars, 'median card back length does not regress')
+assert(cards.filter(card => card.cardType).length >= cardExpected.withCardType, 'typed card coverage does not regress')
+assert(cards.filter(card => card.guideLink).length >= cardExpected.withGuideLink, 'card guide-link coverage does not regress')
+assert(cards.filter(card => card.questionLink).length >= cardExpected.withQuestionLink, 'card question-link coverage does not regress')
+assert(cards.filter(card => card.relatedChapterLink).length >= cardExpected.withRelatedChapterLink, 'card related-link coverage does not regress')
+assert(duplicateCardGroups.length <= cardExpected.exactDuplicateGroups.length, 'exact duplicate card count does not worsen')
 
 assert(baseline.chapterBaselines.length === 6, 'six chapter baselines are recorded')
 for (const chapterBaseline of baseline.chapterBaselines) {

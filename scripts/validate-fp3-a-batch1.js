@@ -13,6 +13,9 @@ const annual = require('../content/exams/fp3/annual/2026-rules.js')
 const sample = require('../content/exams/fp3/a-grade/official-sample-2026.js')
 const guideBodyHashes = require('../content/exams/fp3/annual/2026-guide-body-hashes.js')
 const protectedItemHashes = require('../content/exams/fp3/annual/2026-protected-item-hashes.js')
+const cardOriginalHashes = require('../content/exams/fp3/a-grade/card-learning-loop-original-hashes.js')
+const cardCurrentHashes = require('../content/exams/fp3/a-grade/card-learning-loop-current-hashes.js')
+const cardLearningLoop = require('../content/exams/fp3/a-grade/card-learning-loop-mapping.js')
 
 const issues = []
 const checks = []
@@ -131,23 +134,45 @@ for (const file of guideFiles) {
   }
 }
 
-for (const kind of ['questions', 'cards']) {
-  const dir = kind === 'questions' ? questionRoot : cardRoot
-  const expectedHashes = protectedItemHashes[kind]
-  const collectionKey = kind === 'questions' ? 'questions' : 'cards'
-  const currentItems = new Map()
+const currentQuestions = new Map()
+for (const file of fs.readdirSync(questionRoot).filter(name => name.endsWith('.json')).sort()) {
+  const data = JSON.parse(fs.readFileSync(path.join(questionRoot, file), 'utf8'))
+  for (const question of data.questions) currentQuestions.set(question.id, question)
+}
+assert(Object.keys(protectedItemHashes.questions).length === 135, 'questions: 135 protected item hashes are recorded')
+for (const [questionId, expectedHash] of Object.entries(protectedItemHashes.questions)) {
+  const question = currentQuestions.get(questionId)
+  assert(Boolean(question), `questions/${questionId}: protected item exists`)
+  if (question) assert(sha256(JSON.stringify(question)) === expectedHash, `questions/${questionId}: protected item is unchanged`)
+}
 
-  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.json')).sort()) {
-    const data = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'))
-    for (const item of data[collectionKey]) currentItems.set(item.id, item)
-  }
-
-  const expectedCount = kind === 'questions' ? 135 : 135
-  assert(Object.keys(expectedHashes).length === expectedCount, `${kind}: ${expectedCount} protected item hashes are recorded`)
-  for (const [itemId, expectedHash] of Object.entries(expectedHashes)) {
-    const item = currentItems.get(itemId)
-    assert(Boolean(item), `${kind}/${itemId}: protected item exists`)
-    if (item) assert(sha256(JSON.stringify(item)) === expectedHash, `${kind}/${itemId}: protected item is unchanged`)
+const currentCards = new Map()
+for (const file of fs.readdirSync(cardRoot).filter(name => name.endsWith('.json')).sort()) {
+  const data = JSON.parse(fs.readFileSync(path.join(cardRoot, file), 'utf8'))
+  for (const card of data.cards) currentCards.set(card.id, card)
+}
+assert(Object.keys(protectedItemHashes.cards).length === 135, 'cards: historical full-object hash count remains 135')
+assert(Object.keys(cardOriginalHashes).length === 135, 'cards: 135 protected core-content hashes are recorded')
+assert(Object.keys(cardCurrentHashes).length === 135, 'cards: 135 current core-content hashes are recorded')
+assert(cardLearningLoop.cardCount === 135, 'cards: Batch7 mapping records 135 cards')
+for (const [cardId, originalHash] of Object.entries(cardOriginalHashes)) {
+  const card = currentCards.get(cardId)
+  assert(Boolean(card), `cards/${cardId}: protected card exists`)
+  if (!card) continue
+  const currentHash = sha256(JSON.stringify({
+    id: card.id,
+    front: card.front,
+    back: card.back,
+    tags: card.tags ?? [],
+  }))
+  assert(currentHash === cardCurrentHashes[cardId], `cards/${cardId}: current core hash agrees with Batch7 freeze`)
+  const rewrite = cardLearningLoop.approvedRewrites[cardId]
+  if (rewrite) {
+    assert(rewrite.previousCoreHash === originalHash, `cards/${cardId}: approved rewrite preserves previous hash evidence`)
+    assert(rewrite.currentCoreHash === currentHash, `cards/${cardId}: approved rewrite current hash agrees`)
+    assert(Boolean(rewrite.reason), `cards/${cardId}: approved rewrite records a reason`)
+  } else {
+    assert(currentHash === originalHash, `cards/${cardId}: original front/back/tags remain unchanged`)
   }
 }
 
