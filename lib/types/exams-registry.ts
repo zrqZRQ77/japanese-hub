@@ -195,8 +195,8 @@ export const EXAMS_REGISTRY: ExamMeta[] = [
     color: 'blue',
     icon: 'Monitor',
     indexing: {
-      // 教材本文は公開中だが、公開前審査で薄内容リスクが解消するまで検索インデックス対象外とする。
-      guides: 'noindex',
+      // 26教材の内容品質監査完了後、検索インデックスとSitemap掲載を正式に有効化する。
+      guides: 'index',
     },
     mockExam: {
       durationMinutes: 30,
